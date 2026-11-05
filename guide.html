@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>수신 가이드 · TERRASIGNAL</title>
+<meta name="description" content="디지털 지구에서 살아가는 법. 아이템과 시스템을 모은 살아있는 도감.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TERRASIGNAL">
+<meta property="og:title" content="수신 가이드 · TERRASIGNAL">
+<meta property="og:description" content="디지털 지구에서 살아가는 법. 아이템과 시스템을 모은 살아있는 도감.">
+<meta property="og:image" content="assets/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0c14">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&amp;family=Bungee&amp;family=Gaegu:wght@700&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<style>
+body{margin:0;background:#0b0c12}
+a{color:#ffd166}a:hover{color:#ffffff}
+.ts *{box-sizing:border-box}
+.ts img{max-width:100%}
+.ts button{font:inherit;cursor:pointer}
+.ts button:focus-visible,.ts a:focus-visible{outline:3px solid #ffd166;outline-offset:3px}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes blink{0%,60%{opacity:1}61%,100%{opacity:.25}}
+@keyframes ring{0%{opacity:0;transform:scale(.5)}25%{opacity:1}100%{opacity:0;transform:scale(1.3)}}
+@keyframes crawl{to{transform:translateX(-50%)}}
+@keyframes scan{to{background-position:0 6px}}
+@keyframes riftglow{0%,100%{opacity:.85}50%{opacity:1}}
+@keyframes glitch{0%{transform:translate(0,0)}20%{transform:translate(-3px,1px)}40%{transform:translate(3px,-1px)}60%{transform:translate(-2px,-2px)}80%{transform:translate(2px,2px)}100%{transform:translate(0,0)}}
+.anim .bob{animation:bob 3.4s ease-in-out infinite}
+.anim .blink{animation:blink 1.2s steps(1) infinite}
+.anim .ring{transform-origin:50% 100%;animation:ring 2.4s ease-out infinite}
+.anim .ring.r2{animation-delay:.8s}
+.anim .ring.r3{animation-delay:1.6s}
+.anim .crawl{animation:crawl 40s linear infinite}
+.anim .scan{animation:scan .5s linear infinite}
+.anim .rift{animation:riftglow 1.6s ease-in-out infinite}
+.anim .glitch{animation:glitch .35s steps(4) 1}
+.world{transition:clip-path .8s cubic-bezier(.7,0,.2,1)}
+.mover{transition:left .8s cubic-bezier(.7,0,.2,1)}
+@media (prefers-reduced-motion:reduce){.anim *{animation:none!important}.world,.mover{transition:none!important}}
+.ts .slip{transition:transform .2s,border-color .2s}
+.ts .slip:hover{transform:translateY(-4px);border-color:#ffffff}
+.ts .chan{transition:transform .2s,border-color .2s}
+.ts .chan:hover{transform:translateY(-4px)}
+.ts .h2c{color:#ffd23f!important;text-shadow:3px 3px 0 #000,0 0 16px rgba(255,190,40,.3)!important;-webkit-font-smoothing:antialiased}
+.ts .halftone-tr,.ts .halftone-bl{position:absolute;width:48%;height:75%;pointer-events:none;background-size:13px 13px}
+.ts .halftone-tr{top:0;right:0;background-image:radial-gradient(rgba(255,47,176,.32) 1.4px,transparent 1.8px);-webkit-mask-image:radial-gradient(circle at 100% 0,#000 0,transparent 70%);mask-image:radial-gradient(circle at 100% 0,#000 0,transparent 70%)}
+.ts .halftone-bl{bottom:0;left:0;background-image:radial-gradient(rgba(47,230,200,.28) 1.4px,transparent 1.8px);-webkit-mask-image:radial-gradient(circle at 0 100%,#000 0,transparent 70%);mask-image:radial-gradient(circle at 0 100%,#000 0,transparent 70%)}
+.ts .win{transition:transform .2s}.ts .win:hover{transform:translateY(-5px)}
+@keyframes sigp{0%,100%{opacity:.25}40%{opacity:1}}
+@keyframes gt{0%,90%{text-shadow:none;transform:none}91%{text-shadow:3px 0 #ff2fb0,-3px 0 #2fe6c8;transform:translateX(2px)}95%{text-shadow:-2px 0 #ff2fb0,2px 0 #2fe6c8;transform:translateX(-2px)}98%{text-shadow:none;transform:none}}
+@keyframes stat{0%{background-position:0 0,0 0}33%{background-position:0 2px,3px 0}66%{background-position:0 1px,-2px 0}}
+@keyframes flk{0%,100%{opacity:1}47%{opacity:1}50%{opacity:.4}53%{opacity:1}}
+.anim .sigpulse rect{animation:sigp 1.8s ease-in-out infinite}
+.anim .sigpulse rect:nth-child(2){animation-delay:.3s}
+.anim .sigpulse rect:nth-child(3){animation-delay:.6s}
+.anim .glitchtxt{animation:gt 3s steps(1) infinite}
+.anim .static{animation:stat .3s steps(1) infinite}
+.anim .flick{animation:flk 2.6s infinite}
+@media (max-width:560px){.ts .wbtn{padding:8px 10px!important;font-size:12px!important;letter-spacing:0!important}}
+.ts > *{position:relative;z-index:1}
+.ts .logoglow{position:relative;-webkit-text-stroke:1px #0a0716;text-shadow:2px 2px 0 #ff2fb0,4px 4px 0 #6a3cff,6px 6px 0 #2fe6c8,0 0 14px rgba(255,210,63,.7),0 0 34px rgba(255,47,176,.45)}
+@keyframes lglow{0%,100%{text-shadow:2px 2px 0 #ff2fb0,4px 4px 0 #6a3cff,6px 6px 0 #2fe6c8,0 0 12px rgba(255,210,63,.55),0 0 26px rgba(255,47,176,.3)}50%{text-shadow:2px 2px 0 #ff2fb0,4px 4px 0 #6a3cff,6px 6px 0 #2fe6c8,0 0 22px rgba(255,210,63,.95),0 0 48px rgba(255,47,176,.6)}}
+@keyframes lgl{0%,94%,100%{transform:none}95%{transform:translateX(3px) skewX(-6deg)}97%{transform:translateX(-2px)}}
+.anim .logoglow{animation:lglow 2.4s ease-in-out infinite,lgl 5s steps(1) infinite}
+@keyframes flow{to{stroke-dashoffset:-400}}
+.ts .flow{stroke-dasharray:240 30 60 30}
+.anim .flow{animation:flow 9s linear infinite}.anim .flow.f1{animation-duration:12s}.anim .flow.f2{animation-duration:15s;animation-direction:reverse}.anim .flow.f3{animation-duration:11s}
+@keyframes needle{0%,100%{transform:translateY(80px)}50%{transform:translateY(1100px)}}
+.anim .needle{animation:needle 26s ease-in-out infinite}
+@keyframes eqb{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+.ts .eqb{transform-origin:50% 100%;transform-box:fill-box}
+.anim .eqb{animation:eqb 1.4s ease-in-out infinite}
+@keyframes sqp{0%,100%{transform:scale(.96);opacity:.7}50%{transform:scale(1.04);opacity:1}}
+.anim .sqpulse{animation:sqp 6s ease-in-out infinite}
+@keyframes drift{0%,100%{translate:0 0}50%{translate:0 -26px}}
+.anim .drift{animation:drift 7s ease-in-out infinite}
+@keyframes popb{0%,100%{scale:1}50%{scale:1.08}}
+.anim .pop{animation:popb 1.6s ease-in-out infinite}
+@keyframes spin{to{rotate:360deg}}
+.anim .spin{animation:spin 14s linear infinite}
+.ts .win:hover{transform:translateY(-6px) scale(1.02) rotate(-.4deg)!important}
+.ts .chan:hover{transform:translateY(-5px) scale(1.02)}
+@media (max-width:900px){.ts .pop svg,.ts .spin svg{width:84px;height:84px}}
+@keyframes qbob{0%,100%{translate:0 0;scale:1}50%{translate:0 -10px;scale:1.05}}
+.anim .qmark{animation:qbob 2.8s ease-in-out infinite,gt 3s steps(1) infinite}
+.ts .mystery{transition:transform .2s}.ts .mystery:hover{transform:translateY(-5px) rotate(-.6deg)}
+.ts .portal{transition:transform .2s}.ts .portal:hover{transform:translateY(-6px) scale(1.02)}
+.ts .gate div{transform:scale(.4);opacity:0;transition:transform .5s cubic-bezier(.2,.9,.3,1.3),opacity .3s}
+.ts .portal:hover .gate div{transform:scale(1);opacity:1}
+.ts input:focus-visible,.ts textarea:focus-visible{outline:3px solid #2fe6c8;outline-offset:2px}
+.coat{filter:saturate(1.3) contrast(1.08) brightness(1.04)}
+.coat::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:40;background:radial-gradient(120% 40% at 12% 0%,rgba(255,255,255,.12),transparent 60%),repeating-linear-gradient(115deg,transparent 0 900px,rgba(255,255,255,.06) 980px,rgba(255,255,255,.16) 1010px,rgba(255,255,255,.06) 1040px,transparent 1120px 1800px);background-size:100% 100%,3600px 100%;mix-blend-mode:screen}
+@keyframes gloss{from{background-position:0 0,-1800px 0}to{background-position:0 0,1800px 0}}
+.anim.coat::after{animation:gloss 16s linear infinite}
+.coat .win::before,.coat .chan::before,.coat .portal::before,.coat .mystery::before,.coat .panel::before,.coat .stage::before,.coat form::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:6;box-shadow:inset 0 2px 0 rgba(255,255,255,.55),inset 0 0 0 1px rgba(255,255,255,.12),inset 0 -24px 34px -24px rgba(0,0,0,.7)}
+.coat .win::after,.coat .chan::after,.coat .portal::after,.coat .mystery::after,.coat .panel::after,.coat .stage::after,.coat form::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:7;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.26) 46%,rgba(255,255,255,.06) 52%,transparent 60%);background-size:260% 100%;background-position:120% 0;mix-blend-mode:screen}
+@keyframes sheen{0%,55%{background-position:120% 0}100%{background-position:-20% 0}}
+.anim.coat .win::after,.anim.coat .chan::after,.anim.coat .portal::after,.anim.coat .mystery::after,.anim.coat .panel::after,.anim.coat .stage::after,.anim.coat form::after{animation:sheen 5.5s ease-in-out infinite}
+.coat .stage{box-shadow:0 30px 80px -20px rgba(255,47,176,.35),0 0 0 1px rgba(255,255,255,.15)}
+.coat .h2c{text-shadow:3px 3px 0 #000,0 0 22px rgba(255,210,63,.6),0 -1px 0 #fff3b8!important}
+.coat .logoglow{filter:brightness(1.1)}
+@media (max-width:900px){.ts .h1{font-size:44px!important}.ts .nadu{width:150px!important}.ts .bubble{display:none!important}.ts .hdrnav{display:none!important}}
+@keyframes sqp2{0%{transform:scale(.5);opacity:1}100%{transform:scale(1.8);opacity:0}}
+.anim .sqping{animation:sqp2 1.8s ease-out infinite}
+.ts button{cursor:pointer}
+@media (max-width:900px){.ts .g3,.ts .ig2{grid-template-columns:1fr!important}.ts .steps{grid-template-columns:1fr 1fr!important}.ts .ihero{grid-template-columns:1fr!important}.ts .stat3{grid-template-columns:1fr!important}.ts .gtitle{font-size:42px!important}}
+</style>
+<style>
+x-dc,template{display:none}
+@media (max-width:1560px){.ts header span[style*="border-left: 1px solid #23263a"]{display:none}}
+html{scroll-behavior:smooth}
+@media (max-width:900px){
+  .ts .hdrnav{display:flex!important;width:100%;margin-left:0!important;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .ts .hdrnav::-webkit-scrollbar{display:none}
+}
+</style>
+<script src="js/dc-lite.js"></script>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-tpl">
+
+<div class="ts {{motionClass}} {{coatClass}}" style="width: 100%; min-height: 2700px; background: linear-gradient(180deg, #0b0c14 0%, #150d30 30%, #1a0f3a 60%, #120b28 100%); color: #eef0f7; font-family: 'Noto Sans KR', sans-serif; overflow: hidden; position: relative">
+<header style="border-bottom: 1px solid #23263a">
+<div style="max-width: 1360px; margin: 0 auto; padding: 18px 40px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap">
+<a href="index.html" aria-label="TERRASIGNAL 홈" style="display: flex; align-items: center; gap: 12px; text-decoration: none"><svg width="52" height="52" viewBox="0 0 60 60" aria-hidden="true" class="sigpulse"><defs><linearGradient id="tvg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2fe6c8"></stop><stop offset="1" stop-color="#ff2fb0"></stop></linearGradient></defs><rect x="27" y="15" width="6" height="4" fill="none" stroke="#2fe6c8" stroke-width="1.8"></rect><rect x="23" y="8.5" width="14" height="4.5" fill="none" stroke="#ff2fb0" stroke-width="1.8"></rect><rect x="18" y="1.5" width="24" height="5" fill="none" stroke="#ffd23f" stroke-width="1.8"></rect><path d="M21 21 L30 27 L39 21" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="square"></path><rect x="6" y="27" width="48" height="29" rx="2" fill="#0a0716" stroke="url(#tvg)" stroke-width="3.5"></rect><rect x="11" y="32" width="26" height="19" fill="none" stroke="url(#tvg)" stroke-width="2.5"></rect><rect x="19.5" y="38" width="9" height="7.5" fill="#ffffff"></rect><rect x="41" y="33" width="8" height="6" fill="none" stroke="#ff2fb0" stroke-width="2.2"></rect><rect x="41" y="42" width="8" height="5" fill="none" stroke="#ff2fb0" stroke-width="2.2"></rect><rect x="40" y="50" width="10" height="3" fill="#ff2fb0"></rect></svg><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Bungee', sans-serif; font-size: 28px; line-height: 1; letter-spacing: 1px; color: #ffd23f" class="logoglow" data-text="TERRASIGNAL">TERRASIGNAL</span><span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 3px; color: #2fe6c8">SIGNAL FROM MY SECOND EARTH</span></span></a>
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #8b90aa; border-left: 1px solid #23263a; padding-left: 18px">METAFUNK AGENCY BROADCAST</span>
+<nav class="hdrnav" aria-label="주요 메뉴" style="display: flex; gap: 4px; margin-left: auto; font-size: 15px; font-weight: 500">
+<a href="index.html#rx" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">시그널 수신</a>
+<a href="map.html" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">시그널 지도</a>
+<a href="guide.html" aria-current="page" style="color: #ffd23f; text-decoration: none; padding: 8px 12px; border-bottom: 3px solid #ffd23f">수신 가이드</a>
+<a href="chronicle.html" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">개척 연대기</a>
+<a href="prologue.html" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">프롤로그</a>
+<a href="index.html#tx-you" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">시그널 보내기</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 8px; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; color: #ffffff; background: #e63946; padding: 7px 12px; border-radius: 4px">
+<span class="blink" style="width: 8px; height: 8px; border-radius: 50%; background: #ffffff; display: inline-block"></span>ON AIR
+</div>
+</div>
+</header>
+<section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 56px 40px 0">
+<div class="halftone-tr"></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap">
+<div>
+<div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #2fe6c8; margin-bottom: 10px">RECEIVER GUIDE · 살아있는 도감</div>
+<h1 class="h2c gtitle" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 60px; line-height: 1.1">수신 가이드</h1>
+<p style="margin: 14px 0 0; max-width: 680px; font-size: 17px; line-height: 1.7; color: #c9c3e6">디지털 지구에서 살아가는 법. 세 개의 층에서 할 수 있는 일과 아이템 만드는 법을 모은 도감이에요. 새 신호가 도착할 때마다 한 장씩 늘어나요.</p>
+</div>
+<label style="display: flex; align-items: center; gap: 10px; min-width: 320px; min-height: 52px; padding: 0 16px; background: rgba(10,7,22,.85); border: 2px solid #2fe6c8; box-shadow: 4px 4px 0 #000">
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; color: #2fe6c8">SEARCH</span>
+<input type="text" placeholder="백팩, 캠프파이어, 스킨…" aria-label="가이드 검색" style="flex: 1; min-height: 44px; background: transparent; border: 0; color: #ffffff; font-size: 15px; font-family: 'Noto Sans KR', sans-serif">
+</label>
+</div>
+<div role="group" aria-label="층 선택" style="position: relative; display: flex; gap: 6px; margin-top: 26px; padding: 6px; width: fit-content; max-width: 100%; flex-wrap: wrap; background: rgba(10,7,22,.8); border: 2px solid #2fe6c8; box-shadow: 4px 4px 0 #000">
+<button type="button" onClick="{{showAll}}" aria-pressed="{{isAll}}" style="border: 0; min-height: 44px; padding: 0 16px; font-weight: 700; font-size: 14px; background: {{allBg}}; color: {{allFg}}">전체</button>
+<button type="button" onClick="{{showDigital}}" aria-pressed="{{isDigital}}" style="border: 0; min-height: 44px; padding: 0 16px; font-weight: 700; font-size: 14px; background: {{digiBg}}; color: {{digiFg}}">⬢ 디지털 지구</button>
+<button type="button" onClick="{{showBorder}}" aria-pressed="{{isBorder}}" style="border: 0; min-height: 44px; padding: 0 16px; font-weight: 700; font-size: 14px; background: {{borderBg}}; color: {{borderFg}}">◆ 경계</button>
+<button type="button" onClick="{{showReal}}" aria-pressed="{{isReal}}" style="border: 0; min-height: 44px; padding: 0 16px; font-weight: 700; font-size: 14px; background: {{realBg}}; color: {{realFg}}">■ 현실 지구</button>
+</div>
+</section>
+
+<section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 50px 40px 0">
+<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 20px">
+<div><div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #ffd23f; margin-bottom: 8px">ITEM DEX · 아이템 도감</div><h2 class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 36px">만드는 법이 담긴 아이템</h2></div>
+<span style="font-family: 'Gaegu', sans-serif; font-weight: 700; font-size: 20px; color: #ffe14d">제작카드 숏츠가 나오면 카드가 켜져요!</span>
+</div>
+<sc-if value="{{showItems}}" hint-placeholder-val="{{ true }}">
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 18px">
+<sc-for list="{{items}}" as="it" hint-placeholder-count="7">
+<a href="item.html" class="win" style="position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 10px; padding: 18px; text-decoration: none; color: #ffffff; background: {{it.bg}}; border: 2px {{it.bstyle}} {{it.color}}; box-shadow: 0 0 0 4px #0a0716, 5px 5px 0 4px #000">
+<div style="display: flex; justify-content: space-between; font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 1px"><span style="color: #d6d0f0">⬢ {{it.cat}}</span><span style="color: {{it.color}}">{{it.state}}</span></div>
+<div aria-hidden="true" style="display: grid; place-items: center; height: 92px; background: rgba(10,7,22,.7); border: 1px solid rgba(255,255,255,.12)"><svg width="56" height="56" viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7z" fill="none" stroke="{{it.color}}" stroke-width="1.6"></path><text x="12" y="15.5" text-anchor="middle" font-family="Bungee, sans-serif" font-size="8" fill="{{it.color}}">{{it.mark}}</text></svg></div>
+<b style="font-size: 18px">{{it.name}}</b>
+<span style="font-size: 12px; color: #b8b0d8">{{it.en}} · {{it.src}}</span>
+</a>
+</sc-for>
+</div>
+</sc-if>
+<sc-if value="{{hideItems}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; padding: 22px; border: 2px dashed rgba(255,255,255,.25); color: #b8b0d8">아이템 도감은 ⬢ 디지털 지구 층에 있어요.</p></sc-if>
+</section>
+
+<section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 70px 40px 0">
+<div style="margin-bottom: 20px"><div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #ff2fb0; margin-bottom: 8px">SYSTEM GUIDE · 시스템 안내</div><h2 class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 36px">층별로 알아두면 좋은 것</h2></div>
+<div class="g3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: start">
+<sc-if value="{{showD}}" hint-placeholder-val="{{ true }}">
+<div class="panel" style="position: relative; overflow: hidden; background: rgba(18,12,44,.92); border: 2px solid #7d6bff; box-shadow: 0 0 0 4px #0a0716, 6px 6px 0 4px #000">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: #7d6bff; color: #0a0716; font-weight: 900"><span>⬢ 디지털 지구</span><span style="font-family: 'Space Mono', monospace; font-size: 11px">{{countD}}</span></div>
+<p style="margin: 0; padding: 14px 16px 4px; font-size: 13px; line-height: 1.6; color: #c9c3e6">E2V1 3D 세계에서 살아가는 법. 리얼리티 스레드가 열릴 때마다 늘어나요.</p>
+<ul style="list-style: none; margin: 0; padding: 8px 10px 14px; display: grid; gap: 6px">
+<sc-for list="{{topicsD}}" as="t" hint-placeholder-count="5">
+<li><a href="#" style="display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 46px; padding: 0 10px; color: #ffffff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.08)"><span style="font-size: 15px; font-weight: 700">{{t.name}}</span><span style="font-family: 'Space Mono', monospace; font-size: 10px; color: {{t.color}}; white-space: nowrap">{{t.state}}</span></a></li>
+</sc-for>
+</ul>
+</div>
+</sc-if>
+<sc-if value="{{showB}}" hint-placeholder-val="{{ true }}">
+<div class="panel" style="position: relative; overflow: hidden; background: rgba(18,12,44,.92); border: 2px solid #ff2fb0; box-shadow: 0 0 0 4px #0a0716, 6px 6px 0 4px #000">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: #ff2fb0; color: #0a0716; font-weight: 900"><span>◆ 경계</span><span style="font-family: 'Space Mono', monospace; font-size: 11px">{{countB}}</span></div>
+<p style="margin: 0; padding: 14px 16px 4px; font-size: 13px; line-height: 1.6; color: #c9c3e6">현실과 가상을 잇는 시스템. 웹(app.earth2.io)에서 하고 E2V1에 이어져요.</p>
+<ul style="list-style: none; margin: 0; padding: 8px 10px 14px; display: grid; gap: 6px">
+<sc-for list="{{topicsB}}" as="t" hint-placeholder-count="5">
+<li><a href="#" style="display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 46px; padding: 0 10px; color: #ffffff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.08)"><span style="font-size: 15px; font-weight: 700">{{t.name}}</span><span style="font-family: 'Space Mono', monospace; font-size: 10px; color: {{t.color}}; white-space: nowrap">{{t.state}}</span></a></li>
+</sc-for>
+</ul>
+</div>
+</sc-if>
+<sc-if value="{{showR}}" hint-placeholder-val="{{ true }}">
+<div class="panel" style="position: relative; overflow: hidden; background: rgba(18,12,44,.92); border: 2px solid #2fe6c8; box-shadow: 0 0 0 4px #0a0716, 6px 6px 0 4px #000">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: #2fe6c8; color: #0a0716; font-weight: 900"><span>■ 현실 지구</span><span style="font-family: 'Space Mono', monospace; font-size: 11px">{{countR}}</span></div>
+<p style="margin: 0; padding: 14px 16px 4px; font-size: 13px; line-height: 1.6; color: #c9c3e6">실제 좌표와 연결된 땅. 프로퍼티, 영토, 타일에 관한 안내예요.</p>
+<ul style="list-style: none; margin: 0; padding: 8px 10px 14px; display: grid; gap: 6px">
+<sc-for list="{{topicsR}}" as="t" hint-placeholder-count="5">
+<li><a href="#" style="display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 46px; padding: 0 10px; color: #ffffff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.08)"><span style="font-size: 15px; font-weight: 700">{{t.name}}</span><span style="font-family: 'Space Mono', monospace; font-size: 10px; color: {{t.color}}; white-space: nowrap">{{t.state}}</span></a></li>
+</sc-for>
+</ul>
+</div>
+</sc-if>
+</div>
+</section>
+
+<section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 70px 40px 110px">
+<div class="halftone-bl"></div>
+<div class="panel" style="position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; padding: 26px 28px; background: rgba(40,34,14,.9); border: 2px dashed #ffe14d; box-shadow: 0 0 0 4px #0a0716, 6px 6px 0 4px #000">
+<div><div style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #ffe14d; margin-bottom: 8px">FIELD REPORT · 도감 채우기</div><b style="font-size: 22px">재료가 많이 나오는 좌표를 알고 있나요?</b><p style="margin: 8px 0 0; font-size: 14px; line-height: 1.7; color: #e6dcb0">시그널 보내기로 알려주면 운영자 확인 후 도감에 WEAK 표시와 함께 올라가요. 제보자 닉네임도 함께 기록돼요.</p></div>
+<a href="index.html#tx-you" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 20px; background: #ffe14d; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-weight: 900; white-space: nowrap">제보 보내기 →</a>
+</div>
+<p style="position: relative; margin: 18px 0 0; font-size: 13px; color: #8b84ad">가이드 내용은 Earth2 공식 기사와 운영자가 게임에서 직접 확인한 것만 담아요. 레시피는 예고 없이 바뀔 수 있어서 페이지마다 확인 날짜를 적어요.</p>
+</section>
+<footer style="position: relative; border-top: 2px solid transparent; border-image: linear-gradient(90deg, #2fe6c8, #ff2fb0, #ffe14d) 1; background: rgba(8,5,20,.6)">
+<div style="max-width: 1360px; margin: 0 auto; padding: 48px 40px 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span class="logoglow" style="font-family: 'Bungee', sans-serif; font-size: 24px; line-height: 1; color: #ffd23f">TERRASIGNAL</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #2fe6c8">SIGNAL FROM MY SECOND EARTH</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; color: #a99bd0; margin-top: 6px">TX 37.532599 N · 127.054138 E</span>
+</div>
+<nav aria-label="채널 링크" style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #ff2fb0">CHANNELS</span>
+<a href="https://www.youtube.com/@metafunk-agency" style="color: #ffffff; text-decoration: none">유튜브 · METAFUNK AGENCY ↗</a>
+<a href="https://x.com/metarobot1982" style="color: #ffffff; text-decoration: none">X · @metarobot1982 ↗</a>
+<a href="index.html#tx-you" style="color: #ffffff; text-decoration: none">디스코드 <span style="font-family: 'Space Mono', monospace; font-size: 11px; color: #ffd23f">[링크 연결 예정]</span></a>
+</nav>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px; line-height: 1.7; color: #a99bd0">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #2fe6c8">NOTICE</span>
+<p style="margin: 0">TERRASIGNAL은 METAFUNK AGENCY의 독립 방송국이며, Earth2 공식과 무관합니다.</p>
+<p style="margin: 0">이 사이트의 일부 이미지와 영상은 AI 도구로 제작했습니다.</p>
+<p style="margin: 0">시그널 보내기로 받은 닉네임과 내용은 방송 소재 선정과 답변에만 쓰며, 공개 전 운영자가 확인합니다.</p>
+</div>
+</div>
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 40px 40px; font-family: 'Space Mono', monospace; font-size: 11px; color: #6d6290">© 2026 METAFUNK AGENCY — TERRASIGNAL · EARTH2SPACE · D.I.Store · Keep the Funk, Keep the Signal.</div>
+</footer>
+</div>
+</template>
+<script type="application/json" id="dc-props">{"motion":{"editor":"boolean","default":true},"coating":{"editor":"boolean","default":true},"":{"width":1440,"height":2700}}</script>
+<script>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { layer: 'all' }; }
+  renderVals() {
+    var self = this, L = this.state.layer;
+    var on = '#ffd23f', onFg = '#0a0716', off = 'transparent', offFg = '#d6d0f0';
+    var OK = '#2fe6c8', WIP = '#ffe14d', WAIT = '#8b84ad';
+    function it(name, en, cat, src, mark, st) {
+      var c = st === 'ready' ? '#ffd23f' : (st === 'wip' ? '#7d6bff' : '#5b5480');
+      return { name: name, en: en, cat: cat, src: src, mark: mark, color: c,
+        state: st === 'ready' ? '가이드 시안' : (st === 'wip' ? '캡처 대기' : '대기'),
+        bstyle: st === 'wait' ? 'dashed' : 'solid', bg: st === 'ready' ? 'rgba(40,30,90,.92)' : 'rgba(18,12,44,.88)' };
+    }
+    var items = [
+      it('백팩', 'Backpack', '장착', 'RT4', 'BP', 'ready'),
+      it('모자', 'Cap', '의류', 'RT6', 'CP', 'wip'),
+      it('횃불', 'Torch', '도구', 'RT4', 'TR', 'wip'),
+      it('캠프파이어', 'Campfire', '저장', 'RT4', 'CF', 'wip'),
+      it('글라이더', 'Glider', '이동', 'RT4', 'GL', 'wip'),
+      it('창', 'Spear', '전투', 'RT4', 'SP', 'wait'),
+      it('방패', 'Shield', '전투', 'RT4', 'SH', 'wait')
+    ];
+    function tp(name, st) { return { name: name, state: st === 'ok' ? '공식 기사 있음' : (st === 'scan' ? 'SCANNING' : '작성 예정'), color: st === 'ok' ? OK : (st === 'scan' ? WAIT : WIP) }; }
+    var D = [tp('시작하기 · 런처 설치와 첫 접속', 'todo'), tp('기본 조작 · 핫키 바인딩', 'todo'), tp('제작 · 레시피 목록(G)', 'ok'), tp('장비 장착', 'ok'), tp('캠프파이어 저장 규칙', 'ok'), tp('타일 검색으로 재료 찾기', 'ok'), tp('텔레포트', 'todo'), tp('의류와 요리', 'ok'), tp('퀘스트', 'ok'), tp('농업', 'todo'), tp('E2 Hordes', 'scan')];
+    var B = [tp('에센스(ESS) 기초', 'todo'), tp('멘타 스테이킹', 'ok'), tp('스킨 스토어 · 외형 전용 드롭', 'todo'), tp('바자르 거래', 'todo'), tp('사이드로이드와 레이딩', 'todo'), tp('쥬얼', 'todo'), tp('시빌리언', 'todo')];
+    var R = [tp('레퍼럴 코드 · 첫 토지 구매 전에', 'todo'), tp('프로퍼티와 티어(T1·T2·T3)', 'todo'), tp('T3 영토 투표와 오픈', 'ok'), tp('에센스로 타일 구매', 'todo'), tp('땅 업그레이드', 'ok'), tp('타일아트', 'todo'), tp('EPL로 좌표에 이름 붙이기', 'todo')];
+    var showAllL = L === 'all';
+    return {
+      motionClass: (this.props.motion ?? true) ? 'anim' : '',
+      coatClass: (this.props.coating ?? true) ? 'coat' : '',
+      items: items, showItems: showAllL || L === 'digital', hideItems: !(showAllL || L === 'digital'),
+      showD: showAllL || L === 'digital', showB: showAllL || L === 'border', showR: showAllL || L === 'real',
+      topicsD: D, topicsB: B, topicsR: R, countD: D.length + '개 주제', countB: B.length + '개 주제', countR: R.length + '개 주제',
+      isAll: L === 'all', isDigital: L === 'digital', isBorder: L === 'border', isReal: L === 'real',
+      allBg: L === 'all' ? on : off, allFg: L === 'all' ? onFg : offFg,
+      digiBg: L === 'digital' ? on : off, digiFg: L === 'digital' ? onFg : offFg,
+      borderBg: L === 'border' ? on : off, borderFg: L === 'border' ? onFg : offFg,
+      realBg: L === 'real' ? on : off, realFg: L === 'real' ? onFg : offFg,
+      showAll: function () { self.setState({ layer: 'all' }); },
+      showDigital: function () { self.setState({ layer: 'digital' }); },
+      showBorder: function () { self.setState({ layer: 'border' }); },
+      showReal: function () { self.setState({ layer: 'real' }); }
+    };
+  }
+}
+window.TSComponent = Component;
+</script>
+</body>
+</html>

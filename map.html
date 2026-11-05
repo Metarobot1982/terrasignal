@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>시그널 지도 · TERRASIGNAL</title>
+<meta name="description" content="신호가 도착한 좌표. 현실 지구와 디지털 지구, 그 사이의 경계.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TERRASIGNAL">
+<meta property="og:title" content="시그널 지도 · TERRASIGNAL">
+<meta property="og:description" content="신호가 도착한 좌표. 현실 지구와 디지털 지구, 그 사이의 경계.">
+<meta property="og:image" content="assets/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0c14">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&amp;family=Bungee&amp;family=Gaegu:wght@700&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<style>
+body{margin:0;background:#0b0c12}
+a{color:#ffd166}a:hover{color:#ffffff}
+.ts *{box-sizing:border-box}
+.ts img{max-width:100%}
+.ts button{font:inherit;cursor:pointer}
+.ts button:focus-visible,.ts a:focus-visible{outline:3px solid #ffd166;outline-offset:3px}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes blink{0%,60%{opacity:1}61%,100%{opacity:.25}}
+@keyframes ring{0%{opacity:0;transform:scale(.5)}25%{opacity:1}100%{opacity:0;transform:scale(1.3)}}
+@keyframes crawl{to{transform:translateX(-50%)}}
+@keyframes scan{to{background-position:0 6px}}
+@keyframes riftglow{0%,100%{opacity:.85}50%{opacity:1}}
+@keyframes glitch{0%{transform:translate(0,0)}20%{transform:translate(-3px,1px)}40%{transform:translate(3px,-1px)}60%{transform:translate(-2px,-2px)}80%{transform:translate(2px,2px)}100%{transform:translate(0,0)}}
+.anim .bob{animation:bob 3.4s ease-in-out infinite}
+.anim .blink{animation:blink 1.2s steps(1) infinite}
+.anim .ring{transform-origin:50% 100%;animation:ring 2.4s ease-out infinite}
+.anim .ring.r2{animation-delay:.8s}
+.anim .ring.r3{animation-delay:1.6s}
+.anim .crawl{animation:crawl 40s linear infinite}
+.anim .scan{animation:scan .5s linear infinite}
+.anim .rift{animation:riftglow 1.6s ease-in-out infinite}
+.anim .glitch{animation:glitch .35s steps(4) 1}
+.world{transition:clip-path .8s cubic-bezier(.7,0,.2,1)}
+.mover{transition:left .8s cubic-bezier(.7,0,.2,1)}
+@media (prefers-reduced-motion:reduce){.anim *{animation:none!important}.world,.mover{transition:none!important}}
+.ts .slip{transition:transform .2s,border-color .2s}
+.ts .slip:hover{transform:translateY(-4px);border-color:#ffffff}
+.ts .chan{transition:transform .2s,border-color .2s}
+.ts .chan:hover{transform:translateY(-4px)}
+.ts .h2c{color:#ffd23f!important;text-shadow:3px 3px 0 #000,0 0 16px rgba(255,190,40,.3)!important;-webkit-font-smoothing:antialiased}
+.ts .halftone-tr,.ts .halftone-bl{position:absolute;width:48%;height:75%;pointer-events:none;background-size:13px 13px}
+.ts .halftone-tr{top:0;right:0;background-image:radial-gradient(rgba(255,47,176,.32) 1.4px,transparent 1.8px);-webkit-mask-image:radial-gradient(circle at 100% 0,#000 0,transparent 70%);mask-image:radial-gradient(circle at 100% 0,#000 0,transparent 70%)}
+.ts .halftone-bl{bottom:0;left:0;background-image:radial-gradient(rgba(47,230,200,.28) 1.4px,transparent 1.8px);-webkit-mask-image:radial-gradient(circle at 0 100%,#000 0,transparent 70%);mask-image:radial-gradient(circle at 0 100%,#000 0,transparent 70%)}
+.ts .win{transition:transform .2s}.ts .win:hover{transform:translateY(-5px)}
+@keyframes sigp{0%,100%{opacity:.25}40%{opacity:1}}
+@keyframes gt{0%,90%{text-shadow:none;transform:none}91%{text-shadow:3px 0 #ff2fb0,-3px 0 #2fe6c8;transform:translateX(2px)}95%{text-shadow:-2px 0 #ff2fb0,2px 0 #2fe6c8;transform:translateX(-2px)}98%{text-shadow:none;transform:none}}
+@keyframes stat{0%{background-position:0 0,0 0}33%{background-position:0 2px,3px 0}66%{background-position:0 1px,-2px 0}}
+@keyframes flk{0%,100%{opacity:1}47%{opacity:1}50%{opacity:.4}53%{opacity:1}}
+.anim .sigpulse rect{animation:sigp 1.8s ease-in-out infinite}
+.anim .sigpulse rect:nth-child(2){animation-delay:.3s}
+.anim .sigpulse rect:nth-child(3){animation-delay:.6s}
+.anim .glitchtxt{animation:gt 3s steps(1) infinite}
+.anim .static{animation:stat .3s steps(1) infinite}
+.anim .flick{animation:flk 2.6s infinite}
+@media (max-width:560px){.ts .wbtn{padding:8px 10px!important;font-size:12px!important;letter-spacing:0!important}}
+.ts > *{position:relative;z-index:1}
+.ts .logoglow{position:relative;-webkit-text-stroke:1px #0a0716;text-shadow:2px 2px 0 #ff2fb0,4px 4px 0 #6a3cff,6px 6px 0 #2fe6c8,0 0 14px rgba(255,210,63,.7),0 0 34px rgba(255,47,176,.45)}
+@keyframes lglow{0%,100%{text-shadow:2px 2px 0 #ff2fb0,4px 4px 0 #6a3cff,6px 6px 0 #2fe6c8,0 0 12px rgba(255,210,63,.55),0 0 26px rgba(255,47,176,.3)}50%{text-shadow:2px 2px 0 #ff2fb0,4px 4px 0 #6a3cff,6px 6px 0 #2fe6c8,0 0 22px rgba(255,210,63,.95),0 0 48px rgba(255,47,176,.6)}}
+@keyframes lgl{0%,94%,100%{transform:none}95%{transform:translateX(3px) skewX(-6deg)}97%{transform:translateX(-2px)}}
+.anim .logoglow{animation:lglow 2.4s ease-in-out infinite,lgl 5s steps(1) infinite}
+@keyframes flow{to{stroke-dashoffset:-400}}
+.ts .flow{stroke-dasharray:240 30 60 30}
+.anim .flow{animation:flow 9s linear infinite}.anim .flow.f1{animation-duration:12s}.anim .flow.f2{animation-duration:15s;animation-direction:reverse}.anim .flow.f3{animation-duration:11s}
+@keyframes needle{0%,100%{transform:translateY(80px)}50%{transform:translateY(1100px)}}
+.anim .needle{animation:needle 26s ease-in-out infinite}
+@keyframes eqb{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+.ts .eqb{transform-origin:50% 100%;transform-box:fill-box}
+.anim .eqb{animation:eqb 1.4s ease-in-out infinite}
+@keyframes sqp{0%,100%{transform:scale(.96);opacity:.7}50%{transform:scale(1.04);opacity:1}}
+.anim .sqpulse{animation:sqp 6s ease-in-out infinite}
+@keyframes drift{0%,100%{translate:0 0}50%{translate:0 -26px}}
+.anim .drift{animation:drift 7s ease-in-out infinite}
+@keyframes popb{0%,100%{scale:1}50%{scale:1.08}}
+.anim .pop{animation:popb 1.6s ease-in-out infinite}
+@keyframes spin{to{rotate:360deg}}
+.anim .spin{animation:spin 14s linear infinite}
+.ts .win:hover{transform:translateY(-6px) scale(1.02) rotate(-.4deg)!important}
+.ts .chan:hover{transform:translateY(-5px) scale(1.02)}
+@media (max-width:900px){.ts .pop svg,.ts .spin svg{width:84px;height:84px}}
+@keyframes qbob{0%,100%{translate:0 0;scale:1}50%{translate:0 -10px;scale:1.05}}
+.anim .qmark{animation:qbob 2.8s ease-in-out infinite,gt 3s steps(1) infinite}
+.ts .mystery{transition:transform .2s}.ts .mystery:hover{transform:translateY(-5px) rotate(-.6deg)}
+.ts .portal{transition:transform .2s}.ts .portal:hover{transform:translateY(-6px) scale(1.02)}
+.ts .gate div{transform:scale(.4);opacity:0;transition:transform .5s cubic-bezier(.2,.9,.3,1.3),opacity .3s}
+.ts .portal:hover .gate div{transform:scale(1);opacity:1}
+.ts input:focus-visible,.ts textarea:focus-visible{outline:3px solid #2fe6c8;outline-offset:2px}
+.coat{filter:saturate(1.3) contrast(1.08) brightness(1.04)}
+.coat::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:40;background:radial-gradient(120% 40% at 12% 0%,rgba(255,255,255,.12),transparent 60%),repeating-linear-gradient(115deg,transparent 0 900px,rgba(255,255,255,.06) 980px,rgba(255,255,255,.16) 1010px,rgba(255,255,255,.06) 1040px,transparent 1120px 1800px);background-size:100% 100%,3600px 100%;mix-blend-mode:screen}
+@keyframes gloss{from{background-position:0 0,-1800px 0}to{background-position:0 0,1800px 0}}
+.anim.coat::after{animation:gloss 16s linear infinite}
+.coat .win::before,.coat .chan::before,.coat .portal::before,.coat .mystery::before,.coat .panel::before,.coat .stage::before,.coat form::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:6;box-shadow:inset 0 2px 0 rgba(255,255,255,.55),inset 0 0 0 1px rgba(255,255,255,.12),inset 0 -24px 34px -24px rgba(0,0,0,.7)}
+.coat .win::after,.coat .chan::after,.coat .portal::after,.coat .mystery::after,.coat .panel::after,.coat .stage::after,.coat form::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:7;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.26) 46%,rgba(255,255,255,.06) 52%,transparent 60%);background-size:260% 100%;background-position:120% 0;mix-blend-mode:screen}
+@keyframes sheen{0%,55%{background-position:120% 0}100%{background-position:-20% 0}}
+.anim.coat .win::after,.anim.coat .chan::after,.anim.coat .portal::after,.anim.coat .mystery::after,.anim.coat .panel::after,.anim.coat .stage::after,.anim.coat form::after{animation:sheen 5.5s ease-in-out infinite}
+.coat .stage{box-shadow:0 30px 80px -20px rgba(255,47,176,.35),0 0 0 1px rgba(255,255,255,.15)}
+.coat .h2c{text-shadow:3px 3px 0 #000,0 0 22px rgba(255,210,63,.6),0 -1px 0 #fff3b8!important}
+.coat .logoglow{filter:brightness(1.1)}
+@media (max-width:900px){.ts .h1{font-size:44px!important}.ts .nadu{width:150px!important}.ts .bubble{display:none!important}.ts .hdrnav{display:none!important}}
+.ts .tilegrid{background-image:linear-gradient(rgba(10,7,22,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(10,7,22,.35) 1px,transparent 1px);background-size:18px 18px;mix-blend-mode:multiply}
+@keyframes jit{0%,92%,100%{transform:none;filter:none}93%{transform:translate(-4px,1px);filter:hue-rotate(25deg)}95%{transform:translate(5px,-2px)}97%{transform:translate(-2px,2px);filter:hue-rotate(-20deg)}}
+.anim .jit{animation:jit 4s steps(1) infinite}
+.world{transition:clip-path 1s cubic-bezier(.75,0,.2,1)}
+@keyframes pingr{0%{transform:scale(.4);opacity:1}100%{transform:scale(1.6);opacity:0}}
+.anim .ping{animation:pingr 2s ease-out infinite}
+.ts .pin{cursor:pointer;transition:transform .15s}.ts .pin:hover{transform:scale(1.25)}
+.ts .pin[aria-pressed="true"] svg{transform:scale(1.35)}
+.ts .lbtn{cursor:pointer}
+@media (max-width:900px){.ts .mapgrid{grid-template-columns:1fr!important}.ts .mapgrid3{grid-template-columns:1fr!important}.ts .mtitle{font-size:40px!important}}
+</style>
+<style>
+x-dc,template{display:none}
+@media (max-width:1560px){.ts header span[style*="border-left: 1px solid #23263a"]{display:none}}
+html{scroll-behavior:smooth}
+@media (max-width:900px){
+  .ts .hdrnav{display:flex!important;width:100%;margin-left:0!important;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .ts .hdrnav::-webkit-scrollbar{display:none}
+}
+</style>
+<script src="js/dc-lite.js"></script>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-tpl">
+
+<div class="ts {{motionClass}} {{coatClass}}" style="width: 100%; min-height: 2900px; background: linear-gradient(180deg, #0b0c14 0%, #150d30 30%, #1a0f3a 60%, #120b28 100%); color: #eef0f7; font-family: 'Noto Sans KR', sans-serif; overflow: hidden; position: relative">
+<header style="border-bottom: 1px solid #23263a">
+<div style="max-width: 1360px; margin: 0 auto; padding: 18px 40px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap">
+<a href="index.html" aria-label="TERRASIGNAL 홈" style="display: flex; align-items: center; gap: 12px; text-decoration: none"><svg width="52" height="52" viewBox="0 0 60 60" aria-hidden="true" class="sigpulse"><defs><linearGradient id="tvg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2fe6c8"></stop><stop offset="1" stop-color="#ff2fb0"></stop></linearGradient></defs><rect x="27" y="15" width="6" height="4" fill="none" stroke="#2fe6c8" stroke-width="1.8"></rect><rect x="23" y="8.5" width="14" height="4.5" fill="none" stroke="#ff2fb0" stroke-width="1.8"></rect><rect x="18" y="1.5" width="24" height="5" fill="none" stroke="#ffd23f" stroke-width="1.8"></rect><path d="M21 21 L30 27 L39 21" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="square"></path><rect x="6" y="27" width="48" height="29" rx="2" fill="#0a0716" stroke="url(#tvg)" stroke-width="3.5"></rect><rect x="11" y="32" width="26" height="19" fill="none" stroke="url(#tvg)" stroke-width="2.5"></rect><rect x="19.5" y="38" width="9" height="7.5" fill="#ffffff"></rect><rect x="41" y="33" width="8" height="6" fill="none" stroke="#ff2fb0" stroke-width="2.2"></rect><rect x="41" y="42" width="8" height="5" fill="none" stroke="#ff2fb0" stroke-width="2.2"></rect><rect x="40" y="50" width="10" height="3" fill="#ff2fb0"></rect></svg><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Bungee', sans-serif; font-size: 28px; line-height: 1; letter-spacing: 1px; color: #ffd23f" class="logoglow" data-text="TERRASIGNAL">TERRASIGNAL</span><span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 3px; color: #2fe6c8">SIGNAL FROM MY SECOND EARTH</span></span></a>
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #8b90aa; border-left: 1px solid #23263a; padding-left: 18px">METAFUNK AGENCY BROADCAST</span>
+<nav class="hdrnav" aria-label="주요 메뉴" style="display: flex; gap: 4px; margin-left: auto; font-size: 15px; font-weight: 500">
+<a href="index.html#rx" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">시그널 수신</a>
+<a href="map.html" aria-current="page" style="color: #ffd23f; text-decoration: none; padding: 8px 12px; border-bottom: 3px solid #ffd23f">시그널 지도</a>
+<a href="guide.html" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">수신 가이드</a>
+<a href="chronicle.html" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">개척 연대기</a>
+<a href="prologue.html" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">프롤로그</a>
+<a href="index.html#tx-you" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">시그널 보내기</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 8px; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; color: #ffffff; background: #e63946; padding: 7px 12px; border-radius: 4px">
+<span class="blink" style="width: 8px; height: 8px; border-radius: 50%; background: #ffffff; display: inline-block"></span>ON AIR
+</div>
+</div>
+</header>
+<section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 56px 40px 0">
+<div class="halftone-tr"></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap">
+<div>
+<div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #2fe6c8; margin-bottom: 10px">SIGNAL MAP · 좌표 위의 시그널</div>
+<h1 class="h2c mtitle" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 60px; line-height: 1.1">신호가 도착한 좌표</h1>
+<p style="margin: 14px 0 0; max-width: 640px; font-size: 17px; line-height: 1.7; color: #c9c3e6">모든 시그널은 어느 층에서 왔는지, 지구의 어느 좌표에서 송출됐는지 함께 기록돼요. 층을 바꿔 가며 수신해 보세요.</p>
+</div>
+<div role="group" aria-label="층 선택" class="layerbar" style="display: flex; gap: 6px; padding: 6px; background: rgba(10,7,22,.8); border: 2px solid #2fe6c8; box-shadow: 4px 4px 0 #000; flex-wrap: wrap">
+<button type="button" onClick="{{showAll}}" aria-pressed="{{isAll}}" class="lbtn" style="border: 0; min-height: 44px; padding: 0 16px; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; background: {{allBg}}; color: {{allFg}}">전체</button>
+<button type="button" onClick="{{showReal}}" aria-pressed="{{isReal}}" class="lbtn" style="border: 0; min-height: 44px; padding: 0 16px; font-size: 14px; font-weight: 700; background: {{realBg}}; color: {{realFg}}">■ 현실 지구</button>
+<button type="button" onClick="{{showBorder}}" aria-pressed="{{isBorder}}" class="lbtn" style="border: 0; min-height: 44px; padding: 0 16px; font-size: 14px; font-weight: 700; background: {{borderBg}}; color: {{borderFg}}">◆ 경계</button>
+<button type="button" onClick="{{showDigital}}" aria-pressed="{{isDigital}}" class="lbtn" style="border: 0; min-height: 44px; padding: 0 16px; font-size: 14px; font-weight: 700; background: {{digiBg}}; color: {{digiFg}}">⬢ 디지털 지구</button>
+</div>
+</div>
+</section>
+
+<section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 34px 40px 0">
+<div class="mapgrid" style="display: grid; grid-template-columns: 1fr 340px; gap: 26px; align-items: start">
+<div class="stage" style="position: relative; overflow: hidden; border: 3px solid #0a0716; box-shadow: 0 0 0 3px #2fe6c8, 8px 8px 0 3px #000; background: radial-gradient(120% 90% at 50% 40%, {{mapGlow}}, #07051a 75%)">
+<div style="position: relative; width: 100%; aspect-ratio: 2520 / 1080">
+<img src="assets/c2a6da08f7402bf8c326362a0db85b84.jpg" alt="현실 지구 위성 지도" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<div class="world" aria-hidden="true" style="position: absolute; inset: 0; clip-path: {{clip}}">
+<img class="jit" src="assets/ac50af9688746efd633f474b3231c7fc.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+</div>
+<div class="world rift" aria-hidden="true" style="position: absolute; inset: 0; clip-path: {{riftClip}}; background: linear-gradient(90deg, #2fe6c8, #ffffff 45%, #ff2fb0); box-shadow: 0 0 40px #ff2fb0"></div>
+<div class="world" aria-hidden="true" style="position: absolute; inset: 0; clip-path: {{riftGlow}}; background: linear-gradient(90deg, rgba(47,230,200,0), rgba(255,47,176,.55), rgba(47,230,200,0)); mix-blend-mode: screen"></div>
+<sc-if value="{{showRealCap}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="position: absolute; left: 14px; top: 14px; z-index: 5; padding: 6px 12px; background: #ffffff; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px">EARTH-REAL · 현실 지구</span></sc-if>
+<sc-if value="{{showDigiCap}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="position: absolute; right: 14px; top: 14px; z-index: 5; padding: 6px 12px; background: #ffe14d; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #ff2fb0; font-family: 'Bungee', sans-serif; font-size: 14px; letter-spacing: 1px; transform: rotate(2deg)">EARTH-2 · 디지털 지구</span></sc-if>
+<div class="scan" aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 3px)"></div>
+<span aria-hidden="true" style="position: absolute; left: 10px; top: 51.85%; font-family: 'Space Mono', monospace; font-size: 11px; color: rgba(255,210,63,.75)">EQUATOR 0°</span>
+<sc-for list="{{pins}}" as="p" hint-placeholder-count="6">
+<button type="button" onClick="{{p.pick}}" aria-label="{{p.aria}}" aria-pressed="{{p.on}}" class="pin" style="position: absolute; left: {{p.x}}; top: {{p.y}}; width: 44px; height: 44px; margin: -22px 0 0 -22px; padding: 0; border: 0; background: transparent; display: grid; place-items: center; z-index: {{p.z}}">
+<span class="ping" aria-hidden="true" style="position: absolute; inset: 4px; border: 2px solid {{p.color}}"></span>
+<svg width="{{p.size}}" height="{{p.size}}" viewBox="0 0 24 24" aria-hidden="true" style="position: relative; filter: drop-shadow(0 0 6px {{p.color}}) drop-shadow(2px 2px 0 #000)"><path d="{{p.shape}}" fill="{{p.fill}}" stroke="{{p.color}}" stroke-width="2.5"></path></svg>
+</button>
+</sc-for>
+<sc-for list="{{labels}}" as="l" hint-placeholder-count="2">
+<span aria-hidden="true" style="position: absolute; left: {{l.x}}; top: {{l.y}}; transform: translate({{l.dx}}, -50%); white-space: nowrap; padding: 4px 8px; background: #0a0716; border: 2px solid {{l.color}}; color: #ffffff; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 1px; z-index: 3">{{l.text}}</span>
+</sc-for>
+<div style="position: absolute; left: 12px; bottom: 10px; display: flex; gap: 14px; flex-wrap: wrap; padding: 8px 12px; background: rgba(10,7,22,.82); border: 1px solid rgba(47,230,200,.4); font-family: 'Space Mono', monospace; font-size: 11px; color: #d6d0f0">
+<span>■ 현실 지구</span><span>◆ 경계</span><span>⬢ 디지털 지구</span><span style="color: #2fe6c8">● CLEAR</span><span style="color: #ffe14d">● WEAK</span><span style="color: #ff2fb0">● NOISE</span><span style="color: #8b84ad">현실 지구 · NASA Blue Marble 기반 AI 보정 · 디지털 지구 · AI 타일 대륙 + AI 디지털 배경</span>
+</div>
+</div>
+</div>
+
+<aside aria-live="polite" class="panel" style="position: relative; overflow: hidden; background: rgba(18,12,44,.92); border: 2px solid {{sel.color}}; box-shadow: 0 0 0 4px #0a0716, 6px 6px 0 4px #000">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: {{sel.color}}; color: #0a0716; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px"><span>{{sel.layerName}}</span><span>{{sel.grade}}</span></div>
+<div style="padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; color: #2fe6c8">◎ {{sel.coord}}</span>
+<h2 style="margin: 0; font-size: 22px; font-weight: 900; line-height: 1.4; color: #ffffff">{{sel.title}}</h2>
+<p style="margin: 0; font-size: 14px; line-height: 1.7; color: #c9c3e6">{{sel.desc}}</p>
+<p style="margin: 0; padding-top: 12px; border-top: 1px dashed rgba(47,230,200,.45); font-family: 'Space Mono', monospace; font-size: 12px; line-height: 1.6; color: #b8b0d8">SOURCE · {{sel.source}}<br>수신 · {{sel.date}}</p>
+<a href="#" style="display: inline-flex; align-items: center; justify-content: center; min-height: 46px; background: #ffd23f; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-weight: 900">{{sel.cta}}</a>
+</div>
+</aside>
+</div>
+</section>
+
+<section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 70px 40px 0">
+<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 22px">
+<div><div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #ff2fb0; margin-bottom: 8px">GLOBAL BROADCAST · 전역 송출</div><h2 class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 38px">좌표 없이 지구 전체로</h2></div>
+<span style="font-family: 'Gaegu', sans-serif; font-weight: 700; font-size: 20px; color: #ffe14d">특정 장소가 없는 시그널은 여기로!</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px">
+<sc-for list="{{globals}}" as="g" hint-placeholder-count="5">
+<article class="win" style="position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 8px; padding: 18px 20px; background: rgba(18,12,44,.88); border: 2px {{g.border}} {{g.color}}; box-shadow: 0 0 0 4px #0a0716">
+<div style="display: flex; justify-content: space-between; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 2px"><span style="color: #d6d0f0">{{g.layerName}}</span><span style="color: {{g.color}}">{{g.grade}}</span></div>
+<b style="font-size: 18px; line-height: 1.4; color: #ffffff">{{g.title}}</b>
+<span style="font-size: 13px; line-height: 1.6; color: #b8b0d8">{{g.desc}}</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; color: #8b84ad">{{g.date}}</span>
+</article>
+</sc-for>
+</div>
+</section>
+
+<section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 70px 40px 0">
+<div style="margin-bottom: 22px"><div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #ffe14d; margin-bottom: 8px">COUNTDOWN SIGNALS</div><h2 class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 38px">곧 열리는 시그널</h2></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px">
+<div class="panel" style="position: relative; overflow: hidden; padding: 18px 20px; background: linear-gradient(120deg, rgba(47,230,200,.18), rgba(106,60,255,.3)); border: 2px solid #2fe6c8; box-shadow: 4px 4px 0 #000; display: grid; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #d6d0f0">■ 현실 지구 · 나우루 · 유저 투표 주기</span><b style="font-size: 17px">T3 영토 오픈</b><span style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700"><span style="padding: 3px 7px; border: 1px solid rgba(255,255,255,.3); color: #b8b0d8">① 투표</span><span style="color: #8b84ad">→</span><span style="padding: 3px 7px; border: 1px solid rgba(255,255,255,.3); color: #b8b0d8">② 결과</span><span style="color: #8b84ad">→</span><span style="padding: 3px 7px; border: 1px solid #ffd23f; background: #ffd23f; color: #0a0716">③ 카운트다운</span><span style="color: #8b84ad">→</span><span style="padding: 3px 7px; border: 1px solid rgba(255,255,255,.3); color: #b8b0d8">④ 오픈</span></span><span style="font-family: 'Bungee', sans-serif; font-size: 30px; color: #ffd23f; letter-spacing: 2px">--:--:--</span><span style="font-size: 12px; line-height: 1.5; color: #b8b0d8">플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요.</span></div>
+<div class="panel" style="position: relative; overflow: hidden; padding: 18px 20px; background: linear-gradient(120deg, rgba(47,230,200,.18), rgba(106,60,255,.3)); border: 2px solid #2fe6c8; box-shadow: 4px 4px 0 #000; display: grid; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #d6d0f0">■ 현실 지구 · 일본</span><b style="font-size: 17px">에센스로 타일 구매</b><span style="font-family: 'Bungee', sans-serif; font-size: 30px; color: #ffd23f; letter-spacing: 2px">--:--:--</span></div>
+<div class="panel" style="position: relative; overflow: hidden; padding: 18px 20px; background: linear-gradient(120deg, rgba(255,47,176,.18), rgba(106,60,255,.3)); border: 2px solid #ff2fb0; box-shadow: 4px 4px 0 #000; display: grid; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #d6d0f0">◆ 경계 · 일본</span><b style="font-size: 17px">멘타 스테이커 할인 혜택</b><span style="font-family: 'Bungee', sans-serif; font-size: 30px; color: #ffd23f; letter-spacing: 2px">--:--:--</span></div>
+<div class="panel" style="position: relative; overflow: hidden; padding: 18px 20px; background: linear-gradient(120deg, rgba(255,47,176,.18), rgba(106,60,255,.3)); border: 2px solid #ff2fb0; box-shadow: 4px 4px 0 #000; display: grid; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #d6d0f0">◆ 경계 · 전역 · 운영 일정</span><b style="font-size: 17px">새 스킨 드롭</b><span style="font-family: 'Bungee', sans-serif; font-size: 30px; color: #ffd23f; letter-spacing: 2px">--:--:--</span></div>
+</div>
+<p style="margin: 14px 0 0; font-size: 13px; color: #8b84ad">공식 앱 상단 카운트다운과 Tier 3 Territory Voting, Skin Store를 자동으로 읽어 와요 [연결 예정]. 영토는 유저 투표 주기로, 스킨은 운영 일정으로 열려요. 무엇이, 언제, 어디서 열리는지만 전하고 구매를 권하지 않아요.</p>
+</section>
+
+<section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 80px 40px 110px">
+<div class="halftone-bl"></div>
+<div style="position: relative; margin-bottom: 26px"><div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #2fe6c8; margin-bottom: 8px">TWO-WAY · 쌍방 통신</div><h2 class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 38px">당신의 좌표에서도 시그널이 올라와요</h2></div>
+<ol class="mapgrid3" style="position: relative; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px">
+<li class="panel" style="position: relative; overflow: hidden; padding: 24px; background: rgba(12,30,52,.9); border: 2px solid #2fe6c8; box-shadow: 0 0 0 4px #0a0716, 6px 6px 0 4px #000; display: grid; gap: 10px"><span style="font-family: 'Bungee', sans-serif; font-size: 34px; color: #2fe6c8">TX</span><b style="font-size: 19px">방송국 → 시청자</b><span style="font-size: 14px; line-height: 1.7; color: #c9c3e6">한강 송출탑에서 속보, 딥 시그널, 수신 가이드를 송출해요.</span></li>
+<li class="panel" style="position: relative; overflow: hidden; padding: 24px; background: rgba(40,14,40,.9); border: 2px solid #ff2fb0; box-shadow: 0 0 0 4px #0a0716, 6px 6px 0 4px #000; display: grid; gap: 10px"><span style="font-family: 'Bungee', sans-serif; font-size: 34px; color: #ff2fb0">RX</span><b style="font-size: 19px">시청자 → 방송국</b><span style="font-size: 14px; line-height: 1.7; color: #c9c3e6">질문이나 제보를 보내면 지도 위 당신의 좌표가 반짝여요. 정확한 위치 대신 국가나 도시 단위로만 표시해요.</span></li>
+<li class="panel" style="position: relative; overflow: hidden; padding: 24px; background: rgba(40,34,14,.9); border: 2px dashed #ffe14d; box-shadow: 0 0 0 4px #0a0716, 6px 6px 0 4px #000; display: grid; grid-template-columns: 1fr 84px; gap: 10px; align-items: end"><div style="display: grid; gap: 10px"><span style="font-family: 'Bungee', sans-serif; font-size: 34px; color: #ffe14d">GO!</span><b style="font-size: 19px">현장 출동</b><span style="font-size: 14px; line-height: 1.7; color: #c9c3e6">나두지가 E2V1 안의 그 좌표로 직접 가서 확인하면 WEAK 시그널로 올라와요.</span></div><img class="bob" src="assets/f9dabe0b371fffeb0818b70b009d8797.webp" alt="현장 통신원 나두지" style="width: 84px; height: auto; filter: drop-shadow(4px 4px 0 #000)"></li>
+</ol>
+</section>
+<footer style="position: relative; border-top: 2px solid transparent; border-image: linear-gradient(90deg, #2fe6c8, #ff2fb0, #ffe14d) 1; background: rgba(8,5,20,.6)">
+<div style="max-width: 1360px; margin: 0 auto; padding: 48px 40px 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span class="logoglow" style="font-family: 'Bungee', sans-serif; font-size: 24px; line-height: 1; color: #ffd23f">TERRASIGNAL</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #2fe6c8">SIGNAL FROM MY SECOND EARTH</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; color: #a99bd0; margin-top: 6px">TX 37.530965 N · 127.053108 E</span>
+</div>
+<nav aria-label="채널 링크" style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #ff2fb0">CHANNELS</span>
+<a href="https://www.youtube.com/@metafunk-agency" style="color: #ffffff; text-decoration: none">유튜브 · METAFUNK AGENCY ↗</a>
+<a href="https://x.com/metarobot1982" style="color: #ffffff; text-decoration: none">X · @metarobot1982 ↗</a>
+<a href="index.html#tx-you" style="color: #ffffff; text-decoration: none">디스코드 <span style="font-family: 'Space Mono', monospace; font-size: 11px; color: #ffd23f">[링크 연결 예정]</span></a>
+</nav>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px; line-height: 1.7; color: #a99bd0">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #2fe6c8">NOTICE</span>
+<p style="margin: 0">TERRASIGNAL은 METAFUNK AGENCY의 독립 방송국이며, Earth2 공식과 무관합니다.</p>
+<p style="margin: 0">이 사이트의 일부 이미지와 영상은 AI 도구로 제작했습니다.</p>
+<p style="margin: 0">시그널 보내기로 받은 닉네임과 내용은 방송 소재 선정과 답변에만 쓰며, 공개 전 운영자가 확인합니다.</p>
+</div>
+</div>
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 40px 40px; font-family: 'Space Mono', monospace; font-size: 11px; color: #6d6290">© 2026 METAFUNK AGENCY — TERRASIGNAL · EARTH2SPACE · D.I.Store · Keep the Funk, Keep the Signal.</div>
+</footer>
+</div>
+</template>
+<script type="application/json" id="dc-props">{"motion":{"editor":"boolean","default":true},"coating":{"editor":"boolean","default":true},"startLayer":{"editor":"enum","options":["all","real","border","digital"],"default":"all"},"$preview":{"width":1440,"height":2900}}</script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { layer: null, sel: 0 };
+  }
+  renderVals() {
+    var self = this;
+    var layer = this.state.layer || this.props.startLayer || 'all';
+    var SH = { real: 'M4 4h16v16H4z', border: 'M12 2l10 10-10 10L2 12z', digital: 'M12 2l9 5v10l-9 5-9-5V7z' };
+    var LN = { real: '■ 현실 지구', border: '◆ 경계', digital: '⬢ 디지털 지구' };
+    var GC = { CLEAR: '#2fe6c8', WEAK: '#ffe14d', NOISE: '#ff2fb0' };
+    var all = [
+      { L: 'real', g: 'CLEAR', lat: 37.530965, lon: 127.053108, station: true, title: 'TERRASIGNAL 송출탑', coord: '37.5310 N · 127.0531 E · 서울 한강', desc: '영동대교 앞 한강 위 타일 TV 송출탑. 이 좌표에서 모든 시그널이 송출돼요.', source: 'METAFUNK AGENCY', date: '상시 송출', cta: '송출탑 EPL [설정 예정]' },
+      { L: 'real', g: 'CLEAR', lat: -0.53, lon: 166.92, title: 'T3 영토 오픈', coord: '0.53 S · 166.92 E · 나우루', desc: '플레이어 투표(Tier 3 Territory Voting)로 열리는 영토예요. 열리면 T3 땅이 해금되고, 공식 안내 기준 타일당 E$0.10부터 시작해요. 국가는 카운트다운 배너의 국기로 판단했어요.', source: 'app.earth2.io 카운트다운 배너', date: '2026.11.04 확인', cta: '수신 기록 보기' },
+      { L: 'real', g: 'CLEAR', lat: 35.68, lon: 139.69, title: '에센스로 타일 구매', coord: '35.68 N · 139.69 E · 일본', desc: '공식 앱 카운트다운 배너에 BUY TILES WITH ESSENCE로 표시된 이벤트예요.', source: 'app.earth2.io 카운트다운 배너', date: '2026.11.04 확인', cta: '수신 기록 보기' },
+      { L: 'border', g: 'CLEAR', lat: 43.06, lon: 141.35, title: '멘타 스테이커 할인 혜택', coord: '일본 영토', desc: '멘타 스테이커를 위한 일본 영토 할인 혜택(MENTAR STAKER DISCOUNT PERK)이 카운트다운으로 진행 중이에요.', source: 'app.earth2.io 카운트다운 배너', date: '2026.11.04 확인', cta: '수신 기록 보기' },
+      { L: 'digital', g: 'CLEAR', lat: 6.912794, lon: 158.194885, station: true, title: 'NEON 본부 스튜디오', coord: '6.9128 N · 158.1949 E · 폰페이', desc: '메타펑크시티의 TERRASIGNAL 본부 스튜디오. 크루가 해설을 녹화하는 곳이에요.', source: 'METAFUNK AGENCY', date: '상시', cta: '본부 포털 [연결 예정]' },
+      { L: 'digital', g: 'WEAK', lat: 51.51, lon: -0.13, title: '[예시] 나두지 현장 확인', coord: '예시 좌표', desc: '나두지가 E2V1 안에서 직접 확인한 소식이 이렇게 표시돼요. 실제 소식이 아닌 화면 예시예요.', source: '현장 통신원 나두지', date: '예시', cta: '현장 보고 보기' },
+      { L: 'border', g: 'WEAK', lat: 34.05, lon: -118.24, title: '[예시] 시청자 시그널', coord: '도시 단위로만 표시', desc: '시청자가 보낸 질문이나 제보가 이렇게 지도에 떠올라요. 실제 시청자 글이 아닌 화면 예시예요.', source: '시그널 보내기', date: '예시', cta: '크루 답변 보기' }
+    ];
+    var globalsAll = [
+      { L: 'digital', g: 'CLEAR', title: '리얼리티 스레드 8 · Seeds of Change', desc: 'E2V1에 첫 농업이 들어왔어요. 가든 베드, 물주기, 주방, 레시피.', date: '2026.05.26 · 공식 기사' },
+      { L: 'digital', g: 'NOISE', title: '리얼리티 스레드 9 · Part 1', desc: '창업자 X 게시물로만 확인됐어요. 공식 기사 수신 전이에요.', date: '2026.08 말 · Shane Isaac X' },
+      { L: 'digital', g: 'NOISE', title: 'E2 Hordes', desc: '예고된 일정이 지났지만 출시 기사가 없어요. 개발 중으로 수신 대기.', date: '최근 공식 개발 영상 2024.11' },
+      { L: 'border', g: 'CLEAR', title: 'Halloween 2026 드로이드 스킨', desc: 'Skin Store에 할로윈 2026 Cydroid 스킨이 올라왔어요. 스킨은 외형 전용이에요.', date: '2026.11 · Skin Store' },
+      { L: 'border', g: 'CLEAR', title: '$ESS 업데이트 리포트 Q4-25', desc: '2025년 4분기 에센스 통계 리포트. 반감기 내용이 담겼어요.', date: '2026.03.23 · 공식 기사' }
+    ];
+    var sel = this.state.sel;
+    var pins = [], labels = [];
+    for (var i = 0; i < all.length; i++) {
+      var s = all[i];
+      if (layer !== 'all' && s.L !== layer) continue;
+      var x = ((s.lon + 180) / 360 * 100).toFixed(2) + '%';
+      var y = ((80 - s.lat) / 154.2857 * 100).toFixed(2) + '%';
+      var c = GC[s.g];
+      pins.push({ x: x, y: y, color: c, fill: s.station ? '#ffd23f' : '#0a0716', shape: SH[s.L], size: s.station ? 30 : 22, z: i === sel ? 6 : 4, on: i === sel, aria: s.title + ', ' + LN[s.L], pick: (function (n) { return function () { self.setState({ sel: n }); }; })(i) });
+      if (s.station) labels.push({ x: x, y: y, dx: 'calc(-100% - 22px)', color: '#ffd23f', text: s.L === 'real' ? 'TX 송출탑 · 한강' : 'NEON 본부' });
+    }
+    var cur = all[sel];
+    var globals = [];
+    for (var k = 0; k < globalsAll.length; k++) {
+      var gg = globalsAll[k];
+      if (layer !== 'all' && gg.L !== layer) continue;
+      globals.push({ layerName: LN[gg.L], grade: gg.g, color: GC[gg.g], border: gg.g === 'WEAK' ? 'dashed' : 'solid', title: gg.title, desc: gg.desc, date: gg.date });
+    }
+    var X = layer === 'real' ? 112 : (layer === 'digital' ? -12 : 50);
+    var clip = 'polygon(' + (X + 7) + '% 0, 100% 0, 100% 100%, ' + (X - 7) + '% 100%)';
+    var riftClip = 'polygon(' + (X + 7) + '% 0, ' + (X + 7.5) + '% 0, ' + (X - 6.5) + '% 100%, ' + (X - 7) + '% 100%)';
+    var riftGlow = 'polygon(' + (X + 4) + '% 0, ' + (X + 10) + '% 0, ' + (X - 4) + '% 100%, ' + (X - 10) + '% 100%)';
+    var on = '#ffd23f', onFg = '#0a0716', off = 'transparent', offFg = '#d6d0f0';
+    var glow = { all: '#2a1760', real: '#1d3a4a', border: '#4a1748', digital: '#24145e' }[layer];
+    var land = { all: '#3fd9c4', real: '#e9e2c8', border: '#ff5fc4', digital: '#7d6bff' }[layer];
+    return {
+      motionClass: (this.props.motion ?? true) ? 'anim' : '',
+      coatClass: (this.props.coating ?? true) ? 'coat' : '',
+      pins: pins, labels: labels, globals: globals,
+      sel: { layerName: LN[cur.L], grade: cur.g, color: GC[cur.g], coord: cur.coord, title: cur.title, desc: cur.desc, source: cur.source, date: cur.date, cta: cur.cta },
+      mapGlow: glow, landFill: land, clip: clip, riftClip: riftClip, riftGlow: riftGlow, showRealCap: layer !== 'digital', showDigiCap: layer !== 'real',
+      isAll: layer === 'all', isReal: layer === 'real', isBorder: layer === 'border', isDigital: layer === 'digital',
+      allBg: layer === 'all' ? on : off, allFg: layer === 'all' ? onFg : offFg,
+      realBg: layer === 'real' ? on : off, realFg: layer === 'real' ? onFg : offFg,
+      borderBg: layer === 'border' ? on : off, borderFg: layer === 'border' ? onFg : offFg,
+      digiBg: layer === 'digital' ? on : off, digiFg: layer === 'digital' ? onFg : offFg,
+      showAll: function () { self.setState({ layer: 'all' }); },
+      showReal: function () { self.setState({ layer: 'real', sel: 0 }); },
+      showBorder: function () { self.setState({ layer: 'border', sel: 3 }); },
+      showDigital: function () { self.setState({ layer: 'digital', sel: 4 }); }
+    };
+  }
+}
+window.TSComponent = Component;
+</script>
+</body>
+</html>
