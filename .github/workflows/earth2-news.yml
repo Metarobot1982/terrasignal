@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - tools/check_earth2_news.py
+      - tools/probe_earth2.py
       - .github/workflows/earth2-news.yml
 
 permissions:
@@ -26,6 +27,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Probe earth2.io
+        if: github.event_name == 'push'
+        run: python tools/probe_earth2.py || true
       - name: Check earth2.io news
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
