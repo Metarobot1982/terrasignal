@@ -121,6 +121,7 @@ html{scroll-behavior:smooth}
   .ts .hdrnav::-webkit-scrollbar{display:none}
 }
 </style>
+<script>window.TS_DATA = {"chronicle": "data/chronicle.json"};</script>
 <script src="js/dc-lite.js"></script>
 </head>
 <body>
@@ -237,19 +238,17 @@ html{scroll-behavior:smooth}
 <script type="application/json" id="dc-props">{"motion":{"editor":"boolean","default":true},"coating":{"editor":"boolean","default":true},"":{"width":1440,"height":1900}}</script>
 <script>
 class Component extends DCLogic {
-  constructor(props) { super(props); this.state = { sel: null }; }
+  constructor(props) { super(props); this.state = {}; }
   renderVals() {
     var self = this;
-    var T0 = Date.UTC(2020, 8, 1), T1 = Date.UTC(2026, 11, 31), DAY1 = Date.UTC(2025, 6, 14);
-    var TB = Date.UTC(2023, 9, 1);
-    function pos(y, m, d) { var t = Date.UTC(y, m - 1, d || 15); var p = t < TB ? (t - T0) / (TB - T0) * 7 : 7 + (t - TB) / (T1 - TB) * 93; return p.toFixed(2) + '%'; }
+    var DAY1 = Date.UTC(2025, 6, 14);
     function dayOf(y, m, d) { var n = Math.floor((Date.UTC(y, m - 1, d || 15) - DAY1) / 86400000) + 1; return n >= 1 ? 'DAY ' + n : 'E2V1 이전'; }
     var now = new Date(); var kst = new Date(now.getTime() + now.getTimezoneOffset() * 60000 + 9 * 3600000);
     var buildDay = Math.floor((Date.UTC(kst.getFullYear(), kst.getMonth(), kst.getDate()) - DAY1) / 86400000) + 1;
     var GC = { CLEAR: '#2fe6c8', WEAK: '#ffe14d', NOISE: '#ff2fb0' };
     var LN = { D: '⬢ 디지털 지구', B: '◆ 경계', R: '■ 현실 지구' };
-    var LY = { D: 75, B: 225, R: 375 };
-    var E = [
+    var DATA = this.data && this.data.chronicle ? this.data.chronicle : null;
+    var E = DATA ? DATA.events.map(function (o) { var p = o.date.split('-'); return [o.layer, +p[0], +p[1], +(p[2] || 0), o.grade, o.short, o.title, o.desc, o.source]; }) : [
       ['R', 2020, 11, 0, 'CLEAR', '탄생', '디지털 지구 탄생', '어스2가 출시되며 지구 전체가 디지털 지구로 복제됐어요. 아직 아무도 그 안을 걸을 수 없던 시절이에요.', 'Earth 2 Draft Summary Update (2022.02) · Launching in November of 2020'],
       ['D', 2024, 3, 2, 'CLEAR', 'Pre-Alpha 신청', 'E2V1 프리 알파 테스터 신청 시작', '3D 세계 E2V1을 미리 체험할 테스터 신청이 열렸어요.', 'earth2.io 공식 뉴스'],
       ['D', 2024, 9, 18, 'CLEAR', 'Hordes 전투', 'E2 Hordes 초기 전투 메커니즘 공개', '호드 미니게임의 전투 방식을 개발 기록으로 처음 보여줬어요. 출시는 아직이에요.', 'Earth2 공식 기사 Vol.1'],
@@ -272,16 +271,6 @@ class Component extends DCLogic {
       ['R', 2024, 6, 23, 'CLEAR', '땅 업그레이드', '땅 $ESS 업그레이드 시스템', '에센스로 땅 티어를 업그레이드하는 시스템이 소개됐어요.', '공식 기사'],
       ['R', 2024, 11, 6, 'CLEAR', '4주년', 'Earth 2 4주년', '어스2가 4주년을 맞았어요.', '공식 기사'],
     ];
-    var sel = this.state.sel == null ? 11 : this.state.sel;
-    var cnt = { D: 0, B: 0, R: 0 };
-    var events = E.map(function (e, i) {
-      var k = cnt[e[0]]++; var up = k % 2 === 0; var cy = LY[e[0]] + (up ? -28 : 28);
-      var c = GC[e[4]];
-      return { x: pos(e[1], e[2], e[3]), y: cy + 'px', ly: (up ? cy - 42 : cy + 22) + 'px', color: c, lc: i === sel ? '#ffffff' : c,
-        fill: e[4] === 'CLEAR' ? c : '#0a0716', size: e[4] === 'NOISE' ? '15px' : '18px', rot: e[4] === 'NOISE' ? '45deg' : '0deg',
-        short: e[5], on: i === sel, z: i === sel ? 5 : 3, aria: e[1] + '년 ' + e[2] + '월 ' + (e[3] ? e[3] + '일 ' : '') + e[6],
-        pick: (function (n) { return function () { self.setState({ sel: n }); }; })(i) };
-    });
     function pad(n) { return n < 10 ? '0' + n : '' + n; }
     var COL = { D: 2, B: 3, R: 4 };
     var LC = { D: '#c9c0ff', B: '#ff8fd6', R: '#7ff3df' };
@@ -301,16 +290,11 @@ class Component extends DCLogic {
         date: e[3] ? e[1] + '.' + pad(e[2]) + '.' + pad(e[3]) : e[1] + '.' + pad(e[2]), day: dayOf(e[1], e[2], e[3]),
         title: (e[6].indexOf('리얼리티 스레드 1 ') === 0 ? '★ 깨어난 날 · ' : '') + e[6], desc: e[7], source: e[8] });
     });
-    var s = E[sel];
     return {
       motionClass: (this.props.motion ?? true) ? 'anim' : '',
       coatClass: (this.props.coating ?? true) ? 'coat' : '',
       buildDay: String(buildDay),
-      years: [{ x: '7%', label: '⋯' }, { x: pos(2024, 1, 1), label: '2024' }, { x: pos(2025, 1, 1), label: '2025' }, { x: pos(2026, 1, 1), label: '2026' }, { x: pos(2025, 7, 14), label: '깨어난 날' }],
-      lanes: [{ name: LN.D, sub: 'E2V1 · 3D 세계', color: '#7d6bff' }, { name: LN.B, sub: '웹 ↔ E2V1 시스템', color: '#ff2fb0' }, { name: LN.R, sub: '좌표와 연결된 땅', color: '#2fe6c8' }],
-      events: events, rows: rows,
-      nowX: pos(kst.getFullYear(), kst.getMonth() + 1, kst.getDate()),
-      sel: { color: GC[s[4]], grade: s[4], layer: LN[s[0]], date: s[3] ? s[1] + '.' + pad(s[2]) + '.' + pad(s[3]) : s[1] + '.' + pad(s[2]), day: dayOf(s[1], s[2], s[3]), title: s[6], desc: s[7], source: s[8] }
+      rows: rows
     };
   }
 }

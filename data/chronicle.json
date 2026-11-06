@@ -1,0 +1,216 @@
+{
+  "updatedAt": "2026-11-06T14:25:46.311Z",
+  "note": "연대기 = 세계 구조가 바뀐 날만. 반복 카운트다운·시즌 스킨은 넣지 않음. layer R/B/D, date YYYY-MM-DD 또는 YYYY-MM",
+  "events": [
+    {
+      "layer": "R",
+      "date": "2020-11",
+      "grade": "CLEAR",
+      "short": "탄생",
+      "title": "디지털 지구 탄생",
+      "desc": "어스2가 출시되며 지구 전체가 디지털 지구로 복제됐어요. 아직 아무도 그 안을 걸을 수 없던 시절이에요.",
+      "source": "Earth 2 Draft Summary Update (2022.02) · Launching in November of 2020",
+      "url": ""
+    },
+    {
+      "layer": "D",
+      "date": "2024-03-02",
+      "grade": "CLEAR",
+      "short": "Pre-Alpha 신청",
+      "title": "E2V1 프리 알파 테스터 신청 시작",
+      "desc": "3D 세계 E2V1을 미리 체험할 테스터 신청이 열렸어요.",
+      "source": "earth2.io 공식 뉴스",
+      "url": ""
+    },
+    {
+      "layer": "D",
+      "date": "2024-09-18",
+      "grade": "CLEAR",
+      "short": "Hordes 전투",
+      "title": "E2 Hordes 초기 전투 메커니즘 공개",
+      "desc": "호드 미니게임의 전투 방식을 개발 기록으로 처음 보여줬어요. 출시는 아직이에요.",
+      "source": "Earth2 공식 기사 Vol.1",
+      "url": ""
+    },
+    {
+      "layer": "D",
+      "date": "2025-07-14",
+      "grade": "CLEAR",
+      "short": "RT1",
+      "title": "리얼리티 스레드 1 · 챕터 1",
+      "desc": "캐릭터 합성, 인벤토리, 채집, 낮과 밤, 계절이 들어왔어요. E2V1 건설 1일차.",
+      "source": "공식 기사",
+      "url": ""
+    },
+    {
+      "layer": "D",
+      "date": "2025-07-27",
+      "grade": "CLEAR",
+      "short": "RT2",
+      "title": "리얼리티 스레드 2",
+      "desc": "충돌 시스템 개선과 체력·허기·스태미나 화면이 생겼어요.",
+      "source": "공식 기사",
+      "url": ""
+    },
+    {
+      "layer": "D",
+      "date": "2025-08-24",
+      "grade": "CLEAR",
+      "short": "RT3",
+      "title": "리얼리티 스레드 3",
+      "desc": "디지털 지구 전역에 글로벌 멀티플레이가 열렸어요.",
+      "source": "공식 기사",
+      "url": ""
+    },
+    {
+      "layer": "D",
+      "date": "2025-10-31",
+      "grade": "CLEAR",
+      "short": "RT4",
+      "title": "리얼리티 스레드 4",
+      "desc": "제작, 첫 전투(창·방패), 엔진 최적화가 들어왔어요.",
+      "source": "공식 기사",
+      "url": ""
+    },
+    {
+      "layer": "D",
+      "date": "2025-12-08",
+      "grade": "CLEAR",
+      "short": "배지 접근",
+      "title": "배지 보유자 E2V1 접근 시작",
+      "desc": "테스터가 아닌 배지 보유자에게 처음으로 E2V1 문이 열렸어요.",
+      "source": "공식 기사",
+      "url": ""
+    },
+    {
+      "layer": "D",
+      "date": "2025-12-18",
+      "grade": "WEAK",
+      "short": "RT5",
+      "title": "리얼리티 스레드 5 · 챕터 2",
+      "desc": "텔레포테이션과 룬이 들어왔어요. 날짜는 공식 X와 커뮤니티 기준이고 공식 기사를 확인 중이에요.",
+      "source": "@earth2io X · 커뮤니티",
+      "url": ""
+    },
+    {
+      "layer": "D",
+      "date": "2026-01-06",
+      "grade": "CLEAR",
+      "short": "RT6",
+      "title": "리얼리티 스레드 6 · 챕터 3",
+      "desc": "요리, 의류, 이모트가 들어왔어요.",
+      "source": "공식 기사",
+      "url": ""
+    },
+    {
+      "layer": "D",
+      "date": "2026-03-19",
+      "grade": "CLEAR",
+      "short": "RT7",
+      "title": "리얼리티 스레드 7 · 챕터 4",
+      "desc": "글로벌 퀘스트 시스템이 열렸어요.",
+      "source": "공식 기사",
+      "url": ""
+    },
+    {
+      "layer": "D",
+      "date": "2026-05-26",
+      "grade": "CLEAR",
+      "short": "RT8",
+      "title": "리얼리티 스레드 8 · Seeds of Change",
+      "desc": "E2V1에 첫 농업이 들어왔어요.",
+      "source": "공식 기사",
+      "url": ""
+    },
+    {
+      "layer": "D",
+      "date": "2026-08-31",
+      "grade": "NOISE",
+      "short": "RT9 P1",
+      "title": "리얼리티 스레드 9 · Part 1",
+      "desc": "창업자 X 게시물로만 확인됐어요. 공식 기사 수신 전이에요.",
+      "source": "Shane Isaac X",
+      "url": ""
+    },
+    {
+      "layer": "B",
+      "date": "2023-12-03",
+      "grade": "CLEAR",
+      "short": "스킨 스토어",
+      "title": "Earth 2 Skins 출시",
+      "desc": "수집형 스킨 스토어와 Blueprint 시스템이 열렸어요. 스킨은 외형 전용이에요.",
+      "source": "공식 블로그",
+      "url": ""
+    },
+    {
+      "layer": "B",
+      "date": "2024-08-04",
+      "grade": "CLEAR",
+      "short": "멘타 스테이킹",
+      "title": "멘타 스테이킹 시작",
+      "desc": "땅 위 멘타에 에센스를 스테이킹할 수 있게 됐어요. 호드 발표, 출금 업데이트도 함께 나왔어요.",
+      "source": "공식 기사",
+      "url": ""
+    },
+    {
+      "layer": "B",
+      "date": "2025-07-20",
+      "grade": "CLEAR",
+      "short": "스테이킹 이정표",
+      "title": "스테이킹 이정표 달성",
+      "desc": "RT1을 앞두고 스테이킹 이정표를 넘었다는 공식 발표예요.",
+      "source": "공식 기사",
+      "url": ""
+    },
+    {
+      "layer": "B",
+      "date": "2026-03-23",
+      "grade": "CLEAR",
+      "short": "ESS 리포트",
+      "title": "$ESS 업데이트 리포트 Q4-25",
+      "desc": "2025년 4분기 에센스 통계와 반감기 내용을 담았어요.",
+      "source": "공식 기사",
+      "url": ""
+    },
+    {
+      "layer": "R",
+      "date": "2023-11-27",
+      "grade": "CLEAR",
+      "short": "T3 영토",
+      "title": "테리토리와 T3 땅",
+      "desc": "투표로 여는 T3 영토, Boosted E-ther, 거버넌스 시스템이 시작됐어요.",
+      "source": "공식 기사",
+      "url": ""
+    },
+    {
+      "layer": "R",
+      "date": "2024-04-01",
+      "grade": "WEAK",
+      "short": "공식 백서",
+      "title": "Earth 2 공식 백서 공개",
+      "desc": "공식 백서 PDF가 공개됐어요. 날짜는 커뮤니티 타임라인 기준이에요.",
+      "source": "백서 PDF · 커뮤니티 타임라인",
+      "url": ""
+    },
+    {
+      "layer": "R",
+      "date": "2024-06-23",
+      "grade": "CLEAR",
+      "short": "땅 업그레이드",
+      "title": "땅 $ESS 업그레이드 시스템",
+      "desc": "에센스로 땅 티어를 업그레이드하는 시스템이 소개됐어요.",
+      "source": "공식 기사",
+      "url": ""
+    },
+    {
+      "layer": "R",
+      "date": "2024-11-06",
+      "grade": "CLEAR",
+      "short": "4주년",
+      "title": "Earth 2 4주년",
+      "desc": "어스2가 4주년을 맞았어요.",
+      "source": "공식 기사",
+      "url": ""
+    }
+  ]
+}

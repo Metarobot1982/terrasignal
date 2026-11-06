@@ -128,6 +128,7 @@ html{scroll-behavior:smooth}
   .ts .hdrnav::-webkit-scrollbar{display:none}
 }
 </style>
+<script>window.TS_DATA = {"map": "data/map.json"};</script>
 <script src="js/dc-lite.js"></script>
 </head>
 <body>
@@ -231,12 +232,26 @@ html{scroll-behavior:smooth}
 <section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 70px 40px 0">
 <div style="margin-bottom: 22px"><div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #ffe14d; margin-bottom: 8px">COUNTDOWN SIGNALS</div><h2 class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 38px">곧 열리는 시그널</h2></div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px">
-<div class="panel" style="position: relative; overflow: hidden; padding: 18px 20px; background: linear-gradient(120deg, rgba(47,230,200,.18), rgba(106,60,255,.3)); border: 2px solid #2fe6c8; box-shadow: 4px 4px 0 #000; display: grid; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #d6d0f0">■ 현실 지구 · 나우루 · 유저 투표 주기</span><b style="font-size: 17px">T3 영토 오픈</b><span style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700"><span style="padding: 3px 7px; border: 1px solid rgba(255,255,255,.3); color: #b8b0d8">① 투표</span><span style="color: #8b84ad">→</span><span style="padding: 3px 7px; border: 1px solid rgba(255,255,255,.3); color: #b8b0d8">② 결과</span><span style="color: #8b84ad">→</span><span style="padding: 3px 7px; border: 1px solid #ffd23f; background: #ffd23f; color: #0a0716">③ 카운트다운</span><span style="color: #8b84ad">→</span><span style="padding: 3px 7px; border: 1px solid rgba(255,255,255,.3); color: #b8b0d8">④ 오픈</span></span><span style="font-family: 'Bungee', sans-serif; font-size: 30px; color: #ffd23f; letter-spacing: 2px">--:--:--</span><span style="font-size: 12px; line-height: 1.5; color: #b8b0d8">플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요.</span></div>
-<div class="panel" style="position: relative; overflow: hidden; padding: 18px 20px; background: linear-gradient(120deg, rgba(47,230,200,.18), rgba(106,60,255,.3)); border: 2px solid #2fe6c8; box-shadow: 4px 4px 0 #000; display: grid; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #d6d0f0">■ 현실 지구 · 일본</span><b style="font-size: 17px">에센스로 타일 구매</b><span style="font-family: 'Bungee', sans-serif; font-size: 30px; color: #ffd23f; letter-spacing: 2px">--:--:--</span></div>
-<div class="panel" style="position: relative; overflow: hidden; padding: 18px 20px; background: linear-gradient(120deg, rgba(255,47,176,.18), rgba(106,60,255,.3)); border: 2px solid #ff2fb0; box-shadow: 4px 4px 0 #000; display: grid; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #d6d0f0">◆ 경계 · 일본</span><b style="font-size: 17px">멘타 스테이커 할인 혜택</b><span style="font-family: 'Bungee', sans-serif; font-size: 30px; color: #ffd23f; letter-spacing: 2px">--:--:--</span></div>
-<div class="panel" style="position: relative; overflow: hidden; padding: 18px 20px; background: linear-gradient(120deg, rgba(255,47,176,.18), rgba(106,60,255,.3)); border: 2px solid #ff2fb0; box-shadow: 4px 4px 0 #000; display: grid; gap: 10px"><span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #d6d0f0">◆ 경계 · 전역 · 운영 일정</span><b style="font-size: 17px">새 스킨 드롭</b><span style="font-family: 'Bungee', sans-serif; font-size: 30px; color: #ffd23f; letter-spacing: 2px">--:--:--</span></div>
+<sc-for list="{{countdowns}}" as="c" hint-placeholder-count="4">
+<div class="panel" style="position: relative; overflow: hidden; padding: 18px 20px; background: {{c.bg}}; border: 2px solid {{c.color}}; box-shadow: 4px 4px 0 #000; display: grid; gap: 10px; align-content: start">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #d6d0f0">{{c.tag}}</span>
+<b style="font-size: 17px">{{c.title}}</b>
+<sc-if value="{{c.isVote}}" hint-placeholder-val="{{ false }}">
+<span style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700">
+<sc-for list="{{c.stages}}" as="st" hint-placeholder-count="4">
+<span style="padding: 3px 7px; border: 1px solid {{st.bd}}; background: {{st.bg}}; color: {{st.fg}}">{{st.label}}</span>
+</sc-for>
+</span>
+</sc-if>
+<span class="cd" data-ends="{{c.endsAt}}" style="font-family: 'Bungee', sans-serif; font-size: 30px; color: #ffd23f; letter-spacing: 2px">{{c.left}}</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; color: #ffe9a8">{{c.when}}</span>
+<sc-if value="{{c.hasNote}}" hint-placeholder-val="{{ false }}">
+<span style="font-size: 12px; line-height: 1.5; color: #b8b0d8">{{c.note}}</span>
+</sc-if>
 </div>
-<p style="margin: 14px 0 0; font-size: 13px; color: #8b84ad">공식 앱 상단 카운트다운과 Tier 3 Territory Voting, Skin Store를 자동으로 읽어 와요 [연결 예정]. 영토는 유저 투표 주기로, 스킨은 운영 일정으로 열려요. 무엇이, 언제, 어디서 열리는지만 전하고 구매를 권하지 않아요.</p>
+</sc-for>
+</div>
+<p style="margin: 14px 0 0; font-size: 13px; color: #8b84ad">공식 앱 상단 카운트다운과 Tier 3 Territory Voting, Skin Store를 자동으로 읽어 와요 [연결 예정]. 영토는 유저 투표 주기로, 스킨은 운영 일정으로 열려요. 시간은 공식 앱 기준이고 몇 초 차이가 날 수 있어요. 무엇이, 언제, 어디서 열리는지만 전하고 구매를 권하지 않아요.</p>
 </section>
 
 <section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 80px 40px 110px">
@@ -279,13 +294,36 @@ class Component extends DCLogic {
     super(props);
     this.state = { layer: null, sel: 0 };
   }
+  static left(ends) {
+    if (isNaN(ends)) return '--:--:--';
+    var s = Math.floor((ends - Date.now()) / 1000);
+    if (s <= 0) return '열림';
+    var dd = Math.floor(s / 86400), hh = Math.floor(s % 86400 / 3600), mm = Math.floor(s % 3600 / 60), ss = s % 60;
+    function p(n) { return n < 10 ? '0' + n : '' + n; }
+    return (dd ? dd + 'D ' : '') + p(hh) + ':' + p(mm) + ':' + p(ss);
+  }
+  static kst(ends) {
+    var k = new Date(ends + 9 * 3600000);
+    var W = ['일', '월', '화', '수', '목', '금', '토'];
+    var hr = k.getUTCHours(), mi = k.getUTCMinutes();
+    return (k.getUTCMonth() + 1) + '월 ' + k.getUTCDate() + '일 (' + W[k.getUTCDay()] + ') ' + (hr < 12 ? '오전 ' : '오후 ') + ((hr % 12) || 12) + ':' + (mi < 10 ? '0' : '') + mi + ' · 한국 시간';
+  }
+  afterRender(root) {
+    if (this.__tick) clearInterval(this.__tick);
+    var els = root.querySelectorAll('[data-ends]');
+    var live = [];
+    for (var i = 0; i < els.length; i++) { var v = els[i].getAttribute('data-ends'); if (v) live.push([els[i], +v]); }
+    if (!live.length) return;
+    this.__tick = setInterval(function () { for (var j = 0; j < live.length; j++) live[j][0].textContent = Component.left(live[j][1]); }, 1000);
+  }
   renderVals() {
     var self = this;
     var layer = this.state.layer || this.props.startLayer || 'all';
     var SH = { real: 'M4 4h16v16H4z', border: 'M12 2l10 10-10 10L2 12z', digital: 'M12 2l9 5v10l-9 5-9-5V7z' };
     var LN = { real: '■ 현실 지구', border: '◆ 경계', digital: '⬢ 디지털 지구' };
     var GC = { CLEAR: '#2fe6c8', WEAK: '#ffe14d', NOISE: '#ff2fb0' };
-    var all = [
+    var DATA = this.data && this.data.map ? this.data.map : null;
+    var all = DATA && DATA.pins ? DATA.pins : [
       { L: 'real', g: 'CLEAR', lat: 37.530965, lon: 127.053108, station: true, title: 'TERRASIGNAL 송출탑', coord: '37.5310 N · 127.0531 E · 서울 한강', desc: '영동대교 앞 한강 위 타일 TV 송출탑. 이 좌표에서 모든 시그널이 송출돼요.', source: 'METAFUNK AGENCY', date: '상시 송출', cta: '송출탑 EPL [설정 예정]' },
       { L: 'real', g: 'CLEAR', lat: -0.53, lon: 166.92, title: 'T3 영토 오픈', coord: '0.53 S · 166.92 E · 나우루', desc: '플레이어 투표(Tier 3 Territory Voting)로 열리는 영토예요. 열리면 T3 땅이 해금되고, 공식 안내 기준 타일당 E$0.10부터 시작해요. 국가는 카운트다운 배너의 국기로 판단했어요.', source: 'app.earth2.io 카운트다운 배너', date: '2026.11.04 확인', cta: '수신 기록 보기' },
       { L: 'real', g: 'CLEAR', lat: 35.68, lon: 139.69, title: '에센스로 타일 구매', coord: '35.68 N · 139.69 E · 일본', desc: '공식 앱 카운트다운 배너에 BUY TILES WITH ESSENCE로 표시된 이벤트예요.', source: 'app.earth2.io 카운트다운 배너', date: '2026.11.04 확인', cta: '수신 기록 보기' },
@@ -294,14 +332,36 @@ class Component extends DCLogic {
       { L: 'digital', g: 'WEAK', lat: 51.51, lon: -0.13, title: '[예시] 나두지 현장 확인', coord: '예시 좌표', desc: '나두지가 E2V1 안에서 직접 확인한 소식이 이렇게 표시돼요. 실제 소식이 아닌 화면 예시예요.', source: '현장 통신원 나두지', date: '예시', cta: '현장 보고 보기' },
       { L: 'border', g: 'WEAK', lat: 34.05, lon: -118.24, title: '[예시] 시청자 시그널', coord: '도시 단위로만 표시', desc: '시청자가 보낸 질문이나 제보가 이렇게 지도에 떠올라요. 실제 시청자 글이 아닌 화면 예시예요.', source: '시그널 보내기', date: '예시', cta: '크루 답변 보기' }
     ];
-    var globalsAll = [
+    var globalsAll = DATA && DATA.globals ? DATA.globals : [
       { L: 'digital', g: 'CLEAR', title: '리얼리티 스레드 8 · Seeds of Change', desc: 'E2V1에 첫 농업이 들어왔어요. 가든 베드, 물주기, 주방, 레시피.', date: '2026.05.26 · 공식 기사' },
       { L: 'digital', g: 'NOISE', title: '리얼리티 스레드 9 · Part 1', desc: '창업자 X 게시물로만 확인됐어요. 공식 기사 수신 전이에요.', date: '2026.08 말 · Shane Isaac X' },
       { L: 'digital', g: 'NOISE', title: 'E2 Hordes', desc: '예고된 일정이 지났지만 출시 기사가 없어요. 개발 중으로 수신 대기.', date: '최근 공식 개발 영상 2024.11' },
       { L: 'border', g: 'CLEAR', title: 'Halloween 2026 드로이드 스킨', desc: 'Skin Store에 할로윈 2026 Cydroid 스킨이 올라왔어요. 스킨은 외형 전용이에요.', date: '2026.11 · Skin Store' },
       { L: 'border', g: 'CLEAR', title: '$ESS 업데이트 리포트 Q4-25', desc: '2025년 4분기 에센스 통계 리포트. 반감기 내용이 담겼어요.', date: '2026.03.23 · 공식 기사' }
     ];
+    var cdAll = DATA && DATA.countdowns ? DATA.countdowns : [
+      { L: 'real', place: '나우루', cycle: 'vote', stage: 3, title: 'T3 영토 오픈', endsAt: '', note: '플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요.' },
+      { L: 'real', place: '일본', cycle: '', stage: 0, title: '에센스로 타일 구매', endsAt: '', note: '' },
+      { L: 'border', place: '일본', cycle: '', stage: 0, title: '멘타 스테이커 할인 혜택', endsAt: '', note: '' },
+      { L: 'border', place: '전역', cycle: 'ops', stage: 0, title: '새 스킨 드롭', endsAt: '', note: '' }
+    ];
+    var CYC = { vote: ' · 유저 투표 주기', ops: ' · 운영 일정' };
+    var LCOL = { real: '#2fe6c8', border: '#ff2fb0', digital: '#7d6bff' };
+    var LBG = { real: 'rgba(47,230,200,.18)', border: 'rgba(255,47,176,.18)', digital: 'rgba(125,107,255,.22)' };
+    var STG = ['① 투표', '② 결과', '③ 카운트다운', '④ 오픈'];
+    var countdowns = [];
+    for (var q = 0; q < cdAll.length; q++) {
+      var cd = cdAll[q];
+      if (layer !== 'all' && cd.L !== layer) continue;
+      var ends = cd.endsAt ? Date.parse(cd.endsAt) : NaN;
+      countdowns.push({ tag: LN[cd.L] + ' · ' + cd.place + (CYC[cd.cycle] || ''), title: cd.title, color: LCOL[cd.L],
+        bg: 'linear-gradient(120deg, ' + LBG[cd.L] + ', rgba(106,60,255,.3))',
+        isVote: cd.cycle === 'vote', stages: STG.map(function (t, n) { var on = n + 1 === cd.stage; return { label: t, bd: on ? '#ffd23f' : 'rgba(255,255,255,.3)', bg: on ? '#ffd23f' : 'transparent', fg: on ? '#0a0716' : '#b8b0d8' }; }),
+        endsAt: isNaN(ends) ? '' : String(ends), left: Component.left(ends), when: isNaN(ends) ? '시각 확인 중' : Component.kst(ends),
+        hasNote: !!cd.note, note: cd.note || '' });
+    }
     var sel = this.state.sel;
+    if (sel >= all.length) sel = 0;
     var pins = [], labels = [];
     for (var i = 0; i < all.length; i++) {
       var s = all[i];
@@ -329,7 +389,7 @@ class Component extends DCLogic {
     return {
       motionClass: (this.props.motion ?? true) ? 'anim' : '',
       coatClass: (this.props.coating ?? true) ? 'coat' : '',
-      pins: pins, labels: labels, globals: globals,
+      pins: pins, labels: labels, globals: globals, countdowns: countdowns,
       sel: { layerName: LN[cur.L], grade: cur.g, color: GC[cur.g], coord: cur.coord, title: cur.title, desc: cur.desc, source: cur.source, date: cur.date, cta: cur.cta },
       mapGlow: glow, landFill: land, clip: clip, riftClip: riftClip, riftGlow: riftGlow, showRealCap: layer !== 'digital', showDigiCap: layer !== 'real',
       isAll: layer === 'all', isReal: layer === 'real', isBorder: layer === 'border', isDigital: layer === 'digital',

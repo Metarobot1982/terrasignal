@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>TERRASIGNAL 개척 연대기</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&amp;family=Bungee&amp;family=Gaegu:wght@700&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<style>
+body{margin:0;background:#0b0c12}
+a{color:#ffd166}a:hover{color:#ffffff}
+.ts *{box-sizing:border-box}
+.ts img{max-width:100%}
+.ts button{font:inherit;cursor:pointer}
+.ts button:focus-visible,.ts a:focus-visible{outline:3px solid #ffd166;outline-offset:3px}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes blink{0%,60%{opacity:1}61%,100%{opacity:.25}}
+@keyframes ring{0%{opacity:0;transform:scale(.5)}25%{opacity:1}100%{opacity:0;transform:scale(1.3)}}
+@keyframes crawl{to{transform:translateX(-50%)}}
+@keyframes scan{to{background-position:0 6px}}
+@keyframes riftglow{0%,100%{opacity:.85}50%{opacity:1}}
+@keyframes glitch{0%{transform:translate(0,0)}20%{transform:translate(-3px,1px)}40%{transform:translate(3px,-1px)}60%{transform:translate(-2px,-2px)}80%{transform:translate(2px,2px)}100%{transform:translate(0,0)}}
+.anim .bob{animation:bob 3.4s ease-in-out infinite}
+.anim .blink{animation:blink 1.2s steps(1) infinite}
+.anim .ring{transform-origin:50% 100%;animation:ring 2.4s ease-out infinite}
+.anim .ring.r2{animation-delay:.8s}
+.anim .ring.r3{animation-delay:1.6s}
+.anim .crawl{animation:crawl 40s linear infinite}
+.anim .scan{animation:scan .5s linear infinite}
+.anim .rift{animation:riftglow 1.6s ease-in-out infinite}
+.anim .glitch{animation:glitch .35s steps(4) 1}
+.world{transition:clip-path .8s cubic-bezier(.7,0,.2,1)}
+.mover{transition:left .8s cubic-bezier(.7,0,.2,1)}
+@media (prefers-reduced-motion:reduce){.anim *{animation:none!important}.world,.mover{transition:none!important}}
+.ts .slip{transition:transform .2s,border-color .2s}
+.ts .slip:hover{transform:translateY(-4px);border-color:#ffffff}
+.ts .chan{transition:transform .2s,border-color .2s}
+.ts .chan:hover{transform:translateY(-4px)}
+.ts .h2c{color:#ffd23f!important;text-shadow:3px 3px 0 #000,0 0 16px rgba(255,190,40,.3)!important;-webkit-font-smoothing:antialiased}
+.ts .halftone-tr,.ts .halftone-bl{position:absolute;width:48%;height:75%;pointer-events:none;background-size:13px 13px}
+.ts .halftone-tr{top:0;right:0;background-image:radial-gradient(rgba(255,47,176,.32) 1.4px,transparent 1.8px);-webkit-mask-image:radial-gradient(circle at 100% 0,#000 0,transparent 70%);mask-image:radial-gradient(circle at 100% 0,#000 0,transparent 70%)}
+.ts .halftone-bl{bottom:0;left:0;background-image:radial-gradient(rgba(47,230,200,.28) 1.4px,transparent 1.8px);-webkit-mask-image:radial-gradient(circle at 0 100%,#000 0,transparent 70%);mask-image:radial-gradient(circle at 0 100%,#000 0,transparent 70%)}
+.ts .win{transition:transform .2s}.ts .win:hover{transform:translateY(-5px)}
+@keyframes sigp{0%,100%{opacity:.25}40%{opacity:1}}
+@keyframes gt{0%,90%{text-shadow:none;transform:none}91%{text-shadow:3px 0 #ff2fb0,-3px 0 #2fe6c8;transform:translateX(2px)}95%{text-shadow:-2px 0 #ff2fb0,2px 0 #2fe6c8;transform:translateX(-2px)}98%{text-shadow:none;transform:none}}
+@keyframes stat{0%{background-position:0 0,0 0}33%{background-position:0 2px,3px 0}66%{background-position:0 1px,-2px 0}}
+@keyframes flk{0%,100%{opacity:1}47%{opacity:1}50%{opacity:.4}53%{opacity:1}}
+.anim .sigpulse rect{animation:sigp 1.8s ease-in-out infinite}
+.anim .sigpulse rect:nth-child(2){animation-delay:.3s}
+.anim .sigpulse rect:nth-child(3){animation-delay:.6s}
+.anim .glitchtxt{animation:gt 3s steps(1) infinite}
+.anim .static{animation:stat .3s steps(1) infinite}
+.anim .flick{animation:flk 2.6s infinite}
+@media (max-width:560px){.ts .wbtn{padding:8px 10px!important;font-size:12px!important;letter-spacing:0!important}}
+.ts > *{position:relative;z-index:1}
+.ts .logoglow{position:relative;-webkit-text-stroke:1px #0a0716;text-shadow:2px 2px 0 #ff2fb0,4px 4px 0 #6a3cff,6px 6px 0 #2fe6c8,0 0 14px rgba(255,210,63,.7),0 0 34px rgba(255,47,176,.45)}
+@keyframes lglow{0%,100%{text-shadow:2px 2px 0 #ff2fb0,4px 4px 0 #6a3cff,6px 6px 0 #2fe6c8,0 0 12px rgba(255,210,63,.55),0 0 26px rgba(255,47,176,.3)}50%{text-shadow:2px 2px 0 #ff2fb0,4px 4px 0 #6a3cff,6px 6px 0 #2fe6c8,0 0 22px rgba(255,210,63,.95),0 0 48px rgba(255,47,176,.6)}}
+@keyframes lgl{0%,94%,100%{transform:none}95%{transform:translateX(3px) skewX(-6deg)}97%{transform:translateX(-2px)}}
+.anim .logoglow{animation:lglow 2.4s ease-in-out infinite,lgl 5s steps(1) infinite}
+@keyframes flow{to{stroke-dashoffset:-400}}
+.ts .flow{stroke-dasharray:240 30 60 30}
+.anim .flow{animation:flow 9s linear infinite}.anim .flow.f1{animation-duration:12s}.anim .flow.f2{animation-duration:15s;animation-direction:reverse}.anim .flow.f3{animation-duration:11s}
+@keyframes needle{0%,100%{transform:translateY(80px)}50%{transform:translateY(1100px)}}
+.anim .needle{animation:needle 26s ease-in-out infinite}
+@keyframes eqb{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+.ts .eqb{transform-origin:50% 100%;transform-box:fill-box}
+.anim .eqb{animation:eqb 1.4s ease-in-out infinite}
+@keyframes sqp{0%,100%{transform:scale(.96);opacity:.7}50%{transform:scale(1.04);opacity:1}}
+.anim .sqpulse{animation:sqp 6s ease-in-out infinite}
+@keyframes drift{0%,100%{translate:0 0}50%{translate:0 -26px}}
+.anim .drift{animation:drift 7s ease-in-out infinite}
+@keyframes popb{0%,100%{scale:1}50%{scale:1.08}}
+.anim .pop{animation:popb 1.6s ease-in-out infinite}
+@keyframes spin{to{rotate:360deg}}
+.anim .spin{animation:spin 14s linear infinite}
+.ts .win:hover{transform:translateY(-6px) scale(1.02) rotate(-.4deg)!important}
+.ts .chan:hover{transform:translateY(-5px) scale(1.02)}
+@media (max-width:900px){.ts .pop svg,.ts .spin svg{width:84px;height:84px}}
+@keyframes qbob{0%,100%{translate:0 0;scale:1}50%{translate:0 -10px;scale:1.05}}
+.anim .qmark{animation:qbob 2.8s ease-in-out infinite,gt 3s steps(1) infinite}
+.ts .mystery{transition:transform .2s}.ts .mystery:hover{transform:translateY(-5px) rotate(-.6deg)}
+.ts .portal{transition:transform .2s}.ts .portal:hover{transform:translateY(-6px) scale(1.02)}
+.ts .gate div{transform:scale(.4);opacity:0;transition:transform .5s cubic-bezier(.2,.9,.3,1.3),opacity .3s}
+.ts .portal:hover .gate div{transform:scale(1);opacity:1}
+.ts input:focus-visible,.ts textarea:focus-visible{outline:3px solid #2fe6c8;outline-offset:2px}
+.coat{filter:saturate(1.3) contrast(1.08) brightness(1.04)}
+.coat::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:40;background:radial-gradient(120% 40% at 12% 0%,rgba(255,255,255,.12),transparent 60%),repeating-linear-gradient(115deg,transparent 0 900px,rgba(255,255,255,.06) 980px,rgba(255,255,255,.16) 1010px,rgba(255,255,255,.06) 1040px,transparent 1120px 1800px);background-size:100% 100%,3600px 100%;mix-blend-mode:screen}
+@keyframes gloss{from{background-position:0 0,-1800px 0}to{background-position:0 0,1800px 0}}
+.anim.coat::after{animation:gloss 16s linear infinite}
+.coat .win::before,.coat .chan::before,.coat .portal::before,.coat .mystery::before,.coat .panel::before,.coat .stage::before,.coat form::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:6;box-shadow:inset 0 2px 0 rgba(255,255,255,.55),inset 0 0 0 1px rgba(255,255,255,.12),inset 0 -24px 34px -24px rgba(0,0,0,.7)}
+.coat .win::after,.coat .chan::after,.coat .portal::after,.coat .mystery::after,.coat .panel::after,.coat .stage::after,.coat form::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:7;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.26) 46%,rgba(255,255,255,.06) 52%,transparent 60%);background-size:260% 100%;background-position:120% 0;mix-blend-mode:screen}
+@keyframes sheen{0%,55%{background-position:120% 0}100%{background-position:-20% 0}}
+.anim.coat .win::after,.anim.coat .chan::after,.anim.coat .portal::after,.anim.coat .mystery::after,.anim.coat .panel::after,.anim.coat .stage::after,.anim.coat form::after{animation:sheen 5.5s ease-in-out infinite}
+.coat .stage{box-shadow:0 30px 80px -20px rgba(255,47,176,.35),0 0 0 1px rgba(255,255,255,.15)}
+.coat .h2c{text-shadow:3px 3px 0 #000,0 0 22px rgba(255,210,63,.6),0 -1px 0 #fff3b8!important}
+.coat .logoglow{filter:brightness(1.1)}
+@media (max-width:900px){.ts .h1{font-size:44px!important}.ts .nadu{width:150px!important}.ts .bubble{display:none!important}.ts .hdrnav{display:none!important}}
+.ts .node{cursor:pointer;transition:transform .15s}.ts .node:hover{transform:translate(-50%,-50%) scale(1.3)!important}
+.ts .node[aria-pressed="true"] span{outline:3px solid #ffffff;outline-offset:3px}
+@media (max-width:900px){.ts .vhead{display:none!important}.ts .vrow{grid-template-columns:1fr!important;padding-left:34px!important}.ts .vrow>div:first-child{text-align:left!important;padding:0!important}.ts .vcard,.ts .vnow{grid-column:1/-1!important}.ts .vspine{left:10px!important}.ts .vdot{left:3px!important}.ts .selcard{grid-template-columns:1fr!important}.ts .c3{grid-template-columns:1fr!important}.ts .ctitle{font-size:40px!important}}
+</style>
+</helmet>
+<div class="ts {{motionClass}} {{coatClass}}" style="width: 100%; min-height: 1900px; background: linear-gradient(180deg, #0b0c14 0%, #150d30 30%, #1a0f3a 60%, #120b28 100%); color: #eef0f7; font-family: 'Noto Sans KR', sans-serif; overflow: hidden; position: relative">
+<header style="border-bottom: 1px solid #23263a">
+<div style="max-width: 1360px; margin: 0 auto; padding: 18px 40px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap">
+<a href="#top" aria-label="TERRASIGNAL 홈" style="display: flex; align-items: center; gap: 12px; text-decoration: none"><svg width="52" height="52" viewBox="0 0 60 60" aria-hidden="true" class="sigpulse"><defs><linearGradient id="tvg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2fe6c8"></stop><stop offset="1" stop-color="#ff2fb0"></stop></linearGradient></defs><rect x="27" y="15" width="6" height="4" fill="none" stroke="#2fe6c8" stroke-width="1.8"></rect><rect x="23" y="8.5" width="14" height="4.5" fill="none" stroke="#ff2fb0" stroke-width="1.8"></rect><rect x="18" y="1.5" width="24" height="5" fill="none" stroke="#ffd23f" stroke-width="1.8"></rect><path d="M21 21 L30 27 L39 21" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="square"></path><rect x="6" y="27" width="48" height="29" rx="2" fill="#0a0716" stroke="url(#tvg)" stroke-width="3.5"></rect><rect x="11" y="32" width="26" height="19" fill="none" stroke="url(#tvg)" stroke-width="2.5"></rect><rect x="19.5" y="38" width="9" height="7.5" fill="#ffffff"></rect><rect x="41" y="33" width="8" height="6" fill="none" stroke="#ff2fb0" stroke-width="2.2"></rect><rect x="41" y="42" width="8" height="5" fill="none" stroke="#ff2fb0" stroke-width="2.2"></rect><rect x="40" y="50" width="10" height="3" fill="#ff2fb0"></rect></svg><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Bungee', sans-serif; font-size: 28px; line-height: 1; letter-spacing: 1px; color: #ffd23f" class="logoglow" data-text="TERRASIGNAL">TERRASIGNAL</span><span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 3px; color: #2fe6c8">SIGNAL FROM MY SECOND EARTH</span></span></a>
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #8b90aa; border-left: 1px solid #23263a; padding-left: 18px">METAFUNK AGENCY BROADCAST</span>
+<nav class="hdrnav" aria-label="주요 메뉴" style="display: flex; gap: 4px; margin-left: auto; font-size: 15px; font-weight: 500">
+<a href="#rx" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">시그널 수신</a>
+<a href="#" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">시그널 지도</a>
+<a href="#ch" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">수신 가이드</a>
+<a href="#" aria-current="page" style="color: #ffd23f; text-decoration: none; padding: 8px 12px; border-bottom: 3px solid #ffd23f">개척 연대기</a>
+<a href="#prologue" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">프롤로그</a>
+<a href="#tx-you" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">시그널 보내기</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 8px; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; color: #ffffff; background: #e63946; padding: 7px 12px; border-radius: 4px">
+<span class="blink" style="width: 8px; height: 8px; border-radius: 50%; background: #ffffff; display: inline-block"></span>ON AIR
+</div>
+</div>
+</header>
+<section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 56px 40px 0">
+<div class="halftone-tr"></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap">
+<div>
+<div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #2fe6c8; margin-bottom: 10px">PIONEER CHRONICLE · 개척 연대기</div>
+<h1 class="h2c ctitle" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 60px; line-height: 1.1">디지털 지구가 깨어난 날부터</h1>
+<p style="margin: 14px 0 0; max-width: 680px; font-size: 17px; line-height: 1.7; color: #c9c3e6">2020년 디지털 지구가 탄생하고, 2025년 7월 14일 깨어난 뒤로 무엇이 지어졌는지 세 개의 층으로 기록해요. 가장 최근 신호가 맨 위에 있어요.</p>
+</div>
+<div class="panel" style="position: relative; overflow: hidden; padding: 16px 22px; background: #0a0716; border: 2px solid #ffd23f; box-shadow: 5px 5px 0 #000; text-align: right">
+<span style="display: block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #ffd23f">깨어난 지 · BUILD DAY</span>
+<b style="font-family: 'Bungee', sans-serif; font-size: 48px; line-height: 1.1; color: #ffffff">{{buildDay}}</b>
+<span style="display: block; font-size: 12px; color: #b8b0d8">2025.07.14 디지털 지구가 깨어난 날 = 1일차</span>
+</div>
+</div>
+</section>
+
+<section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 40px 40px 0">
+<div class="vhead" style="position: sticky; top: 0; z-index: 20; display: grid; grid-template-columns: 150px 1fr 1fr 1fr; gap: 18px; padding: 14px 0; background: linear-gradient(180deg, #120c30 75%, rgba(18,12,48,0)); ">
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #8b84ad; align-self: end">DATE</span>
+<span style="padding: 10px 14px; border: 2px solid #7d6bff; background: rgba(125,107,255,.18); font-weight: 900; color: #c9c0ff">⬢ 디지털 지구</span>
+<span style="padding: 10px 14px; border: 2px solid #ff2fb0; background: rgba(255,47,176,.16); font-weight: 900; color: #ff8fd6">◆ 경계</span>
+<span style="padding: 10px 14px; border: 2px solid #2fe6c8; background: rgba(47,230,200,.14); font-weight: 900; color: #7ff3df">■ 현실 지구</span>
+</div>
+<div class="vtl" style="position: relative">
+<div aria-hidden="true" class="vspine" style="position: absolute; left: 118px; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, #ffd23f, #2fe6c8 30%, #7d6bff 70%, rgba(125,107,255,.2))"></div>
+<div class="vrow" style="position: relative; display: grid; grid-template-columns: 150px 1fr 1fr 1fr; gap: 18px; align-items: center; padding: 10px 0 26px">
+<div style="position: relative; text-align: right; padding-right: 44px"><span style="font-family: 'Bungee', sans-serif; font-size: 18px; color: #ffd23f">NOW</span></div>
+<span aria-hidden="true" class="vdot" style="position: absolute; left: 110px; top: 50%; width: 19px; height: 19px; margin-top: -16px; background: #ffd23f; border: 3px solid #0a0716; box-shadow: 0 0 16px #ffd23f"></span>
+<div class="vnow" style="grid-column: 2 / 5; padding: 12px 16px; border: 2px dashed #ffd23f; color: #ffe9a8; font-weight: 700">오늘 · 디지털 지구가 깨어난 지 <b style="color: #ffd23f">DAY {{buildDay}}</b> · 다음 신호를 수신 중</div>
+</div>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="12">
+<sc-if value="{{r.isYear}}" hint-placeholder-val="{{ false }}">
+<div class="vrow" style="position: relative; display: grid; grid-template-columns: 150px 1fr; gap: 18px; padding: 18px 0 8px">
+<div style="text-align: right; padding-right: 44px"><span style="font-family: 'Bungee', sans-serif; font-size: 30px; color: #ffffff; text-shadow: 3px 3px 0 #ff2fb0">{{r.year}}</span></div>
+<div aria-hidden="true" style="align-self: center; height: 1px; background: rgba(255,255,255,.15)"></div>
+</div>
+</sc-if>
+<sc-if value="{{r.isEvent}}" hint-placeholder-val="{{ true }}">
+<div class="vrow" style="position: relative; display: grid; grid-template-columns: 150px 1fr 1fr 1fr; gap: 18px; align-items: start; padding: 8px 0">
+<div style="text-align: right; padding: 14px 44px 0 0; display: grid; gap: 2px"><span style="font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; color: #ffffff">{{r.date}}</span><span style="font-family: 'Space Mono', monospace; font-size: 11px; color: #8b84ad">{{r.day}}</span></div>
+<span aria-hidden="true" class="vdot" style="position: absolute; left: 111px; top: 22px; width: 17px; height: 17px; background: {{r.fill}}; border: 3px solid {{r.color}}; transform: rotate({{r.rot}}); box-shadow: 0 0 10px {{r.color}}"></span>
+<article class="win vcard" style="grid-column: {{r.col}}; position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; background: {{r.bg}}; border: 2px {{r.bstyle}} {{r.color}}; box-shadow: 0 0 0 3px #0a0716{{r.glow}}">
+<div style="display: flex; justify-content: space-between; gap: 8px; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 1px"><span class="vlayer" style="color: {{r.lc}}">{{r.layer}}</span><span style="color: {{r.color}}">{{r.grade}}</span></div>
+<b style="font-size: 17px; line-height: 1.4; color: #ffffff">{{r.title}}</b>
+<span style="font-size: 13px; line-height: 1.6; color: #c9c3e6">{{r.desc}}</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 10px; color: #8b84ad">SOURCE · {{r.source}}</span>
+</article>
+</div>
+</sc-if>
+</sc-for>
+</div>
+<div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 18px; padding: 10px 0; font-family: 'Space Mono', monospace; font-size: 11px; color: #d6d0f0">
+<span style="color: #2fe6c8">■ CLEAR 공식 기사</span><span style="color: #ffe14d">□ WEAK 커뮤니티·현장 기준</span><span style="color: #ff2fb0">◆ NOISE 공식 기사 전</span>
+</div>
+</section>
+
+<section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 70px 40px 110px">
+<div class="halftone-bl"></div>
+<div class="c3" style="position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px">
+<div class="panel" style="position: relative; overflow: hidden; padding: 22px; background: rgba(24,16,60,.9); border: 2px solid #7d6bff; box-shadow: 5px 5px 0 #000"><b style="color: #a99bff">⬢ 디지털 지구</b><p style="margin: 8px 0 0; font-size: 14px; line-height: 1.7; color: #c9c3e6">리얼리티 스레드가 열린 날, 접근권이 넓어진 날, 새 기능이 예고된 날.</p></div>
+<div class="panel" style="position: relative; overflow: hidden; padding: 22px; background: rgba(40,14,40,.9); border: 2px solid #ff2fb0; box-shadow: 5px 5px 0 #000"><b style="color: #ff7fd0">◆ 경계</b><p style="margin: 8px 0 0; font-size: 14px; line-height: 1.7; color: #c9c3e6">에센스, 스테이킹, 스킨 드롭처럼 현실과 가상을 잇는 시스템이 바뀐 날.</p></div>
+<div class="panel" style="position: relative; overflow: hidden; padding: 22px; background: rgba(12,30,52,.9); border: 2px solid #2fe6c8; box-shadow: 5px 5px 0 #000"><b style="color: #2fe6c8">■ 현실 지구</b><p style="margin: 8px 0 0; font-size: 14px; line-height: 1.7; color: #c9c3e6">영토가 열리고, 땅과 좌표에 관한 규칙이 생긴 날.</p></div>
+</div>
+<p style="position: relative; margin: 18px 0 0; font-size: 13px; color: #8b84ad">날짜는 공식 기사 기준이에요. 공식 기사가 없는 항목은 WEAK·NOISE로 표시하고, 자동 수집으로 확인되면 CLEAR로 바뀌어요.</p>
+</section>
+<footer style="position: relative; border-top: 2px solid transparent; border-image: linear-gradient(90deg, #2fe6c8, #ff2fb0, #ffe14d) 1; background: rgba(8,5,20,.6)">
+<div style="max-width: 1360px; margin: 0 auto; padding: 48px 40px 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span class="logoglow" style="font-family: 'Bungee', sans-serif; font-size: 24px; line-height: 1; color: #ffd23f">TERRASIGNAL</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #2fe6c8">SIGNAL FROM MY SECOND EARTH</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; color: #a99bd0; margin-top: 6px">TX 37.532599 N · 127.054138 E</span>
+</div>
+<nav aria-label="채널 링크" style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #ff2fb0">CHANNELS</span>
+<a href="https://www.youtube.com/@metafunk-agency" style="color: #ffffff; text-decoration: none">유튜브 · METAFUNK AGENCY ↗</a>
+<a href="https://x.com/metarobot1982" style="color: #ffffff; text-decoration: none">X · @metarobot1982 ↗</a>
+<a href="#tx-you" style="color: #ffffff; text-decoration: none">디스코드 <span style="font-family: 'Space Mono', monospace; font-size: 11px; color: #ffd23f">[링크 연결 예정]</span></a>
+</nav>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px; line-height: 1.7; color: #a99bd0">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #2fe6c8">NOTICE</span>
+<p style="margin: 0">TERRASIGNAL은 METAFUNK AGENCY의 독립 방송국이며, Earth2 공식과 무관합니다.</p>
+<p style="margin: 0">이 사이트의 일부 이미지와 영상은 AI 도구로 제작했습니다.</p>
+<p style="margin: 0">시그널 보내기로 받은 닉네임과 내용은 방송 소재 선정과 답변에만 쓰며, 공개 전 운영자가 확인합니다.</p>
+</div>
+</div>
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 40px 40px; font-family: 'Space Mono', monospace; font-size: 11px; color: #6d6290">© 2026 METAFUNK AGENCY — TERRASIGNAL · EARTH2SPACE · D.I.Store · Keep the Funk, Keep the Signal.</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"motion":{"editor":"boolean","default":true},"coating":{"editor":"boolean","default":true},"":{"width":1440,"height":1900}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = {}; }
+  renderVals() {
+    var self = this;
+    var DAY1 = Date.UTC(2025, 6, 14);
+    function dayOf(y, m, d) { var n = Math.floor((Date.UTC(y, m - 1, d || 15) - DAY1) / 86400000) + 1; return n >= 1 ? 'DAY ' + n : 'E2V1 이전'; }
+    var now = new Date(); var kst = new Date(now.getTime() + now.getTimezoneOffset() * 60000 + 9 * 3600000);
+    var buildDay = Math.floor((Date.UTC(kst.getFullYear(), kst.getMonth(), kst.getDate()) - DAY1) / 86400000) + 1;
+    var GC = { CLEAR: '#2fe6c8', WEAK: '#ffe14d', NOISE: '#ff2fb0' };
+    var LN = { D: '⬢ 디지털 지구', B: '◆ 경계', R: '■ 현실 지구' };
+    var DATA = this.data && this.data.chronicle ? this.data.chronicle : null;
+    var E = DATA ? DATA.events.map(function (o) { var p = o.date.split('-'); return [o.layer, +p[0], +p[1], +(p[2] || 0), o.grade, o.short, o.title, o.desc, o.source]; }) : [
+      ['R', 2020, 11, 0, 'CLEAR', '탄생', '디지털 지구 탄생', '어스2가 출시되며 지구 전체가 디지털 지구로 복제됐어요. 아직 아무도 그 안을 걸을 수 없던 시절이에요.', 'Earth 2 Draft Summary Update (2022.02) · Launching in November of 2020'],
+      ['D', 2024, 3, 2, 'CLEAR', 'Pre-Alpha 신청', 'E2V1 프리 알파 테스터 신청 시작', '3D 세계 E2V1을 미리 체험할 테스터 신청이 열렸어요.', 'earth2.io 공식 뉴스'],
+      ['D', 2024, 9, 18, 'CLEAR', 'Hordes 전투', 'E2 Hordes 초기 전투 메커니즘 공개', '호드 미니게임의 전투 방식을 개발 기록으로 처음 보여줬어요. 출시는 아직이에요.', 'Earth2 공식 기사 Vol.1'],
+      ['D', 2025, 7, 14, 'CLEAR', 'RT1', '리얼리티 스레드 1 · 챕터 1', '캐릭터 합성, 인벤토리, 채집, 낮과 밤, 계절이 들어왔어요. E2V1 건설 1일차.', '공식 기사'],
+      ['D', 2025, 7, 27, 'CLEAR', 'RT2', '리얼리티 스레드 2', '충돌 시스템 개선과 체력·허기·스태미나 화면이 생겼어요.', '공식 기사'],
+      ['D', 2025, 8, 24, 'CLEAR', 'RT3', '리얼리티 스레드 3', '디지털 지구 전역에 글로벌 멀티플레이가 열렸어요.', '공식 기사'],
+      ['D', 2025, 10, 31, 'CLEAR', 'RT4', '리얼리티 스레드 4', '제작, 첫 전투(창·방패), 엔진 최적화가 들어왔어요.', '공식 기사'],
+      ['D', 2025, 12, 8, 'CLEAR', '배지 접근', '배지 보유자 E2V1 접근 시작', '테스터가 아닌 배지 보유자에게 처음으로 E2V1 문이 열렸어요.', '공식 기사'],
+      ['D', 2025, 12, 18, 'WEAK', 'RT5', '리얼리티 스레드 5 · 챕터 2', '텔레포테이션과 룬이 들어왔어요. 날짜는 공식 X와 커뮤니티 기준이고 공식 기사를 확인 중이에요.', '@earth2io X · 커뮤니티'],
+      ['D', 2026, 1, 6, 'CLEAR', 'RT6', '리얼리티 스레드 6 · 챕터 3', '요리, 의류, 이모트가 들어왔어요.', '공식 기사'],
+      ['D', 2026, 3, 19, 'CLEAR', 'RT7', '리얼리티 스레드 7 · 챕터 4', '글로벌 퀘스트 시스템이 열렸어요.', '공식 기사'],
+      ['D', 2026, 5, 26, 'CLEAR', 'RT8', '리얼리티 스레드 8 · Seeds of Change', 'E2V1에 첫 농업이 들어왔어요.', '공식 기사'],
+      ['D', 2026, 8, 31, 'NOISE', 'RT9 P1', '리얼리티 스레드 9 · Part 1', '창업자 X 게시물로만 확인됐어요. 공식 기사 수신 전이에요.', 'Shane Isaac X'],
+      ['B', 2023, 12, 3, 'CLEAR', '스킨 스토어', 'Earth 2 Skins 출시', '수집형 스킨 스토어와 Blueprint 시스템이 열렸어요. 스킨은 외형 전용이에요.', '공식 블로그'],
+      ['B', 2024, 8, 4, 'CLEAR', '멘타 스테이킹', '멘타 스테이킹 시작', '땅 위 멘타에 에센스를 스테이킹할 수 있게 됐어요. 호드 발표, 출금 업데이트도 함께 나왔어요.', '공식 기사'],
+      ['B', 2025, 7, 20, 'CLEAR', '스테이킹 이정표', '스테이킹 이정표 달성', 'RT1을 앞두고 스테이킹 이정표를 넘었다는 공식 발표예요.', '공식 기사'],
+      ['B', 2026, 3, 23, 'CLEAR', 'ESS 리포트', '$ESS 업데이트 리포트 Q4-25', '2025년 4분기 에센스 통계와 반감기 내용을 담았어요.', '공식 기사'],
+      ['R', 2023, 11, 27, 'CLEAR', 'T3 영토', '테리토리와 T3 땅', '투표로 여는 T3 영토, Boosted E-ther, 거버넌스 시스템이 시작됐어요.', '공식 기사'],
+      ['R', 2024, 4, 1, 'WEAK', '공식 백서', 'Earth 2 공식 백서 공개', '공식 백서 PDF가 공개됐어요. 날짜는 커뮤니티 타임라인 기준이에요.', '백서 PDF · 커뮤니티 타임라인'],
+      ['R', 2024, 6, 23, 'CLEAR', '땅 업그레이드', '땅 $ESS 업그레이드 시스템', '에센스로 땅 티어를 업그레이드하는 시스템이 소개됐어요.', '공식 기사'],
+      ['R', 2024, 11, 6, 'CLEAR', '4주년', 'Earth 2 4주년', '어스2가 4주년을 맞았어요.', '공식 기사'],
+    ];
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+    var COL = { D: 2, B: 3, R: 4 };
+    var LC = { D: '#c9c0ff', B: '#ff8fd6', R: '#7ff3df' };
+    var order = E.map(function (e, i) { return i; }).sort(function (a, b) {
+      var A = E[a], B = E[b];
+      return Date.UTC(B[1], B[2] - 1, B[3] || 15) - Date.UTC(A[1], A[2] - 1, A[3] || 15);
+    });
+    var rows = [], lastY = null;
+    order.forEach(function (i) {
+      var e = E[i];
+      if (e[1] !== lastY) { rows.push({ isYear: true, isEvent: false, year: String(e[1]) }); lastY = e[1]; }
+      var c = GC[e[4]];
+      var special = e[6].indexOf('리얼리티 스레드 1 ') === 0 || e[5] === '탄생';
+      rows.push({ isYear: false, isEvent: true, col: COL[e[0]], layer: LN[e[0]], lc: LC[e[0]], grade: e[4], color: c,
+        fill: e[4] === 'CLEAR' ? c : '#0a0716', rot: e[4] === 'NOISE' ? '45deg' : '0deg', bstyle: e[4] === 'WEAK' ? 'dashed' : 'solid',
+        bg: special ? 'rgba(60,40,10,.92)' : 'rgba(18,12,44,.9)', glow: special ? ', 0 0 24px rgba(255,210,63,.45)' : '',
+        date: e[3] ? e[1] + '.' + pad(e[2]) + '.' + pad(e[3]) : e[1] + '.' + pad(e[2]), day: dayOf(e[1], e[2], e[3]),
+        title: (e[6].indexOf('리얼리티 스레드 1 ') === 0 ? '★ 깨어난 날 · ' : '') + e[6], desc: e[7], source: e[8] });
+    });
+    return {
+      motionClass: (this.props.motion ?? true) ? 'anim' : '',
+      coatClass: (this.props.coating ?? true) ? 'coat' : '',
+      buildDay: String(buildDay),
+      rows: rows
+    };
+  }
+}
+</script>
+</body>
+</html>

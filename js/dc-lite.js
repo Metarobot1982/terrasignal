@@ -2,7 +2,8 @@
  * dc-lite.js — TERRASIGNAL page runtime
  * Renders a page template (<template id="dc-tpl">) with the page's Component class.
  * Supports {{hole}} text/attribute holes, <sc-if value>, <sc-for list as>, onClick="{{fn}}",
- * and setState() re-rendering. Data files can be loaded by a page through window.TS.load().
+ * and setState() re-rendering. Pages listing data files in window.TS_DATA ({name: path}) get them
+ * as this.data[name] and re-render once loaded; until then the page shows its built-in defaults.
  */
 (function () {
   'use strict';
@@ -148,6 +149,15 @@
     window.TS = window.TS || {};
     window.TS.page = comp;
     render();
+    var files = window.TS_DATA || null;
+    if (files) {
+      var keys = Object.keys(files);
+      Promise.all(keys.map(function (k) { return window.TS.load(files[k]); })).then(function (vals) {
+        var data = {}, got = false;
+        keys.forEach(function (k, i) { if (vals[i]) { data[k] = vals[i]; got = true; } });
+        if (got) { comp.data = data; render(); }
+      });
+    }
     if (location.hash) {
       var target = document.getElementById(location.hash.slice(1));
       if (target) target.scrollIntoView();

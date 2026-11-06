@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>TERRASIGNAL 홈</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&amp;family=Bungee&amp;family=Gaegu:wght@700&amp;family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<style>
+body{margin:0;background:#0b0c12}
+a{color:#ffd166}a:hover{color:#ffffff}
+.ts *{box-sizing:border-box}
+.ts img{max-width:100%}
+.ts button{font:inherit;cursor:pointer}
+.ts button:focus-visible,.ts a:focus-visible{outline:3px solid #ffd166;outline-offset:3px}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes blink{0%,60%{opacity:1}61%,100%{opacity:.25}}
+@keyframes ring{0%{opacity:0;transform:scale(.5)}25%{opacity:1}100%{opacity:0;transform:scale(1.3)}}
+@keyframes crawl{to{transform:translateX(-50%)}}
+@keyframes scan{to{background-position:0 6px}}
+@keyframes riftglow{0%,100%{opacity:.85}50%{opacity:1}}
+@keyframes glitch{0%{transform:translate(0,0)}20%{transform:translate(-3px,1px)}40%{transform:translate(3px,-1px)}60%{transform:translate(-2px,-2px)}80%{transform:translate(2px,2px)}100%{transform:translate(0,0)}}
+.anim .bob{animation:bob 3.4s ease-in-out infinite}
+.anim .blink{animation:blink 1.2s steps(1) infinite}
+.anim .ring{transform-origin:50% 100%;animation:ring 2.4s ease-out infinite}
+.anim .ring.r2{animation-delay:.8s}
+.anim .ring.r3{animation-delay:1.6s}
+.anim .crawl{animation:crawl 40s linear infinite}
+.anim .scan{animation:scan .5s linear infinite}
+.anim .rift{animation:riftglow 1.6s ease-in-out infinite}
+.anim .glitch{animation:glitch .35s steps(4) 1}
+.world{transition:clip-path .8s cubic-bezier(.7,0,.2,1)}
+.mover{transition:left .8s cubic-bezier(.7,0,.2,1)}
+@media (prefers-reduced-motion:reduce){.anim *{animation:none!important}.world,.mover{transition:none!important}}
+.ts .slip{transition:transform .2s,border-color .2s}
+.ts .slip:hover{transform:translateY(-4px);border-color:#ffffff}
+.ts .chan{transition:transform .2s,border-color .2s}
+.ts .chan:hover{transform:translateY(-4px)}
+.ts .h2c{color:#ffd23f!important;text-shadow:3px 3px 0 #000,0 0 16px rgba(255,190,40,.3)!important;-webkit-font-smoothing:antialiased}
+.ts .halftone-tr,.ts .halftone-bl{position:absolute;width:48%;height:75%;pointer-events:none;background-size:13px 13px}
+.ts .halftone-tr{top:0;right:0;background-image:radial-gradient(rgba(255,47,176,.32) 1.4px,transparent 1.8px);-webkit-mask-image:radial-gradient(circle at 100% 0,#000 0,transparent 70%);mask-image:radial-gradient(circle at 100% 0,#000 0,transparent 70%)}
+.ts .halftone-bl{bottom:0;left:0;background-image:radial-gradient(rgba(47,230,200,.28) 1.4px,transparent 1.8px);-webkit-mask-image:radial-gradient(circle at 0 100%,#000 0,transparent 70%);mask-image:radial-gradient(circle at 0 100%,#000 0,transparent 70%)}
+.ts .win{transition:transform .2s}.ts .win:hover{transform:translateY(-5px)}
+@keyframes sigp{0%,100%{opacity:.25}40%{opacity:1}}
+@keyframes gt{0%,90%{text-shadow:none;transform:none}91%{text-shadow:3px 0 #ff2fb0,-3px 0 #2fe6c8;transform:translateX(2px)}95%{text-shadow:-2px 0 #ff2fb0,2px 0 #2fe6c8;transform:translateX(-2px)}98%{text-shadow:none;transform:none}}
+@keyframes stat{0%{background-position:0 0,0 0}33%{background-position:0 2px,3px 0}66%{background-position:0 1px,-2px 0}}
+@keyframes flk{0%,100%{opacity:1}47%{opacity:1}50%{opacity:.4}53%{opacity:1}}
+.anim .sigpulse rect{animation:sigp 1.8s ease-in-out infinite}
+.anim .sigpulse rect:nth-child(2){animation-delay:.3s}
+.anim .sigpulse rect:nth-child(3){animation-delay:.6s}
+.anim .glitchtxt{animation:gt 3s steps(1) infinite}
+.anim .static{animation:stat .3s steps(1) infinite}
+.anim .flick{animation:flk 2.6s infinite}
+@media (max-width:560px){.ts .wbtn{padding:8px 10px!important;font-size:12px!important;letter-spacing:0!important}}
+.ts > *{position:relative;z-index:1}
+.ts .logoglow{position:relative;-webkit-text-stroke:1px #0a0716;text-shadow:2px 2px 0 #ff2fb0,4px 4px 0 #6a3cff,6px 6px 0 #2fe6c8,0 0 14px rgba(255,210,63,.7),0 0 34px rgba(255,47,176,.45)}
+@keyframes lglow{0%,100%{text-shadow:2px 2px 0 #ff2fb0,4px 4px 0 #6a3cff,6px 6px 0 #2fe6c8,0 0 12px rgba(255,210,63,.55),0 0 26px rgba(255,47,176,.3)}50%{text-shadow:2px 2px 0 #ff2fb0,4px 4px 0 #6a3cff,6px 6px 0 #2fe6c8,0 0 22px rgba(255,210,63,.95),0 0 48px rgba(255,47,176,.6)}}
+@keyframes lgl{0%,94%,100%{transform:none}95%{transform:translateX(3px) skewX(-6deg)}97%{transform:translateX(-2px)}}
+.anim .logoglow{animation:lglow 2.4s ease-in-out infinite,lgl 5s steps(1) infinite}
+@keyframes flow{to{stroke-dashoffset:-400}}
+.ts .flow{stroke-dasharray:240 30 60 30}
+.anim .flow{animation:flow 9s linear infinite}.anim .flow.f1{animation-duration:12s}.anim .flow.f2{animation-duration:15s;animation-direction:reverse}.anim .flow.f3{animation-duration:11s}
+@keyframes needle{0%,100%{transform:translateY(80px)}50%{transform:translateY(1100px)}}
+.anim .needle{animation:needle 26s ease-in-out infinite}
+@keyframes eqb{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+.ts .eqb{transform-origin:50% 100%;transform-box:fill-box}
+.anim .eqb{animation:eqb 1.4s ease-in-out infinite}
+@keyframes sqp{0%,100%{transform:scale(.96);opacity:.7}50%{transform:scale(1.04);opacity:1}}
+.anim .sqpulse{animation:sqp 6s ease-in-out infinite}
+@keyframes drift{0%,100%{translate:0 0}50%{translate:0 -26px}}
+.anim .drift{animation:drift 7s ease-in-out infinite}
+@keyframes popb{0%,100%{scale:1}50%{scale:1.08}}
+.anim .pop{animation:popb 1.6s ease-in-out infinite}
+@keyframes spin{to{rotate:360deg}}
+.anim .spin{animation:spin 14s linear infinite}
+.ts .win:hover{transform:translateY(-6px) scale(1.02) rotate(-.4deg)!important}
+.ts .chan:hover{transform:translateY(-5px) scale(1.02)}
+@media (max-width:900px){.ts .pop svg,.ts .spin svg{width:84px;height:84px}}
+@keyframes qbob{0%,100%{translate:0 0;scale:1}50%{translate:0 -10px;scale:1.05}}
+.anim .qmark{animation:qbob 2.8s ease-in-out infinite,gt 3s steps(1) infinite}
+.ts .mystery{transition:transform .2s}.ts .mystery:hover{transform:translateY(-5px) rotate(-.6deg)}
+.ts .portal{transition:transform .2s}.ts .portal:hover{transform:translateY(-6px) scale(1.02)}
+.ts .gate div{transform:scale(.4);opacity:0;transition:transform .5s cubic-bezier(.2,.9,.3,1.3),opacity .3s}
+.ts .portal:hover .gate div{transform:scale(1);opacity:1}
+.ts input:focus-visible,.ts textarea:focus-visible{outline:3px solid #2fe6c8;outline-offset:2px}
+.coat{filter:saturate(1.3) contrast(1.08) brightness(1.04)}
+.coat::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:40;background:radial-gradient(120% 40% at 12% 0%,rgba(255,255,255,.12),transparent 60%),repeating-linear-gradient(115deg,transparent 0 900px,rgba(255,255,255,.06) 980px,rgba(255,255,255,.16) 1010px,rgba(255,255,255,.06) 1040px,transparent 1120px 1800px);background-size:100% 100%,3600px 100%;mix-blend-mode:screen}
+@keyframes gloss{from{background-position:0 0,-1800px 0}to{background-position:0 0,1800px 0}}
+.anim.coat::after{animation:gloss 16s linear infinite}
+.coat .win::before,.coat .chan::before,.coat .portal::before,.coat .mystery::before,.coat .panel::before,.coat .stage::before,.coat form::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:6;box-shadow:inset 0 2px 0 rgba(255,255,255,.55),inset 0 0 0 1px rgba(255,255,255,.12),inset 0 -24px 34px -24px rgba(0,0,0,.7)}
+.coat .win::after,.coat .chan::after,.coat .portal::after,.coat .mystery::after,.coat .panel::after,.coat .stage::after,.coat form::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:7;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.26) 46%,rgba(255,255,255,.06) 52%,transparent 60%);background-size:260% 100%;background-position:120% 0;mix-blend-mode:screen}
+@keyframes sheen{0%,55%{background-position:120% 0}100%{background-position:-20% 0}}
+.anim.coat .win::after,.anim.coat .chan::after,.anim.coat .portal::after,.anim.coat .mystery::after,.anim.coat .panel::after,.anim.coat .stage::after,.anim.coat form::after{animation:sheen 5.5s ease-in-out infinite}
+.coat .stage{box-shadow:0 30px 80px -20px rgba(255,47,176,.35),0 0 0 1px rgba(255,255,255,.15)}
+.coat .h2c{text-shadow:3px 3px 0 #000,0 0 22px rgba(255,210,63,.6),0 -1px 0 #fff3b8!important}
+.coat .logoglow{filter:brightness(1.1)}
+@media (max-width:900px){.ts .h1{font-size:44px!important}.ts .nadu{width:150px!important}.ts .bubble{display:none!important}.ts .hdrnav{display:none!important}}
+.ts .vbtn{opacity:.28;transition:opacity .2s}.ts .stage:hover .vbtn,.ts .vbtn:focus-visible,.ts .vbtn[aria-pressed="true"]{opacity:1}
+@media (max-width:900px){.ts .lay3{grid-template-columns:1fr!important}}
+@keyframes hsw{0%,12%{clip-path:polygon(97% 0,100% 0,100% 100%,83% 100%)}38%,62%{clip-path:polygon(57% 0,100% 0,100% 100%,43% 100%)}88%,100%{clip-path:polygon(17% 0,100% 0,100% 100%,3% 100%)}}
+@keyframes hrf{0%,12%{clip-path:polygon(97% 0,97.5% 0,83.5% 100%,83% 100%)}38%,62%{clip-path:polygon(57% 0,57.5% 0,43.5% 100%,43% 100%)}88%,100%{clip-path:polygon(17% 0,17.5% 0,3.5% 100%,3% 100%)}}
+.anim .hsweep{animation:hsw 14s cubic-bezier(.7,0,.3,1) infinite alternate}
+.anim .hrift{animation:hrf 14s cubic-bezier(.7,0,.3,1) infinite alternate}
+@keyframes hping{0%{transform:scale(.5);opacity:1}100%{transform:scale(2);opacity:0}}
+.anim .ping{animation:hping 1.8s ease-out infinite}
+.ts .hmap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+</style>
+</helmet>
+<div class="ts {{motionClass}} {{coatClass}}" style="width: 100%; min-height: 6250px; background: linear-gradient(180deg, #0b0c14 0%, #150d30 30%, #1a0f3a 60%, #120b28 100%); color: #eef0f7; font-family: 'Noto Sans KR', sans-serif; overflow: hidden; position: relative">
+<div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden"><svg viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; width: 100%; top: 1180px; height: 170px"><path class="flow f0" d="M0,85.1 L8,89.8 L16,96.3 L24,103.6 L32,110.5 L40,116.0 L48,119.2 L56,120.1 L64,119.1 L72,117.0 L80,114.7 L88,113.0 L96,112.1 L104,112.0 L112,112.0 L120,111.2 L128,108.9 L136,104.7 L144,98.5 L152,91.1 L160,83.6 L168,76.9 L176,72.3 L184,70.0 L192,70.2 L200,72.0 L208,74.6 L216,76.8 L224,77.8 L232,77.2 L240,75.2 L248,72.5 L256,69.8 L264,68.0 L272,67.4 L280,68.1 L288,69.5 L296,70.6 L304,70.5 L312,68.5 L320,64.4 L328,58.5 L336,51.8 L344,45.4 L352,40.5 L360,37.8 L368,37.7 L376,39.8 L384,43.3 L392,47.3 L400,50.9 L408,53.6 L416,55.2 L424,56.4 L432,57.8 L440,60.4 L448,64.5 L456,70.4 L464,77.4 L472,84.7 L480,91.1 L488,95.7 L496,97.8 L504,97.5 L512,95.2 L520,91.9 L528,88.9 L536,87.0 L544,86.8 L552,88.3 L560,90.9 L568,93.8 L576,96.2 L584,97.4 L592,97.3 L600,96.4 L608,95.3 L616,95.1 L624,96.4 L632,99.7 L640,104.6 L648,110.4 L656,116.0 L664,120.3 L672,122.2 L680,121.5 L688,118.4 L696,113.5 L704,107.9 L712,102.7 L720,98.4 L728,95.4 L736,93.3 L744,91.4 L752,88.9 L760,85.2 L768,80.1 L776,73.8 L784,67.2 L792,61.2 L800,57.0 L808,55.2 L816,55.9 L824,58.6 L832,62.5 L840,66.4 L848,69.1 L856,70.1 L864,69.2 L872,66.8 L880,63.7 L888,60.9 L896,59.1 L904,58.7 L912,59.3 L920,60.4 L928,61.0 L936,60.5 L944,58.3 L952,54.5 L960,49.8 L968,45.2 L976,41.9 L984,40.7 L992,42.2 L1000,46.3 L1008,52.3 L1016,59.2 L1024,65.8 L1032,71.3 L1040,75.4 L1048,78.2 L1056,80.2 L1064,82.3 L1072,85.2 L1080,89.3 L1088,94.5 L1096,100.2 L1104,105.3 L1112,108.9 L1120,110.3 L1128,109.3 L1136,106.1 L1144,101.6 L1152,97.0 L1160,93.5 L1168,91.7 L1176,92.1 L1184,94.2 L1192,97.3 L1200,100.4 L1208,102.7 L1216,103.6 L1224,103.2 L1232,102.1 L1240,100.9 L1248,100.5 L1256,101.5 L1264,104.0 L1272,107.4 L1280,110.9 L1288,113.3 L1296,113.7 L1304,111.5 L1312,106.7 L1320,99.9 L1328,92.0 L1336,84.4 L1344,77.9 L1352,73.1 L1360,70.1 L1368,68.2 L1376,66.8 L1384,64.9 L1392,62.1 L1400,58.3 L1408,54.0 L1416,49.9 L1424,47.0 L1432,46.1 L1440,47.6" fill="none" stroke="#2fe6c8" stroke-opacity="0.55" stroke-width="2"></path><path class="flow f1" d="M0,70.3 L8,77.8 L16,83.2 L24,86.2 L32,87.6 L40,88.9 L48,91.5 L56,96.1 L64,102.0 L72,107.6 L80,111.1 L88,111.5 L96,108.9 L104,104.6 L112,100.3 L120,97.6 L128,96.8 L136,97.3 L144,97.5 L152,96.0 L160,92.0 L168,86.3 L176,80.3 L184,75.9 L192,74.3 L200,75.7 L208,78.8 L216,82.1 L224,84.0 L232,84.1 L240,83.1 L248,82.4 L256,83.7 L264,87.6 L272,93.9 L280,100.8 L288,106.6 L296,109.8 L304,110.3 L312,108.9 L320,107.3 L328,106.9 L336,108.2 L344,110.6 L352,112.4 L360,112.1 L368,108.6 L376,102.4 L384,94.7 L392,87.5 L400,82.2 L408,79.2 L416,77.6 L424,76.0 L432,72.9 L440,67.7 L448,61.1 L456,54.8 L464,50.4 L472,49.2 L480,51.0 L488,54.6 L496,58.1 L504,60.2 L512,60.5 L520,59.6 L528,59.2 L536,60.6 L544,64.7 L552,70.6 L560,77.0 L568,81.9 L576,84.0 L584,83.3 L592,80.8 L600,78.2 L608,77.0 L616,77.6 L624,79.3 L632,80.5 L640,79.6 L648,75.9 L656,69.9 L664,62.9 L672,57.0 L680,53.4 L688,52.6 L696,53.4 L704,54.3 L712,53.9 L720,51.8 L728,48.6 L736,45.9 L744,45.4 L752,48.1 L760,53.7 L768,60.8 L776,67.6 L784,72.6 L792,75.4 L800,77.0 L808,78.8 L816,82.2 L824,87.9 L832,95.0 L840,102.1 L848,107.2 L856,109.2 L864,108.2 L872,105.5 L880,102.7 L888,101.3 L896,101.7 L904,103.1 L912,103.9 L920,102.7 L928,98.7 L936,92.7 L944,86.1 L952,80.9 L960,78.3 L968,78.5 L976,80.4 L984,82.2 L992,82.7 L1000,81.4 L1008,79.0 L1016,77.2 L1024,77.5 L1032,80.8 L1040,86.6 L1048,93.4 L1056,99.3 L1064,103.0 L1072,104.1 L1080,103.7 L1088,103.4 L1096,104.4 L1104,107.3 L1112,111.3 L1120,114.9 L1128,116.2 L1136,114.3 L1144,109.4 L1152,103.0 L1160,96.8 L1168,92.3 L1176,89.8 L1184,88.4 L1192,86.6 L1200,83.0 L1208,77.0 L1216,69.4 L1224,61.8 L1232,56.1 L1240,53.3 L1248,53.5 L1256,55.4 L1264,57.4 L1272,58.0 L1280,56.9 L1288,54.8 L1296,53.5 L1304,54.3 L1312,58.0 L1320,64.0 L1328,70.6 L1336,75.9 L1344,78.8 L1352,79.1 L1360,77.8 L1368,76.6 L1376,76.8 L1384,78.9 L1392,81.9 L1400,84.4 L1408,84.7 L1416,82.0 L1424,76.6 L1432,70.2 L1440,64.4" fill="none" stroke="#ff2fb0" stroke-opacity="0.45" stroke-width="1.6"></path><path class="flow f2" d="M0,109.0 L8,103.5 L16,97.7 L24,92.7 L32,89.6 L40,88.7 L48,90.0 L56,92.9 L64,96.4 L72,99.3 L80,100.9 L88,100.8 L96,99.2 L104,96.6 L112,94.1 L120,92.3 L128,91.6 L136,92.0 L144,92.8 L152,93.2 L160,92.1 L168,89.0 L176,83.6 L184,76.2 L192,67.8 L200,59.5 L208,52.6 L216,47.8 L224,45.4 L232,45.2 L240,46.3 L248,47.8 L256,48.9 L264,49.1 L272,48.4 L280,47.3 L288,46.6 L296,47.1 L304,49.5 L312,53.7 L320,59.2 L328,65.2 L336,70.5 L344,74.1 L352,75.4 L360,74.3 L368,71.5 L376,67.9 L384,64.7 L392,62.8 L400,62.7 L408,64.5 L416,67.4 L424,70.8 L432,73.7 L440,75.7 L448,76.5 L456,76.6 L464,76.8 L472,78.1 L480,81.0 L488,86.1 L496,93.0 L504,100.9 L512,108.7 L520,115.2 L528,119.5 L536,121.2 L544,120.5 L552,118.0 L560,114.9 L568,112.0 L576,110.0 L584,109.2 L592,109.0 L600,108.9 L608,108.0 L616,105.6 L624,101.6 L632,96.2 L640,90.3 L648,85.0 L656,81.2 L664,79.6 L672,80.4 L680,83.1 L688,86.7 L696,90.1 L704,92.3 L712,92.6 L720,90.9 L728,87.6 L736,83.5 L744,79.6 L752,76.6 L760,74.8 L768,73.9 L776,73.2 L784,72.1 L792,69.5 L800,65.2 L808,59.2 L816,52.1 L824,45.2 L832,39.4 L840,35.9 L848,35.1 L856,36.8 L864,40.6 L872,45.3 L880,49.9 L888,53.5 L896,55.9 L904,57.2 L912,58.0 L920,59.1 L928,61.3 L936,64.9 L944,69.7 L952,75.3 L960,80.4 L968,84.3 L976,86.0 L984,85.5 L992,82.9 L1000,79.3 L1008,75.6 L1016,73.2 L1024,72.6 L1032,74.3 L1040,77.7 L1048,82.3 L1056,87.0 L1064,90.9 L1072,93.6 L1080,95.1 L1088,95.9 L1096,96.8 L1104,98.7 L1112,102.0 L1120,106.7 L1128,112.5 L1136,118.3 L1144,123.0 L1152,125.6 L1160,125.5 L1168,122.7 L1176,117.8 L1184,111.7 L1192,105.6 L1200,100.4 L1208,96.8 L1216,94.6 L1224,93.3 L1232,92.2 L1240,90.5 L1248,87.6 L1256,83.4 L1264,78.5 L1272,73.8 L1280,70.1 L1288,68.3 L1296,68.7 L1304,71.1 L1312,74.7 L1320,78.5 L1328,81.2 L1336,82.0 L1344,80.6 L1352,77.0 L1360,72.2 L1368,67.0 L1376,62.4 L1384,59.1 L1392,57.2 L1400,56.4 L1408,56.0 L1416,55.1 L1424,53.1 L1432,49.8 L1440,45.5" fill="none" stroke="#ffd23f" stroke-opacity="0.35" stroke-width="1.2"></path><path class="flow f3" d="M0,113.0 L8,112.6 L16,111.6 L24,111.7 L32,113.5 L40,116.5 L48,119.2 L56,119.8 L64,117.4 L72,112.0 L80,104.9 L88,98.0 L96,92.8 L104,89.9 L112,88.6 L120,87.4 L128,84.7 L136,80.0 L144,73.6 L152,67.2 L160,62.5 L168,60.9 L176,62.2 L184,65.6 L192,69.1 L200,71.2 L208,71.4 L216,70.4 L224,69.4 L232,70.2 L240,73.5 L248,78.9 L256,84.8 L264,89.5 L272,91.5 L280,90.6 L288,87.7 L296,84.4 L304,82.4 L312,82.1 L320,83.0 L328,83.7 L336,82.5 L344,78.4 L352,71.9 L360,64.2 L368,57.3 L376,52.6 L384,50.7 L392,50.6 L400,50.9 L408,50.0 L416,47.4 L424,43.5 L432,39.9 L440,38.5 L448,40.1 L456,44.8 L464,51.3 L472,57.6 L480,62.4 L488,65.1 L496,66.4 L504,67.7 L512,70.6 L520,75.7 L528,82.6 L536,89.6 L544,95.0 L552,97.4 L560,96.8 L568,94.2 L576,91.5 L584,90.0 L592,90.4 L600,91.9 L608,93.2 L616,92.6 L624,89.4 L632,84.0 L640,77.8 L648,72.8 L656,70.3 L664,70.7 L672,72.9 L680,75.5 L688,76.8 L696,76.3 L704,74.6 L712,73.3 L720,74.0 L728,77.6 L736,83.8 L744,91.3 L752,98.2 L760,102.9 L768,105.1 L776,105.6 L784,105.9 L792,107.4 L800,110.9 L808,115.5 L816,119.9 L824,122.3 L832,121.5 L840,117.6 L848,111.9 L856,106.2 L864,101.9 L872,99.6 L880,98.6 L888,97.3 L896,94.3 L904,89.0 L912,81.7 L920,74.2 L928,68.3 L936,65.2 L944,65.0 L952,66.8 L960,68.8 L968,69.5 L976,68.5 L984,66.3 L992,64.5 L1000,64.7 L1008,67.7 L1016,73.1 L1024,79.3 L1032,84.5 L1040,87.3 L1048,87.4 L1056,85.7 L1064,83.9 L1072,83.3 L1080,84.5 L1088,86.9 L1096,89.0 L1104,88.9 L1112,85.9 L1120,80.1 L1128,73.0 L1136,66.3 L1144,61.7 L1152,59.3 L1160,58.6 L1168,57.9 L1176,55.8 L1184,51.8 L1192,46.3 L1200,41.1 L1208,37.9 L1216,37.8 L1224,40.8 L1232,45.7 L1240,50.7 L1248,54.3 L1256,56.1 L1264,56.7 L1272,57.7 L1280,60.6 L1288,66.1 L1296,73.5 L1304,81.4 L1312,87.8 L1320,91.5 L1328,92.3 L1336,91.3 L1344,90.1 L1352,90.1 L1360,91.9 L1368,94.8 L1376,97.2 L1384,97.5 L1392,94.9 L1400,89.7 L1408,83.6 L1416,78.4 L1424,75.4 L1432,75.0 L1440,76.2" fill="none" stroke="#6a3cff" stroke-opacity="0.5" stroke-width="1.4"></path></svg><svg viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; width: 100%; top: 2060px; height: 150px"><path class="flow f0" d="M0,85.1 L8,89.8 L16,96.3 L24,103.6 L32,110.5 L40,116.0 L48,119.2 L56,120.1 L64,119.1 L72,117.0 L80,114.7 L88,113.0 L96,112.1 L104,112.0 L112,112.0 L120,111.2 L128,108.9 L136,104.7 L144,98.5 L152,91.1 L160,83.6 L168,76.9 L176,72.3 L184,70.0 L192,70.2 L200,72.0 L208,74.6 L216,76.8 L224,77.8 L232,77.2 L240,75.2 L248,72.5 L256,69.8 L264,68.0 L272,67.4 L280,68.1 L288,69.5 L296,70.6 L304,70.5 L312,68.5 L320,64.4 L328,58.5 L336,51.8 L344,45.4 L352,40.5 L360,37.8 L368,37.7 L376,39.8 L384,43.3 L392,47.3 L400,50.9 L408,53.6 L416,55.2 L424,56.4 L432,57.8 L440,60.4 L448,64.5 L456,70.4 L464,77.4 L472,84.7 L480,91.1 L488,95.7 L496,97.8 L504,97.5 L512,95.2 L520,91.9 L528,88.9 L536,87.0 L544,86.8 L552,88.3 L560,90.9 L568,93.8 L576,96.2 L584,97.4 L592,97.3 L600,96.4 L608,95.3 L616,95.1 L624,96.4 L632,99.7 L640,104.6 L648,110.4 L656,116.0 L664,120.3 L672,122.2 L680,121.5 L688,118.4 L696,113.5 L704,107.9 L712,102.7 L720,98.4 L728,95.4 L736,93.3 L744,91.4 L752,88.9 L760,85.2 L768,80.1 L776,73.8 L784,67.2 L792,61.2 L800,57.0 L808,55.2 L816,55.9 L824,58.6 L832,62.5 L840,66.4 L848,69.1 L856,70.1 L864,69.2 L872,66.8 L880,63.7 L888,60.9 L896,59.1 L904,58.7 L912,59.3 L920,60.4 L928,61.0 L936,60.5 L944,58.3 L952,54.5 L960,49.8 L968,45.2 L976,41.9 L984,40.7 L992,42.2 L1000,46.3 L1008,52.3 L1016,59.2 L1024,65.8 L1032,71.3 L1040,75.4 L1048,78.2 L1056,80.2 L1064,82.3 L1072,85.2 L1080,89.3 L1088,94.5 L1096,100.2 L1104,105.3 L1112,108.9 L1120,110.3 L1128,109.3 L1136,106.1 L1144,101.6 L1152,97.0 L1160,93.5 L1168,91.7 L1176,92.1 L1184,94.2 L1192,97.3 L1200,100.4 L1208,102.7 L1216,103.6 L1224,103.2 L1232,102.1 L1240,100.9 L1248,100.5 L1256,101.5 L1264,104.0 L1272,107.4 L1280,110.9 L1288,113.3 L1296,113.7 L1304,111.5 L1312,106.7 L1320,99.9 L1328,92.0 L1336,84.4 L1344,77.9 L1352,73.1 L1360,70.1 L1368,68.2 L1376,66.8 L1384,64.9 L1392,62.1 L1400,58.3 L1408,54.0 L1416,49.9 L1424,47.0 L1432,46.1 L1440,47.6" fill="none" stroke="#2fe6c8" stroke-opacity="0.55" stroke-width="2"></path><path class="flow f1" d="M0,70.3 L8,77.8 L16,83.2 L24,86.2 L32,87.6 L40,88.9 L48,91.5 L56,96.1 L64,102.0 L72,107.6 L80,111.1 L88,111.5 L96,108.9 L104,104.6 L112,100.3 L120,97.6 L128,96.8 L136,97.3 L144,97.5 L152,96.0 L160,92.0 L168,86.3 L176,80.3 L184,75.9 L192,74.3 L200,75.7 L208,78.8 L216,82.1 L224,84.0 L232,84.1 L240,83.1 L248,82.4 L256,83.7 L264,87.6 L272,93.9 L280,100.8 L288,106.6 L296,109.8 L304,110.3 L312,108.9 L320,107.3 L328,106.9 L336,108.2 L344,110.6 L352,112.4 L360,112.1 L368,108.6 L376,102.4 L384,94.7 L392,87.5 L400,82.2 L408,79.2 L416,77.6 L424,76.0 L432,72.9 L440,67.7 L448,61.1 L456,54.8 L464,50.4 L472,49.2 L480,51.0 L488,54.6 L496,58.1 L504,60.2 L512,60.5 L520,59.6 L528,59.2 L536,60.6 L544,64.7 L552,70.6 L560,77.0 L568,81.9 L576,84.0 L584,83.3 L592,80.8 L600,78.2 L608,77.0 L616,77.6 L624,79.3 L632,80.5 L640,79.6 L648,75.9 L656,69.9 L664,62.9 L672,57.0 L680,53.4 L688,52.6 L696,53.4 L704,54.3 L712,53.9 L720,51.8 L728,48.6 L736,45.9 L744,45.4 L752,48.1 L760,53.7 L768,60.8 L776,67.6 L784,72.6 L792,75.4 L800,77.0 L808,78.8 L816,82.2 L824,87.9 L832,95.0 L840,102.1 L848,107.2 L856,109.2 L864,108.2 L872,105.5 L880,102.7 L888,101.3 L896,101.7 L904,103.1 L912,103.9 L920,102.7 L928,98.7 L936,92.7 L944,86.1 L952,80.9 L960,78.3 L968,78.5 L976,80.4 L984,82.2 L992,82.7 L1000,81.4 L1008,79.0 L1016,77.2 L1024,77.5 L1032,80.8 L1040,86.6 L1048,93.4 L1056,99.3 L1064,103.0 L1072,104.1 L1080,103.7 L1088,103.4 L1096,104.4 L1104,107.3 L1112,111.3 L1120,114.9 L1128,116.2 L1136,114.3 L1144,109.4 L1152,103.0 L1160,96.8 L1168,92.3 L1176,89.8 L1184,88.4 L1192,86.6 L1200,83.0 L1208,77.0 L1216,69.4 L1224,61.8 L1232,56.1 L1240,53.3 L1248,53.5 L1256,55.4 L1264,57.4 L1272,58.0 L1280,56.9 L1288,54.8 L1296,53.5 L1304,54.3 L1312,58.0 L1320,64.0 L1328,70.6 L1336,75.9 L1344,78.8 L1352,79.1 L1360,77.8 L1368,76.6 L1376,76.8 L1384,78.9 L1392,81.9 L1400,84.4 L1408,84.7 L1416,82.0 L1424,76.6 L1432,70.2 L1440,64.4" fill="none" stroke="#ff2fb0" stroke-opacity="0.45" stroke-width="1.6"></path><path class="flow f2" d="M0,109.0 L8,103.5 L16,97.7 L24,92.7 L32,89.6 L40,88.7 L48,90.0 L56,92.9 L64,96.4 L72,99.3 L80,100.9 L88,100.8 L96,99.2 L104,96.6 L112,94.1 L120,92.3 L128,91.6 L136,92.0 L144,92.8 L152,93.2 L160,92.1 L168,89.0 L176,83.6 L184,76.2 L192,67.8 L200,59.5 L208,52.6 L216,47.8 L224,45.4 L232,45.2 L240,46.3 L248,47.8 L256,48.9 L264,49.1 L272,48.4 L280,47.3 L288,46.6 L296,47.1 L304,49.5 L312,53.7 L320,59.2 L328,65.2 L336,70.5 L344,74.1 L352,75.4 L360,74.3 L368,71.5 L376,67.9 L384,64.7 L392,62.8 L400,62.7 L408,64.5 L416,67.4 L424,70.8 L432,73.7 L440,75.7 L448,76.5 L456,76.6 L464,76.8 L472,78.1 L480,81.0 L488,86.1 L496,93.0 L504,100.9 L512,108.7 L520,115.2 L528,119.5 L536,121.2 L544,120.5 L552,118.0 L560,114.9 L568,112.0 L576,110.0 L584,109.2 L592,109.0 L600,108.9 L608,108.0 L616,105.6 L624,101.6 L632,96.2 L640,90.3 L648,85.0 L656,81.2 L664,79.6 L672,80.4 L680,83.1 L688,86.7 L696,90.1 L704,92.3 L712,92.6 L720,90.9 L728,87.6 L736,83.5 L744,79.6 L752,76.6 L760,74.8 L768,73.9 L776,73.2 L784,72.1 L792,69.5 L800,65.2 L808,59.2 L816,52.1 L824,45.2 L832,39.4 L840,35.9 L848,35.1 L856,36.8 L864,40.6 L872,45.3 L880,49.9 L888,53.5 L896,55.9 L904,57.2 L912,58.0 L920,59.1 L928,61.3 L936,64.9 L944,69.7 L952,75.3 L960,80.4 L968,84.3 L976,86.0 L984,85.5 L992,82.9 L1000,79.3 L1008,75.6 L1016,73.2 L1024,72.6 L1032,74.3 L1040,77.7 L1048,82.3 L1056,87.0 L1064,90.9 L1072,93.6 L1080,95.1 L1088,95.9 L1096,96.8 L1104,98.7 L1112,102.0 L1120,106.7 L1128,112.5 L1136,118.3 L1144,123.0 L1152,125.6 L1160,125.5 L1168,122.7 L1176,117.8 L1184,111.7 L1192,105.6 L1200,100.4 L1208,96.8 L1216,94.6 L1224,93.3 L1232,92.2 L1240,90.5 L1248,87.6 L1256,83.4 L1264,78.5 L1272,73.8 L1280,70.1 L1288,68.3 L1296,68.7 L1304,71.1 L1312,74.7 L1320,78.5 L1328,81.2 L1336,82.0 L1344,80.6 L1352,77.0 L1360,72.2 L1368,67.0 L1376,62.4 L1384,59.1 L1392,57.2 L1400,56.4 L1408,56.0 L1416,55.1 L1424,53.1 L1432,49.8 L1440,45.5" fill="none" stroke="#ffd23f" stroke-opacity="0.35" stroke-width="1.2"></path><path class="flow f3" d="M0,113.0 L8,112.6 L16,111.6 L24,111.7 L32,113.5 L40,116.5 L48,119.2 L56,119.8 L64,117.4 L72,112.0 L80,104.9 L88,98.0 L96,92.8 L104,89.9 L112,88.6 L120,87.4 L128,84.7 L136,80.0 L144,73.6 L152,67.2 L160,62.5 L168,60.9 L176,62.2 L184,65.6 L192,69.1 L200,71.2 L208,71.4 L216,70.4 L224,69.4 L232,70.2 L240,73.5 L248,78.9 L256,84.8 L264,89.5 L272,91.5 L280,90.6 L288,87.7 L296,84.4 L304,82.4 L312,82.1 L320,83.0 L328,83.7 L336,82.5 L344,78.4 L352,71.9 L360,64.2 L368,57.3 L376,52.6 L384,50.7 L392,50.6 L400,50.9 L408,50.0 L416,47.4 L424,43.5 L432,39.9 L440,38.5 L448,40.1 L456,44.8 L464,51.3 L472,57.6 L480,62.4 L488,65.1 L496,66.4 L504,67.7 L512,70.6 L520,75.7 L528,82.6 L536,89.6 L544,95.0 L552,97.4 L560,96.8 L568,94.2 L576,91.5 L584,90.0 L592,90.4 L600,91.9 L608,93.2 L616,92.6 L624,89.4 L632,84.0 L640,77.8 L648,72.8 L656,70.3 L664,70.7 L672,72.9 L680,75.5 L688,76.8 L696,76.3 L704,74.6 L712,73.3 L720,74.0 L728,77.6 L736,83.8 L744,91.3 L752,98.2 L760,102.9 L768,105.1 L776,105.6 L784,105.9 L792,107.4 L800,110.9 L808,115.5 L816,119.9 L824,122.3 L832,121.5 L840,117.6 L848,111.9 L856,106.2 L864,101.9 L872,99.6 L880,98.6 L888,97.3 L896,94.3 L904,89.0 L912,81.7 L920,74.2 L928,68.3 L936,65.2 L944,65.0 L952,66.8 L960,68.8 L968,69.5 L976,68.5 L984,66.3 L992,64.5 L1000,64.7 L1008,67.7 L1016,73.1 L1024,79.3 L1032,84.5 L1040,87.3 L1048,87.4 L1056,85.7 L1064,83.9 L1072,83.3 L1080,84.5 L1088,86.9 L1096,89.0 L1104,88.9 L1112,85.9 L1120,80.1 L1128,73.0 L1136,66.3 L1144,61.7 L1152,59.3 L1160,58.6 L1168,57.9 L1176,55.8 L1184,51.8 L1192,46.3 L1200,41.1 L1208,37.9 L1216,37.8 L1224,40.8 L1232,45.7 L1240,50.7 L1248,54.3 L1256,56.1 L1264,56.7 L1272,57.7 L1280,60.6 L1288,66.1 L1296,73.5 L1304,81.4 L1312,87.8 L1320,91.5 L1328,92.3 L1336,91.3 L1344,90.1 L1352,90.1 L1360,91.9 L1368,94.8 L1376,97.2 L1384,97.5 L1392,94.9 L1400,89.7 L1408,83.6 L1416,78.4 L1424,75.4 L1432,75.0 L1440,76.2" fill="none" stroke="#6a3cff" stroke-opacity="0.5" stroke-width="1.4"></path></svg><svg viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; width: 100%; top: 2980px; height: 150px"><path class="flow f0" d="M0,85.1 L8,89.8 L16,96.3 L24,103.6 L32,110.5 L40,116.0 L48,119.2 L56,120.1 L64,119.1 L72,117.0 L80,114.7 L88,113.0 L96,112.1 L104,112.0 L112,112.0 L120,111.2 L128,108.9 L136,104.7 L144,98.5 L152,91.1 L160,83.6 L168,76.9 L176,72.3 L184,70.0 L192,70.2 L200,72.0 L208,74.6 L216,76.8 L224,77.8 L232,77.2 L240,75.2 L248,72.5 L256,69.8 L264,68.0 L272,67.4 L280,68.1 L288,69.5 L296,70.6 L304,70.5 L312,68.5 L320,64.4 L328,58.5 L336,51.8 L344,45.4 L352,40.5 L360,37.8 L368,37.7 L376,39.8 L384,43.3 L392,47.3 L400,50.9 L408,53.6 L416,55.2 L424,56.4 L432,57.8 L440,60.4 L448,64.5 L456,70.4 L464,77.4 L472,84.7 L480,91.1 L488,95.7 L496,97.8 L504,97.5 L512,95.2 L520,91.9 L528,88.9 L536,87.0 L544,86.8 L552,88.3 L560,90.9 L568,93.8 L576,96.2 L584,97.4 L592,97.3 L600,96.4 L608,95.3 L616,95.1 L624,96.4 L632,99.7 L640,104.6 L648,110.4 L656,116.0 L664,120.3 L672,122.2 L680,121.5 L688,118.4 L696,113.5 L704,107.9 L712,102.7 L720,98.4 L728,95.4 L736,93.3 L744,91.4 L752,88.9 L760,85.2 L768,80.1 L776,73.8 L784,67.2 L792,61.2 L800,57.0 L808,55.2 L816,55.9 L824,58.6 L832,62.5 L840,66.4 L848,69.1 L856,70.1 L864,69.2 L872,66.8 L880,63.7 L888,60.9 L896,59.1 L904,58.7 L912,59.3 L920,60.4 L928,61.0 L936,60.5 L944,58.3 L952,54.5 L960,49.8 L968,45.2 L976,41.9 L984,40.7 L992,42.2 L1000,46.3 L1008,52.3 L1016,59.2 L1024,65.8 L1032,71.3 L1040,75.4 L1048,78.2 L1056,80.2 L1064,82.3 L1072,85.2 L1080,89.3 L1088,94.5 L1096,100.2 L1104,105.3 L1112,108.9 L1120,110.3 L1128,109.3 L1136,106.1 L1144,101.6 L1152,97.0 L1160,93.5 L1168,91.7 L1176,92.1 L1184,94.2 L1192,97.3 L1200,100.4 L1208,102.7 L1216,103.6 L1224,103.2 L1232,102.1 L1240,100.9 L1248,100.5 L1256,101.5 L1264,104.0 L1272,107.4 L1280,110.9 L1288,113.3 L1296,113.7 L1304,111.5 L1312,106.7 L1320,99.9 L1328,92.0 L1336,84.4 L1344,77.9 L1352,73.1 L1360,70.1 L1368,68.2 L1376,66.8 L1384,64.9 L1392,62.1 L1400,58.3 L1408,54.0 L1416,49.9 L1424,47.0 L1432,46.1 L1440,47.6" fill="none" stroke="#2fe6c8" stroke-opacity="0.55" stroke-width="2"></path><path class="flow f1" d="M0,70.3 L8,77.8 L16,83.2 L24,86.2 L32,87.6 L40,88.9 L48,91.5 L56,96.1 L64,102.0 L72,107.6 L80,111.1 L88,111.5 L96,108.9 L104,104.6 L112,100.3 L120,97.6 L128,96.8 L136,97.3 L144,97.5 L152,96.0 L160,92.0 L168,86.3 L176,80.3 L184,75.9 L192,74.3 L200,75.7 L208,78.8 L216,82.1 L224,84.0 L232,84.1 L240,83.1 L248,82.4 L256,83.7 L264,87.6 L272,93.9 L280,100.8 L288,106.6 L296,109.8 L304,110.3 L312,108.9 L320,107.3 L328,106.9 L336,108.2 L344,110.6 L352,112.4 L360,112.1 L368,108.6 L376,102.4 L384,94.7 L392,87.5 L400,82.2 L408,79.2 L416,77.6 L424,76.0 L432,72.9 L440,67.7 L448,61.1 L456,54.8 L464,50.4 L472,49.2 L480,51.0 L488,54.6 L496,58.1 L504,60.2 L512,60.5 L520,59.6 L528,59.2 L536,60.6 L544,64.7 L552,70.6 L560,77.0 L568,81.9 L576,84.0 L584,83.3 L592,80.8 L600,78.2 L608,77.0 L616,77.6 L624,79.3 L632,80.5 L640,79.6 L648,75.9 L656,69.9 L664,62.9 L672,57.0 L680,53.4 L688,52.6 L696,53.4 L704,54.3 L712,53.9 L720,51.8 L728,48.6 L736,45.9 L744,45.4 L752,48.1 L760,53.7 L768,60.8 L776,67.6 L784,72.6 L792,75.4 L800,77.0 L808,78.8 L816,82.2 L824,87.9 L832,95.0 L840,102.1 L848,107.2 L856,109.2 L864,108.2 L872,105.5 L880,102.7 L888,101.3 L896,101.7 L904,103.1 L912,103.9 L920,102.7 L928,98.7 L936,92.7 L944,86.1 L952,80.9 L960,78.3 L968,78.5 L976,80.4 L984,82.2 L992,82.7 L1000,81.4 L1008,79.0 L1016,77.2 L1024,77.5 L1032,80.8 L1040,86.6 L1048,93.4 L1056,99.3 L1064,103.0 L1072,104.1 L1080,103.7 L1088,103.4 L1096,104.4 L1104,107.3 L1112,111.3 L1120,114.9 L1128,116.2 L1136,114.3 L1144,109.4 L1152,103.0 L1160,96.8 L1168,92.3 L1176,89.8 L1184,88.4 L1192,86.6 L1200,83.0 L1208,77.0 L1216,69.4 L1224,61.8 L1232,56.1 L1240,53.3 L1248,53.5 L1256,55.4 L1264,57.4 L1272,58.0 L1280,56.9 L1288,54.8 L1296,53.5 L1304,54.3 L1312,58.0 L1320,64.0 L1328,70.6 L1336,75.9 L1344,78.8 L1352,79.1 L1360,77.8 L1368,76.6 L1376,76.8 L1384,78.9 L1392,81.9 L1400,84.4 L1408,84.7 L1416,82.0 L1424,76.6 L1432,70.2 L1440,64.4" fill="none" stroke="#ff2fb0" stroke-opacity="0.45" stroke-width="1.6"></path><path class="flow f2" d="M0,109.0 L8,103.5 L16,97.7 L24,92.7 L32,89.6 L40,88.7 L48,90.0 L56,92.9 L64,96.4 L72,99.3 L80,100.9 L88,100.8 L96,99.2 L104,96.6 L112,94.1 L120,92.3 L128,91.6 L136,92.0 L144,92.8 L152,93.2 L160,92.1 L168,89.0 L176,83.6 L184,76.2 L192,67.8 L200,59.5 L208,52.6 L216,47.8 L224,45.4 L232,45.2 L240,46.3 L248,47.8 L256,48.9 L264,49.1 L272,48.4 L280,47.3 L288,46.6 L296,47.1 L304,49.5 L312,53.7 L320,59.2 L328,65.2 L336,70.5 L344,74.1 L352,75.4 L360,74.3 L368,71.5 L376,67.9 L384,64.7 L392,62.8 L400,62.7 L408,64.5 L416,67.4 L424,70.8 L432,73.7 L440,75.7 L448,76.5 L456,76.6 L464,76.8 L472,78.1 L480,81.0 L488,86.1 L496,93.0 L504,100.9 L512,108.7 L520,115.2 L528,119.5 L536,121.2 L544,120.5 L552,118.0 L560,114.9 L568,112.0 L576,110.0 L584,109.2 L592,109.0 L600,108.9 L608,108.0 L616,105.6 L624,101.6 L632,96.2 L640,90.3 L648,85.0 L656,81.2 L664,79.6 L672,80.4 L680,83.1 L688,86.7 L696,90.1 L704,92.3 L712,92.6 L720,90.9 L728,87.6 L736,83.5 L744,79.6 L752,76.6 L760,74.8 L768,73.9 L776,73.2 L784,72.1 L792,69.5 L800,65.2 L808,59.2 L816,52.1 L824,45.2 L832,39.4 L840,35.9 L848,35.1 L856,36.8 L864,40.6 L872,45.3 L880,49.9 L888,53.5 L896,55.9 L904,57.2 L912,58.0 L920,59.1 L928,61.3 L936,64.9 L944,69.7 L952,75.3 L960,80.4 L968,84.3 L976,86.0 L984,85.5 L992,82.9 L1000,79.3 L1008,75.6 L1016,73.2 L1024,72.6 L1032,74.3 L1040,77.7 L1048,82.3 L1056,87.0 L1064,90.9 L1072,93.6 L1080,95.1 L1088,95.9 L1096,96.8 L1104,98.7 L1112,102.0 L1120,106.7 L1128,112.5 L1136,118.3 L1144,123.0 L1152,125.6 L1160,125.5 L1168,122.7 L1176,117.8 L1184,111.7 L1192,105.6 L1200,100.4 L1208,96.8 L1216,94.6 L1224,93.3 L1232,92.2 L1240,90.5 L1248,87.6 L1256,83.4 L1264,78.5 L1272,73.8 L1280,70.1 L1288,68.3 L1296,68.7 L1304,71.1 L1312,74.7 L1320,78.5 L1328,81.2 L1336,82.0 L1344,80.6 L1352,77.0 L1360,72.2 L1368,67.0 L1376,62.4 L1384,59.1 L1392,57.2 L1400,56.4 L1408,56.0 L1416,55.1 L1424,53.1 L1432,49.8 L1440,45.5" fill="none" stroke="#ffd23f" stroke-opacity="0.35" stroke-width="1.2"></path><path class="flow f3" d="M0,113.0 L8,112.6 L16,111.6 L24,111.7 L32,113.5 L40,116.5 L48,119.2 L56,119.8 L64,117.4 L72,112.0 L80,104.9 L88,98.0 L96,92.8 L104,89.9 L112,88.6 L120,87.4 L128,84.7 L136,80.0 L144,73.6 L152,67.2 L160,62.5 L168,60.9 L176,62.2 L184,65.6 L192,69.1 L200,71.2 L208,71.4 L216,70.4 L224,69.4 L232,70.2 L240,73.5 L248,78.9 L256,84.8 L264,89.5 L272,91.5 L280,90.6 L288,87.7 L296,84.4 L304,82.4 L312,82.1 L320,83.0 L328,83.7 L336,82.5 L344,78.4 L352,71.9 L360,64.2 L368,57.3 L376,52.6 L384,50.7 L392,50.6 L400,50.9 L408,50.0 L416,47.4 L424,43.5 L432,39.9 L440,38.5 L448,40.1 L456,44.8 L464,51.3 L472,57.6 L480,62.4 L488,65.1 L496,66.4 L504,67.7 L512,70.6 L520,75.7 L528,82.6 L536,89.6 L544,95.0 L552,97.4 L560,96.8 L568,94.2 L576,91.5 L584,90.0 L592,90.4 L600,91.9 L608,93.2 L616,92.6 L624,89.4 L632,84.0 L640,77.8 L648,72.8 L656,70.3 L664,70.7 L672,72.9 L680,75.5 L688,76.8 L696,76.3 L704,74.6 L712,73.3 L720,74.0 L728,77.6 L736,83.8 L744,91.3 L752,98.2 L760,102.9 L768,105.1 L776,105.6 L784,105.9 L792,107.4 L800,110.9 L808,115.5 L816,119.9 L824,122.3 L832,121.5 L840,117.6 L848,111.9 L856,106.2 L864,101.9 L872,99.6 L880,98.6 L888,97.3 L896,94.3 L904,89.0 L912,81.7 L920,74.2 L928,68.3 L936,65.2 L944,65.0 L952,66.8 L960,68.8 L968,69.5 L976,68.5 L984,66.3 L992,64.5 L1000,64.7 L1008,67.7 L1016,73.1 L1024,79.3 L1032,84.5 L1040,87.3 L1048,87.4 L1056,85.7 L1064,83.9 L1072,83.3 L1080,84.5 L1088,86.9 L1096,89.0 L1104,88.9 L1112,85.9 L1120,80.1 L1128,73.0 L1136,66.3 L1144,61.7 L1152,59.3 L1160,58.6 L1168,57.9 L1176,55.8 L1184,51.8 L1192,46.3 L1200,41.1 L1208,37.9 L1216,37.8 L1224,40.8 L1232,45.7 L1240,50.7 L1248,54.3 L1256,56.1 L1264,56.7 L1272,57.7 L1280,60.6 L1288,66.1 L1296,73.5 L1304,81.4 L1312,87.8 L1320,91.5 L1328,92.3 L1336,91.3 L1344,90.1 L1352,90.1 L1360,91.9 L1368,94.8 L1376,97.2 L1384,97.5 L1392,94.9 L1400,89.7 L1408,83.6 L1416,78.4 L1424,75.4 L1432,75.0 L1440,76.2" fill="none" stroke="#6a3cff" stroke-opacity="0.5" stroke-width="1.4"></path></svg><svg viewBox="0 0 80 1220" aria-hidden="true" style="position: absolute; left: 14px; top: 1150px; width: 80px; height: 1220px"><line x1="0" y1="0" x2="18" y2="0" stroke="#2fe6c8" stroke-opacity="0.7" stroke-width="1.5"></line><text x="24" y="4" fill="#2fe6c8" fill-opacity=".6" font-family="Space Mono, monospace" font-size="11">CH 00</text><line x1="0" y1="20" x2="9" y2="20" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="40" x2="9" y2="40" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="60" x2="9" y2="60" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="80" x2="9" y2="80" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="100" x2="18" y2="100" stroke="#2fe6c8" stroke-opacity="0.7" stroke-width="1.5"></line><line x1="0" y1="120" x2="9" y2="120" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="140" x2="9" y2="140" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="160" x2="9" y2="160" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="180" x2="9" y2="180" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="200" x2="18" y2="200" stroke="#2fe6c8" stroke-opacity="0.7" stroke-width="1.5"></line><text x="24" y="204" fill="#2fe6c8" fill-opacity=".6" font-family="Space Mono, monospace" font-size="11">CH 01</text><line x1="0" y1="220" x2="9" y2="220" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="240" x2="9" y2="240" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="260" x2="9" y2="260" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="280" x2="9" y2="280" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="300" x2="18" y2="300" stroke="#2fe6c8" stroke-opacity="0.7" stroke-width="1.5"></line><line x1="0" y1="320" x2="9" y2="320" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="340" x2="9" y2="340" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="360" x2="9" y2="360" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="380" x2="9" y2="380" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="400" x2="18" y2="400" stroke="#2fe6c8" stroke-opacity="0.7" stroke-width="1.5"></line><text x="24" y="404" fill="#2fe6c8" fill-opacity=".6" font-family="Space Mono, monospace" font-size="11">CH 02</text><line x1="0" y1="420" x2="9" y2="420" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="440" x2="9" y2="440" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="460" x2="9" y2="460" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="480" x2="9" y2="480" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="500" x2="18" y2="500" stroke="#2fe6c8" stroke-opacity="0.7" stroke-width="1.5"></line><line x1="0" y1="520" x2="9" y2="520" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="540" x2="9" y2="540" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="560" x2="9" y2="560" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="580" x2="9" y2="580" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="600" x2="18" y2="600" stroke="#2fe6c8" stroke-opacity="0.7" stroke-width="1.5"></line><text x="24" y="604" fill="#2fe6c8" fill-opacity=".6" font-family="Space Mono, monospace" font-size="11">CH 03</text><line x1="0" y1="620" x2="9" y2="620" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="640" x2="9" y2="640" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="660" x2="9" y2="660" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="680" x2="9" y2="680" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="700" x2="18" y2="700" stroke="#2fe6c8" stroke-opacity="0.7" stroke-width="1.5"></line><line x1="0" y1="720" x2="9" y2="720" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="740" x2="9" y2="740" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="760" x2="9" y2="760" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="780" x2="9" y2="780" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="800" x2="18" y2="800" stroke="#2fe6c8" stroke-opacity="0.7" stroke-width="1.5"></line><text x="24" y="804" fill="#2fe6c8" fill-opacity=".6" font-family="Space Mono, monospace" font-size="11">CH 04</text><line x1="0" y1="820" x2="9" y2="820" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="840" x2="9" y2="840" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="860" x2="9" y2="860" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="880" x2="9" y2="880" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="900" x2="18" y2="900" stroke="#2fe6c8" stroke-opacity="0.7" stroke-width="1.5"></line><line x1="0" y1="920" x2="9" y2="920" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="940" x2="9" y2="940" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="960" x2="9" y2="960" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="980" x2="9" y2="980" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="1000" x2="18" y2="1000" stroke="#2fe6c8" stroke-opacity="0.7" stroke-width="1.5"></line><text x="24" y="1004" fill="#2fe6c8" fill-opacity=".6" font-family="Space Mono, monospace" font-size="11">CH 05</text><line x1="0" y1="1020" x2="9" y2="1020" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="1040" x2="9" y2="1040" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="1060" x2="9" y2="1060" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="1080" x2="9" y2="1080" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="1100" x2="18" y2="1100" stroke="#2fe6c8" stroke-opacity="0.7" stroke-width="1.5"></line><line x1="0" y1="1120" x2="9" y2="1120" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="1140" x2="9" y2="1140" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="1160" x2="9" y2="1160" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="1180" x2="9" y2="1180" stroke="#2fe6c8" stroke-opacity="0.35" stroke-width="1.5"></line><line x1="0" y1="1200" x2="18" y2="1200" stroke="#2fe6c8" stroke-opacity="0.7" stroke-width="1.5"></line><text x="24" y="1204" fill="#2fe6c8" fill-opacity=".6" font-family="Space Mono, monospace" font-size="11">CH 06</text><g class="needle"><path d="M0 0 L 70 0" stroke="#ff2fb0" stroke-width="2.5"></path><path d="M70 -6 L 80 0 L 70 6 Z" fill="#ff2fb0"></path></g></svg><svg viewBox="0 0 160 120" aria-hidden="true" style="position: absolute; right: 30px; top: 1020px; width: 200px; height: 150px"><rect class="eqb" x="0" y="59" width="6" height="61" fill="#2fe6c8" fill-opacity=".55" style="animation-delay:-0.78s"></rect><rect class="eqb" x="10" y="17" width="6" height="103" fill="#ff2fb0" fill-opacity=".55" style="animation-delay:-0.65s"></rect><rect class="eqb" x="20" y="54" width="6" height="66" fill="#ffd23f" fill-opacity=".55" style="animation-delay:-0.82s"></rect><rect class="eqb" x="30" y="83" width="6" height="37" fill="#2fe6c8" fill-opacity=".55" style="animation-delay:-0.72s"></rect><rect class="eqb" x="40" y="43" width="6" height="77" fill="#ff2fb0" fill-opacity=".55" style="animation-delay:-1.11s"></rect><rect class="eqb" x="50" y="92" width="6" height="28" fill="#ffd23f" fill-opacity=".55" style="animation-delay:-0.42s"></rect><rect class="eqb" x="60" y="92" width="6" height="28" fill="#2fe6c8" fill-opacity=".55" style="animation-delay:-1.13s"></rect><rect class="eqb" x="70" y="38" width="6" height="82" fill="#ff2fb0" fill-opacity=".55" style="animation-delay:-0.06s"></rect><rect class="eqb" x="80" y="12" width="6" height="108" fill="#ffd23f" fill-opacity=".55" style="animation-delay:-1.35s"></rect><rect class="eqb" x="90" y="41" width="6" height="79" fill="#2fe6c8" fill-opacity=".55" style="animation-delay:-0.86s"></rect><rect class="eqb" x="100" y="86" width="6" height="34" fill="#ff2fb0" fill-opacity=".55" style="animation-delay:-0.02s"></rect><rect class="eqb" x="110" y="52" width="6" height="68" fill="#ffd23f" fill-opacity=".55" style="animation-delay:-0.08s"></rect><rect class="eqb" x="120" y="83" width="6" height="37" fill="#2fe6c8" fill-opacity=".55" style="animation-delay:-0.34s"></rect><rect class="eqb" x="130" y="97" width="6" height="23" fill="#ff2fb0" fill-opacity=".55" style="animation-delay:-0.65s"></rect><rect class="eqb" x="140" y="60" width="6" height="60" fill="#ffd23f" fill-opacity=".55" style="animation-delay:-1.18s"></rect><rect class="eqb" x="150" y="53" width="6" height="67" fill="#2fe6c8" fill-opacity=".55" style="animation-delay:-0.90s"></rect></svg><svg viewBox="0 0 160 120" aria-hidden="true" style="position: absolute; right: 60px; top: 2600px; width: 200px; height: 150px"><rect class="eqb" x="0" y="59" width="6" height="61" fill="#2fe6c8" fill-opacity=".55" style="animation-delay:-0.78s"></rect><rect class="eqb" x="10" y="17" width="6" height="103" fill="#ff2fb0" fill-opacity=".55" style="animation-delay:-0.65s"></rect><rect class="eqb" x="20" y="54" width="6" height="66" fill="#ffd23f" fill-opacity=".55" style="animation-delay:-0.82s"></rect><rect class="eqb" x="30" y="83" width="6" height="37" fill="#2fe6c8" fill-opacity=".55" style="animation-delay:-0.72s"></rect><rect class="eqb" x="40" y="43" width="6" height="77" fill="#ff2fb0" fill-opacity=".55" style="animation-delay:-1.11s"></rect><rect class="eqb" x="50" y="92" width="6" height="28" fill="#ffd23f" fill-opacity=".55" style="animation-delay:-0.42s"></rect><rect class="eqb" x="60" y="92" width="6" height="28" fill="#2fe6c8" fill-opacity=".55" style="animation-delay:-1.13s"></rect><rect class="eqb" x="70" y="38" width="6" height="82" fill="#ff2fb0" fill-opacity=".55" style="animation-delay:-0.06s"></rect><rect class="eqb" x="80" y="12" width="6" height="108" fill="#ffd23f" fill-opacity=".55" style="animation-delay:-1.35s"></rect><rect class="eqb" x="90" y="41" width="6" height="79" fill="#2fe6c8" fill-opacity=".55" style="animation-delay:-0.86s"></rect><rect class="eqb" x="100" y="86" width="6" height="34" fill="#ff2fb0" fill-opacity=".55" style="animation-delay:-0.02s"></rect><rect class="eqb" x="110" y="52" width="6" height="68" fill="#ffd23f" fill-opacity=".55" style="animation-delay:-0.08s"></rect><rect class="eqb" x="120" y="83" width="6" height="37" fill="#2fe6c8" fill-opacity=".55" style="animation-delay:-0.34s"></rect><rect class="eqb" x="130" y="97" width="6" height="23" fill="#ff2fb0" fill-opacity=".55" style="animation-delay:-0.65s"></rect><rect class="eqb" x="140" y="60" width="6" height="60" fill="#ffd23f" fill-opacity=".55" style="animation-delay:-1.18s"></rect><rect class="eqb" x="150" y="53" width="6" height="67" fill="#2fe6c8" fill-opacity=".55" style="animation-delay:-0.90s"></rect></svg><svg class="sqpulse" viewBox="0 0 800 800" aria-hidden="true" style="position: absolute; right: -180px; top: 1700px; width: 700px; height: 700px"><rect x="360.0" y="360.0" width="80" height="80" fill="none" stroke="#2fe6c8" stroke-opacity="0.22" stroke-width="2"></rect><rect x="315.0" y="315.0" width="170" height="170" fill="none" stroke="#ff2fb0" stroke-opacity="0.19" stroke-width="2"></rect><rect x="270.0" y="270.0" width="260" height="260" fill="none" stroke="#ffd23f" stroke-opacity="0.16" stroke-width="2"></rect><rect x="225.0" y="225.0" width="350" height="350" fill="none" stroke="#6a3cff" stroke-opacity="0.13" stroke-width="2"></rect><rect x="180.0" y="180.0" width="440" height="440" fill="none" stroke="#2fe6c8" stroke-opacity="0.10" stroke-width="2"></rect></svg><svg class="sqpulse" viewBox="0 0 800 800" aria-hidden="true" style="position: absolute; left: -220px; top: 2500px; width: 700px; height: 700px"><rect x="360.0" y="360.0" width="80" height="80" fill="none" stroke="#2fe6c8" stroke-opacity="0.22" stroke-width="2"></rect><rect x="315.0" y="315.0" width="170" height="170" fill="none" stroke="#ff2fb0" stroke-opacity="0.19" stroke-width="2"></rect><rect x="270.0" y="270.0" width="260" height="260" fill="none" stroke="#ffd23f" stroke-opacity="0.16" stroke-width="2"></rect><rect x="225.0" y="225.0" width="350" height="350" fill="none" stroke="#6a3cff" stroke-opacity="0.13" stroke-width="2"></rect><rect x="180.0" y="180.0" width="440" height="440" fill="none" stroke="#2fe6c8" stroke-opacity="0.10" stroke-width="2"></rect></svg><div class="drift" style="position: absolute; left: 50.0%; top: 2574px; width: 18px; height: 18px; border: 2px solid #ff2fb0; background: #ff2fb022; box-shadow: 0 0 12px #ff2fb066; animation-delay: -2.4s; transform: rotate(2deg)"></div><div class="drift" style="position: absolute; left: 91.4%; top: 1241px; width: 15px; height: 15px; border: 2px solid #2fe6c8; background: #2fe6c822; box-shadow: 0 0 12px #2fe6c866; animation-delay: -3.1s; transform: rotate(-19deg)"></div><div class="drift" style="position: absolute; left: 56.1%; top: 1298px; width: 12px; height: 12px; border: 2px solid #ff2fb0; background: #ff2fb022; box-shadow: 0 0 12px #ff2fb066; animation-delay: -2.3s; transform: rotate(18deg)"></div><div class="drift" style="position: absolute; left: 83.3%; top: 1051px; width: 14px; height: 14px; border: 2px solid #2fe6c8; background: #2fe6c822; box-shadow: 0 0 12px #2fe6c866; animation-delay: -2.8s; transform: rotate(19deg)"></div><div class="drift" style="position: absolute; left: 40.2%; top: 1218px; width: 21px; height: 21px; border: 2px solid #ffd23f; background: #ffd23f22; box-shadow: 0 0 12px #ffd23f66; animation-delay: -1.6s; transform: rotate(-17deg)"></div><div class="drift" style="position: absolute; left: 33.9%; top: 3267px; width: 24px; height: 24px; border: 2px solid #2fe6c8; background: #2fe6c822; box-shadow: 0 0 12px #2fe6c866; animation-delay: -0.8s; transform: rotate(8deg)"></div><div class="drift" style="position: absolute; left: 3.1%; top: 2119px; width: 19px; height: 19px; border: 2px solid #ffd23f; background: #ffd23f22; box-shadow: 0 0 12px #ffd23f66; animation-delay: -3.4s; transform: rotate(-2deg)"></div><div class="drift" style="position: absolute; left: 20.3%; top: 2733px; width: 12px; height: 12px; border: 2px solid #ffd23f; background: #ffd23f22; box-shadow: 0 0 12px #ffd23f66; animation-delay: -2.3s; transform: rotate(-4deg)"></div><div class="drift" style="position: absolute; left: 97.0%; top: 1051px; width: 26px; height: 26px; border: 2px solid #ffd23f; background: #ffd23f22; box-shadow: 0 0 12px #ffd23f66; animation-delay: -1.8s; transform: rotate(15deg)"></div><div class="drift" style="position: absolute; left: 22.2%; top: 1957px; width: 25px; height: 25px; border: 2px solid #ffd23f; background: #ffd23f22; box-shadow: 0 0 12px #ffd23f66; animation-delay: -3.5s; transform: rotate(-18deg)"></div><div class="drift" style="position: absolute; left: 16.1%; top: 2066px; width: 10px; height: 10px; border: 2px solid #ffd23f; background: #ffd23f22; box-shadow: 0 0 12px #ffd23f66; animation-delay: -2.0s; transform: rotate(-8deg)"></div><div class="drift" style="position: absolute; left: 9.0%; top: 1257px; width: 20px; height: 20px; border: 2px solid #2fe6c8; background: #2fe6c822; box-shadow: 0 0 12px #2fe6c866; animation-delay: -0.1s; transform: rotate(-5deg)"></div><div class="drift" style="position: absolute; left: 61.7%; top: 1343px; width: 21px; height: 21px; border: 2px solid #ffd23f; background: #ffd23f22; box-shadow: 0 0 12px #ffd23f66; animation-delay: -0.8s; transform: rotate(-5deg)"></div><div class="drift" style="position: absolute; left: 62.2%; top: 1765px; width: 14px; height: 14px; border: 2px solid #ffd23f; background: #ffd23f22; box-shadow: 0 0 12px #ffd23f66; animation-delay: -1.5s; transform: rotate(-12deg)"></div><div class="drift" style="position: absolute; left: 73.0%; top: 3213px; width: 14px; height: 14px; border: 2px solid #ff2fb0; background: #ff2fb022; box-shadow: 0 0 12px #ff2fb066; animation-delay: -5.3s; transform: rotate(4deg)"></div><div class="drift" style="position: absolute; left: 42.5%; top: 1289px; width: 11px; height: 11px; border: 2px solid #ff2fb0; background: #ff2fb022; box-shadow: 0 0 12px #ff2fb066; animation-delay: -1.4s; transform: rotate(8deg)"></div></div>
+
+<svg width="0" height="0" style="position: absolute" aria-hidden="true">
+<defs>
+<filter id="boil"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="1"><animate attributeName="seed" values="1;3;5;2;4" dur="0.6s" repeatCount="indefinite" calcMode="discrete"></animate></feTurbulence><feDisplacementMap in="SourceGraphic" scale="3"></feDisplacementMap></filter>
+</defs>
+</svg>
+
+<header style="border-bottom: 1px solid #23263a">
+<div style="max-width: 1360px; margin: 0 auto; padding: 18px 40px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap">
+<a href="#top" aria-label="TERRASIGNAL 홈" style="display: flex; align-items: center; gap: 12px; text-decoration: none"><svg width="52" height="52" viewBox="0 0 60 60" aria-hidden="true" class="sigpulse"><defs><linearGradient id="tvg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2fe6c8"></stop><stop offset="1" stop-color="#ff2fb0"></stop></linearGradient></defs><rect x="27" y="15" width="6" height="4" fill="none" stroke="#2fe6c8" stroke-width="1.8"></rect><rect x="23" y="8.5" width="14" height="4.5" fill="none" stroke="#ff2fb0" stroke-width="1.8"></rect><rect x="18" y="1.5" width="24" height="5" fill="none" stroke="#ffd23f" stroke-width="1.8"></rect><path d="M21 21 L30 27 L39 21" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="square"></path><rect x="6" y="27" width="48" height="29" rx="2" fill="#0a0716" stroke="url(#tvg)" stroke-width="3.5"></rect><rect x="11" y="32" width="26" height="19" fill="none" stroke="url(#tvg)" stroke-width="2.5"></rect><rect x="19.5" y="38" width="9" height="7.5" fill="#ffffff"></rect><rect x="41" y="33" width="8" height="6" fill="none" stroke="#ff2fb0" stroke-width="2.2"></rect><rect x="41" y="42" width="8" height="5" fill="none" stroke="#ff2fb0" stroke-width="2.2"></rect><rect x="40" y="50" width="10" height="3" fill="#ff2fb0"></rect></svg><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Bungee', sans-serif; font-size: 28px; line-height: 1; letter-spacing: 1px; color: #ffd23f" class="logoglow" data-text="TERRASIGNAL">TERRASIGNAL</span><span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 3px; color: #2fe6c8">SIGNAL FROM MY SECOND EARTH</span></span></a>
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #8b90aa; border-left: 1px solid #23263a; padding-left: 18px">METAFUNK AGENCY BROADCAST</span>
+<nav class="hdrnav" aria-label="주요 메뉴" style="display: flex; gap: 4px; margin-left: auto; font-size: 15px; font-weight: 500">
+<a href="#rx" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">시그널 수신</a>
+<a href="#" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">시그널 지도</a>
+<a href="#ch" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">수신 가이드</a>
+<a href="#" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">개척 연대기</a>
+<a href="#prologue" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">프롤로그</a>
+<a href="#tx-you" style="color: #eef0f7; text-decoration: none; padding: 8px 12px">시그널 보내기</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 8px; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; color: #ffffff; background: #e63946; padding: 7px 12px; border-radius: 4px">
+<span class="blink" style="width: 8px; height: 8px; border-radius: 50%; background: #ffffff; display: inline-block"></span>ON AIR
+</div>
+</div>
+</header>
+
+<section id="top" style="max-width: 1360px; margin: 0 auto; padding: 56px 40px 0">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; margin-bottom: 32px">
+<div style="display: flex; flex-direction: column; gap: 16px; min-width: 0; max-width: 820px">
+<span style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #35b6ff">SIGNAL FROM MY SECOND EARTH</span>
+<h1 class="h1" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 72px; line-height: 1.08; letter-spacing: -1px; color: #ffffff; word-break: keep-all">두 개의 지구.<br>하나의 좌표.</h1>
+<p style="margin: 18px 0 0; font-size: 22px; font-weight: 700; line-height: 1.5; color: #c9c3e6; word-break: keep-all">그리고 서로를 이어주는 단 하나의 방송국.</p>
+</div>
+<div style="display: flex; gap: 0; border: 1px solid #2c3048; border-radius: 6px; overflow: hidden; font-family: 'Space Mono', monospace">
+<div style="padding: 12px 18px; border-right: 1px solid #2c3048"><div style="font-size: 11px; letter-spacing: 2px; color: #8b90aa">깨어난 지 · BUILD DAY</div><div style="font-family: 'Black Han Sans', sans-serif; font-size: 40px; line-height: 1.1; color: #ffd166">{{buildDay}}</div></div>
+<div style="padding: 12px 18px"><div style="font-size: 11px; letter-spacing: 2px; color: #8b90aa">TX · 서울 한강 TV 송출탑</div><div style="font-size: 15px; line-height: 1.7; color: #eef0f7">37.530965 N<br>127.053108 E</div></div>
+</div>
+</div>
+
+<div class="stage" style="position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; border: 1px solid #2c3048; background: #101219">
+
+<div style="position: absolute; inset: 0; background-color: #12141c">
+<img src="/_blob/ea9e760d62745312f367290e811d7de7" alt="현실 지구: 실사 서울 한강 야경에 만화 망점과 펜선이 스며든 하늘, 송출탑이 나타날 자리에 코랄색 신호 표시" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,12,18,.55), rgba(11,12,18,0) 30%, rgba(11,12,18,0) 75%, rgba(11,12,18,.45))"></div>
+<div style="position: absolute; left: 28px; top: 24px; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #c7cbe0; line-height: 1.8">REAL EARTH · 현실 지구<br><span style="color: #8b90aa">SEOUL · HAN RIVER · 영동대교 앞</span></div>
+</div>
+
+<div class="world" style="position: absolute; inset: 0; clip-path: {{clip}}">
+<sc-if value="{{playing}}" hint-placeholder-val="{{ true }}"><video src="/_blob/cbcf6a44b5e02698271dc91cdb3d9b44" poster="/_blob/1cf215a3977029b64faf8cab9aef9688" autoplay="" muted="" loop="" playsinline="" aria-label="서울 한강 위 타일 TV 송출탑에서 여러 세계로 신호가 퍼져 나가는 영상" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></video></sc-if><sc-if value="{{paused}}" hint-placeholder-val="{{ false }}"><img src="/_blob/1cf215a3977029b64faf8cab9aef9688" alt="서울 한강 위 타일 TV 송출탑 (영상 일시정지 중)" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></sc-if>
+<div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,12,18,.55), rgba(11,12,18,0) 45%)"></div>
+<div class="scan" style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(0,0,0,.16) 0 2px, transparent 2px 6px)"></div>
+<div style="position: absolute; right: 28px; top: 24px; text-align: right; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #ffffff; line-height: 1.8">MY SECOND EARTH · E2V1<br><span style="color: #9fdcff">TX TOWER · SEOUL HAN RIVER · LIVE</span></div>
+</div>
+
+<div class="world rift" style="position: absolute; inset: 0; clip-path: {{riftClip}}; background: linear-gradient(180deg, #35b6ff, #ff5a3c 50%, #ffd166); pointer-events: none"></div>
+
+<div class="mover" style="position: absolute; top: 0; bottom: 0; left: {{riftX}}; width: 0">
+<svg viewBox="0 0 300 120" aria-hidden="true" style="position: absolute; left: -150px; top: 46px; width: 300px; height: 120px; overflow: visible">
+<g class="ring" style="opacity: 0"><path d="M100 70 Q150 20 200 70" fill="none" stroke="#35b6ff" stroke-width="5" stroke-linecap="round"></path></g>
+<g class="ring r2" style="opacity: 0"><path d="M70 60 Q150 -20 230 60" fill="none" stroke="#35b6ff" stroke-width="5" stroke-linecap="round"></path></g>
+<g class="ring r3" style="opacity: 0"><path d="M40 50 Q150 -60 260 50" fill="none" stroke="#35b6ff" stroke-width="5" stroke-linecap="round"></path></g>
+</svg>
+<img class="bob nadu" src="/_blob/f9dabe0b371fffeb0818b70b009d8797" alt="두 세계를 오가는 현장 통신원 나두지" style="position: absolute; left: -110px; bottom: 54px; width: 220px; height: auto; filter: drop-shadow(6px 6px 0 #000000)">
+<div class="bubble" style="position: absolute; left: {{bubbleLeft}}; bottom: 250px; width: 230px; background: #ffffff; color: #0b0c12; font-family: 'Gaegu', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.25; padding: 12px 16px; border-radius: 16px; box-shadow: 4px 4px 0 #000000">여기가 경계선! 신호는 이쪽에서 저쪽으로 건너가요</div>
+</div>
+<button type="button" class="vbtn" onClick="{{togglePlay}}" aria-pressed="{{paused}}" aria-label="{{playLabel}}" title="{{playLabel}}" style="position: absolute; right: 12px; bottom: 12px; z-index: 12; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; background: rgba(10,7,22,.55); border: 1px solid rgba(255,255,255,.35); cursor: pointer">
+<sc-if value="{{playing}}" hint-placeholder-val="{{ true }}"><svg width="12" height="12" viewBox="0 0 14 14" aria-hidden="true"><rect x="2" y="1" width="3.5" height="12" fill="#ffffff"></rect><rect x="8.5" y="1" width="3.5" height="12" fill="#ffffff"></rect></svg></sc-if>
+<sc-if value="{{paused}}" hint-placeholder-val="{{ false }}"><svg width="12" height="12" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1 L13 7 L3 13 Z" fill="#ffd23f"></path></svg></sc-if>
+</button>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px; margin-top: 14px">
+<div role="group" aria-label="세계 전환" style="align-self: center; display: flex; flex-wrap: nowrap; justify-content: center; gap: 4px; max-width: 100%; padding: 4px; background: rgba(11,12,18,.82); border: 1px solid #3a3f5c; border-radius: 999px">
+<button type="button" onClick="{{showReal}}" aria-pressed="{{isReal}}" class="wbtn" style="border: 0; border-radius: 999px; padding: 10px 18px; min-height: 44px; white-space: nowrap; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 1px; background: {{realBg}}; color: {{realFg}}">현실 지구</button>
+<button type="button" onClick="{{showSplit}}" aria-pressed="{{isSplit}}" class="wbtn" style="border: 0; border-radius: 999px; padding: 10px 18px; min-height: 44px; white-space: nowrap; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 1px; background: {{splitBg}}; color: {{splitFg}}">경계</button>
+<button type="button" onClick="{{showDigital}}" aria-pressed="{{isDigital}}" class="wbtn" style="border: 0; border-radius: 999px; padding: 10px 18px; min-height: 44px; white-space: nowrap; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 1px; background: {{digiBg}}; color: {{digiFg}}">디지털 지구</button>
+</div>
+
+<div style="display: flex; align-items: stretch; background: #13151f; border: 1px solid #2c3048; border-radius: 8px; overflow: hidden; font-size: 15px">
+<div style="flex: none; display: flex; align-items: center; gap: 8px; padding: 12px 18px; background: #ffd166; color: #0b0c12; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 13px; letter-spacing: 2px">RX LIVE</div>
+<div style="flex: 1; overflow: hidden; display: flex; align-items: center">
+<div class="crawl" style="display: flex; gap: 48px; white-space: nowrap; width: max-content; padding-left: 24px">
+<span><b style="color: #ffd166; font-family: 'Space Mono', monospace">NOISE</b> RT10 인게임 변화 감지 · 공식 발표 전</span>
+<span><b style="color: #35b6ff; font-family: 'Space Mono', monospace">CLEAR</b> Earth 2 Official 공지 채널 3곳 수신 연결</span>
+<span><b style="color: #3ddc84; font-family: 'Space Mono', monospace">ON</b> E2V1 Pre-Alpha · Raiding 수신 중</span>
+<span><b style="color: #8b90aa; font-family: 'Space Mono', monospace">SCAN</b> E2 Hordes · EcoSim · Conquer · Avatar · Weaver 탐색 중</span>
+<span><b style="color: #ffd166; font-family: 'Space Mono', monospace">NOISE</b> RT10 인게임 변화 감지 · 공식 발표 전</span>
+<span><b style="color: #35b6ff; font-family: 'Space Mono', monospace">CLEAR</b> Earth 2 Official 공지 채널 3곳 수신 연결</span>
+<span><b style="color: #3ddc84; font-family: 'Space Mono', monospace">ON</b> E2V1 Pre-Alpha · Raiding 수신 중</span>
+<span><b style="color: #8b90aa; font-family: 'Space Mono', monospace">SCAN</b> E2 Hordes · EcoSim · Conquer · Avatar · Weaver 탐색 중</span>
+</div>
+</div>
+</div>
+</div>
+
+<p style="margin: 18px 0 0; font-size: 15px; color: #8b90aa; max-width: 70ch">하나의 좌표, 서울 한강 위 두 개의 지구. 현실 지구와 디지털 지구 버튼은 각 세계를 화면 가득 보여주고, 경계 버튼은 두 세계가 맞닿은 자리를 보여줘요.</p>
+</section>
+
+<section id="rx" style="position: relative; max-width: 1360px; margin: 0 auto; padding: 130px 40px 40px">
+<div class="halftone-tr"></div>
+<svg viewBox="0 0 400 300" aria-hidden="true" style="position: absolute; right: 0; top: 40px; width: 380px; height: 280px; pointer-events: none"><g stroke="#ffffff" stroke-opacity=".18" stroke-width="3" stroke-linecap="round"><path d="M400 20 L 250 90"></path><path d="M400 70 L 280 120"></path><path d="M400 130 L 300 150"></path></g></svg>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; margin-bottom: 44px">
+<div style="display: flex; gap: 18px; align-items: flex-end">
+<svg class="sigpulse" width="54" height="60" viewBox="0 0 54 60" aria-hidden="true"><rect x="21" y="46" width="12" height="9" fill="none" stroke="#2fe6c8" stroke-width="3"></rect><rect x="14" y="30" width="26" height="11" fill="none" stroke="#ff2fb0" stroke-width="3"></rect><rect x="5" y="9" width="44" height="15" fill="none" stroke="#ffe14d" stroke-width="3"></rect></svg>
+<div><div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #2fe6c8; margin-bottom: 8px">RX · RECEIVED SIGNALS</div><h2 class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 52px; line-height: 1.1; color: #ffffff">경계 너머에서 도착한 신호</h2></div><div class="pop" style="flex: none; align-self: flex-start; transform: rotate(-10deg); margin-left: 6px"><svg width="130" height="130" viewBox="0 0 120 120" aria-hidden="true"><polygon points="118.0,60.0 102.9,69.8 112.3,85.2 94.4,87.4 96.2,105.3 79.1,99.6 72.9,116.5 60.0,104.0 47.1,116.5 40.9,99.6 23.8,105.3 25.6,87.4 7.7,85.2 17.1,69.8 2.0,60.0 17.1,50.2 7.7,34.8 25.6,32.6 23.8,14.7 40.9,20.4 47.1,3.5 60.0,16.0 72.9,3.5 79.1,20.4 96.2,14.7 94.4,32.6 112.3,34.8 102.9,50.2" fill="#0a0716" transform="translate(4 4)"></polygon><polygon points="118.0,60.0 102.9,69.8 112.3,85.2 94.4,87.4 96.2,105.3 79.1,99.6 72.9,116.5 60.0,104.0 47.1,116.5 40.9,99.6 23.8,105.3 25.6,87.4 7.7,85.2 17.1,69.8 2.0,60.0 17.1,50.2 7.7,34.8 25.6,32.6 23.8,14.7 40.9,20.4 47.1,3.5 60.0,16.0 72.9,3.5 79.1,20.4 96.2,14.7 94.4,32.6 112.3,34.8 102.9,50.2" fill="#ffd23f" stroke="#0a0716" stroke-width="3"></polygon><text x="60" y="57.0" text-anchor="middle" font-family="Bungee, sans-serif" font-size="15" fill="#0a0716">NEW</text><text x="60" y="73.5" text-anchor="middle" font-family="Bungee, sans-serif" font-size="15" fill="#0a0716">SIGNAL!</text></svg></div>
+</div>
+<span style="font-family: 'Gaegu', sans-serif; font-weight: 700; font-size: 20px; color: #ffe14d; transform: rotate(2deg)">아래 소식은 예시예요</span>
+</div>
+<div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px">
+
+<article class="win" style="position: relative; background: rgba(28,12,52,.88); border: 2px solid #ff2fb0; box-shadow: 0 0 0 4px #0a0716, 0 0 34px rgba(255,47,176,.45); overflow: hidden; display: flex; flex-direction: column">
+<div class="static" style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(255,47,176,.06) 0 2px, transparent 2px 7px); pointer-events: none"></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: #ff2fb0; color: #0a0716; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px"><span>RX · DAY 478 · 오늘</span><span>NOISE</span></div>
+<div style="position: relative; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #a99bff">⬢ 디지털 지구</span>
+<h3 class="glitchtxt" style="margin: 0; font-size: 22px; font-weight: 900; line-height: 1.4; color: #ffffff">리얼리티 스레드 10 인게임 변화 감지</h3>
+<p style="margin: 0; font-size: 14px; color: #c9b8ea">Reality Thread 10 changes detected in-game</p>
+<p style="margin: 6px 0 0; padding-top: 12px; border-top: 1px dashed rgba(255,47,176,.5); font-family: 'Space Mono', monospace; font-size: 12px; color: #c9b8ea">SOURCE · 현장 감지, 공식 발표 전</p>
+</div>
+</article>
+
+<article class="win" style="position: relative; background: rgba(12,30,52,.88); border: 2px solid #2fe6c8; box-shadow: 0 0 0 4px #0a0716, 0 0 34px rgba(47,230,200,.45); overflow: hidden; display: flex; flex-direction: column">
+<div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.04) 0 1px, transparent 1px 4px); pointer-events: none"></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: #2fe6c8; color: #0a0716; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px"><span>RX · DAY 477 · 어제</span><span>CLEAR</span></div>
+<div style="position: relative; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #2fe6c8">■ 현실 지구</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 900; line-height: 1.4; color: #ffffff">Earth 2 Official 공지 제목</h3>
+<p style="margin: 0; font-size: 14px; color: #b8dfe6">Official announcement title</p>
+<p style="margin: 6px 0 0; padding-top: 12px; border-top: 1px solid rgba(47,230,200,.45); font-family: 'Space Mono', monospace; font-size: 12px; color: #b8dfe6">SOURCE · Discord #announcements</p>
+</div>
+</article>
+
+<article class="win" style="position: relative; background: rgba(40,34,14,.88); border: 2px dashed #ffe14d; box-shadow: 0 0 0 4px #0a0716, 0 0 30px rgba(255,225,77,.35); overflow: hidden; display: flex; flex-direction: column">
+<div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(255,225,77,.16) 1.2px, transparent 1.6px); background-size: 10px 10px; pointer-events: none"></div>
+<div class="flick" style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: #ffe14d; color: #0a0716; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px"><span>RX · DAY 476 · 2일 전</span><span>WEAK</span></div>
+<div style="position: relative; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #a99bff">⬢ 디지털 지구</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 900; line-height: 1.4; color: #ffffff">현장 통신원 확인 소식 제목</h3>
+<p style="margin: 0; font-size: 14px; color: #e6dcb0">Field report title</p>
+<p style="margin: 6px 0 0; padding-top: 12px; border-top: 1px dashed rgba(255,225,77,.5); font-family: 'Space Mono', monospace; font-size: 12px; color: #e6dcb0">SOURCE · 나두지 현장 확인</p>
+</div>
+</article>
+
+</div>
+<div style="position: relative; display: flex; flex-wrap: wrap; gap: 18px; margin-top: 30px; font-family: 'Space Mono', monospace; font-size: 12px; color: #c9b8ea">
+<span style="display: flex; align-items: center; gap: 8px"><span style="width: 18px; height: 12px; border: 2px solid #2fe6c8; box-shadow: 0 0 8px #2fe6c8"></span>CLEAR · 공식 발표</span>
+<span style="display: flex; align-items: center; gap: 8px"><span style="width: 18px; height: 12px; border: 2px dashed #ffe14d"></span>WEAK · 현장 직접 확인</span>
+<span style="display: flex; align-items: center; gap: 8px"><span style="width: 18px; height: 12px; border: 2px solid #ff2fb0; background: repeating-linear-gradient(90deg, #ff2fb0 0 2px, transparent 2px 4px)"></span>NOISE · 공식 발표 전</span>
+</div>
+</section>
+
+<section id="map" style="position: relative; max-width: 1360px; margin: 0 auto; padding: 120px 40px 40px">
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; margin-bottom: 30px">
+<div><div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #2fe6c8; margin-bottom: 8px">SIGNAL MAP · 하나의 좌표, 두 개의 지구</div><h2 class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 52px; line-height: 1.1; color: #ffffff">신호가 도착한 좌표</h2></div>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 50px; padding: 0 20px; background: #ffd23f; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-weight: 900">시그널 지도 열기 →</a>
+</div>
+<a href="#" class="stage hmap" aria-label="시그널 지도 열기" style="position: relative; display: block; overflow: hidden; aspect-ratio: 2520 / 1080; border: 3px solid #0a0716; box-shadow: 0 0 0 3px #2fe6c8, 8px 8px 0 3px #000">
+<img src="/_blob/c2a6da08f7402bf8c326362a0db85b84" alt="현실 지구 지도">
+<div class="hsweep" aria-hidden="true" style="position: absolute; inset: 0; clip-path: polygon(57% 0, 100% 0, 100% 100%, 43% 100%)"><img src="/_blob/ac50af9688746efd633f474b3231c7fc" alt=""></div>
+<div class="hrift" aria-hidden="true" style="position: absolute; inset: 0; clip-path: polygon(57% 0, 57.5% 0, 43.5% 100%, 43% 100%); background: linear-gradient(90deg, #2fe6c8, #ffffff 45%, #ff2fb0); box-shadow: 0 0 40px #ff2fb0"></div>
+<span class="ping" aria-hidden="true" style="position: absolute; left: 85.29%; top: 27.53%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border: 2px solid #ffd23f"></span><span aria-hidden="true" style="position: absolute; left: 85.29%; top: 27.53%; width: 10px; height: 10px; margin: -5px 0 0 -5px; background: #ffd23f; box-shadow: 0 0 10px #ffd23f"></span><span class="ping" aria-hidden="true" style="position: absolute; left: 93.94%; top: 47.37%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border: 2px solid #2fe6c8"></span><span aria-hidden="true" style="position: absolute; left: 93.94%; top: 47.37%; width: 10px; height: 10px; margin: -5px 0 0 -5px; background: #2fe6c8; box-shadow: 0 0 10px #2fe6c8"></span><span class="ping" aria-hidden="true" style="position: absolute; left: 96.37%; top: 52.19%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border: 2px solid #2fe6c8"></span><span aria-hidden="true" style="position: absolute; left: 96.37%; top: 52.19%; width: 10px; height: 10px; margin: -5px 0 0 -5px; background: #2fe6c8; box-shadow: 0 0 10px #2fe6c8"></span><span class="ping" aria-hidden="true" style="position: absolute; left: 88.80%; top: 28.73%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border: 2px solid #2fe6c8"></span><span aria-hidden="true" style="position: absolute; left: 88.80%; top: 28.73%; width: 10px; height: 10px; margin: -5px 0 0 -5px; background: #2fe6c8; box-shadow: 0 0 10px #2fe6c8"></span>
+<span aria-hidden="true" style="position: absolute; left: 14px; top: 14px; padding: 5px 10px; background: #ffffff; color: #0a0716; border: 3px solid #0a0716; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px">■ 현실 지구</span>
+<span aria-hidden="true" style="position: absolute; right: 14px; top: 14px; padding: 5px 10px; background: #2fe6c8; color: #0a0716; border: 3px solid #0a0716; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px">⬢ 디지털 지구</span>
+</a>
+</section>
+
+<section id="ch" style="position: relative; max-width: 1360px; margin: 0 auto; padding: 120px 40px 40px">
+<div class="halftone-bl"></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; margin-bottom: 44px">
+<div style="display: flex; gap: 18px; align-items: flex-end">
+<svg class="sigpulse" width="54" height="60" viewBox="0 0 54 60" aria-hidden="true"><rect x="21" y="46" width="12" height="9" fill="none" stroke="#2fe6c8" stroke-width="3"></rect><rect x="14" y="30" width="26" height="11" fill="none" stroke="#ff2fb0" stroke-width="3"></rect><rect x="5" y="9" width="44" height="15" fill="none" stroke="#ffe14d" stroke-width="3"></rect></svg>
+<div><div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #2fe6c8; margin-bottom: 8px">GUIDE · 수신 가이드</div><h2 class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 52px; line-height: 1.1; color: #ffffff; word-break: keep-all">디지털 지구에서 살아가는 법</h2></div><div class="spin" style="flex: none; align-self: flex-start; margin-left: 6px"><svg width="118" height="118" viewBox="0 0 120 120" aria-hidden="true"><circle cx="62" cy="62" r="52" fill="#0a0716"></circle><circle cx="58" cy="58" r="52" fill="#ff2fb0" stroke="#0a0716" stroke-width="3"></circle><circle cx="58" cy="58" r="34" fill="#0a0716"></circle><line x1="102.0" y1="58.0" x2="108.0" y2="58.0" stroke="#0a0716" stroke-width="3"></line><line x1="98.7" y1="74.8" x2="104.2" y2="77.1" stroke="#0a0716" stroke-width="3"></line><line x1="89.1" y1="89.1" x2="93.4" y2="93.4" stroke="#0a0716" stroke-width="3"></line><line x1="74.8" y1="98.7" x2="77.1" y2="104.2" stroke="#0a0716" stroke-width="3"></line><line x1="58.0" y1="102.0" x2="58.0" y2="108.0" stroke="#0a0716" stroke-width="3"></line><line x1="41.2" y1="98.7" x2="38.9" y2="104.2" stroke="#0a0716" stroke-width="3"></line><line x1="26.9" y1="89.1" x2="22.6" y2="93.4" stroke="#0a0716" stroke-width="3"></line><line x1="17.3" y1="74.8" x2="11.8" y2="77.1" stroke="#0a0716" stroke-width="3"></line><line x1="14.0" y1="58.0" x2="8.0" y2="58.0" stroke="#0a0716" stroke-width="3"></line><line x1="17.3" y1="41.2" x2="11.8" y2="38.9" stroke="#0a0716" stroke-width="3"></line><line x1="26.9" y1="26.9" x2="22.6" y2="22.6" stroke="#0a0716" stroke-width="3"></line><line x1="41.2" y1="17.3" x2="38.9" y2="11.8" stroke="#0a0716" stroke-width="3"></line><line x1="58.0" y1="14.0" x2="58.0" y2="8.0" stroke="#0a0716" stroke-width="3"></line><line x1="74.8" y1="17.3" x2="77.1" y2="11.8" stroke="#0a0716" stroke-width="3"></line><line x1="89.1" y1="26.9" x2="93.4" y2="22.6" stroke="#0a0716" stroke-width="3"></line><line x1="98.7" y1="41.2" x2="104.2" y2="38.9" stroke="#0a0716" stroke-width="3"></line><line x1="58" y1="58" x2="58" y2="30" stroke="#ffd23f" stroke-width="5" stroke-linecap="round"></line><text x="58" y="76" text-anchor="middle" font-family="Bungee, sans-serif" font-size="11" fill="#ffd23f">TUNE IN</text></svg></div>
+</div>
+<p style="margin: 0; font-size: 15px; color: #c9b8ea; max-width: 44ch">모든 신호는 세 개의 층 중 하나에서 와요. 같은 좌표 위의 현실 지구, 그 위에 겹쳐진 디지털 지구, 그리고 두 세계 사이의 경계.</p>
+</div>
+<div class="lay3" style="position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px">
+<sc-for list="{{layers}}" as="ly" hint-placeholder-count="3">
+<a href="guide.html" class="chan" style="position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 12px; padding: 26px 24px; min-height: 300px; text-decoration: none; color: #ffffff; background: linear-gradient(160deg, {{ly.tint}}, rgba(18,12,44,.94) 60%); border: 2px solid {{ly.color}}; box-shadow: 0 0 0 4px #0a0716, 0 0 28px {{ly.glow}}">
+<div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px"><span style="color: {{ly.color}}">{{ly.code}}</span><span style="color: #0a0716; background: {{ly.color}}; padding: 2px 8px">{{ly.count}}</span></div>
+<span aria-hidden="true" style="font-size: 44px; line-height: 1; color: {{ly.color}}; text-shadow: 0 0 18px {{ly.glow}}">{{ly.mark}}</span>
+<h3 style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 32px; text-shadow: 2px 2px 0 #000">{{ly.name}}</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #e4dcfa">{{ly.line}}</p>
+<p style="margin: auto 0 0; padding-top: 12px; border-top: 1px dashed rgba(255,255,255,.2); font-size: 13px; line-height: 1.7; color: #b8b0d8">{{ly.topics}}</p>
+<span style="font-weight: 900; color: {{ly.color}}">가이드 보기 →</span>
+</a>
+</sc-for>
+</div>
+</section>
+
+<section id="prologue" style="position: relative; max-width: 1360px; margin: 0 auto; padding: 120px 40px 20px">
+<div class="panel" style="position: relative; overflow: hidden; padding: 56px 48px; text-align: center; background: radial-gradient(120% 120% at 50% 0%, #2a1760, #0a0716 70%); border: 2px solid #ffd23f; box-shadow: 0 0 0 4px #0a0716, 8px 8px 0 4px #000">
+<div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 4px; color: #ffd23f">PROLOGUE · MY SECOND EARTH</div>
+<p style="margin: 28px 0 0; font-family: 'Black Han Sans', sans-serif; font-size: 40px; line-height: 1.3; color: #ffffff; word-break: keep-all">지구는 하나뿐이라고 믿었다.</p>
+<p style="margin: 18px 0 0; font-size: 20px; line-height: 1.8; color: #c9c3e6; word-break: keep-all">그러나 우리가 살아가는 이 세계의 이면에는<br>또 하나의 지구가 존재하고 있었다.</p>
+<a href="#" style="display: inline-flex; align-items: center; min-height: 52px; margin-top: 30px; padding: 0 24px; background: #ffd23f; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-weight: 900">프롤로그 전체 보기 →</a>
+</div>
+</section>
+
+<section id="crew" style="position: relative; max-width: 1360px; margin: 0 auto; padding: 130px 40px 100px">
+<div class="halftone-tr"></div>
+<div style="position: relative; display: flex; gap: 18px; align-items: flex-end; margin-bottom: 20px">
+<svg class="sigpulse" width="54" height="60" viewBox="0 0 54 60" aria-hidden="true"><rect x="21" y="46" width="12" height="9" fill="none" stroke="#2fe6c8" stroke-width="3"></rect><rect x="14" y="30" width="26" height="11" fill="none" stroke="#ff2fb0" stroke-width="3"></rect><rect x="5" y="9" width="44" height="15" fill="none" stroke="#ffe14d" stroke-width="3"></rect></svg>
+<div><div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #2fe6c8; margin-bottom: 8px">CREW · ON AIR</div><h2 class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 52px; line-height: 1.1; color: #ffffff; word-break: keep-all">경계를 넘나드는 크루</h2></div><div class="pop" style="flex: none; align-self: flex-start; transform: rotate(8deg); margin-left: 6px"><svg width="130" height="130" viewBox="0 0 120 120" aria-hidden="true"><polygon points="118.0,60.0 102.9,69.8 112.3,85.2 94.4,87.4 96.2,105.3 79.1,99.6 72.9,116.5 60.0,104.0 47.1,116.5 40.9,99.6 23.8,105.3 25.6,87.4 7.7,85.2 17.1,69.8 2.0,60.0 17.1,50.2 7.7,34.8 25.6,32.6 23.8,14.7 40.9,20.4 47.1,3.5 60.0,16.0 72.9,3.5 79.1,20.4 96.2,14.7 94.4,32.6 112.3,34.8 102.9,50.2" fill="#0a0716" transform="translate(4 4)"></polygon><polygon points="118.0,60.0 102.9,69.8 112.3,85.2 94.4,87.4 96.2,105.3 79.1,99.6 72.9,116.5 60.0,104.0 47.1,116.5 40.9,99.6 23.8,105.3 25.6,87.4 7.7,85.2 17.1,69.8 2.0,60.0 17.1,50.2 7.7,34.8 25.6,32.6 23.8,14.7 40.9,20.4 47.1,3.5 60.0,16.0 72.9,3.5 79.1,20.4 96.2,14.7 94.4,32.6 112.3,34.8 102.9,50.2" fill="#ff2fb0" stroke="#0a0716" stroke-width="3"></polygon><text x="60" y="57.0" text-anchor="middle" font-family="Bungee, sans-serif" font-size="15" fill="#ffffff">ON</text><text x="60" y="73.5" text-anchor="middle" font-family="Bungee, sans-serif" font-size="15" fill="#ffffff">AIR!</text></svg></div>
+</div>
+<p style="position: relative; margin: 0 0 70px; font-size: 17px; line-height: 1.85; color: #d4c8f0; max-width: 64ch">현장 통신원 나두지는 경계를 넘어 두 번째 지구 곳곳을 누비고, 메타민 박사는 본부 스튜디오 NEON에서 경계 너머의 신호를 해독해요. 송출탑은 서울 한강, 영동대교 앞 물 위의 좌표에 서 있어요.</p>
+<div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px">
+
+<div class="panel" style="position: relative; min-height: 460px; border: 5px solid #0a0716; outline: 2px solid #ff2fb0; background: radial-gradient(rgba(255,47,176,.35) 1.4px, transparent 1.8px) 0 0 / 12px 12px, linear-gradient(160deg, #3a1460, #1a0d38); box-shadow: 10px 10px 0 #000000; display: flex; align-items: flex-end; overflow: visible">
+<img class="bob" src="/_blob/f9dabe0b371fffeb0818b70b009d8797" alt="현장 통신원 나두지" style="position: absolute; left: 50%; bottom: 110px; width: 240px; margin-left: -120px; height: auto; filter: drop-shadow(6px 6px 0 #000000) drop-shadow(-3px 0 0 rgba(47,230,200,.7)); z-index: 2">
+<svg viewBox="0 0 400 200" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 100%; height: 60%; pointer-events: none"><g stroke="#ffffff" stroke-opacity=".25" stroke-width="3" stroke-linecap="round"><path d="M0 20 L 140 90"></path><path d="M0 80 L 120 110"></path><path d="M400 30 L 270 95"></path><path d="M400 90 L 290 115"></path></g></svg>
+<div style="position: relative; z-index: 3; margin: 0 16px 16px; background: #ffe14d; color: #0a0716; border: 3px solid #0a0716; padding: 12px 16px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 2px">FIELD · 현장 통신원</span>
+<b style="font-size: 22px; font-weight: 900">나두지</b>
+<span style="font-size: 14px">두 세계의 경계를 넘나들며 열린 구역을 직접 걷고 기록해요.</span>
+</div>
+</div>
+
+<div class="panel" style="position: relative; min-height: 460px; border: 5px solid #0a0716; outline: 2px solid #2fe6c8; background: #120c2a; box-shadow: 10px 10px 0 #000000; display: flex; align-items: flex-end; overflow: hidden">
+<img src="/_blob/81bc16718fe06a9909a32dd75a0ac407" alt="스튜디오 해설 메타민 박사" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<div style="position: absolute; inset: 0; background: radial-gradient(rgba(47,230,200,.25) 1.2px, transparent 1.6px) 0 0 / 11px 11px; -webkit-mask-image: linear-gradient(0deg, #000 0%, transparent 45%); mask-image: linear-gradient(0deg, #000 0%, transparent 45%)"></div>
+<div style="position: relative; z-index: 3; margin: 0 16px 16px; background: #2fe6c8; color: #0a0716; border: 3px solid #0a0716; padding: 12px 16px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 2px">STUDIO · NEON 스튜디오 해설</span>
+<b style="font-size: 22px; font-weight: 900">메타민 박사</b>
+<span style="font-size: 14px">들어온 신호를 해석해요. 콘텐츠마다 의상이 바뀝니다.</span>
+</div>
+</div>
+
+<div class="mystery" style="position: relative; min-height: 460px; border: 5px solid #0a0716; outline: 2px dashed #ffd23f; background: #120c2a; box-shadow: 10px 10px 0 #000000; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden">
+<div class="static" style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.07) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(106,60,255,.08) 0 2px, transparent 2px 6px); pointer-events: none"></div>
+<div aria-hidden="true" style="position: absolute; left: 50%; top: 70px; width: 170px; margin-left: -85px; display: flex; flex-direction: column; align-items: center">
+<div style="width: 96px; height: 96px; border-radius: 50%; background: #1d1440; border: 2px solid #3a2a6e"></div>
+<div style="width: 170px; height: 120px; margin-top: 10px; border-radius: 80px 80px 12px 12px; background: #1d1440; border: 2px solid #3a2a6e"></div>
+</div>
+<div class="glitchtxt qmark" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 64px; text-align: center; font-family: 'Bungee', sans-serif; font-size: 150px; line-height: 1; color: #ffd23f; -webkit-text-stroke: 2px #0a0716; text-shadow: 3px 3px 0 #ff2fb0, 6px 6px 0 #6a3cff, 9px 9px 0 #2fe6c8, 0 0 30px rgba(255,210,63,.45)">?</div>
+<div style="position: absolute; left: 14px; top: 14px; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #ffd23f"><span class="blink" style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #ffd23f; margin-right: 6px"></span>SIGNAL INCOMING</div>
+<div style="position: relative; z-index: 3; margin: 0 16px 16px; background: #2a1f52; color: #ffffff; border: 3px solid #0a0716; padding: 12px 16px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #ffd23f">CREW 03 · 시그널 탐색 중</span>
+<b style="font-size: 22px; font-weight: 900">???</b>
+<span style="font-size: 14px; color: #d4c8f0">아직 수신되지 않은 크루예요. 새로운 목소리가 경계를 넘어올 자리입니다.</span>
+</div>
+</div>
+<div class="mystery" style="position: relative; min-height: 460px; border: 5px solid #0a0716; outline: 2px dashed #6a3cff; background: #120c2a; box-shadow: 10px 10px 0 #000000; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden">
+<div class="static" style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.07) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(106,60,255,.08) 0 2px, transparent 2px 6px); pointer-events: none"></div>
+<div aria-hidden="true" style="position: absolute; left: 50%; top: 70px; width: 170px; margin-left: -85px; display: flex; flex-direction: column; align-items: center">
+<div style="width: 96px; height: 96px; border-radius: 50%; background: #1d1440; border: 2px solid #3a2a6e"></div>
+<div style="width: 170px; height: 120px; margin-top: 10px; border-radius: 80px 80px 12px 12px; background: #1d1440; border: 2px solid #3a2a6e"></div>
+</div>
+<div class="glitchtxt qmark" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 64px; text-align: center; font-family: 'Bungee', sans-serif; font-size: 150px; line-height: 1; color: #ffd23f; -webkit-text-stroke: 2px #0a0716; text-shadow: 3px 3px 0 #ff2fb0, 6px 6px 0 #6a3cff, 9px 9px 0 #2fe6c8, 0 0 30px rgba(255,210,63,.45)">?</div>
+<div style="position: absolute; left: 14px; top: 14px; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #6a3cff"><span class="blink" style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #6a3cff; margin-right: 6px"></span>SIGNAL INCOMING</div>
+<div style="position: relative; z-index: 3; margin: 0 16px 16px; background: #2a1f52; color: #ffffff; border: 3px solid #0a0716; padding: 12px 16px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #6a3cff">CREW 04 · 시그널 탐색 중</span>
+<b style="font-size: 22px; font-weight: 900">???</b>
+<span style="font-size: 14px; color: #d4c8f0">아직 수신되지 않은 크루예요. 새로운 목소리가 경계를 넘어올 자리입니다.</span>
+</div>
+</div>
+</div>
+<p style="position: relative; margin: 44px 0 0; font-family: 'Gaegu', sans-serif; font-weight: 700; font-size: 28px; color: #ffe14d">Keep the Funk, Keep the Signal.</p>
+</section>
+
+<section id="portal" style="position: relative; max-width: 1360px; margin: 0 auto; padding: 120px 40px 40px">
+<div class="halftone-bl"></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; margin-bottom: 44px">
+<div style="display: flex; gap: 18px; align-items: flex-end">
+<svg class="sigpulse" width="54" height="60" viewBox="0 0 54 60" aria-hidden="true"><rect x="21" y="46" width="12" height="9" fill="none" stroke="#2fe6c8" stroke-width="3"></rect><rect x="14" y="30" width="26" height="11" fill="none" stroke="#ff2fb0" stroke-width="3"></rect><rect x="5" y="9" width="44" height="15" fill="none" stroke="#ffe14d" stroke-width="3"></rect></svg>
+<div><div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #2fe6c8; margin-bottom: 8px">TX · COORDINATES</div><h2 class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 52px; line-height: 1.1; color: #ffffff">송출탑이 서 있는 좌표</h2></div>
+</div>
+<p style="margin: 0; font-size: 15px; color: #c9b8ea; max-width: 46ch">신호가 출발하는 송출탑과, 신호가 해독되는 본부의 좌표예요. 현실 지도와 디지털 지구에서 직접 찾아가 보세요.</p>
+</div>
+<div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 26px">
+
+<article class="portal" style="position: relative; background: #120c2a; border: 2px solid #2fe6c8; box-shadow: 0 0 0 4px #0a0716, 0 0 30px rgba(47,230,200,.4); overflow: hidden; display: flex; flex-direction: column">
+<div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden">
+<img src="/_blob/1cf215a3977029b64faf8cab9aef9688" alt="서울 한강 TV 송출탑" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<div class="gate" aria-hidden="true" style="position: absolute; inset: 0; display: grid; place-items: center"><div style="width: 40%; aspect-ratio: 1 / 1; border: 3px solid #2fe6c8; box-shadow: 0 0 20px #2fe6c8, inset 0 0 20px rgba(47,230,200,.5)"></div></div>
+<span style="position: absolute; left: 12px; top: 12px; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 2px; background: #2fe6c8; color: #0a0716; padding: 3px 8px">TX · 송출탑</span>
+</div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-size: 22px; font-weight: 900; color: #ffffff">TERRASIGNAL 송출탑</h3>
+<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; color: #9ff5e6">37.530965 N · 127.053108 E · 서울 성동구 영동대교 앞</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px">
+<a href="#portal" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; background: #2fe6c8; color: #0a0716; font-weight: 700; font-size: 14px; text-decoration: none; border: 2px solid #0a0716; box-shadow: 3px 3px 0 #000000">어스2 지도에서 보기 ↗</a>
+<a href="#portal" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; background: transparent; color: #2fe6c8; font-weight: 700; font-size: 14px; text-decoration: none; border: 2px solid #2fe6c8">E2V1에서 가는 법</a>
+</div>
+<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 11px; color: #ffd23f">[어스2 프로퍼티 링크 연결 예정]</p>
+</div>
+</article>
+
+<article class="portal" style="position: relative; background: #120c2a; border: 2px solid #ff2fb0; box-shadow: 0 0 0 4px #0a0716, 0 0 30px rgba(255,47,176,.4); overflow: hidden; display: flex; flex-direction: column">
+<div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden">
+<img src="/_blob/d4e097ee3e19c66ce1a25f782eece347" alt="메타펑크시티 NEON 본부 스튜디오" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<div class="gate" aria-hidden="true" style="position: absolute; inset: 0; display: grid; place-items: center"><div style="width: 40%; aspect-ratio: 1 / 1; border: 3px solid #ff2fb0; box-shadow: 0 0 20px #ff2fb0, inset 0 0 20px rgba(255,47,176,.5)"></div></div>
+<span style="position: absolute; left: 12px; top: 12px; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 2px; background: #ff2fb0; color: #ffffff; padding: 3px 8px">STUDIO · 본부</span>
+</div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-size: 22px; font-weight: 900; color: #ffffff">메타펑크시티 NEON</h3>
+<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; color: #ffb3e1">6.912794 N · 158.194885 E · 미크로네시아 폰페이</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px">
+<a href="#portal" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; background: #ff2fb0; color: #ffffff; font-weight: 700; font-size: 14px; text-decoration: none; border: 2px solid #0a0716; box-shadow: 3px 3px 0 #000000">어스2 지도에서 보기 ↗</a>
+<a href="#portal" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; background: transparent; color: #ff2fb0; font-weight: 700; font-size: 14px; text-decoration: none; border: 2px solid #ff2fb0">E2V1에서 가는 법</a>
+</div>
+<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 11px; color: #ffd23f">[어스2 프로퍼티 링크 연결 예정]</p>
+</div>
+</article>
+
+<article class="portal" style="position: relative; background: #120c2a; border: 2px dotted #6a4f9c; overflow: hidden; display: flex; flex-direction: column; min-height: 360px">
+<div class="static" style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(106,60,255,.07) 0 2px, transparent 2px 6px); pointer-events: none"></div>
+<div style="position: relative; flex: 1; display: grid; place-items: center"><div class="sqpulse" style="width: 120px; height: 120px; border: 3px dashed #ffd23f; display: grid; place-items: center; font-family: 'Bungee', sans-serif; font-size: 54px; color: #ffd23f">?</div></div>
+<div style="position: relative; padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #ffd23f">SISTER · EARTH2SPACE</span>
+<h3 style="margin: 0; font-size: 20px; font-weight: 900; color: #8f7fbf">TERRA VIVARIUM PROJECT</h3>
+<p style="margin: 0; font-size: 14px; color: #8f7fbf">EARTH2SPACE가 설계하는 생태계와 곳곳에 숨겨진 포털. 그 과정은 TERRASIGNAL이 기록해요 [링크 연결 예정]</p>
+</div>
+</article>
+
+</div>
+<p style="position: relative; margin: 20px 0 0; font-size: 12px; color: #8b80b0">어스2 지도 버튼은 Earth2 공식 사이트로 이동합니다. TERRASIGNAL은 Earth2 공식과 무관한 독립 방송국입니다.</p>
+</section>
+
+<section id="tx-you" style="position: relative; max-width: 1360px; margin: 0 auto; padding: 120px 40px 60px">
+<div class="halftone-tr"></div>
+<div style="position: relative; display: flex; gap: 18px; align-items: flex-end; margin-bottom: 44px; flex-wrap: wrap">
+<svg class="sigpulse" width="54" height="60" viewBox="0 0 54 60" aria-hidden="true"><rect x="21" y="46" width="12" height="9" fill="none" stroke="#2fe6c8" stroke-width="3"></rect><rect x="14" y="30" width="26" height="11" fill="none" stroke="#ff2fb0" stroke-width="3"></rect><rect x="5" y="9" width="44" height="15" fill="none" stroke="#ffe14d" stroke-width="3"></rect></svg>
+<div><div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #2fe6c8; margin-bottom: 8px">TX FROM YOU · 시청자 송신</div><h2 class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 52px; line-height: 1.1; color: #ffffff">당신의 시그널도 경계를 넘는다</h2></div>
+</div>
+<div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 34px; align-items: start">
+
+<form style="position: relative; background: #120c2a; border: 5px solid #0a0716; outline: 2px solid #ffd23f; box-shadow: 10px 10px 0 #000000; padding: 26px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #ffd23f"><span>SIGNAL FORM</span><span><span class="blink" style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ff2fb0; margin-right: 6px"></span>REC</span></div>
+<label for="sig-name" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700; color: #ffffff">닉네임
+<input id="sig-name" type="text" placeholder="어스2 닉네임이나 부르고 싶은 이름" style="min-height: 44px; padding: 0 12px; background: #1d1440; border: 2px solid #3a2a6e; color: #ffffff; font-size: 15px; font-family: 'Noto Sans KR', sans-serif">
+</label>
+<fieldset style="border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px">
+<legend style="font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 8px">어떤 시그널인가요?</legend>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<label for="sig-q" style="display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 12px; border: 2px solid #2fe6c8; color: #2fe6c8; font-size: 14px; font-weight: 700"><input id="sig-q" type="radio" name="sig-type" checked>궁금해요</label>
+<label for="sig-tip" style="display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 12px; border: 2px solid #ff2fb0; color: #ff2fb0; font-size: 14px; font-weight: 700"><input id="sig-tip" type="radio" name="sig-type">제보해요</label>
+<label for="sig-say" style="display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 12px; border: 2px solid #ffd23f; color: #ffd23f; font-size: 14px; font-weight: 700"><input id="sig-say" type="radio" name="sig-type">하고 싶은 말</label>
+</div>
+</fieldset>
+<label for="sig-msg" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700; color: #ffffff">내용
+<textarea id="sig-msg" rows="5" placeholder="E2V1에서 궁금한 점, 발견한 변화, 방송에 바라는 점을 적어주세요" style="padding: 12px; background: #1d1440; border: 2px solid #3a2a6e; color: #ffffff; font-size: 15px; font-family: 'Noto Sans KR', sans-serif; resize: vertical"></textarea>
+</label>
+<p style="margin: 0; font-size: 12px; line-height: 1.6; color: #a99bd0">보내주신 시그널은 운영자가 확인한 뒤 골라서 공개해요. 연락처나 개인정보는 적지 말아주세요.</p>
+<button type="button" style="min-height: 52px; background: #ffd23f; color: #0a0716; border: 3px solid #0a0716; box-shadow: 5px 5px 0 #000000; font-family: 'Bungee', sans-serif; font-size: 18px; letter-spacing: 1px; cursor: pointer">SEND SIGNAL · 시그널 보내기</button>
+<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 11px; color: #ffd23f">[디자인 시안 · 실제 전송 기능은 연결 예정]</p>
+</form>
+
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><span style="font-family: 'Bungee', sans-serif; font-size: 20px; color: #ffd23f; text-shadow: 2px 2px 0 #000000">VIEWER SIGNALS</span><span style="font-family: 'Gaegu', sans-serif; font-weight: 700; font-size: 18px; color: #ffd23f">아래는 예시예요</span></div>
+
+<div style="position: relative; display: flex; flex-direction: column; gap: 12px">
+<div style="align-self: flex-start; max-width: 88%; background: #ffffff; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000000; padding: 14px 16px; border-radius: 4px 18px 18px 18px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; color: #1f7fd1">시청자 · 궁금해요</span>
+<p style="margin: 4px 0 0; font-size: 15px; line-height: 1.6">시청자 질문 예시가 들어갈 자리예요.</p>
+</div>
+<div style="align-self: flex-end; max-width: 88%; display: flex; gap: 10px; align-items: flex-end">
+<div style="background: #2fe6c8; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000000; padding: 14px 16px; border-radius: 18px 4px 18px 18px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700">메타민 박사 · STUDIO</span>
+<p style="margin: 4px 0 0; font-size: 15px; line-height: 1.6">메타민 박사의 답변이 들어갈 자리예요.</p>
+</div>
+<img src="/_blob/81bc16718fe06a9909a32dd75a0ac407" alt="메타민 박사" style="flex: none; width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 3px solid #0a0716">
+</div>
+</div>
+
+<div style="position: relative; display: flex; flex-direction: column; gap: 12px">
+<div style="align-self: flex-start; max-width: 88%; background: #ffffff; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000000; padding: 14px 16px; border-radius: 4px 18px 18px 18px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; color: #c2187a">시청자 · 제보해요</span>
+<p style="margin: 4px 0 0; font-size: 15px; line-height: 1.6">시청자 제보 예시가 들어갈 자리예요.</p>
+</div>
+<div style="align-self: flex-end; max-width: 88%; display: flex; gap: 10px; align-items: flex-end">
+<div style="background: #ff2fb0; color: #ffffff; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000000; padding: 14px 16px; border-radius: 18px 4px 18px 18px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700">나두지 · FIELD</span>
+<p style="margin: 4px 0 0; font-size: 15px; line-height: 1.6">나두지가 현장에서 확인한 답변이 들어갈 자리예요.</p>
+</div>
+<img src="/_blob/f9dabe0b371fffeb0818b70b009d8797" alt="나두지" style="flex: none; width: 52px; height: 52px; border-radius: 50%; object-fit: cover; object-position: top; background: #2a1f52; border: 3px solid #0a0716">
+</div>
+</div>
+
+<a href="#tx-you" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; padding: 0 18px; background: #6a3cff; color: #ffffff; text-decoration: none; border: 3px solid #0a0716; box-shadow: 5px 5px 0 #000000; font-weight: 700; font-size: 15px"><span>자유롭게 이야기하려면 디스코드 채널로</span><span style="font-family: 'Space Mono', monospace; font-size: 12px">[링크 연결 예정] ↗</span></a>
+</div>
+
+</div>
+</section>
+
+<footer style="position: relative; border-top: 2px solid transparent; border-image: linear-gradient(90deg, #2fe6c8, #ff2fb0, #ffe14d) 1; background: rgba(8,5,20,.6)">
+<div style="max-width: 1360px; margin: 0 auto; padding: 48px 40px 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span class="logoglow" style="font-family: 'Bungee', sans-serif; font-size: 24px; line-height: 1; color: #ffd23f">TERRASIGNAL</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #2fe6c8">SIGNAL FROM MY SECOND EARTH</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; color: #a99bd0; margin-top: 6px">TX 37.530965 N · 127.053108 E</span>
+</div>
+<nav aria-label="채널 링크" style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #ff2fb0">CHANNELS</span>
+<a href="https://www.youtube.com/@metafunk-agency" style="color: #ffffff; text-decoration: none">유튜브 · METAFUNK AGENCY ↗</a>
+<a href="https://x.com/metarobot1982" style="color: #ffffff; text-decoration: none">X · @metarobot1982 ↗</a>
+<a href="#tx-you" style="color: #ffffff; text-decoration: none">디스코드 <span style="font-family: 'Space Mono', monospace; font-size: 11px; color: #ffd23f">[링크 연결 예정]</span></a>
+</nav>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px; line-height: 1.7; color: #a99bd0">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #2fe6c8">NOTICE</span>
+<p style="margin: 0">TERRASIGNAL은 METAFUNK AGENCY의 독립 방송국이며, Earth2 공식과 무관합니다.</p>
+<p style="margin: 0">이 사이트의 일부 이미지와 영상은 AI 도구로 제작했습니다.</p>
+<p style="margin: 0">시그널 보내기로 받은 닉네임과 내용은 방송 소재 선정과 답변에만 쓰며, 공개 전 운영자가 확인합니다.</p>
+</div>
+</div>
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 40px 40px; font-family: 'Space Mono', monospace; font-size: 11px; color: #6d6290">© 2026 METAFUNK AGENCY — TERRASIGNAL · EARTH2SPACE · D.I.Store · Keep the Funk, Keep the Signal.</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"motion":{"editor":"boolean","default":true},"coating":{"editor":"boolean","default":true},"startWorld":{"editor":"enum","options":["real","split","digital"],"default":"digital"},"$preview":{"width":1440,"height":6250}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { world: null, paused: false };
+  }
+  renderVals() {
+    var now = new Date();
+    var kst = new Date(now.getTime() + now.getTimezoneOffset() * 60000 + 9 * 3600000);
+    var start = Date.UTC(2025, 6, 14);
+    var today = Date.UTC(kst.getFullYear(), kst.getMonth(), kst.getDate());
+    var day = Math.floor((today - start) / 86400000) + 1;
+    var motion = this.props.motion ?? true;
+    var world = this.state.world || this.props.startWorld || 'digital';
+    var x = world === 'real' ? 112 : (world === 'digital' ? -12 : 50);
+    var nx = world === 'real' ? 84 : (world === 'digital' ? 14 : 50);
+    var on = '#ffd166', onFg = '#0b0c12', off = 'transparent', offFg = '#c7cbe0';
+    var self = this;
+    return {
+      motionClass: motion ? 'anim' : '',
+      coatClass: (this.props.coating ?? true) ? 'coat' : '',
+      playing: !this.state.paused,
+      paused: !!this.state.paused,
+      playLabel: this.state.paused ? '첫 화면 영상 재생' : '첫 화면 영상 멈춤',
+      togglePlay: function () { self.setState({ paused: !self.state.paused }); },
+      buildDay: String(day),
+      clip: 'polygon(' + (x + 6) + '% 0, 100% 0, 100% 100%, ' + (x - 6) + '% 100%)',
+      riftClip: 'polygon(' + (x + 6) + '% 0, ' + (x + 6.4) + '% 0, ' + (x - 5.6) + '% 100%, ' + (x - 6) + '% 100%)',
+      riftX: nx + '%',
+      bubbleLeft: world === 'real' ? '-340px' : '96px',
+      isReal: world === 'real', isSplit: world === 'split', isDigital: world === 'digital',
+      realBg: world === 'real' ? on : off, realFg: world === 'real' ? onFg : offFg,
+      splitBg: world === 'split' ? on : off, splitFg: world === 'split' ? onFg : offFg,
+      digiBg: world === 'digital' ? on : off, digiFg: world === 'digital' ? onFg : offFg,
+      showReal: function () { self.setState({ world: 'real' }); },
+      showSplit: function () { self.setState({ world: 'split' }); },
+      showDigital: function () { self.setState({ world: 'digital' }); },
+      layers: [
+        { code: 'LAYER 01', mark: '■', name: '현실 지구', color: '#2fe6c8', glow: 'rgba(47,230,200,.35)', tint: 'rgba(47,230,200,.18)', count: '7개 주제', line: '우리가 사는 지구. 디지털 지구의 모든 땅은 이곳의 좌표와 겹쳐 있어요.', topics: '레퍼럴 코드 · 프로퍼티와 티어 · T3 영토 투표와 오픈 · 에센스로 타일 구매 · 땅 업그레이드 · 타일아트 · EPL' },
+        { code: 'LAYER 02', mark: '◆', name: '경계', color: '#ff2fb0', glow: 'rgba(255,47,176,.35)', tint: 'rgba(255,47,176,.18)', count: '7개 주제', line: '두 지구 사이. 이쪽과 저쪽을 오가며 둘을 이어 주는 것들이 흐르는 곳.', topics: '에센스 · 멘타 스테이킹 · 스킨 드롭 · 바자르 · 사이드로이드와 레이딩 · 쥬얼 · 시빌리언' },
+        { code: 'LAYER 03', mark: '⬢', name: '디지털 지구', color: '#a99bff', glow: 'rgba(125,107,255,.4)', tint: 'rgba(125,107,255,.22)', count: '11개 주제', line: '나의 두 번째 지구. 아바타로 걷고, 만들고, 살아가는 세계.', topics: '시작하기 · 기본 조작 · 제작 · 장비 장착 · 캠프파이어 · 타일 검색 · 텔레포트 · 의류와 요리 · 퀘스트 · 농업 · E2 Hordes(신호 탐색 중)' }
+      ],
+      open: [
+        { no: 'CH 01', name: 'E2V1 Pre-Alpha', desc: '아바타로 들어가는 디지털 지구. 지도, 프로퍼티, 홀로빌딩, 아이템, 제작, 퀘스트' },
+        { no: 'CH 02', name: 'Raiding', desc: 'Cydroid 레이딩과 Command Deck' },
+        { no: 'CH 00', name: '시작하기', desc: '런처 설치부터 첫 접속까지' }
+      ],
+      locked: [
+        { no: 'CH 03', name: 'E2 Hordes', note: '런처 표기 · COMING 2026' },
+        { no: 'CH 04', name: 'EcoSim', note: '런처 표기 · STARTING 2026' },
+        { no: 'CH 05', name: 'Conquer', note: '런처 표기 · COMING SOON' },
+        { no: 'CH 06', name: 'Avatar', note: '런처 표기 · COMING SOON' },
+        { no: 'CH 07', name: 'Weaver', note: '지도 미출시 항목' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
