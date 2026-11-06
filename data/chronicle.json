@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T14:25:46.311Z",
+  "updatedAt": "2026-11-06T14:35:18Z",
   "note": "연대기 = 세계 구조가 바뀐 날만. 반복 카운트다운·시즌 스킨은 넣지 않음. layer R/B/D, date YYYY-MM-DD 또는 YYYY-MM",
   "events": [
     {
@@ -14,13 +14,13 @@
     },
     {
       "layer": "D",
-      "date": "2024-03-02",
+      "date": "2024-03-06",
       "grade": "CLEAR",
       "short": "Pre-Alpha 신청",
       "title": "E2V1 프리 알파 테스터 신청 시작",
       "desc": "3D 세계 E2V1을 미리 체험할 테스터 신청이 열렸어요.",
-      "source": "earth2.io 공식 뉴스",
-      "url": ""
+      "source": "earth2.io 공식 기사 · E2V1 pre-alpha invites open!",
+      "url": "https://earth2.io/news/e2v1-pre-alpha-invite"
     },
     {
       "layer": "D",
@@ -29,8 +29,8 @@
       "short": "Hordes 전투",
       "title": "E2 Hordes 초기 전투 메커니즘 공개",
       "desc": "호드 미니게임의 전투 방식을 개발 기록으로 처음 보여줬어요. 출시는 아직이에요.",
-      "source": "Earth2 공식 기사 Vol.1",
-      "url": ""
+      "source": "earth2.io 공식 기사 · Earth 2 Hordes: Early Combat Mechanics – Volume 1",
+      "url": "https://earth2.io/news/combat-mechanics-volume-1"
     },
     {
       "layer": "D",
@@ -39,8 +39,8 @@
       "short": "RT1",
       "title": "리얼리티 스레드 1 · 챕터 1",
       "desc": "캐릭터 합성, 인벤토리, 채집, 낮과 밤, 계절이 들어왔어요. E2V1 건설 1일차.",
-      "source": "공식 기사",
-      "url": ""
+      "source": "earth2.io 공식 기사 · Welcome to E2V1 Pre-Alpha Chapter 1: Reality Thread 1",
+      "url": "https://earth2.io/news/e2v1-chapter-1"
     },
     {
       "layer": "D",
@@ -49,8 +49,8 @@
       "short": "RT2",
       "title": "리얼리티 스레드 2",
       "desc": "충돌 시스템 개선과 체력·허기·스태미나 화면이 생겼어요.",
-      "source": "공식 기사",
-      "url": ""
+      "source": "earth2.io 공식 기사 · E2V1 – Reality Thread 2 Update Notes",
+      "url": "https://earth2.io/news/reality-thread-2"
     },
     {
       "layer": "D",
@@ -59,8 +59,8 @@
       "short": "RT3",
       "title": "리얼리티 스레드 3",
       "desc": "디지털 지구 전역에 글로벌 멀티플레이가 열렸어요.",
-      "source": "공식 기사",
-      "url": ""
+      "source": "earth2.io 공식 기사 · Earth 2 Reality Thread 3 introduces Global Multiplayer across entire Digital Earth",
+      "url": "https://earth2.io/news/reality-thread-3"
     },
     {
       "layer": "D",
@@ -69,8 +69,8 @@
       "short": "RT4",
       "title": "리얼리티 스레드 4",
       "desc": "제작, 첫 전투(창·방패), 엔진 최적화가 들어왔어요.",
-      "source": "공식 기사",
-      "url": ""
+      "source": "earth2.io 공식 기사 · Reality Thread 4 – Crafting, Combat & Core E2V1 Optimisations",
+      "url": "https://earth2.io/news/reality-thread-4"
     },
     {
       "layer": "D",
@@ -85,12 +85,12 @@
     {
       "layer": "D",
       "date": "2025-12-18",
-      "grade": "WEAK",
+      "grade": "CLEAR",
       "short": "RT5",
       "title": "리얼리티 스레드 5 · 챕터 2",
-      "desc": "텔레포테이션과 룬이 들어왔어요. 날짜는 공식 X와 커뮤니티 기준이고 공식 기사를 확인 중이에요.",
-      "source": "@earth2io X · 커뮤니티",
-      "url": ""
+      "desc": "텔레포테이션과 룬이 들어왔어요.",
+      "source": "earth2.io 공식 기사 · Chapter 2: Reality Thread 5 – Teleportation Comes Online",
+      "url": "https://earth2.io/news/reality-thread-5"
     },
     {
       "layer": "D",
@@ -99,8 +99,8 @@
       "short": "RT6",
       "title": "리얼리티 스레드 6 · 챕터 3",
       "desc": "요리, 의류, 이모트가 들어왔어요.",
-      "source": "공식 기사",
-      "url": ""
+      "source": "earth2.io 공식 기사 · Chapter 3: Reality Thread 6 – What’s Cooking in E2V1?",
+      "url": "https://earth2.io/news/reality-thread-6"
     },
     {
       "layer": "D",
@@ -109,8 +109,8 @@
       "short": "RT7",
       "title": "리얼리티 스레드 7 · 챕터 4",
       "desc": "글로벌 퀘스트 시스템이 열렸어요.",
-      "source": "공식 기사",
-      "url": ""
+      "source": "earth2.io 공식 기사 · Chapter 4: Reality Thread 7 -Quests: Who’s Got the Goods?",
+      "url": "https://earth2.io/news/reality-thread-7"
     },
     {
       "layer": "D",
@@ -119,8 +119,8 @@
       "short": "RT8",
       "title": "리얼리티 스레드 8 · Seeds of Change",
       "desc": "E2V1에 첫 농업이 들어왔어요.",
-      "source": "공식 기사",
-      "url": ""
+      "source": "earth2.io 공식 기사 · Chapter 5 -Reality Thread 8 – Seeds of Change",
+      "url": "https://earth2.io/news/reality-thread-8"
     },
     {
       "layer": "D",
@@ -139,8 +139,8 @@
       "short": "스킨 스토어",
       "title": "Earth 2 Skins 출시",
       "desc": "수집형 스킨 스토어와 Blueprint 시스템이 열렸어요. 스킨은 외형 전용이에요.",
-      "source": "공식 블로그",
-      "url": ""
+      "source": "earth2.io 공식 기사 · Earth 2 Skins – Important Details",
+      "url": "https://earth2.io/news/earth2skins"
     },
     {
       "layer": "B",
@@ -149,8 +149,8 @@
       "short": "멘타 스테이킹",
       "title": "멘타 스테이킹 시작",
       "desc": "땅 위 멘타에 에센스를 스테이킹할 수 있게 됐어요. 호드 발표, 출금 업데이트도 함께 나왔어요.",
-      "source": "공식 기사",
-      "url": ""
+      "source": "earth2.io 공식 기사 · Earth 2 Unveils Mentar Staking, Earth 2 Hordes, and Withdrawal Update",
+      "url": "https://earth2.io/news/mentar-staking-live"
     },
     {
       "layer": "B",
@@ -159,8 +159,8 @@
       "short": "스테이킹 이정표",
       "title": "스테이킹 이정표 달성",
       "desc": "RT1을 앞두고 스테이킹 이정표를 넘었다는 공식 발표예요.",
-      "source": "공식 기사",
-      "url": ""
+      "source": "earth2.io 공식 기사 · Earth 2 Reaches Staking Milestone Ahead of Chapter 1: Reality Thread 1",
+      "url": "https://earth2.io/news/reality-thread-1-reminders"
     },
     {
       "layer": "B",
@@ -169,8 +169,8 @@
       "short": "ESS 리포트",
       "title": "$ESS 업데이트 리포트 Q4-25",
       "desc": "2025년 4분기 에센스 통계와 반감기 내용을 담았어요.",
-      "source": "공식 기사",
-      "url": ""
+      "source": "earth2.io 공식 기사 · $ESS Update Report Q4-25",
+      "url": "https://earth2.io/news/ess-2025-q4"
     },
     {
       "layer": "R",
@@ -179,8 +179,8 @@
       "short": "T3 영토",
       "title": "테리토리와 T3 땅",
       "desc": "투표로 여는 T3 영토, Boosted E-ther, 거버넌스 시스템이 시작됐어요.",
-      "source": "공식 기사",
-      "url": ""
+      "source": "earth2.io 공식 기사 · Territories – Boosted E-ther, Governance System & T3 Land",
+      "url": "https://earth2.io/news/territories"
     },
     {
       "layer": "R",
@@ -199,8 +199,8 @@
       "short": "땅 업그레이드",
       "title": "땅 $ESS 업그레이드 시스템",
       "desc": "에센스로 땅 티어를 업그레이드하는 시스템이 소개됐어요.",
-      "source": "공식 기사",
-      "url": ""
+      "source": "earth2.io 공식 기사 · Introducing the Earth 2 Land $ESS Upgrade System",
+      "url": "https://earth2.io/news/ess-land-upgrade"
     },
     {
       "layer": "R",
@@ -209,8 +209,8 @@
       "short": "4주년",
       "title": "Earth 2 4주년",
       "desc": "어스2가 4주년을 맞았어요.",
-      "source": "공식 기사",
-      "url": ""
+      "source": "earth2.io 공식 기사 · Earth 2 Turns 4!",
+      "url": "https://earth2.io/news/earth-2-turns-4"
     }
   ]
 }

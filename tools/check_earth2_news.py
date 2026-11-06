@@ -16,7 +16,9 @@ import re
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
+
+KST = timezone(timedelta(hours=9))
 
 API = 'https://public-api.wordpress.com/rest/v1.1/sites/195754016/posts'
 ARTICLE = 'https://earth2.io/news/'
@@ -55,10 +57,18 @@ def text(s):
     return re.sub(r'\s+', ' ', html.unescape(s)).strip()
 
 
+def kst_date(iso):
+    """Official posts carry Sydney time; TERRASIGNAL dates are Korean time."""
+    try:
+        return datetime.fromisoformat(iso).astimezone(KST).strftime('%Y-%m-%d')
+    except (TypeError, ValueError):
+        return (iso or '')[:10]
+
+
 def item(p):
     return {
         'id': p['ID'],
-        'date': (p.get('date') or '')[:10],
+        'date': kst_date(p.get('date')),
         'publishedAt': p.get('date', ''),
         'title': text(p.get('title')),
         'url': ARTICLE + p.get('slug', ''),
