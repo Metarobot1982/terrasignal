@@ -59,6 +59,14 @@ def collect_links():
         except Exception as e:  # noqa: BLE001
             notes.append('%s → %s' % (url, e))
             continue
+        if os.environ.get('NEWS_DEBUG'):
+            print('--- %s : %d bytes' % (url, len(body)))
+            print('title:', (re.search(r'<title>([^<]*)', body) or [None, ''])[1][:120])
+            print('"/news" occurrences:', body.count('/news'))
+            print('hrefs:', sorted(set(re.findall(r'href="([^"#]+)"', body)))[:60])
+            print('locs:', re.findall(r'<loc>([^<]+)</loc>', body)[:40])
+            i = body.find('/news/')
+            print('context:', body[max(0, i - 200):i + 300] if i >= 0 else '-')
         found = set(m.rstrip('/') for m in ART.findall(body))
         found |= set(BASE + m.rstrip('/') for m in REL.findall(body))
         # sitemap index → follow child sitemaps that look like posts/news

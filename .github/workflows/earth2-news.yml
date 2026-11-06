@@ -29,6 +29,7 @@ jobs:
       - name: Check earth2.io news
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NEWS_DEBUG: ${{ github.event_name == 'push' && '1' || '' }}
         run: python tools/check_earth2_news.py
       - name: Save what was seen
         run: |
