@@ -1,0 +1,3132 @@
+{
+  "source": "https://public-api.wordpress.com/rest/v1.1/sites/195754016/posts",
+  "savedAt": "2026-11-06T14:34:39Z",
+  "posts": [
+    {
+      "id": 3182,
+      "date": "2026-05-31",
+      "publishedAt": "2026-05-31T17:56:43+10:00",
+      "title": "Reality Thread 8 Update – 0.5.8.2 Released",
+      "url": "https://earth2.io/news/e2v1-update-0-5-8-2",
+      "summary": "May 31, 2026 – Australia – Just over 24 hours after Reality Thread 8 officially went live, the Earth 2 team released an update addressing a small number of issues identified by Players during the initial release period. Given the scale of RT8 and the large number of systems introduced simultaneously, the rollout itself went […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 3035,
+      "date": "2026-05-26",
+      "publishedAt": "2026-05-26T12:09:50+10:00",
+      "title": "Chapter 5 -Reality Thread 8 – Seeds of Change",
+      "url": "https://earth2.io/news/reality-thread-8",
+      "summary": "May 26, 2026 – Australia – Just 2 months after the last major Earth 2 release, Reality Thread 8 marks another leap forward for E2V1, introducing the first version of agriculture inside Earth 2 and expanding the growing network of systems that increase purpose and utility to Earth 2 land. While the headline feature for […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 3027,
+      "date": "2026-03-24",
+      "publishedAt": "2026-03-24T02:08:26+10:00",
+      "title": "Reality Thread 7 Update 0.4.7.1",
+      "url": "https://earth2.io/news/e2v1-update-0-4-7-1",
+      "summary": "March 24, 2026 – Australia – In just over 24 hours since Chapter 4: Reality Thread 7 officially went live, the Earth 2 team has deployed update 0.4.7.1, addressing a number of issues identified in the initial rollout. As with all Reality Thread releases, the team has been actively monitoring performance, player feedback and system […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 2894,
+      "date": "2026-03-23",
+      "publishedAt": "2026-03-23T15:57:10+10:00",
+      "title": "$ESS Update Report Q4-25",
+      "url": "https://earth2.io/news/ess-2025-q4",
+      "summary": "March 23, 2026 – Sydney, Australia – We are pleased to share the $ESS Statistics report for Q4 2025. This update includes key details of $ESS metrics throughout the mentioned period, including a detailed explanation of each category below. Please note that the ESS halving event perfectly aligned internally on the system as it also […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "$ESS",
+        "Character Synthesis",
+        "Community",
+        "Essence",
+        "Essence Burn",
+        "Treasury",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 2936,
+      "date": "2026-03-19",
+      "publishedAt": "2026-03-19T18:40:10+10:00",
+      "title": "Chapter 4: Reality Thread 7 -Quests: Who’s Got the Goods?",
+      "url": "https://earth2.io/news/reality-thread-7",
+      "summary": "March 19, 2026 – Australia – Reality Thread 7 (0.4.7.0) is almost here, bringing with it a feature rich and system focused update for E2V1 that continues to build on the foundations of the platform while giving Players with access more to do and more ways to interact with the world. This release brings together […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 2910,
+      "date": "2026-01-25",
+      "publishedAt": "2026-01-25T03:07:39+10:00",
+      "title": "Reality Thread 6 Update -Version 0.3.6.2",
+      "url": "https://earth2.io/news/e2v1-update-0-3-6-2",
+      "summary": "Jan 25, 2026 – Sydney, Australia – Update 0.3.6.2 is currently rolling out. This update includes some critical fixes, system improvements and important backend changes, with a strong focus on stability, inventory reliability and preparation work for Reality Thread 7. While many of the changes are not highly visual, they address deeper system-level issues that […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 2830,
+      "date": "2026-01-06",
+      "publishedAt": "2026-01-06T01:17:32+10:00",
+      "title": "Chapter 3: Reality Thread 6 – What’s Cooking in E2V1?",
+      "url": "https://earth2.io/news/reality-thread-6",
+      "summary": "Wishing a Happy New Year to all Earth 2 Players! Jan 6, 2026 – Sydney, Australia – We’re fittingly welcoming in the new year with the release of Chapter 3: Reality Thread 6 as it feels like a great way to kick things off and continue the momentum we’ve been building release by release, delivering a […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 2821,
+      "date": "2025-12-21",
+      "publishedAt": "2025-12-21T12:54:24+10:00",
+      "title": "Reality Thread 5 Update -Version 0.2.5.1",
+      "url": "https://earth2.io/news/e2v1-update-0-2-5-1",
+      "summary": "Since the release of Reality Thread 5 (0.2.5.0), just over 2 days ago, the Earth 2 team has been actively monitoring gameplay, server performance and Player feedback across E2V1. As a result of that monitoring and the valuable data collected, we have now deployed Version 0.2.5.1 within this short period of time, introducing targeted fixes […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 2776,
+      "date": "2025-12-18",
+      "publishedAt": "2025-12-18T23:02:19+10:00",
+      "title": "Chapter 2: Reality Thread 5 – Teleportation Comes Online",
+      "url": "https://earth2.io/news/reality-thread-5",
+      "summary": "Another Defining Step for Earth 2 On December 8, 2025, Earth 2 quietly opened the door of E2V1 to non-testers for the first time ever, expanding access through our Badge Holder Rewards Program and marking an important moment in the project’s timeline. Though E2V1 is still in pre-alpha, it is beginning to operate as a […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 2764,
+      "date": "2025-11-22",
+      "publishedAt": "2025-11-22T15:32:08+10:00",
+      "title": "Earth 2 Pre-Alpha Update 0.1.4.1",
+      "url": "https://earth2.io/news/e2v1-update-0-1-4-1",
+      "summary": "Nov 22, 2025 – Sydney, Australia – Since the release of Reality Thread 4, our dedicated Pre-Alpha testers have played an essential role in helping us identify and refine several key areas of the Character Location and Multiplayer Systems. This is exactly what the Pre-Alpha phase is designed for, so we appreciate the assistance from […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 2715,
+      "date": "2025-10-31",
+      "publishedAt": "2025-10-31T19:47:55+10:00",
+      "title": "Reality Thread 4 – Crafting, Combat & Core E2V1 Optimisations",
+      "url": "https://earth2.io/news/reality-thread-4",
+      "summary": "Introduction – A New Reality Thread Unfolds inside E2V1 Oct 31, 2025 – Sydney, Australia – It has been two months since we released Reality Thread 3, a milestone update that officially brought multiplayer to Earth 2’s massive open world, E2V1. Reality Thread 3 marked a key turning point – the first time Players could […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 2087,
+      "date": "2025-10-31",
+      "publishedAt": "2025-10-31T19:47:03+10:00",
+      "title": "Earth 2 $ESS Update Report: (April-June 2025, July-September 2025)",
+      "url": "https://earth2.io/news/ess-30-sep-2025",
+      "summary": "Oct 31, 2025 – Sydney, Australia – Earth 2 is pleased to share the $ESS Statistics report from April 2025 through to September 2025. This update includes key details of $ESS metrics throughout the mentioned period, including a detailed explanation of each category below. Please note that this is a double quarter report, while the […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "$ESS",
+        "Character Synthesis",
+        "Community",
+        "Essence",
+        "Essence Burn",
+        "Treasury",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 2655,
+      "date": "2025-08-24",
+      "publishedAt": "2025-08-24T23:10:49+10:00",
+      "title": "Earth 2 Reality Thread 3 introduces Global Multiplayer across entire Digital Earth",
+      "url": "https://earth2.io/news/reality-thread-3",
+      "summary": "August 24, 2025 – Sydney, Australia – Over the past four weeks, the Earth 2 development team has remained laser-focused on a number of updates to further progress our platform, tuning out distractions and external noise. Today, we are pleased to announce the release of Reality Thread 3, which includes one of the most significant […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 2644,
+      "date": "2025-07-27",
+      "publishedAt": "2025-07-27T07:15:39+10:00",
+      "title": "E2V1 – Reality Thread 2 Update Notes",
+      "url": "https://earth2.io/news/reality-thread-2",
+      "summary": "July 27, 2025 – Sydney, Australia – Over the past 5 days, our development team has been hard at work identifying, fixing and improving various systems inside the E2V1 Pre-Alpha. The most significant of these updates is an improvement to the global collision system, aimed at improving the Character movement experience for Players. In addition […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 2630,
+      "date": "2025-07-21",
+      "publishedAt": "2025-07-21T00:31:24+10:00",
+      "title": "Earth 2 Reaches Staking Milestone Ahead of Chapter 1: Reality Thread 1",
+      "url": "https://earth2.io/news/reality-thread-1-reminders",
+      "summary": "July 21, 2025 – Sydney, Australia – As anticipation builds around the release of Chapter 1: Reality Thread 1, Earth 2 is proud to announce a significant platform record: over 74,000,000 Essence has now been staked by Players on land inside Earth 2. This represents more than 7% of the maximum Essence supply possible and […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 2597,
+      "date": "2025-07-14",
+      "publishedAt": "2025-07-14T08:48:52+10:00",
+      "title": "Welcome to E2V1 Pre-Alpha Chapter 1: Reality Thread 1",
+      "url": "https://earth2.io/news/e2v1-chapter-1",
+      "summary": "July 14, 2025 – Sydney, Australia – We are extremely proud to announce the first playable test release of E2V1 Pre-Alpha: Chapter 1. It all begins with Reality Thread 1 the initial strand of lifeforms in the woven digital fabric of Earth 2. This is a significant moment in the development of E2V1, as it […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Chapter 1",
+        "Community",
+        "E2V1",
+        "EcoSim",
+        "Essence",
+        "Feature",
+        "News",
+        "Open Testing",
+        "Public Release",
+        "Reality Thread 1",
+        "Reality Threads",
+        "Resources",
+        "Update",
+        "announcement",
+        "pre-alpha"
+      ]
+    },
+    {
+      "id": 2426,
+      "date": "2025-05-26",
+      "publishedAt": "2025-05-26T01:30:03+10:00",
+      "title": "E2V1 2025 Sneak Peek Follow Up Article – Core E2V1 Design Updates",
+      "url": "https://earth2.io/news/e2v1-core-design-updates",
+      "summary": "May 26, 2025 – Sydney, Australia – Welcome to the follow up article for the latest E2V1 Sneak Peek Footage video release. This article is designed to provide further explanation on some of the footage that was showcased, what it means, how it works and what we’re designing and building as a team. Not all […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 2273,
+      "date": "2025-05-14",
+      "publishedAt": "2025-05-14T21:13:15+10:00",
+      "title": "Earth 2 Essence Update Report (June 2024 – March 2025)",
+      "url": "https://earth2.io/news/ess-31-mar-25",
+      "summary": "May 14, 2025 – Sydney, Australia – Earth 2 is pleased to present some important $ESS token statistics that have occurred since the ERC-20 utility token launch and up until March 31, 2025. This update includes key details of $ESS metrics throughout that period, including a detailed explanation of each category below. For the period […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Burn",
+        "Community",
+        "ERC-20 Utility Token",
+        "Earth 2 Essence",
+        "EcoSim",
+        "Essence",
+        "Ethereum Blockchain",
+        "Mining",
+        "Minting",
+        "Monthly Statistics",
+        "Summary",
+        "Treasury",
+        "Update"
+      ]
+    },
+    {
+      "id": 2399,
+      "date": "2025-05-10",
+      "publishedAt": "2025-05-10T17:58:23+10:00",
+      "title": "The ESS Discount Spinner: A Unique Perk for Earth 2 Stakers",
+      "url": "https://earth2.io/news/ess-spinner",
+      "summary": "10 May, 2025 – Sydney, Australia – Earth 2 is excited to introduce the ESS Discount Spinner, a dynamic feature that not only adds new utility and burn mechanics to Essence but also provides our most dedicated stakers with a unique perk to secure guaranteed discounts on new land purchases. How the ESS Discount Spinner […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "$ESS",
+        "Active Players",
+        "Community",
+        "ESS Discount Spinner",
+        "Essence",
+        "Feature",
+        "Land Ownership",
+        "Mentar Staking",
+        "Rewards",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 2377,
+      "date": "2025-05-08",
+      "publishedAt": "2025-05-08T23:11:53+10:00",
+      "title": "Chapter 2: Teleportation",
+      "url": "https://earth2.io/news/teleportation",
+      "summary": "May 08, 2025 – Sydney, Australia – Following the release of Chapter 1: Explore, Craft, Survive. Earth 2’s next focus will be the release of Chapter 2: Teleportation. This article serves as a comprehensive guide to how teleportation will function within the Earth 2 ecosystem. We are providing details about the upcoming system now to […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "$ESS",
+        "Community",
+        "E2V1",
+        "EPL",
+        "ERC-20 Utility Token",
+        "EcoSim",
+        "Essence",
+        "Essence Utility",
+        "Feature",
+        "Game",
+        "Land Ownership",
+        "Teleportation",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 2353,
+      "date": "2025-04-23",
+      "publishedAt": "2025-04-23T11:20:10+10:00",
+      "title": "Supercharged E-ther For Earth 2 Day – 2025!",
+      "url": "https://earth2.io/news/earth2day2025",
+      "summary": "April 23 2025 – Sydney, Australia – It is once again the time of year where the Earth’s inhabitants come together to celebrate our wonderous planet and all that it has to offer. With E2V1’s upcoming Chapter 1 early access release approaching, this year’s Earth 2 Day is a little more special! First introduced in 2022 […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Community",
+        "E-ther",
+        "ERC-20 Utility Token",
+        "Earth2Day",
+        "Essence",
+        "Essence Token",
+        "Ethereum Blockchain",
+        "MetaMask",
+        "Rewards",
+        "Supercharged E-ther",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 2342,
+      "date": "2025-04-18",
+      "publishedAt": "2025-04-18T22:38:43+10:00",
+      "title": "Over 67 Million Essence Staked – a New Milestone for Earth 2’s Mentar Staking System",
+      "url": "https://earth2.io/news/mentar-staking-all-time-high",
+      "summary": "April 18, 2025 – Sydney, Australia – The Earth 2 community has set a new record with over 67,000,000 ESSENCE ($ESS) now actively staked through the Mentar Staking System – the highest amount ever recorded! This surge in Mentar staking participation not only signals ongoing confidence in the Earth 2 project, but also showcases the […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "$ESS",
+        "Community",
+        "Essence",
+        "Mentar Staking",
+        "MetaMask",
+        "Milestone",
+        "News",
+        "announcement"
+      ]
+    },
+    {
+      "id": 2335,
+      "date": "2025-04-13",
+      "publishedAt": "2025-04-13T20:52:35+10:00",
+      "title": "Earth 2 Hordes Combat Mechanics Vol. 3",
+      "url": "https://earth2.io/news/combat-mechanics-volume-3",
+      "summary": "You’re deep in digital terrain – real locations, real geography – and out of nowhere, the ground shakes. Skeleton warriors. Zombies. Rock Golems and more. They don’t just look cool. They drop loot, E-ther, and they can kill you. Welcome to the latest Earth 2 Hordes Combat update! April 13, 2025 – Sydney, Australia We’re […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 2309,
+      "date": "2025-04-06",
+      "publishedAt": "2025-04-06T17:18:44+10:00",
+      "title": "The Dawn of Life in Earth 2: Character Synthesis in E2V1",
+      "url": "https://earth2.io/news/dawn-of-life",
+      "summary": "April 6, 2025 – Sydney, Australia – Earth 2 is preparing to welcome its very first inhabitants leading into Chapter 1 Pre-Alpha release “Explore. Craft. Survive.” With the introduction of the Character Synthesis system inside E2V1, the first true spark of life is preparing to ignite the activity inside the geolocational Metaverse of Earth 2. […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 2261,
+      "date": "2024-12-01",
+      "publishedAt": "2024-12-01T23:10:27+10:00",
+      "title": "Earth 2 Megacities & Tile Art Series: Vol.5 – Final Episode before E2V1",
+      "url": "https://earth2.io/news/megacity-tileart-series",
+      "summary": "December 1, 2024 – Sydney, Australia – Welcome to the fifth and final installment in the Earth 2 Megacities and Tile Art series. This series has been a celebration of the creativity and vision of our community, showcasing Player-owned properties, planned megacities, and intricate tile art displayed in our developing 1:1 scale digital Earth, Earth […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "#tech",
+        "Active Players",
+        "Community",
+        "E2V1",
+        "Earth 2",
+        "Megacities",
+        "Tile Art"
+      ]
+    },
+    {
+      "id": 2256,
+      "date": "2024-11-26",
+      "publishedAt": "2024-11-26T02:10:35+10:00",
+      "title": "Earth 2 Hordes Combat Mechanics Volume 2",
+      "url": "https://earth2.io/news/combat-mechanics-volume-2",
+      "summary": "November 26, 2024 – Sydney, Australia – Welcome to Earth 2 Hordes Combat Mechanics Volume 2! In this article, we’re excited to highlight some of the updates our team has been testing for the Earth 2 Hordes mini-game. These developments are not only integral to Earth 2 Hordes but will also play a crucial role […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Combat",
+        "E2V1",
+        "Earth 2 Hordes",
+        "Mini-Games",
+        "Open World",
+        "Staking",
+        "Utility",
+        "development",
+        "gaming",
+        "video-games"
+      ]
+    },
+    {
+      "id": 2239,
+      "date": "2024-11-20",
+      "publishedAt": "2024-11-20T23:07:02+10:00",
+      "title": "Earth 2 Creation Process Series – Volume 1 – The Skeleton Warrior",
+      "url": "https://earth2.io/news/creation-process-vol-1",
+      "summary": "November 20, 2024 – Sydney, Australia – We’re pleased to introduce the Creation Process Series, a behind-the-scenes look at the meticulous process of creating our unique 3D assets here at Earth 2. This series highlights key moments condensed from hours of recorded footage, demonstrating the dedication and artistry involved in crafting characters, objects and creatures […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "3D Character",
+        "3D Models",
+        "Creation Process",
+        "Creativity",
+        "Series",
+        "Skeleton Warrior"
+      ]
+    },
+    {
+      "id": 2197,
+      "date": "2024-11-15",
+      "publishedAt": "2024-11-15T22:29:21+10:00",
+      "title": "The Earth 2 EcoSim – Mining: The Beginning of a New Era!",
+      "url": "https://earth2.io/news/earth2-ecosim-mining",
+      "summary": "November 16, 2024 – Sydney, Australia – And so Earth 2 enters a new phase—an era that will gradually open doors to a world of new opportunities for those Players ready to shape a living, breathing, global ecosystem from the land they own. This release marks the dawn of the dynamic Earth 2 EcoSim, a […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "$ESS",
+        "Discovery Tier Resources",
+        "Earth 2 Essence",
+        "Earth 2 Player",
+        "EcoSim",
+        "Essence",
+        "Feature",
+        "Geologist",
+        "Jewels",
+        "News",
+        "Prospecting Cydroids",
+        "Resources",
+        "Update",
+        "Utility",
+        "Weaver",
+        "holobuildings"
+      ]
+    },
+    {
+      "id": 2141,
+      "date": "2024-11-06",
+      "publishedAt": "2024-11-06T23:39:53+10:00",
+      "title": "Earth 2 Turns 4!",
+      "url": "https://earth2.io/news/earth-2-turns-4",
+      "summary": "November 06, 2024 – Sydney, Australia – Earth 2 invites the Earth 2 Community to join us in celebrating our 4th birthday! Despite some unavoidable setbacks, there have been numerous developments at Earth 2 over the past 12 months and we are expecting some noteworthy releases heading into next year which will not only introduce […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Anniversary",
+        "Community",
+        "E2V1",
+        "Earth 2 Turns 4",
+        "EcoSim",
+        "Features",
+        "Update",
+        "announcement",
+        "progress"
+      ]
+    },
+    {
+      "id": 2125,
+      "date": "2024-10-12",
+      "publishedAt": "2024-10-12T03:21:58+10:00",
+      "title": "The Earth 2 Launcher: A Sneak Peek",
+      "url": "https://earth2.io/news/earth-2-launcher",
+      "summary": "October 12, 2024 – Sydney, Australia – Earth 2 is pleased to provide a sneak peek video showcasing the upcoming Earth 2 Launcher which our dev team have been working on as part of the E2V1 Pre-Alpha release. Designed to serve as a centralised hub for Players, this launcher will offer a streamlined way to […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "3D Gameplay",
+        "Avatar",
+        "Conquer",
+        "E2V1",
+        "E2V1 Pre-Alpha",
+        "Earth 2 Hordes",
+        "Earth 2 Launcher",
+        "Earth 2 Skins",
+        "EcoSim",
+        "Metaverse",
+        "Raiding",
+        "Sneak Peak",
+        "Technology",
+        "virtual-reality",
+        "web3"
+      ]
+    },
+    {
+      "id": 2106,
+      "date": "2024-09-18",
+      "publishedAt": "2024-09-18T01:50:27+10:00",
+      "title": "Earth 2 Hordes: Early Combat Mechanics – Volume 1",
+      "url": "https://earth2.io/news/combat-mechanics-volume-1",
+      "summary": "September 18, 2024 – Sydney, Australia – Earth 2 is excited to share a very early look into its first combat mechanics with a video release and this article. While Earth 2 is envisioned as a multifaceted digital Metaverse with ambitions to encompass socialising, resource mining, building, trading, exploring, shopping and more, we believe a […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Attacks",
+        "Combat",
+        "E2V1",
+        "Earth 2 Hordes",
+        "Enemy Units",
+        "Game Mechanics",
+        "Metaverse",
+        "Mini-Games",
+        "Showcase",
+        "Update",
+        "Utility",
+        "Weapons",
+        "gameplay"
+      ]
+    },
+    {
+      "id": 2092,
+      "date": "2024-08-28",
+      "publishedAt": "2024-08-28T23:27:49+10:00",
+      "title": "Wildlife in Earth 2 – Vol. 1",
+      "url": "https://earth2.io/news/wildlife-vol-1",
+      "summary": "August 28, 2024 – Sydney, Australia – Earth 2 is excited to introduce the first look at wildlife to E2V1, inching the virtual world one step closer to our long term goal of a fully immersive experience. Our new team members have been hard at work behind the scenes, not just on wildlife but across […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Dynamic Navmesh System",
+        "E2V1",
+        "Earth 2 Hordes",
+        "Open World",
+        "Updates",
+        "Virtual World Progress",
+        "Wildlife",
+        "development"
+      ]
+    },
+    {
+      "id": 2076,
+      "date": "2024-08-12",
+      "publishedAt": "2024-08-12T00:11:30+10:00",
+      "title": "Earth 2, 2024 | GDC Trailer",
+      "url": "https://earth2.io/news/earth-2-gdc-trailer",
+      "summary": "August 12, 2024 – Sydney, Australia – Earth 2 invites you to take a closer look at E2V1 with the official footage release from our GDC San Francisco 2024 showcase reel. E2V1 is a work in progress 1:1 scale, playable 3D digital version of our planet Earth being actively developed. This real-time, in-game footage offers an […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "E2V1",
+        "Footage",
+        "GDC",
+        "Metaverse",
+        "Update",
+        "Youtube Video"
+      ]
+    },
+    {
+      "id": 2065,
+      "date": "2024-08-04",
+      "publishedAt": "2024-08-04T01:19:50+10:00",
+      "title": "Earth 2 Unveils Mentar Staking, Earth 2 Hordes, and Withdrawal Update",
+      "url": "https://earth2.io/news/mentar-staking-live",
+      "summary": "August 04, 2024 – Sydney, Australia – Earth 2 is excited to announce several significant developments and features in this latest update. This article will delve into the new Mentar Staking system, provide background information on our first upcoming E2V1 mini-game, Earth 2 Hordes, and explain its connection to the Mentar Staking system. Additionally, we […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Earth 2 Hordes",
+        "Essence",
+        "Essence Staking",
+        "Mentar Staking",
+        "Mini-Games",
+        "Players",
+        "Update",
+        "Withdrawals"
+      ]
+    },
+    {
+      "id": 2054,
+      "date": "2024-07-26",
+      "publishedAt": "2024-07-26T23:48:38+10:00",
+      "title": "Earth 2 $ESS Statistics Update: 30 Days On-Platform Data",
+      "url": "https://earth2.io/news/ess-26-jul-24",
+      "summary": "July 26, 2024 – Sydney, Australia – Earth 2 is pleased to present a recent $ESS token statistics update from the past 30 days, detailing daily usage for Land Upgrades, Cydroid construction, and Skin purchases. All dates below are in UTC. Key Totals are: Land Upgrades: 4,642,500 $ESS Cydroid Construction: 115,842 $ESS Skin Purchases: 851,932 […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "$ESS",
+        "Community",
+        "Essence",
+        "Essence Burn",
+        "Treasury",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 2045,
+      "date": "2024-07-17",
+      "publishedAt": "2024-07-17T00:03:19+10:00",
+      "title": "TOP 10 Land Upgrade Burners on Launch Day!",
+      "url": "https://earth2.io/news/top-10-land-upgrades",
+      "summary": "July 17, 2024 – Sydney, Australia – Earth 2 is excited to honour the top 10 players who made some of the most incredible statements via the burning of Essence on the launch day of the Land Upgrades system. This milestone event saw an astounding 12,257,101 $ESS burned, reflecting the overall high level of engagement […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "$ESS",
+        "Active Players",
+        "Essence Burn",
+        "Top 10"
+      ]
+    },
+    {
+      "id": 2036,
+      "date": "2024-06-30",
+      "publishedAt": "2024-06-30T22:40:59+10:00",
+      "title": "Earth 2 Players Spend Over 12 Million Essence on Land Upgrade Launch",
+      "url": "https://earth2.io/news/land-upgrade-burn",
+      "summary": "Historic Day for Earth 2: Unprecedented Spending and Utility of $ESS June 30, 2024 – Sydney, Australia- Earth 2 players have showcased remarkable engagement with the platform, spending over 12 million Essence on the first day of the Earth 2 Land Upgrade system launch on Tuesday, June 25, 2024. The exact amount, 12,257,101.6727 $ESS, equates […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "$ESS",
+        "Active Players",
+        "Community",
+        "Earth 2 Essence",
+        "Essence Burn",
+        "Land Upgrade System",
+        "Rewards",
+        "progress"
+      ]
+    },
+    {
+      "id": 2026,
+      "date": "2024-06-29",
+      "publishedAt": "2024-06-29T20:55:31+10:00",
+      "title": "ESSENCE Utility Boost via the Earth 2 Skin Store",
+      "url": "https://earth2.io/news/ess-utility-e2-skins",
+      "summary": "Earth 2 to Expand $ESS Utility via the cosmetic Skin Store June 29, 2024 – Sydney, Australia – Earth 2 is thrilled to announce another new addition to the utility of Essence ($ESS) through the introduction of the ability to purchase selected skins from the Earth 2 Skin Store. This development aligns with Earth 2’s […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "$ESS",
+        "Earth 2 Skins",
+        "Essence",
+        "Feature",
+        "Update",
+        "Utility",
+        "announcement"
+      ]
+    },
+    {
+      "id": 2001,
+      "date": "2024-06-23",
+      "publishedAt": "2024-06-23T23:40:34+10:00",
+      "title": "Introducing the Earth 2 Land $ESS Upgrade System",
+      "url": "https://earth2.io/news/ess-land-upgrade",
+      "summary": "June 23, 2024 – Sydney, Australia – Earth 2 is pleased to introduce the Earth 2 Land Upgrade system, powered by Essence ($ESS). This article is being released prior to deployment in order to give Players some time to understand the basics around how the system will work. At first glance it is a simple […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "$ESS",
+        "Blue Energy",
+        "Essence",
+        "Essence Rewards",
+        "Essence Token",
+        "Green Energy",
+        "Land Mechanics",
+        "Land Tier",
+        "Land Upgrade System",
+        "News",
+        "Red Energy",
+        "Special Campaign",
+        "Special T1",
+        "Token",
+        "Update",
+        "Yellow Energy"
+      ]
+    },
+    {
+      "id": 1987,
+      "date": "2024-04-24",
+      "publishedAt": "2024-04-24T00:27:07+10:00",
+      "title": "Supercharged E-ther For Earth 2 Day!",
+      "url": "https://earth2.io/news/earth2day2024",
+      "summary": "April 24, 2024 – Sydney, Australia – Earth 2 Day was first introduced in 2022 to coincide with global Earth Day. To continue on the tradition from last year, we will celebrate #Earth2Day once again by rewarding our active Players. Therefore, from UTC 00:01 April 23, 2024 to UTC 00:01 April 24, 2024, Earth 2 […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Community",
+        "E-ther",
+        "Earth2Day",
+        "Essence",
+        "Essence Token",
+        "Rewards",
+        "Supercharged E-ther",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1981,
+      "date": "2024-03-28",
+      "publishedAt": "2024-03-28T21:49:05+10:00",
+      "title": "E2V1 Pre-Alpha Invite Land Giveaway Competition Winners (X & YouTube)",
+      "url": "https://earth2.io/news/pre-alpha-invite-winners",
+      "summary": "March 28, 2024 – Sydney, Australia – Congratulations to the lucky winners of our E2V1 land giveaway competition held on X and YouTube. Since sharing our E2V1 invitational pre-alpha invite video and releasing the sign up form to Earth 2 Players, we have received a massive number of applications from Players located all across the […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Community",
+        "competitions",
+        "giveaway",
+        "land-giveaway",
+        "socials"
+      ]
+    },
+    {
+      "id": 1966,
+      "date": "2024-03-21",
+      "publishedAt": "2024-03-21T03:54:22+10:00",
+      "title": "Earth 2 at GDC 2024!",
+      "url": "https://earth2.io/news/gdc-2024",
+      "summary": "Earth 2 is thrilled to announce our official attendance of GDC 2024 which will include public access to a build of Earth 2 Version 1 (E2V1) for people to play with. In conjunction with MetaGravity, Earth 2 will have a booth demoing E2V1 between Meta and Unity in the main entrance and busiest section of […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Community",
+        "E2V1",
+        "GDC 2024",
+        "HyperScale Engine",
+        "MetaGravity",
+        "News",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1954,
+      "date": "2024-03-17",
+      "publishedAt": "2024-03-17T23:00:43+10:00",
+      "title": "MetaGravity and Earth 2 Partner to Build a HyperScale Interactive 3D Replica of the Earth",
+      "url": "https://earth2.io/news/metagravity-earth2",
+      "summary": "San Francisco, CA – March 17, 2024 – MetaGravity, a leading provider of decentralised cloud infrastructure solutions, and Earth 2, the creators of a groundbreaking 1:1 scale, interactive digital replica of the planet Earth, have today officially announced a collaborative partnership. This partnership aims to leverage MetaGravity’s HyperScale Engine to achieve unprecedented levels of scalability […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "HyperScale Engine",
+        "MetaGravity",
+        "Multiplayer",
+        "News",
+        "Press Release",
+        "Unbounded Digital World",
+        "announcement",
+        "partnership"
+      ]
+    },
+    {
+      "id": 1942,
+      "date": "2024-03-06",
+      "publishedAt": "2024-03-06T08:12:33+10:00",
+      "title": "E2V1 pre-alpha invites open!",
+      "url": "https://earth2.io/news/e2v1-pre-alpha-invite",
+      "summary": "March 02, 2024 – Sydney, Australia – Earth 2 is pleased to confirm we are openly accepting early applications for early testing of various aspects of the E2V1 (Earth 2 Version 1) pre-alpha. These applications are being accepted in advance so that when the time comes, we will have a list of willing supporters on hand and ready to help […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "3D World",
+        "E2V1",
+        "Metaverse",
+        "Technology",
+        "opensimulator",
+        "pre-alpha",
+        "signup",
+        "virtual-worlds"
+      ]
+    },
+    {
+      "id": 1916,
+      "date": "2024-03-02",
+      "publishedAt": "2024-03-02T00:58:14+10:00",
+      "title": "Yellow Energy – Rewarding Creativity & Contributions to Earth 2!",
+      "url": "https://earth2.io/news/yellow-energy",
+      "summary": "March 02, 2024 – Sydney, Australia – Earth 2 has a small group of passionate content creators who regularly put time and effort toward enriching our community with diverse material tailored to various demographics. Importantly, this material allows people to better understand various aspects of Earth 2, such as how things work, a feature’s background […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Community",
+        "Content Contribution",
+        "Content Creators",
+        "Endorsing",
+        "Essence",
+        "Feature",
+        "News",
+        "Update",
+        "Yellow Energy",
+        "Yellow Energy Experience Points",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1907,
+      "date": "2024-02-22",
+      "publishedAt": "2024-02-22T17:19:12+10:00",
+      "title": "Retroactive EDC Air Drop for Tier 1 Properties Affected by Locked Countries",
+      "url": "https://earth2.io/news/locked-countries-edc",
+      "summary": "February 22, 2024 – Sydney, Australia – We are delighted to officially confirm the retroactive air drop of Essence to the current Landowners of Tier 1 (T1) properties in countries where the sale of T1 land was locked, resulting in repressed New Land Prices for T1 properties in those affected regions prior to the Essence […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Air Drop",
+        "EcoSim",
+        "Essence",
+        "Locked Countries",
+        "News",
+        "Retroactive EDC",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1890,
+      "date": "2024-01-28",
+      "publishedAt": "2024-01-28T21:16:18+10:00",
+      "title": "Archiok & Things To Remember About Earth 2 Skins",
+      "url": "https://earth2.io/news/archiok",
+      "summary": "January 28, 2024 – Sydney, Australia – There are many contributing factors that will make up the Metaverse and wearable cosmetics will certainly form one big part. We believe it is important for a contending platform in the Metaverse space to display the capability of creating its own appealing IP, effectively designing and developing a […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Archiok",
+        "Earth 2 Skins",
+        "News",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1878,
+      "date": "2024-01-18",
+      "publishedAt": "2024-01-18T08:44:21+10:00",
+      "title": "The Power of Essence",
+      "url": "https://earth2.io/news/the-power-of-essence",
+      "summary": "What is the Power of Essence? A question many have pondered over time. The simple answer is that the Power of Essence will be largely determined by those who hold it, a liberty placed deeply into the hands of those who own such a vital source of power. In the ever-evolving Metaverse that is Earth […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Core System",
+        "Energy Units",
+        "Essence",
+        "Important",
+        "Lore",
+        "Power Cells",
+        "Power of Essence",
+        "Whitepaper"
+      ]
+    },
+    {
+      "id": 1865,
+      "date": "2023-12-31",
+      "publishedAt": "2023-12-31T10:05:18+10:00",
+      "title": "Resource Release: Iridium",
+      "url": "https://earth2.io/news/resources-iridium",
+      "summary": "December 31, 2023 – Sydney, Australia – Iridium is currently available to claim via the E2PRV system and is the last Resource to be revealed from our officially announced list of Resources! Please note that claims submitted after today may still be evaluated before 2024 but expect longer wait times as the claim evaluation slows […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "D9",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "Iridium",
+        "New Resource",
+        "Resource Release"
+      ]
+    },
+    {
+      "id": 1856,
+      "date": "2023-12-18",
+      "publishedAt": "2023-12-18T23:08:41+10:00",
+      "title": "Resource Release: Thorium",
+      "url": "https://earth2.io/news/resources-thorium",
+      "summary": "December 18, 2023 – Sydney, Australia – Thorium is currently available to claim via the E2PRV system. Thorium is the 2nd last Resource to be officially confirmed for the Earth 2 EcoSim with only one more Resource from Discovery Tier 9 left to reveal after that. We take this moment to remind Earth 2 Players […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "D9",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "New Resource",
+        "Resource Release",
+        "Thorium"
+      ]
+    },
+    {
+      "id": 1771,
+      "date": "2023-12-14",
+      "publishedAt": "2023-12-14T11:54:51+10:00",
+      "title": "Prospecting Cydroids, Resources & Prime Jewels – Sand",
+      "url": "https://earth2.io/news/resources-sand",
+      "summary": "December 14, 2023- Sydney, Australia – Prospecting Cydroids, Resources & Prime Jewels. You may have heard these mentioned before, or seen our weekly Resource release announcements. But what are they and what role do they play in the Earth 2 EcoSim? To understand how Prospecting Cydroids, Resources and Prime Jewels relate to each other, and […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Building Blocks",
+        "D1",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "Jewels",
+        "Moleh",
+        "Prospecting Cydroid",
+        "Resources",
+        "Sand",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1846,
+      "date": "2023-12-11",
+      "publishedAt": "2023-12-11T22:25:07+10:00",
+      "title": "Resource Release: Vanadium",
+      "url": "https://earth2.io/news/resources-vanadium",
+      "summary": "December 11, 2023 – Sydney, Australia -Vanadium is currently available to claim via the E2PRV system, with only 2 more Resources from Discovery Tier 9 left to reveal in total. We take this moment to remind Earth 2 Players that they will be able to manufacture 2nd Generation Cydroids (2ndGen) to harvest Occurrence Units, however, […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "D8",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "New Resource",
+        "Resource Release",
+        "Vanadium"
+      ]
+    },
+    {
+      "id": 1808,
+      "date": "2023-12-04",
+      "publishedAt": "2023-12-04T22:10:11+10:00",
+      "title": "Resource Release: Rhenium",
+      "url": "https://earth2.io/news/resources-rhenium",
+      "summary": "December 4, 2023 – Sydney, Australia -Rhenium is currently available to claim via the E2PRV system, with only 3 more Resources left to reveal in total. We take this moment to remind Earth 2 Players that they will be able to manufacture 2nd Generation Cydroids (2ndGen) to harvest Occurrence Units, however, these 2ndGen Cydroids will […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "D8",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "New Resource",
+        "Resource Release",
+        "Rhenium"
+      ]
+    },
+    {
+      "id": 1828,
+      "date": "2023-12-03",
+      "publishedAt": "2023-12-03T13:45:18+10:00",
+      "title": "Earth 2 Skins – Important Details",
+      "url": "https://earth2.io/news/earth2skins",
+      "summary": "December 3, 2023 – Brisbane Australia – We’re pleased to introduce the Earth 2 Skins store, a place where you can acquire and in the future trade collectible skins of various items to use inside our 3D world, E2V1. Earth 2 Skins function a little differently to standard skin systems, so be sure to read […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "3D Character",
+        "Avatars",
+        "Blueprint System",
+        "Characters",
+        "Earth 2 Skins",
+        "Feature",
+        "Kyung",
+        "Shane",
+        "Skins",
+        "development",
+        "pipeline"
+      ]
+    },
+    {
+      "id": 1760,
+      "date": "2023-11-27",
+      "publishedAt": "2023-11-27T23:02:22+10:00",
+      "title": "Resource Release: Uranium",
+      "url": "https://earth2.io/news/resources-uranium",
+      "summary": "November 27, 2023 – Sydney, Australia – A highly anticipated resource, Uranium is currently available to claim via the E2PRV system. Uranium is the first of the D8 Resources to be revealed, with only 4 more Resources left to reveal in total. We take this moment to remind Earth 2 Players that they will be […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "D8",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "New Resource",
+        "Resource Release",
+        "Uranium"
+      ]
+    },
+    {
+      "id": 1781,
+      "date": "2023-11-27",
+      "publishedAt": "2023-11-27T03:39:23+10:00",
+      "title": "Territories – Boosted E-ther, Governance System & T3 Land",
+      "url": "https://earth2.io/news/territories",
+      "summary": "November 27, 2023 – Sydney, Australia – A little over a week ago Earth 2 deployed its 6th major feature release of 2023! This release was not an isolated feature alone but is comprised of 3 separate systems: the Boosted E-ther land mechanic system, the first version of the Governance system and the release of […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Boosts",
+        "Gonvernance",
+        "Land Mechanics",
+        "Player Rewards",
+        "Release",
+        "Reward",
+        "SEED",
+        "Territories",
+        "Tier 3",
+        "Update",
+        "Voting"
+      ]
+    },
+    {
+      "id": 1765,
+      "date": "2023-11-24",
+      "publishedAt": "2023-11-24T00:43:04+10:00",
+      "title": "Prospecting Cydroids, Resources & Prime Jewels – Wood",
+      "url": "https://earth2.io/news/resources-wood",
+      "summary": "November 23, 2023- Sydney, Australia – Prospecting Cydroids, Resources & Prime Jewels. You may have heard these mentioned before, or seen our weekly Resource release announcements. But what are they and what role do they play in the Earth 2 EcoSim? To understand how Prospecting Cydroids, Resources and Prime Jewels relate to each other, and […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Building Blocks",
+        "D1",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "Jewels",
+        "Prospecting Cydroid",
+        "Resources",
+        "Salix",
+        "Wood",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1750,
+      "date": "2023-11-21",
+      "publishedAt": "2023-11-21T21:02:50+10:00",
+      "title": "Resource Release: Tellurium",
+      "url": "https://earth2.io/news/resources-tellurium",
+      "summary": "November 21, 2023 – Sydney, Australia – Tellurium is currently available to claim via the E2PRV system, with only 5 more resources left to reveal! Earth 2 made a promise in the past that Tier 1 land would receive additional Resources, and that promise starts from Discovery Tier 7. The higher the Discovery Tier, the […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "D7",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "New Resource",
+        "Resource Release",
+        "Tellurium"
+      ]
+    },
+    {
+      "id": 1744,
+      "date": "2023-11-17",
+      "publishedAt": "2023-11-17T13:37:34+10:00",
+      "title": "Prospecting Cydroids, Resources & Prime Jewels – Copper",
+      "url": "https://earth2.io/news/resources-copper",
+      "summary": "November 17, 2023- Sydney, Australia – Prospecting Cydroids, Resources & Prime Jewels. You may have heard these mentioned before, or seen our weekly Resource release announcements. But what are they and what role do they play in the Earth 2 EcoSim? To understand how Prospecting Cydroids, Resources and Prime Jewels relate to each other, and […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Building Blocks",
+        "Copper",
+        "D1",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "Guli",
+        "Jewels",
+        "Prospecting Cydroid",
+        "Resources",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1731,
+      "date": "2023-11-15",
+      "publishedAt": "2023-11-15T23:40:00+10:00",
+      "title": "Prospecting Cydroids, Resources & Prime Jewels – Coal",
+      "url": "https://earth2.io/news/resources-coal",
+      "summary": "November 15, 2023- Sydney, Australia – Prospecting Cydroids, Resources & Prime Jewels. You may have heard these mentioned before, or seen our weekly Resource release announcements. But what are they and what role do they play in the Earth 2 EcoSim? To understand how Prospecting Cydroids, Resources and Prime Jewels relate to each other, and […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Building Blocks",
+        "Coal",
+        "D1",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "Fury",
+        "Jewels",
+        "Prospecting Cydroid",
+        "Resources",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1721,
+      "date": "2023-11-14",
+      "publishedAt": "2023-11-14T22:34:46+10:00",
+      "title": "‘Abort Raid’ A New Civilian Ability",
+      "url": "https://earth2.io/news/abort-raid",
+      "summary": "November 14, 2023 – Sydney, Australia – Assemble your Faction, put your Red Energy on standby and slot up on those Catseye Jewels to get ready for some fast and furious raiding! A new civilian ability has been released on Earth 2, the Raid Abort. Unlocking this new ability provides the Raid Commander with the […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Abort Raid",
+        "Community",
+        "Factions",
+        "Feature",
+        "Jewels",
+        "Raid Commander",
+        "Raiding",
+        "Strategy",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1709,
+      "date": "2023-11-13",
+      "publishedAt": "2023-11-13T20:48:30+10:00",
+      "title": "Resource Release: Tantalum",
+      "url": "https://earth2.io/news/resources-tantalum",
+      "summary": "November 13, 2023 – Sydney, Australia – Tantalum is currently available to claim via the E2PRV system! Remember that Discovery Tier 7 Resources onwards will only be mineable on Tier 1 properties. Earth 2 made a promise in the past that Tier 1 land would receive additional Resources, and that promise starts from Discovery Tier […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "D7",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "New Resource",
+        "Resource Release",
+        "Tantalum"
+      ]
+    },
+    {
+      "id": 1700,
+      "date": "2023-11-09",
+      "publishedAt": "2023-11-09T22:20:40+10:00",
+      "title": "Prospecting Cydroids, Resources & Prime Jewels – Gold",
+      "url": "https://earth2.io/news/resources-gold",
+      "summary": "November 9, 2023- Sydney, Australia – Prospecting Cydroids, Resources & Prime Jewels. You may have heard these mentioned before, or seen our weekly Resource release announcements. But what are they and what role do they play in the Earth 2 EcoSim? To understand how Prospecting Cydroids, Resources and Prime Jewels relate to each other, and […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Building Blocks",
+        "D2",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "Gold",
+        "Jewels",
+        "Prospecting Cydroid",
+        "Resources",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1660,
+      "date": "2023-11-07",
+      "publishedAt": "2023-11-07T19:55:40+10:00",
+      "title": "Prospecting Cydroids, Resources & Prime Jewels – Oil",
+      "url": "https://earth2.io/news/resources-oil",
+      "summary": "November 7, 2023- Sydney, Australia – Prospecting Cydroids, Resources & Prime Jewels. You may have heard these mentioned before, or seen our weekly Resource release announcements. But what are they and what role do they play in the Earth 2 EcoSim? To understand how Prospecting Cydroids, Resources and Prime Jewels relate to each other, and […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Building Blocks",
+        "D1",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "Jewels",
+        "Oil",
+        "Prospecting Cydroid",
+        "Resources",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1685,
+      "date": "2023-11-06",
+      "publishedAt": "2023-11-06T22:15:53+10:00",
+      "title": "Resource Release: Boron",
+      "url": "https://earth2.io/news/resources-boron",
+      "summary": "November 6, 2023 – Sydney, Australia – Boron is currently available to claim via the E2PRV system! Remember that Discovery Tier 7 Resources onwards will only be mineable on Tier 1 properties. Earth 2 made a promise in the past that Tier 1 land would receive additional Resources, and that promise starts from Discovery Tier […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Boron",
+        "Build Blocks",
+        "D7",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "New Resource",
+        "Resource Release"
+      ]
+    },
+    {
+      "id": 1664,
+      "date": "2023-11-05",
+      "publishedAt": "2023-11-05T22:53:05+10:00",
+      "title": "Happy 3rd Anniversary Earth 2",
+      "url": "https://earth2.io/news/e2-turns-3",
+      "summary": "November 5, 2023 – Sydney Australia – We’d like to wish Earth 2 and the Community a Happy 3rd Anniversary! The past 12 months have been hands-on and arduous with Earth 2 taking a step up in the complexity of publicly released features since our last birthday celebrations. While these releases have been web based […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "3rd Anniversary",
+        "Anniversary Month",
+        "Building",
+        "Earth 2 Turns 3",
+        "Recap",
+        "progress"
+      ]
+    },
+    {
+      "id": 1653,
+      "date": "2023-10-31",
+      "publishedAt": "2023-10-31T20:40:35+10:00",
+      "title": "Prospecting Cydroids, Resources & Prime Jewels – Silver",
+      "url": "https://earth2.io/news/resources-silver",
+      "summary": "October 31, 2023- Sydney, Australia – Prospecting Cydroids, Resources & Prime Jewels. You may have heard these mentioned before, or seen our weekly Resource release announcements. But what are they and what role do they play in the Earth 2 EcoSim? To understand how Prospecting Cydroids, Resources and Prime Jewels relate to each other, and […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Building Blocks",
+        "D2",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "Jewels",
+        "Prospecting Cydroid",
+        "Resources",
+        "Silver",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1642,
+      "date": "2023-10-30",
+      "publishedAt": "2023-10-30T21:31:55+10:00",
+      "title": "Resource Release: Molybdenum",
+      "url": "https://earth2.io/news/resources-molybdenum",
+      "summary": "October 30, 2023 – Sydney, Australia – Molybdenum is currently available to claim, with over 500 claims approved already! Molybdenum is also the first of the Discovery Tier 7 Resources to be released. Players should be aware that Resources from D7 onwards will only be mineable on Tier 1 properties. Earth 2 made a promise […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "D7",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "Molybdenum",
+        "New Resource",
+        "Resource Release"
+      ]
+    },
+    {
+      "id": 1634,
+      "date": "2023-10-27",
+      "publishedAt": "2023-10-27T23:47:51+10:00",
+      "title": "Prospecting Cydroids, Resources & Prime Jewels – Limestone",
+      "url": "https://earth2.io/news/resources-limestone",
+      "summary": "October 27, 2023- Sydney, Australia – Prospecting Cydroids, Resources & Prime Jewels. You may have heard these mentioned before, or seen our weekly Resource release announcements. But what are they and what role do they play in the Earth 2 EcoSim? To understand how Prospecting Cydroids, Resources and Prime Jewels relate to each other, and […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Building Blocks",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "Jewels",
+        "Limestone",
+        "Prospecting Cydroid",
+        "Resources",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1559,
+      "date": "2023-10-25",
+      "publishedAt": "2023-10-25T23:46:00+10:00",
+      "title": "Prospecting Cydroids, Resources & Prime Jewels – Water",
+      "url": "https://earth2.io/news/resources-water",
+      "summary": "October 25, 2023- Sydney, Australia – Prospecting Cydroids, Resources & Prime Jewels. You may have heard these mentioned before, or seen our weekly Resource release announcements. But what are they and what role do they play in the Earth 2 EcoSim? To understand how Prospecting Cydroids, Resources and Prime Jewels relate to each other, and […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Building Blocks",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "Jewels",
+        "Prospecting Cydroid",
+        "Resources",
+        "Water",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1570,
+      "date": "2023-10-24",
+      "publishedAt": "2023-10-24T00:29:17+10:00",
+      "title": "Resource Release: Titanium",
+      "url": "https://earth2.io/news/resources-titanium",
+      "summary": "October 23, 2023 – Sydney, Australia – Titanium is currently available to claim, with over 1,100 claims approved already! Titanium is also the last of the Discovery Tier 6 Resources to be released and Players should be aware that Resources from D7 onwards will only be mineable on Tier 1 properties, please read the announcement […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "D6",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "New Resource",
+        "Resource Release",
+        "Titanium"
+      ]
+    },
+    {
+      "id": 1499,
+      "date": "2023-10-19",
+      "publishedAt": "2023-10-19T22:13:33+10:00",
+      "title": "Prospecting Cydroids, Resources & Prime Jewels – Iron",
+      "url": "https://earth2.io/news/resources-iron",
+      "summary": "October 19, 2023- Sydney, Australia – Prospecting Cydroids, Resources & Prime Jewels. You may have heard these mentioned before, or seen our weekly Resource release announcements. But what are they and what role do they play in the Earth 2 EcoSim? To understand how Prospecting Cydroids, Resources and Prime Jewels relate to each other, and […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Building Blocks",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "Iron",
+        "Jewels",
+        "Prospecting Cydroid",
+        "Resources",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1462,
+      "date": "2023-10-16",
+      "publishedAt": "2023-10-16T23:29:29+10:00",
+      "title": "Resource Release: Zirconium",
+      "url": "https://earth2.io/news/resources-zirconium",
+      "summary": "October 16, 2023 – Sydney, Australia – Zirconium is currently available to claim via the E2PRV system! There have been well over 1240 claims submitted for Zirconium since its release and with only 10 more foundational Resources remaining, don’t miss your chance to claim any of the currently available Resources. Zirconium was introduced as a […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "D6",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "New Resource",
+        "Resource Release",
+        "Zirconium"
+      ]
+    },
+    {
+      "id": 1442,
+      "date": "2023-10-10",
+      "publishedAt": "2023-10-10T12:42:11+10:00",
+      "title": "Resource Release: Neodymium",
+      "url": "https://earth2.io/news/resources-neodymium",
+      "summary": "October 10, 2023 – Sydney, Australia – Neodymium is currently claimable via the E2PRV system and has been very popular with over 740 claims approved already! This is a great opportunity for any Players who own property in Earth 2 and believe they have this (or any active released) Resources present in their land to […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "D6",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "Neodymium",
+        "New Resource",
+        "Resource Release"
+      ]
+    },
+    {
+      "id": 1430,
+      "date": "2023-10-03",
+      "publishedAt": "2023-10-03T15:57:46+10:00",
+      "title": "Resource Release: Diamond",
+      "url": "https://earth2.io/news/resources-diamond",
+      "summary": "October 03, 2023 – Sydney, Australia – Arguably one of the most beautiful, coveted and well-known Resources in the world, Diamond was released via the Earth 2 Player Resource Validation (E2PRV) System on Monday last week. Already over 95% of the 400+ Diamond claims submitted so far have been validated and approved by the CAT! […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "D5",
+        "Diamond",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "New Resource",
+        "Resource Release"
+      ]
+    },
+    {
+      "id": 1411,
+      "date": "2023-09-25",
+      "publishedAt": "2023-09-25T22:38:06+10:00",
+      "title": "Resource Release: Niobium",
+      "url": "https://earth2.io/news/resources-niobium",
+      "summary": "September 25, 2023 – Sydney, Australia – Niobium was released via the Earth 2 Player Resource Validation (E2PRV) System last Monday and is currently available to claim. Interestingly there have been more Niobium claims approved than Platinum which was released two weeks ago! In many cases, Resources belonging to higher Discovery Tiers will be rarer […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "D5",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "New Resource",
+        "Niobium",
+        "Resource Release"
+      ]
+    },
+    {
+      "id": 1375,
+      "date": "2023-09-21",
+      "publishedAt": "2023-09-21T08:05:16+10:00",
+      "title": "Resource Release: Platinum",
+      "url": "https://earth2.io/news/resources-platinum",
+      "summary": "September 21, 2023 – Sydney, Australia – Following a regular release schedule, Platinum was released last Monday via the Earth 2 Player Resource Validation (E2PRV) System and is currently available to claim, with hundreds of claims already approved and more than 20 verifiable Platinum mines identified but yet to be claimed! This is a great […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "D5",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "New Resource",
+        "Platinum",
+        "Resource Release"
+      ]
+    },
+    {
+      "id": 1384,
+      "date": "2023-09-19",
+      "publishedAt": "2023-09-19T21:36:25+10:00",
+      "title": "P2P Civilian Trading LIVE",
+      "url": "https://earth2.io/news/civilian-bazaar-live",
+      "summary": "September 19, 2023 – Sydney, Australia – Earth 2® is pleased to officially announce P2P Civilian trading which is now LIVE on the Bazaar! Civilians become the third major tradeable EcoSim utility item on the Bazaar and the unique aesthetic and skills that come with their achieved mastery levels make each of these First Edition […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Auto Raid",
+        "Bazaar",
+        "Civilian Bazaar",
+        "Feature",
+        "P2P Trading",
+        "Raiding",
+        "Vision"
+      ]
+    },
+    {
+      "id": 1353,
+      "date": "2023-09-08",
+      "publishedAt": "2023-09-08T01:23:37+10:00",
+      "title": "Resource Release: Cobalt",
+      "url": "https://earth2.io/news/resources-cobalt",
+      "summary": "September 8, 2023 – Sydney, Australia – Cobalt was released on Monday via the Earth 2 Player Resource Validation (E2PRV) System and is ready to claim with hundreds of claims already approved! This is a great opportunity for any Players who own property in Earth 2 and believe they have this (or any currently released) […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Build Blocks",
+        "Cobalt",
+        "D4",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "New Resource",
+        "Resource Release"
+      ]
+    },
+    {
+      "id": 1355,
+      "date": "2023-09-05",
+      "publishedAt": "2023-09-05T23:21:50+10:00",
+      "title": "Jewel Bazaar Update, Jewels Bulk Buy & New Marketplace Filter",
+      "url": "https://earth2.io/news/jewel-bazaar-update",
+      "summary": "September 5, 2023 – Sydney, Australia – Following the recent release of P2P Cydroid trading on the Bazaar, the new-look Jewel Bazaar UI has also been updated to not only bring it in line with the new design style on Earth 2 but to facilitate a better experience for Players overall. In addition to their […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Bazaar",
+        "Bulk Buy",
+        "Cydroid Bazaar",
+        "Filters",
+        "Jewels",
+        "MarketPlace",
+        "New Design",
+        "Update"
+      ]
+    },
+    {
+      "id": 1296,
+      "date": "2023-08-30",
+      "publishedAt": "2023-08-30T15:51:32+10:00",
+      "title": "Resource Release: Chromium",
+      "url": "https://earth2.io/news/resources-chromium",
+      "summary": "August 30, 2023 – Sydney, Australia – Chromium was opened a few days ago via the Earth 2 Player Resource Validation (E2PRV) System and already has over 400 claims approved appearing in over 30 resource locations already visible on the Earth 2 Resource Heatmap! This is a great opportunity for any Players who own property […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Chromium",
+        "D4",
+        "Discovery Tier Resources",
+        "EcoSim",
+        "New Resource",
+        "Resource Release"
+      ]
+    },
+    {
+      "id": 1328,
+      "date": "2023-08-28",
+      "publishedAt": "2023-08-28T18:43:45+10:00",
+      "title": "P2P Cydroid Trading NOW LIVE",
+      "url": "https://earth2.io/news/cydroid-bazaar",
+      "summary": "August 28, 2023 – Sydney, Australia – Earth 2 is pleased to officially announce P2P Cydroid trading which is now LIVE on the Bazaar! Cydroids being sold via the Bazaar come fully powered with 5 Essence so they are locked, loaded and ready to raid! This is a great opportunity to trade their Cydroids for […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Bazaar",
+        "Cydroid",
+        "Cydroid Bazaar",
+        "New Feature",
+        "P2P Sales",
+        "P2P Trading",
+        "Raiding",
+        "U2U Trading"
+      ]
+    },
+    {
+      "id": 1313,
+      "date": "2023-08-17",
+      "publishedAt": "2023-08-17T12:01:15+10:00",
+      "title": "Cydroid Management Update & Cydroid Slotting",
+      "url": "https://earth2.io/news/cydroid-jewel-slotting",
+      "summary": "August 17, 2023 – Sydney, Australia – We are very pleased to announce that the Cydroid Management interface released last week is officially live! Many Players have already started exploring the new features as soon as they discovered the quiet release. Similar to the Civilian Management section, Players can now see a complete overview of […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Burn",
+        "Crafting",
+        "Cydroid Slotting",
+        "Cydroids",
+        "Feature",
+        "Game Mechanics",
+        "Jewel Utility",
+        "Jewels",
+        "Raiding",
+        "Strategy",
+        "slotting"
+      ]
+    },
+    {
+      "id": 1291,
+      "date": "2023-08-11",
+      "publishedAt": "2023-08-11T21:53:26+10:00",
+      "title": "Resource Release: Tungsten",
+      "url": "https://earth2.io/news/resources-tungsten",
+      "summary": "August 11, 2023 – Sydney, Australia – Tungsten is now available to claim via the Earth 2 Player Resource Validation (E2PRV) System! This is a great opportunity for any Players who own property in Earth 2 and believe they have this (or any currently released) Resources present in their land to submit a claim. By […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Building Blocks",
+        "EcoSim",
+        "New Resource",
+        "Prime Jewel",
+        "Prospecting Cydroid",
+        "Resources",
+        "Tungsten"
+      ]
+    },
+    {
+      "id": 1278,
+      "date": "2023-08-11",
+      "publishedAt": "2023-08-11T13:37:30+10:00",
+      "title": "NEW JEWEL BOOST OVERVIEW FOR RESOURCES",
+      "url": "https://earth2.io/news/resource-jewel-boost-overview",
+      "summary": "August 11, 2023 – Sydney, Australia – With all the excitement around our recent ‘yet to be officially announced’ feature, we wanted to first publish a short article pointing out a small but useful update to the Property Jewel Slotting page. This update provides a nice overview summarising the boosts of multiple Jewels slotted into […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Improvements",
+        "Jewels",
+        "Mentars",
+        "Overview",
+        "Resources",
+        "slotting"
+      ]
+    },
+    {
+      "id": 1271,
+      "date": "2023-08-10",
+      "publishedAt": "2023-08-10T05:58:05+10:00",
+      "title": "Brilliant Ability Revealed – the ‘COPY EFFECT’",
+      "url": "https://earth2.io/news/brilliant-copy",
+      "summary": "August 10, 2023 – Sydney Australia – A Brilliant Jewel is a rare type of Jewel that has an extremely small chance of being created when crafting Luminous Jewels in Earth 2. They are often sold on the secondary market between Players for exuberant figures, but it is important to remember that these prices are […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Boosts",
+        "Brilliant",
+        "Copy Effect",
+        "Cydroids",
+        "EcoSim",
+        "Jewels",
+        "slotting"
+      ]
+    },
+    {
+      "id": 1257,
+      "date": "2023-08-08",
+      "publishedAt": "2023-08-08T22:04:07+10:00",
+      "title": "REDUCED E2PRV REJECTION LOSS + GUIDELINE REMINDERS",
+      "url": "https://earth2.io/news/e2prv-reduced-loss-and-guidelines",
+      "summary": "August 08, 2023 – Sydney, Australia- This is an important update to the E2PRV system that will affect all Players participating in submitting claims or staking Essence to claims. Continue reading to find out more about the reduction of Essence loss when claims are rejected, open claims that need to be re-assessed by Players as […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Claims",
+        "Community",
+        "E2PRV",
+        "Essence Rewards",
+        "Resources",
+        "Staking",
+        "guidelines"
+      ]
+    },
+    {
+      "id": 1243,
+      "date": "2023-08-08",
+      "publishedAt": "2023-08-08T15:06:07+10:00",
+      "title": "Resource Release: Nickel",
+      "url": "https://earth2.io/news/resources-nickel",
+      "summary": "August 8, 2023 – Sydney, Australia – Here are a few details about the resource Nickel which is now available to claim via the Earth 2 Player Resource Validation (E2PRV) System! This is a great opportunity for any Players who own property in Earth 2 and believe they have this (or any currently released) Resources […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Building Blocks",
+        "Cydroids",
+        "D2",
+        "EcoSim",
+        "Jewels",
+        "Resources",
+        "Utility"
+      ]
+    },
+    {
+      "id": 1234,
+      "date": "2023-08-01",
+      "publishedAt": "2023-08-01T21:41:11+10:00",
+      "title": "Resource Release: Tin",
+      "url": "https://earth2.io/news/resources-tin",
+      "summary": "August 1, 2023 – Sydney, Australia – Tin is now available to claim via the Earth 2 Player Resource Validation (E2PRV) System! This is a great opportunity for any Players who own property in Earth 2 and believe they have this (or any currently released) Resources present in their land to submit a claim. By […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Building Blocks",
+        "Cydroids",
+        "D2",
+        "EcoSim",
+        "Jewels",
+        "Resources",
+        "Utility"
+      ]
+    },
+    {
+      "id": 1229,
+      "date": "2023-07-28",
+      "publishedAt": "2023-07-28T22:35:50+10:00",
+      "title": "Red Energy for New T1 to Stop",
+      "url": "https://earth2.io/news/red-energy-t1-over",
+      "summary": "July 28, 2023 – Sydney, Australia – The prosperous days of fusing Red Energy to acquire new T1 land have come to an end for Earth 2 Pioneers. The Civilians want Red Energy for themselves, for now. Therefore, at some time on Monday, the 31st of July UTC the ability to purchase new T1 Land […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "RedEnergy",
+        "T1",
+        "Teasers",
+        "Update"
+      ]
+    },
+    {
+      "id": 1222,
+      "date": "2023-07-28",
+      "publishedAt": "2023-07-28T19:34:18+10:00",
+      "title": "Profile Overview V1",
+      "url": "https://earth2.io/news/profile-overview-v1",
+      "summary": "July 28, 2023 – Sydney, Australia – Earth 2 is pleased to announce the new Profile Overview V1 feature which forms part of our ongoing commitment to provide Players with a better overview of their various digital items. This is a helpful update to the Profile page which allows Players to quickly gain valuable insight […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "EcoSim",
+        "Feature",
+        "Overview",
+        "Profile",
+        "Resources",
+        "Update"
+      ]
+    },
+    {
+      "id": 1196,
+      "date": "2023-07-27",
+      "publishedAt": "2023-07-27T11:37:02+10:00",
+      "title": "Resource Release: Zinc + Bauxite",
+      "url": "https://earth2.io/news/resources-zinc-bauxite",
+      "summary": "July 27, 2023 – Sydney, Australia – Earth 2 quietly released Bauxite and Zinc recently which are now officially available to claim via the Earth 2 Player Resource Validation (E2PRV) System. If you own property in Earth 2 and believe you have any of these Resources present in your land, submit a claim! You can […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "EcoSim",
+        "Resources",
+        "Update"
+      ]
+    },
+    {
+      "id": 1164,
+      "date": "2023-07-23",
+      "publishedAt": "2023-07-23T19:35:07+10:00",
+      "title": "Resources Overview",
+      "url": "https://earth2.io/news/resources-overview",
+      "summary": "July 23, 2023 – Sydney Australia – Earth 2 has released a new update to help Players get an overview of how many Resources they have across their land portfolio. This Resource Overview will summarise and display 5 Resource types from D1 (excluding Water, Wood and Sand which will be confirmed inside E2V1) then include […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 1157,
+      "date": "2023-07-22",
+      "publishedAt": "2023-07-22T09:51:38+10:00",
+      "title": "New Look Revealed for Jewels and the Jewel Inventory!",
+      "url": "https://earth2.io/news/jewels-and-inventory-update",
+      "summary": "July 22, 2023 – Sydney, Australia – For the first time since the release of Jewels on the Earth 2 platform, the entire Jewel system including the Jewel inventory and the Jewels themselves have had a brand new facelift to better reflect the updated branding of our website and upcoming plans for the representation of […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 1139,
+      "date": "2023-07-05",
+      "publishedAt": "2023-07-05T20:37:53+10:00",
+      "title": "Optional Campaign: Pre-E2V1 Resource Solution for Wood, Water & Sand",
+      "url": "https://earth2.io/news/wood-water-sand-campaign",
+      "summary": "July 5 2023 – Sydney, Australia – Wood, Water and Sand are 3 of the original 8 Resources officially announced for the Earth 2 EcoSim. They are crucial EcoSim Resources but unlike the other 5 Resources which have already been released through the E2PRV (Player Resource Validation) system and made available for Players to claim, […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Campaign",
+        "E2V1",
+        "EcoSim",
+        "Important",
+        "Jewels",
+        "Occurrence Units",
+        "Resources",
+        "Retroactive",
+        "Sand",
+        "Water",
+        "Wood",
+        "backdated",
+        "holobuildings",
+        "slotting"
+      ]
+    },
+    {
+      "id": 1123,
+      "date": "2023-06-23",
+      "publishedAt": "2023-06-23T23:57:44+10:00",
+      "title": "E2PRV: Claim Approval Guidelines for Copper and Silver Resources",
+      "url": "https://earth2.io/news/copper-silver-guidelines",
+      "summary": "June 23, 2023 – Sydney, Australia – Before we get too far along with the new Resource releases, we wanted to reiterate guidelines to our community and provide clear examples of what we find acceptable or not. With the lower reward for successful claims, this is about Players wanting to confirm a resource on their […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Claims",
+        "Collaboration",
+        "Copper",
+        "E2PRV",
+        "EcoSim",
+        "Resources",
+        "Rewards",
+        "Silver",
+        "guidelines"
+      ]
+    },
+    {
+      "id": 1131,
+      "date": "2023-06-23",
+      "publishedAt": "2023-06-23T22:51:34+10:00",
+      "title": "E2PRV: Chance To Appeal Claims Marked For Rejection",
+      "url": "https://earth2.io/news/claim-rejection-appeals",
+      "summary": "June 23, 2023 – Sydney, Australia – The first round of Resource Validations is coming to a close with the vast majority of Gold, Oil, Coal, Iron Ore and Limestone claims being approved for distribution on Earth 2 to date! Many Players have already made incredible returns through the Essence Staking feature of the E2PRV […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Appeal",
+        "Claims",
+        "E2PRV",
+        "EcoSim",
+        "Resources",
+        "Second Chance",
+        "The CAT"
+      ]
+    },
+    {
+      "id": 1111,
+      "date": "2023-06-18",
+      "publishedAt": "2023-06-18T18:45:28+10:00",
+      "title": "The Weaver, Prospecting Cydroids & Resources",
+      "url": "https://earth2.io/news/major-ecosim-update",
+      "summary": "June 18, 2023 – Sydney Australia – As we continue to release different facets of the EcoSim, we find ourselves moving closer to a fully fledged, operational, base version. As part of the next steps, today marks the beginning of a process which will see the unveiling of 21 additional Resources, all of which will be […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Discovery Tier Resources",
+        "EcoSim",
+        "Important",
+        "Jewels",
+        "Major Article",
+        "Occurence Units",
+        "Prospecting Cydroid",
+        "Raw Materials",
+        "Resources",
+        "Weaver",
+        "announcement",
+        "holobuildings"
+      ]
+    },
+    {
+      "id": 791,
+      "date": "2023-06-09",
+      "publishedAt": "2023-06-09T00:10:14+10:00",
+      "title": "First Edition Civilians Officially Live on Earth 2!",
+      "url": "https://earth2.io/news/civilians-live",
+      "summary": "June 9, 2023 – Sydney, Australia – Our highly anticipated First Edition Civilians are now live on Earth 2! Synthesise Civilians on your properties to manage your Cydroids and Raids, and level up to improve your Civilians performance by gaining XP! Since the release of the Raiding system, Players have been eagerly awaiting the release […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Civilians",
+        "Feature",
+        "Game",
+        "Game Mechanics",
+        "Guide",
+        "Instructions",
+        "News",
+        "Raiding",
+        "Update"
+      ]
+    },
+    {
+      "id": 1053,
+      "date": "2023-05-17",
+      "publishedAt": "2023-05-17T18:29:11+10:00",
+      "title": "Civilians XP + Raid Commander Targeting System",
+      "url": "https://earth2.io/news/civilians-xp-target-system",
+      "summary": "May 17, 2023 – Sydney Australia – Before Civilians are deployed to our Stage 2 pre-production server, we would like to provide an update to our Earth 2 Community about how the new Civilians XP and Raid Commander Auto-Target system will function. We would also like to point out that Red Energy Sustenance, Civilians XP […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Auto Raid",
+        "Civilians",
+        "Cydroid Technician",
+        "Cydroids",
+        "E-ther Reckoner",
+        "Feature",
+        "Raid Commander",
+        "Raiding",
+        "Update",
+        "XP",
+        "XP System",
+        "expansion"
+      ]
+    },
+    {
+      "id": 1040,
+      "date": "2023-05-03",
+      "publishedAt": "2023-05-03T20:50:04+10:00",
+      "title": "Sustenance for First Edition Civilians on Earth 2",
+      "url": "https://earth2.io/news/civilian-sustenance",
+      "summary": "May 3, 2023 – Sydney, Australia – Earth 2 is pleased to share details of the first sustenance system within Earth 2. Amongst other things, this article will also explain how Red Energy will be used specifically as the initial unit to sustain the First Edition Earth 2 Civilians. First Edition Civilians will primarily be […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Civilians",
+        "Feature",
+        "Raiding",
+        "RedEnergy",
+        "Sustenance",
+        "Update",
+        "expansion"
+      ]
+    },
+    {
+      "id": 1033,
+      "date": "2023-04-22",
+      "publishedAt": "2023-04-22T05:25:12+10:00",
+      "title": "Get Supercharged on Earth 2 Day 2023!",
+      "url": "https://earth2.io/news/earth2day-2023",
+      "summary": "April 22, 2023 – Sydney, Australia – Last year on April 23rd, Earth 2 introduced the #E24E1 #Earth2Day concept. Our long-term goals to provide assistance back to Earth 1, across numerous noteworthy causes including humanitarian, environmental and educational have not changed. However, we admit and take ownership that in order to help others we first […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "2023",
+        "E24E1",
+        "Earth2Day",
+        "Player Rewards",
+        "announcement"
+      ]
+    },
+    {
+      "id": 1025,
+      "date": "2023-04-20",
+      "publishedAt": "2023-04-20T02:01:04+10:00",
+      "title": "E-ther transactions brings E-ther Banking one step closer & more",
+      "url": "https://earth2.io/news/ether-update",
+      "summary": "April 20, 2023 – Sydney, Australia – Earth 2 has implemented important changes which will allow Players to see itemised transaction records for E-ther gained inside the Earth 2 EcoSim. These updates have been made in preparation for the increasing utility that E-ther will have inside of Earth 2, such as for the upcoming Civilians […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "E-ther",
+        "E-ther Detection",
+        "EDC",
+        "Feature",
+        "Transactions",
+        "Update"
+      ]
+    },
+    {
+      "id": 1013,
+      "date": "2023-04-14",
+      "publishedAt": "2023-04-14T00:25:54+10:00",
+      "title": "E2PRV System Reopens for Silver and Copper Resource Claims",
+      "url": "https://earth2.io/news/e2prv-silver-copper",
+      "summary": "April 14, 2023 – Sydney, Australia – The Earth 2 Player Resource Validation (E2PRV) system is an initiative primarily designed and developed to provide our Players with the opportunity to claim a Resource they could prove exists on the correlating real world location and, therefore, should also exist on their land inside Earth 2. The […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Community",
+        "E2PRV",
+        "Feature",
+        "Important",
+        "Resources",
+        "Silver",
+        "Staking",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 982,
+      "date": "2023-04-01",
+      "publishedAt": "2023-04-01T00:40:28+10:00",
+      "title": "Introducing ‘Red Energy’ & the First RBA Reward",
+      "url": "https://earth2.io/news/red-energy",
+      "summary": "March 31, 2023 – Sydney, Australia – Red Energy is now live on the Earth 2 platform and will be used to welcome the very first ‘time limited’ reward of our RBA initiative. Red Energy is the first of multiple Energy types that will be introduced into the Earth 2 platform as Player participation or […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Active Players",
+        "EnergyTypes",
+        "Feature",
+        "RBAs",
+        "Raiding",
+        "RedEnergy",
+        "Retroactive",
+        "Rewards"
+      ]
+    },
+    {
+      "id": 955,
+      "date": "2023-03-29",
+      "publishedAt": "2023-03-29T21:56:13+10:00",
+      "title": "Minor Updates: Improvements to Raiding",
+      "url": "https://earth2.io/news/raiding-update-1",
+      "summary": "March 29, 2023 – Sydney, Australia – Earth 2 is pleased to announce a few handy updates and improvements to the Raiding system which should enhance the Raiding experience for many Players. Such updates need to be balanced carefully in order to comply with the long-term mechanics of the EcoSim, a system where Players will […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Cydroids",
+        "Feature",
+        "Game",
+        "Improvements",
+        "News",
+        "Raiding",
+        "Update",
+        "feedback"
+      ]
+    },
+    {
+      "id": 937,
+      "date": "2023-03-16",
+      "publishedAt": "2023-03-16T19:55:50+10:00",
+      "title": "Raiding is Officially Live on Earth 2!",
+      "url": "https://earth2.io/news/raiding-v1",
+      "summary": "16 March, 2023 – Sydney, Australia – Last week Earth 2 quietly deployed Raiding Version 1 to our production website, the first iteration of the Raiding Game Engine. It is important to point out that the primary purpose of developing the Raiding Game Engine was to test it in a live environment as a predecessor […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Cydroids",
+        "Feature",
+        "Game Mechanics",
+        "News",
+        "Raiding",
+        "Video",
+        "announcement"
+      ]
+    },
+    {
+      "id": 928,
+      "date": "2023-03-05",
+      "publishedAt": "2023-03-05T05:40:00+10:00",
+      "title": "Cydroid Rarities & Property Trading Protocols",
+      "url": "https://earth2.io/news/cydroid-property-trading-rarities",
+      "summary": "5th of March, 2023 – Sydney, Australia – As we draw closer to the live release of Raiding, we felt it necessary to highlight some very important aspects for Players to consider, especially if you plan on selling properties that are acting as Raiding launch pads or have Cydroids tethered to them. Therefore, this article […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Cydroids",
+        "Feature",
+        "Important",
+        "Protocols",
+        "Raiding",
+        "Rarity",
+        "Trade",
+        "U2U Trading",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 919,
+      "date": "2023-02-24",
+      "publishedAt": "2023-02-24T23:42:43+10:00",
+      "title": "Raiding & Cydroid Update + Green Light on Stage2",
+      "url": "https://earth2.io/news/raiding-update",
+      "summary": "February 22, 2023 – Sydney Australia – Earth 2 is pleased to announce an official “Green Light” for Raiding on our pre-production server, Stage 2 ( https://stage2-app.earth2.io/ ). Players who have test accounts on Stage 2 are invited to try out the newly developed Raiding feature and report any issues in the #raiding-stage2-bug-reports channel on […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Community",
+        "Cydroids",
+        "Feature",
+        "Game",
+        "Game Mechanics",
+        "Jewels",
+        "Raiding",
+        "Update"
+      ]
+    },
+    {
+      "id": 885,
+      "date": "2022-12-23",
+      "publishedAt": "2022-12-23T16:48:42+01:00",
+      "title": "Raiding, Cydroids & Civilians High Level Summary",
+      "url": "https://earth2.io/news/raiding-details",
+      "summary": "December 24, 2022 – Brisbane, Australia – Earth 2 recently announced the scheduled introduction of 4 new game mechanics. Raiding, Cydroids and Civilians make up 3 of these new mechanics and this article will cover a high-level summary on each one to ensure Players have a clear understanding on what to expect. Each game mechanic […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Civilians",
+        "Cydroids",
+        "Game",
+        "Game Mechanics",
+        "News",
+        "Raiding",
+        "Stage2",
+        "Update",
+        "bots"
+      ]
+    },
+    {
+      "id": 879,
+      "date": "2022-12-22",
+      "publishedAt": "2022-12-22T15:58:06+01:00",
+      "title": "A Unique Gift Idea, just in time for Christmas!",
+      "url": "https://earth2.io/news/gift-the-metaverse",
+      "summary": "December 23, 2022 – Sydney, Australia – As we quickly approach Christmas and other end-of-year celebrations, we are reminded with the art of giving. So, what better way to finish the year than by giving someone a gift from the future? Earth 2 has recently tweaked its gifting system so whether you are stuck on […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Update",
+        "announcement",
+        "gifting"
+      ]
+    },
+    {
+      "id": 871,
+      "date": "2022-12-20",
+      "publishedAt": "2022-12-20T14:41:55+01:00",
+      "title": "Earth 2 and Ready Player Me Announce Strategic Partnership",
+      "url": "https://earth2.io/news/ready-player-me-partnership",
+      "summary": "Sydney, Australia | 20 December, 2022 – Earth 2’s strategic partnership with Ready Player Me means Players will be able to explore E2V1, the first version of Earth 2’s upcoming 1:1 digital replication of planet Earth, as customisable avatars much earlier than expected. The partnership was uniquely revealed as part of Earth 2’s recent video […]",
+      "categories": [
+        "News",
+        "Press Releases"
+      ],
+      "tags": [
+        "Avatars",
+        "Community",
+        "Game",
+        "News",
+        "Press Release",
+        "Ready Player Me",
+        "Strategic",
+        "Update",
+        "announcement",
+        "partnership"
+      ]
+    },
+    {
+      "id": 859,
+      "date": "2022-12-15",
+      "publishedAt": "2022-12-15T21:35:50+01:00",
+      "title": "Protection of Earth 2 Customer Data",
+      "url": "https://earth2.io/news/customer-data-protection",
+      "summary": "Dec 16 2022 – Sydney, Australia – Earth 2 takes the protection of its customers’ data very seriously. In addition to regular code reviews and Quality Assurance (QA) processes, Earth 2 has also hired professional security experts since December, 2020, to identify any potential security vulnerabilities and work with our development team to ensure any […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "2FA",
+        "Auth0",
+        "Google Authenticator",
+        "Jumio",
+        "KYC",
+        "Security",
+        "Update",
+        "customer data",
+        "customer safety"
+      ]
+    },
+    {
+      "id": 854,
+      "date": "2022-12-01",
+      "publishedAt": "2022-12-01T23:55:52+01:00",
+      "title": "Earth 2 Jewels to receive more Utility with introduction of Raiding and Droids",
+      "url": "https://earth2.io/news/jewelsboost",
+      "summary": "December 2, 2022 – Brisbane, Australia – Earth 2 is pleased to reveal the new utility that Raiding and Droids will add to one Tier 2 Jewel and a handful of Tier 3 Jewels! This update provides a clear demonstration of Earth 2’s commitment toward expanding the utility of existing digital items which can be […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Bazaar",
+        "Crafting",
+        "Droids",
+        "Feature",
+        "Game Mechanics",
+        "Jewels",
+        "Raiding",
+        "Sneak Peek",
+        "Trade",
+        "U2U Trading",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 842,
+      "date": "2022-11-30",
+      "publishedAt": "2022-11-30T23:53:46+01:00",
+      "title": "Earth 2 Birthday Wrap-Up but Celebrations to Continue",
+      "url": "https://earth2.io/news/e2bdaywrap",
+      "summary": "December 1, 2022 – Sydney Australia – How quickly our birthday month draws to a close! Here’s a round-up of the updates and new features implemented and what’s still to come. As promised, the first iterations of the game mechanics, including the lore, has been premiered, providing a preliminary look at the addition of: ✔ […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Community",
+        "Update",
+        "announcement",
+        "birthday"
+      ]
+    },
+    {
+      "id": 837,
+      "date": "2022-11-30",
+      "publishedAt": "2022-11-30T14:51:03+01:00",
+      "title": "Over $19M USD in Withdrawals processed by Earth 2",
+      "url": "https://earth2.io/news/e2withdrawals",
+      "summary": "30 November, 2022 – Sydney, Australia – Earth 2 is pleased to announce it has officially processed over $19M USD in E$ withdrawals as of November 26, 2022. This is an outstanding achievement for a project that launched only 2 years earlier and has grown to become the largest Virtual Land registry in the world. […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "$E",
+        "Community",
+        "News",
+        "Player Withdrawals",
+        "PlayerFirst",
+        "Trade",
+        "USD",
+        "Update",
+        "Withdrawals",
+        "announcement",
+        "earn",
+        "platform"
+      ]
+    },
+    {
+      "id": 828,
+      "date": "2022-11-24",
+      "publishedAt": "2022-11-24T15:32:13+01:00",
+      "title": "E$10,000(USD) Reward for the 100m’th Tile Purchased + 700% increase in P2P Jewel Sales",
+      "url": "https://earth2.io/news/100m-tile-reward",
+      "summary": "November 25, 2022 – Earth 2 has come a long way since launching in November, 2020, with 0 Players, 0 publicity and a few hundred dollars budgeted for advertisements. From then to now we have become a team that spans across Europe, Australasia, the UK, Asia and America, and earlier this year we sold our […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "100 million",
+        "Bazaar",
+        "E-ther",
+        "Jewels",
+        "P2P Sales",
+        "Player Rewards",
+        "Retroactive",
+        "U2U Trading",
+        "Update",
+        "Winner",
+        "announcement"
+      ]
+    },
+    {
+      "id": 822,
+      "date": "2022-11-22",
+      "publishedAt": "2022-11-22T15:12:51+01:00",
+      "title": "Decimalisation Update",
+      "url": "https://earth2.io/news/decimal-update2",
+      "summary": "22 November, 2022, Sydney Australia – Today Earth 2 deployed an update not only to facilitate new game mechanics related to the upcoming Raiding feature, but also as a pre-emptive adjustment for future spending scenarios for E-ther and Essence. These adjustments will see E-ther receive two decimal points and Essence expand to 4 decimal points. […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Adjustment",
+        "Decimalisation",
+        "E-ther",
+        "Essence",
+        "Raiding",
+        "Update",
+        "future planning"
+      ]
+    },
+    {
+      "id": 807,
+      "date": "2022-11-11",
+      "publishedAt": "2022-11-11T11:30:14+01:00",
+      "title": "Earth 2 Continues Support for Creators with U2U HB Trading v1.1 Update",
+      "url": "https://earth2.io/news/u2uhbv11",
+      "summary": "11 November 2022 – Sydney, Australia – Earth 2 has demonstrated its ongoing support for Creators on its platform with the new release of the User-to-User (U2U) HoloBlueprint (HB) trading system v1.1! HoloBuildings are Earth 2’s experiment of creating tools to facilitate User Generated Content which then has a direct Utility in the game mechanics […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Creativity",
+        "Feature",
+        "News",
+        "U2U Trading",
+        "UGC",
+        "Update",
+        "User generated Content",
+        "announcement",
+        "earn",
+        "holobuildings",
+        "v1.1"
+      ]
+    },
+    {
+      "id": 795,
+      "date": "2022-11-01",
+      "publishedAt": "2022-11-01T15:49:08+01:00",
+      "title": "Earth 2 Turns 2!",
+      "url": "https://earth2.io/news/e2turns2",
+      "summary": "November 2, 2022 – Sydney, Australia – The month of November 2022, marks the second anniversary of the Earth 2 project and to kick start the birthday month, we have the following message from our CEO, Shane Isaac which includes a brief recap of the past 12 months and then what to expect throughout November […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "2 Years Old",
+        "Anniversary",
+        "Anniversary Month",
+        "Community",
+        "Earth 2 Turns 2",
+        "News",
+        "Schedule",
+        "Update",
+        "announcement",
+        "birthday"
+      ]
+    },
+    {
+      "id": 782,
+      "date": "2022-10-13",
+      "publishedAt": "2022-10-13T16:47:26+02:00",
+      "title": "A Well-Earned Break For Stakers: Earth 2 to Put A Pause On Validation Claims",
+      "url": "https://earth2.io/news/e2prv-claims-paused",
+      "summary": "13 October, 2022 – Sydney, Australia – To say the past 3 months has been anything less than intense for Players participating in the Earth 2 Resource Validation System would be a massive understatement. In the past we promised to provide a minimum of 3 months for Players to create Resource Validation Claims and we […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Community",
+        "E2PRV",
+        "EcoSim",
+        "Essence",
+        "News",
+        "Resources",
+        "Staking",
+        "Update",
+        "Validation",
+        "announcement"
+      ]
+    },
+    {
+      "id": 759,
+      "date": "2022-09-17",
+      "publishedAt": "2022-09-17T20:42:29+02:00",
+      "title": "Over 50% of open Resource Claims Processed by the CAT & 20M Essence Rewarded!",
+      "url": "https://earth2.io/news/e2prv-update",
+      "summary": "18 September, 2022 – Sydney, Australia – Earlier this week the CAT (Claims Approval Team) reached a goal of having processed over 50% of the total open Resource Claims created by Earth 2 land owners. Overall, the Earth 2 Player Resource Validation system (E2PRV) has been rewarding for those Players who have remained dedicated toward […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Claims",
+        "Collaboration",
+        "Community",
+        "E2PRV",
+        "Essence",
+        "News",
+        "Resources",
+        "Staking",
+        "Statistics",
+        "The CAT",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 736,
+      "date": "2022-09-16",
+      "publishedAt": "2022-09-16T19:53:11+02:00",
+      "title": "U2U HB Trading v1.1 plus other Updates!",
+      "url": "https://earth2.io/news/hb-trading-update",
+      "summary": "September 17, 2022 – Sydney, Australia – As promised, since launching User-to-User HB Trading on our platform just over two weeks ago, our team has held an internal review of the feature while taking community feedback on board. For information on this, the HB Trading Withdrawal Protocol, Downloadable 3D Models, Accusations of a Security breach […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Earth2EggHunt2022",
+        "News",
+        "Trade",
+        "UGC",
+        "Update",
+        "announcement",
+        "holobuildings"
+      ]
+    },
+    {
+      "id": 724,
+      "date": "2022-08-31",
+      "publishedAt": "2022-08-31T17:14:34+02:00",
+      "title": "U2U HoloBuilding Trading: Everything you need to know about buying and selling creations on the Bazaar.",
+      "url": "https://earth2.io/news/u2u-hb-trading",
+      "summary": "August 31, 2022 – Sydney, Australia – User-to-User (U2U) Trading of HoloBlueprints was quietly introduced to our stage2 test server a couple of weeks ago and many players jumped at the opportunity to begin exploring the new feature ahead of its official release today. Players testing the site also provided significant feedback, including reports of […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "3D Models",
+        "Creativity",
+        "EcoSim",
+        "ProCreator",
+        "Trade",
+        "UGC",
+        "Update",
+        "User generated Content",
+        "Utility",
+        "announcement",
+        "holobuildings"
+      ]
+    },
+    {
+      "id": 670,
+      "date": "2022-08-30",
+      "publishedAt": "2022-08-30T15:00:44+02:00",
+      "title": "Community Update on 2021 Egg Hunt Winners",
+      "url": "https://earth2.io/news/2021-egg-hunt",
+      "summary": "We’re aware of the uncertainty surrounding the situation with the prizes from the 2021 Easter Hunt. In order to resolve this as fairly as possible, we’ve put together a list of winners and are opening up a challenge period so we can rightfully award prizes. To be eligible for your prize, as a winner or […]",
+      "categories": [
+        "News"
+      ],
+      "tags": []
+    },
+    {
+      "id": 651,
+      "date": "2022-08-12",
+      "publishedAt": "2022-08-12T19:19:36+02:00",
+      "title": "Player Resource Validation approvals are about to begin!",
+      "url": "https://earth2.io/news/e2prv-approvals",
+      "summary": "August 12, 2022 – Sydney, Australia – It has been just over 3 weeks since we launched the Earth 2 Player Resource Validation system (“E2PRV”) and we have already received over 9,000 submitted claims with a combined staked Essence total over 7.6 million so far! That’s over 250,000 times players have staked to support claims […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Claims",
+        "Community",
+        "E2PRV",
+        "Essence",
+        "Feature",
+        "Staking",
+        "Update",
+        "announcement",
+        "approvals",
+        "earn"
+      ]
+    },
+    {
+      "id": 630,
+      "date": "2022-07-15",
+      "publishedAt": "2022-07-15T09:31:00+02:00",
+      "title": "Earth 2 Player Resource Validation",
+      "url": "https://earth2.io/news/e2prv",
+      "summary": "July 15, 2022 – Sydney, Australia – Earth 2 is pleased to announce the release of our very own Player Resource Validation system. Less than 12 hours after quietly releasing this new feature yesterday, and prior to this official announcement, our systems experienced over 25,000 unique stakes made up of over 600,000 Essence! Earth 2 […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Community",
+        "Essence",
+        "Feature",
+        "News",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 623,
+      "date": "2022-07-11",
+      "publishedAt": "2022-07-11T11:48:53+02:00",
+      "title": "Ongoing Weekly Countdowns for Mentar Giveaways And New Country Releases!",
+      "url": "https://earth2.io/news/countdowns-mentars",
+      "summary": "July 11th – Sydney, Australia – After recently achieving an incredible milestone of 100 million tiles sold, Earth 2 will trial public countdowns, starting with not one, but two countdowns, every week over the next couple of months. The first countdown will trigger the opening of a new country, while the second countdown will gift […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Countdowns",
+        "Giveaways",
+        "Mentars",
+        "New Country Release",
+        "News",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 595,
+      "date": "2022-06-09",
+      "publishedAt": "2022-06-09T07:00:28+02:00",
+      "title": "Earth 2 passes100 Million tile sales, Iron Ore Heatmap Release & more",
+      "url": "https://earth2.io/news/e2-passes-100m-tiles",
+      "summary": "June 9, 2022 – Sydney, Australia – On the 2nd of June, 2022, Earth 2 officially sold its 100,000,000th tile!! This works out the be an average of over 1,000,000 tiles per week! These are some very powerful figures as the Essence token launch edges closer in Q3, 2022. “This is a monumental achievement for […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "100 million",
+        "Concept Art",
+        "Mentar",
+        "Milestone",
+        "Resources",
+        "Tiles",
+        "Update",
+        "announcement",
+        "heatmap"
+      ]
+    },
+    {
+      "id": 570,
+      "date": "2022-05-29",
+      "publishedAt": "2022-05-29T18:39:12+02:00",
+      "title": "Essence Fractions, Vlog #6 & more",
+      "url": "https://earth2.io/news/vlog6",
+      "summary": "Announcement Sunday the 29th of May Dear Earth 2 Players and Community, We hope all is well. This announcement is made up of 3 separate parts so please ensure you read each part to keep yourself up to date with the latest Earth 2 news and instructions. VLOG #6 – Residential & Commercial Buildings + […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Earth2EggHunt2022",
+        "Essence",
+        "News",
+        "Update",
+        "Vlog",
+        "announcement",
+        "dev vlog"
+      ]
+    },
+    {
+      "id": 534,
+      "date": "2022-05-20",
+      "publishedAt": "2022-05-20T04:59:47+02:00",
+      "title": "Resource Heatmap & Fractions of Essence",
+      "url": "https://earth2.io/news/gold-oil-heatmap",
+      "summary": "May 20, 2022, Dear Earth 2 Players, We hope all is well. We’re excited to announce that the Gold and Oil Resource Heatmap will go live over the next 24 hours! While the first release of official resource locations on Earth 2 is a milestone to celebrate, there are some important things to consider so […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "EcoSim",
+        "Essence",
+        "Feature",
+        "Gold",
+        "Oil",
+        "Resources",
+        "Update",
+        "announcement",
+        "heatmap"
+      ]
+    },
+    {
+      "id": 506,
+      "date": "2022-05-07",
+      "publishedAt": "2022-05-07T15:39:50+02:00",
+      "title": "Earth 2 Announces Strategic Partnership with R/GA",
+      "url": "https://earth2.io/news/earth2-rga-partnership",
+      "summary": "May 7, 2022, Sydney Australia – Metaverse platform Earth 2, a futuristic concept for a geolocational 1:1 scale second Earth, is excited to officially announce a strategic partnership with the internationally recognised, award winning, innovation and design-driven global company R/GA. The R/GA Singapore partnership will integrate product strategy, experience design, product design, and web and […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "News",
+        "Press Release",
+        "partnership"
+      ]
+    },
+    {
+      "id": 467,
+      "date": "2022-04-23",
+      "publishedAt": "2022-04-23T01:40:46+02:00",
+      "title": "Earth2Day & Active Player Essence Rewards",
+      "url": "https://earth2.io/news/earth2day",
+      "summary": "April 23, 2022, Sydney The Acknowledgement of Earth Day and the introduction of Earth 2 Day marked with Essence rewards for Active Players We hope all is well and we’d like to wish everyone a Happy Earth Day, 2022. Earth Day was first proposed as a day where we, as its inhabitants, would honour the […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "April23",
+        "E24E1",
+        "Earth2Day",
+        "EarthDay",
+        "Essence",
+        "Essence Rewards",
+        "Initiative",
+        "News",
+        "Player Rewards",
+        "Rewards",
+        "announcement"
+      ]
+    },
+    {
+      "id": 412,
+      "date": "2022-03-24",
+      "publishedAt": "2022-03-24T17:43:04+01:00",
+      "title": "Dev Vlog #2 looks at Earth 2 Building Tech",
+      "url": "https://earth2.io/news/dev-vlog-2-looks-at-earth-2-building-tech",
+      "summary": "March 25, 2022, Sydney Earth 2 is excited to share the second video of our new Dev Vlog series showcasing the first EcoSim building, the Water Processor, in its Phase 2 form. Initial showcases will focus on buildings being visually represented in their Phase 2 model format pertinent to the Earth 2 EcoSim, but we […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "EcoSim",
+        "Game",
+        "News",
+        "Technology",
+        "Update",
+        "World Builder",
+        "Youtube Video",
+        "dev vlog",
+        "progress"
+      ]
+    },
+    {
+      "id": 394,
+      "date": "2022-03-17",
+      "publishedAt": "2022-03-17T14:58:36+01:00",
+      "title": "Watch the first video in our new Dev Vlog series plus Leaderboard Update & more",
+      "url": "https://earth2.io/news/devlog1update",
+      "summary": "First Dev Vlog video in new Series goes Live Earth 2 is proud to kick off the first installment of our new developer vlog series where we will be providing periodic updates and insights into parts of key technical developments that segments of our engineering team have been focusing on and prototyping. One of the […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "3D World",
+        "Engineering",
+        "Game",
+        "Made with Unity",
+        "News",
+        "Proprietary Technology",
+        "Technology",
+        "Terrain Systems",
+        "Update",
+        "World Rendering",
+        "Youtube Video",
+        "announcement",
+        "dev vlog"
+      ]
+    },
+    {
+      "id": 377,
+      "date": "2022-02-23",
+      "publishedAt": "2022-02-23T20:09:18+01:00",
+      "title": "Earth 2’s Web3 Document, Token & more",
+      "url": "https://earth2.io/news/earth-2s-web3-document-token-more",
+      "summary": "On February 22, 2022 the Draft of the Earth 2 Web3 Document was published in order to provide an update to the community and invite feedback. The draft is a work in progress but provides extensive details surrounding what Earth 2 is and what our short and long term goals are. The document also provides […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "BlockChain",
+        "Community",
+        "Design",
+        "Draft",
+        "Essence",
+        "Game",
+        "NFTs",
+        "News",
+        "Update",
+        "Web 3",
+        "announcement",
+        "feedback"
+      ]
+    },
+    {
+      "id": 333,
+      "date": "2022-02-17",
+      "publishedAt": "2022-02-17T13:31:23+01:00",
+      "title": "Winners & Runners-Up of the #Earth2EggHunt2022",
+      "url": "https://earth2.io/news/winners-runners-up-of-the-earth2egghunt2022",
+      "summary": "Latest Update: 21 August, 2022. Congratulations to the winners and runners-up of the #Earth2EggHunt2022! Here is where you will find the complete list of all the winners and runners-up of this year’s Egg Hunt. As each Hidden Egg is discovered, an announcement post will be shared on our social media pages informing all participants of […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Challenge",
+        "Community",
+        "Earth2EggHunt2022",
+        "EggHunt",
+        "Game",
+        "Prizes",
+        "Update"
+      ]
+    },
+    {
+      "id": 326,
+      "date": "2022-02-10",
+      "publishedAt": "2022-02-10T13:55:26+01:00",
+      "title": "CUSTOM REFERRAL CODE, LOCKED COUNTRIES & MORE",
+      "url": "https://earth2.io/news/custom-referral-code-locked-countries-more",
+      "summary": "February 10, 2022 – Sydney. Dear Earth 2 Players, We hope all is well and we’re pleased to bring you a second update in as many days. Custom Referral Codes for T1 Property Owners For our EDC Tier 1 property owners, the promised custom referral code benefit has been implemented and is now live! To […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Custom Referral Codes",
+        "E-ther Detection",
+        "Locked Countries",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 320,
+      "date": "2022-02-09",
+      "publishedAt": "2022-02-09T11:21:17+01:00",
+      "title": "Progress Update on Resources",
+      "url": "https://earth2.io/news/progress-update-on-resources",
+      "summary": "February 9, 2022 Dear Earth 2 Players, We hope all is well. Many of our Players have been waiting patiently for Resources to become detectable on Earth 2 and we would like to provide an update on its progress. This update will include details on how the location of Resources will be determined and an […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "EcoSim",
+        "News",
+        "Resources",
+        "Update",
+        "announcement",
+        "progress"
+      ]
+    },
+    {
+      "id": 302,
+      "date": "2022-01-28",
+      "publishedAt": "2022-01-28T17:38:39+01:00",
+      "title": "Second Egg Hunt Live and Update",
+      "url": "https://earth2.io/news/second-egg-hunt-live-and-update",
+      "summary": "January 29, 2022 – Sydney The Egg Hunt Earth 2’s second Egg Hunt is underway, and it’s free for all Earth 2 Players to participate! All you need is a free Earth 2 account to play! The Egg Hunt concept was created last year to provide rewards to those Players closely following Earth 2 related […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "2022",
+        "Challenge",
+        "Community",
+        "EggHunt",
+        "Game",
+        "Prizes",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 297,
+      "date": "2022-01-20",
+      "publishedAt": "2022-01-20T15:36:08+01:00",
+      "title": "Tier 3 Jewels add to 1.3m Player sold Jewels to date",
+      "url": "https://earth2.io/news/tier-3-jewels-add-to-1-3m-player-sold-jewels-to-date",
+      "summary": "20th of January, 2022, Sydney – Earth 2 is pleased to announce the introduction of Tier 3 Jewels into our evolving EcoSim. This introduction sees the next level of player crafted jewels released inside Earth 2 and is part of our ongoing commitment to tweak and expand the important economical component of our future metaverse. […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Crafting",
+        "EcoSim",
+        "Feature",
+        "Jewels",
+        "Player Created",
+        "Tier 3",
+        "Trade",
+        "Update"
+      ]
+    },
+    {
+      "id": 292,
+      "date": "2022-01-12",
+      "publishedAt": "2022-01-12T16:27:35+01:00",
+      "title": "Web Updates and Happy New Year!",
+      "url": "https://earth2.io/news/web-updates-and-happy-new-year",
+      "summary": "Dear Earth 2 Players, We hope all is well and Happy New Year! We’re a little bit late to the New Year’s party but our team has been working hard on some important fixes and updates over the break. In continuation of the trajectory we were on at the end of 2021, we plan to […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "2022",
+        "Metaverse",
+        "New Year",
+        "Update",
+        "Website",
+        "holobuildings"
+      ]
+    },
+    {
+      "id": 281,
+      "date": "2021-12-23",
+      "publishedAt": "2021-12-23T08:29:43+01:00",
+      "title": "Gifting of Virtual Land on Earth 2",
+      "url": "https://earth2.io/news/gifting-of-virtual-land-on-earth-2",
+      "summary": "Dec 23, 2021 – Just in time for Christmas, Earth 2 has launched its new gifting feature, allowing players the ability to send ownership of unique virtual land tiles of any geolocation on earth. Virtual land on Earth 2 directly corresponds to exact locations in the real world making each piece of land, including the […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Community",
+        "Feature",
+        "Story",
+        "Update",
+        "gifting"
+      ]
+    },
+    {
+      "id": 276,
+      "date": "2021-12-21",
+      "publishedAt": "2021-12-21T18:02:03+01:00",
+      "title": "Former Senior Binance Director, Omar Rahim, joins Earth 2 as Strategic Advisor",
+      "url": "https://earth2.io/news/former-senior-binance-director-omar-rahim-joins-earth-2-as-strategic-advisor",
+      "summary": "Omar Rahim Joins the Earth 2 Team as Their Newest Strategic Advisor December 22, 2021 – Sydney, Australia Metaverse platform Earth 2 is excited to announce the appointment of Omar Rahim, a former Senior Director at cryptocurrency giant Binance, to strategic advisor where he will focus on Earth 2’s decentralisation initiatives, partnership programs and overall transition […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Binance",
+        "BlockChain",
+        "News",
+        "Omar Rahim",
+        "Press Release",
+        "Strategy",
+        "Team",
+        "Web 3",
+        "announcement"
+      ]
+    },
+    {
+      "id": 252,
+      "date": "2021-12-16",
+      "publishedAt": "2021-12-16T14:03:13+01:00",
+      "title": "Earth 2 announces acquisition of 3D fast-paced sci-fi vehicular combat game DRONE",
+      "url": "https://earth2.io/news/earth-2-announces-acquisition-of-3d-fast-paced-sci-fi-vehicular-combat-game-drone",
+      "summary": "Sydney, Australia – December, 2021 – Earth 2, the metaverse platform and virtual twin of our real world, has announced the acquisition of DRONE The Game (DRONE), a fast-paced 3D-action combat game where players custom build their sci-fi vehicles and player-versus-player environments. The acquisition will facilitate Earth 2’s first official 3D gameplay implementation through the […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Acquisition",
+        "DRONE",
+        "Game",
+        "News",
+        "Press Release",
+        "PvP",
+        "UGC",
+        "Web 3",
+        "World Builder",
+        "announcement"
+      ]
+    },
+    {
+      "id": 240,
+      "date": "2021-12-06",
+      "publishedAt": "2021-12-06T21:00:24+01:00",
+      "title": "Earth 2 announces decentralization plans and partnership with Polygon Studios",
+      "url": "https://earth2.io/news/earth-2-announces-decentralization-plans-and-partnership-with-polygon-studios",
+      "summary": "Provides on-chain, non-custodial ownership and transaction capability for Earth2 users Offers the option to move assets and transactions onto the public Ethereum mainnet Earth 2 and Polygon Studios will collaborate to enhance blockchain gaming and scale metaverse platform Sydney, Australia – December 2021. Earth 2, the metaverse platform and virtual twin of our real world, […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "BlockChain",
+        "Decentralisation",
+        "NFTs",
+        "News",
+        "PS",
+        "Polygon",
+        "Polygon Studios",
+        "Press Release",
+        "Strategy",
+        "announcement",
+        "partnership"
+      ]
+    },
+    {
+      "id": 233,
+      "date": "2021-12-03",
+      "publishedAt": "2021-12-03T17:29:55+01:00",
+      "title": "Announcement & Retrospective Essence Reward for Earth 2 Land Owners",
+      "url": "https://earth2.io/news/retrospective-reward-for-earth-2-land-owners",
+      "summary": "03/DEC/2021 Dear Earth 2 Players, We hope all is well and that you are keeping safe and healthy. As we wave goodbye to the end of our maiden year, we want to thank you for your ongoing support for and dedication to Earth 2. Your most recent show of support in the Enter the Metaverse […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "2021",
+        "EDC",
+        "Essence",
+        "Retrospective",
+        "Reward",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 225,
+      "date": "2021-11-10",
+      "publishedAt": "2021-11-10T21:32:34+01:00",
+      "title": "Earth 2 to release Jewel Crafting",
+      "url": "https://earth2.io/news/earth-2-to-release-jewel-crafting",
+      "summary": "November 11, 2021 – Earth 2 is excited to announce the upcoming release of Jewel Crafting. Jewels will become a central part of the planned Earth 2 EcoSim and will be able to boost, control and specialise the resource production on a Player’s property. Over coming days, Earth 2 will introduce an additional layer to […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Feature",
+        "Jewels",
+        "Novemberversary",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 175,
+      "date": "2021-09-23",
+      "publishedAt": "2021-09-23T20:25:47+02:00",
+      "title": "Earth 2® & Mapbox HoloBuilding Press Release",
+      "url": "https://earth2.io/news/earth-2-mapbox-holobuilding-press-release",
+      "summary": "The Mapbox GL-JS and GL-Draw APIs led system gives players the first tools they need to create, edit and deploy their Earth 2® created HoloBuilding layouts. Sydney, Australia, September 23rd- Earth 2®, a metaverse platform that aims to provide a one-to-one virtual version of the Earth, has announced the initial rollout of HoloBuildings, allowing players […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Collaboration",
+        "Mapbox",
+        "Press Release",
+        "holobuildings"
+      ]
+    },
+    {
+      "id": 165,
+      "date": "2021-09-23",
+      "publishedAt": "2021-09-23T20:13:46+02:00",
+      "title": "HoloBuildings, Updates and Fixes",
+      "url": "https://earth2.io/news/holobuildings-updates-and-fixes",
+      "summary": "(All above HoloBuildings have been uniquely created by Earth 2® Players using the Earth 2® HoloBuilding Editor) September, 23, 2021 – Today marks the second part of the official release of HoloBuildings on Earth 2®. This release now allows Players to place permanent HoloBuildings on their properties which, in addition to creating more visual appeal, will […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Update",
+        "announcement",
+        "fixes",
+        "holobuildings"
+      ]
+    },
+    {
+      "id": 155,
+      "date": "2021-09-17",
+      "publishedAt": "2021-09-17T12:31:48+02:00",
+      "title": "Earth 2® “Network” Humble Beginnings",
+      "url": "https://earth2.io/news/earth-2-network-humble-beginnings",
+      "summary": "Today we are excited to introduce the humble beginnings of the Earth 2® “Network”. The Earth 2® Network will become the centralised system where information, communication, notifications and more are delivered to our Players on Earth 2®. Anything of relevance to you as a Player will be found inside the Earth 2® Network over time. Today, the […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Communication",
+        "Earth2® Network",
+        "Feature",
+        "Social Media",
+        "Update",
+        "announcement",
+        "platform"
+      ]
+    },
+    {
+      "id": 146,
+      "date": "2021-09-06",
+      "publishedAt": "2021-09-06T19:20:00+02:00",
+      "title": "Earth 2® Set to Launch Unique Property Identifier System",
+      "url": "https://earth2.io/news/earth-2-set-to-launch-unique-property-identifier-system",
+      "summary": "The countdown has commenced for Earth 2® Property Locators, or EPLs, available 1pm UTC September 8th, 2021 Sydney, Australia – September 6, 2021 Virtual Earth platform Earth 2® has announced the September 8th launch of its new property upgrade feature, the EPL. Short for Earth 2® Property Locator, EPL is a global identifier unique to […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "EPL",
+        "Feature",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 127,
+      "date": "2021-08-27",
+      "publishedAt": "2021-08-27T19:50:00+02:00",
+      "title": "Earth 2® announces automated customer verification solution",
+      "url": "https://earth2.io/news/earth-2-announces-automated-customer-verification-solution",
+      "summary": "Jumio’s AI-powered verification technology ensures Earth 2® Players are Real and Ready to Trade Partnership with Jumio allows for authenticated transactions Earth 2®, a platform designed to create a one-to-one virtual version of the Earth, is partnering with Jumio, the leading provider of AI-powered end-to-end identity verification and eKYC solutions, to streamline its customer verification […]",
+      "categories": [
+        "Press Releases"
+      ],
+      "tags": [
+        "Compliance",
+        "Jumio",
+        "partnership",
+        "verification"
+      ]
+    },
+    {
+      "id": 104,
+      "date": "2021-08-12",
+      "publishedAt": "2021-08-12T23:14:41+02:00",
+      "title": "Mentars, E-ther, Essence & Holo Buildings",
+      "url": "https://earth2.io/news/mentars-e-ther-essence",
+      "summary": "Dear Earth 2® Players, Followers & Spectators, We hope all is well. The Earth 2® team has been very busy over the past few months most recently resulting in 7 releases over the past 8 weeks, some noticeable and others less noticeable. These updates have been primarily focused on Phase 2 features which are both […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Essence",
+        "Mentar",
+        "Update",
+        "announcement"
+      ]
+    },
+    {
+      "id": 93,
+      "date": "2021-07-23",
+      "publishedAt": "2021-07-23T04:22:48+02:00",
+      "title": "Bazaar",
+      "url": "https://earth2.io/news/bazaar",
+      "summary": "We hope all is well. Earth 2® has two roll outs planned for this week, one due to launch over the next 12 hours (so long as a last minute security bug is fixed) and another…",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Bazaar",
+        "Jewels",
+        "Update"
+      ]
+    },
+    {
+      "id": 55,
+      "date": "2021-07-22",
+      "publishedAt": "2021-07-22T23:18:40+02:00",
+      "title": "Jewels",
+      "url": "https://earth2.io/news/jewels",
+      "summary": "Dear Earth 2® Users, We hope all is well. A few hours ago we quietly pushed out our new React front end framework for the entire Earth 2® app…",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "Jewels",
+        "Update"
+      ]
+    }
+  ]
+}
