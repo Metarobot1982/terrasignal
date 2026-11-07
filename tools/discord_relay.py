@@ -269,6 +269,14 @@ def publish(d, to_chronicle):
     m = load(MAP, None)
     if m is None:
         raise RuntimeError('data/map.json missing')
+    if d['kind'] == 'countdown':
+        cds = [c for c in m.get('countdowns', []) if c.get('key')]  # real entries replace the placeholders
+        cds = [c for c in cds if c['key'] != d['sourceKey']]
+        cds.append(dict(d['countdown'], key=d['sourceKey']))
+        m['countdowns'] = cds
+        m['updatedAt'] = now_iso()
+        save(MAP, m)
+        return
     y, mo, da = d['date'].split('-')
     entry = {'L': d['layer'], 'g': d['grade'], 'title': d['title'], 'desc': d.get('descKo') or d['excerpt'][:160] or d['title'],
              'date': '%s.%s.%s · %s' % (y, mo, da, '공식 기사' if d['kind'] == 'earth2.io' else '공식 디스코드'),
@@ -308,6 +316,10 @@ def review(dc, cfg, drafts, bot_id):
             chron = bool(voters[BOOK])
             publish(d, chron)
             d['status'], d['decidedAt'], d['chronicle'] = 'published', now_iso(), chron
+            if d['kind'] == 'countdown':
+                dc.edit(cfg['approvalChannel'], d['draftId'], '🟢 **반영됨** — 곧 열리는 시그널에 올라가요. 이후 어사이드가 보내는 남은 시간은 자동으로 갱신돼요.')
+                print('published countdown', d['title'][:60])
+                continue
             dc.edit(cfg['approvalChannel'], d['draftId'],
                     '🟢 **반영됨** — 1~3분 뒤 사이트 시그널 지도에 올라가요.%s%s' % (
                         ' 개척 연대기에도 기록했어요.' if chron else '',
@@ -315,6 +327,108 @@ def review(dc, cfg, drafts, bot_id):
             changed = True
             print('published', d['title'][:60], 'chronicle' if chron else '')
     return changed
+
+
+# ---------------------------------------------------------------- Aside reports
+# The Aside browser routine (operator's PC, logged in to app.earth2.io) posts a
+# report in the Aside channel. Each line:  종류 | 제목 | 장소 | 남은 시간 | 단계
+#   종류: 영토 · 스킨 · 스테이커 · 에센스타일 · 기타
+#   남은 시간: "2일 14시간 36분", "14시간 5분", "2D 14:36:20", "14:36:20"
+#   단계(영토만): 투표 · 결과 · 카운트다운 · 오픈
+KIND = {
+    '영토': ('real', 'vote'), '스킨': ('border', 'ops'), '스테이커': ('border', ''),
+    '에센스타일': ('real', ''), '기타': ('border', ''),
+}
+STAGE = {'투표': 1, '결과': 2, '카운트다운': 3, '오픈': 4}
+
+
+def parse_left(t):
+    t = t.strip().upper().replace(' ', '')
+    m = re.match(r'^(?:(\d+)(?:일|D))?(?:(\d+)(?:시간|H))?(?:(\d+)(?:분|M))?(?:(\d+)(?:초|S))?$', t)
+    if m and any(m.groups()):
+        d, h, mi, se = (int(x or 0) for x in m.groups())
+        return d * 86400 + h * 3600 + mi * 60 + se
+    m = re.match(r'^(\d+):(\d{1,2}):(\d{2}):(\d{2})$', t)  # 일:시:분:초 (배너 표기)
+    if m:
+        d, h, mi, se = (int(x) for x in m.groups())
+        return d * 86400 + h * 3600 + mi * 60 + se
+    m = re.match(r'^(?:(\d+)(?:일|D))?(\d{1,2}):(\d{2})(?::(\d{2}))?$', t)
+    if m:
+        d, h, mi, se = (int(x or 0) for x in m.groups())
+        return d * 86400 + h * 3600 + mi * 60 + se
+    return None
+
+
+def parse_report(m):
+    """Return countdown dicts from one Aside message (lines after [TS-AUTO])."""
+    text = m.get('content') or ''
+    if '[TS-AUTO]' not in text:
+        return []
+    sent = datetime.fromisoformat(m['timestamp'].replace('Z', '+00:00'))
+    out = []
+    for line in text.split('[TS-AUTO]', 1)[1].splitlines():
+        cols = [c.strip() for c in line.strip().strip('-•').split('|')]
+        if len(cols) < 4 or cols[0] not in KIND:
+            continue
+        kind, title, place, left = cols[:4]
+        stage = STAGE.get(cols[4], 0) if len(cols) > 4 else 0
+        secs = parse_left(left)
+        layer, cycle = KIND[kind]
+        ends = (sent + timedelta(seconds=secs)).strftime('%Y-%m-%dT%H:%M:%SZ') if secs is not None else ''
+        out.append({'L': layer, 'place': place or '전역', 'cycle': cycle, 'stage': stage if kind == '영토' else 0,
+                    'title': title, 'endsAt': ends,
+                    'note': '플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요.' if kind == '영토' else ''})
+    return out
+
+
+def aside(dc, cfg, state, drafts):
+    ch = cfg.get('asideChannel')
+    if not ch:
+        return
+    after = state.get('asideLastSeen')
+    if not after:
+        latest = dc.messages(ch, limit=1)
+        state['asideLastSeen'] = latest[-1]['id'] if latest else '0'
+        after = state['asideLastSeen']
+    reports = []
+    for m in dc.messages(ch, after=after, limit=100):
+        state['asideLastSeen'] = m['id']
+        reports += parse_report(m)
+    if not reports:
+        return
+    mp = load(MAP, {})
+    live = {c.get('key'): c for c in mp.get('countdowns', []) if c.get('key')}
+    pending = {d['sourceKey'] for d in drafts['items'] if d['status'] == 'pending'}
+    rejected = {d['sourceKey'] for d in drafts['items'] if d['status'] == 'rejected'}
+    updated = False
+    for c in reports:
+        key = 'countdown:%s:%s' % (c['title'], c['place'])
+        if key in live:  # approved before → keep the time fresh without asking again
+            live[key].update({k: c[k] for k in ('endsAt', 'stage') if c[k] or k == 'stage'})
+            updated = True
+        elif key not in pending and key not in rejected:
+            when = c['endsAt'] or '시각 확인 중'
+            src = {'kind': 'countdown', 'title': c['title'], 'countdown': c,
+                   'excerpt': '장소: %s\n끝나는 시각(UTC): %s%s' % (c['place'], when, '\n단계: %s' % c['stage'] if c['stage'] else ''),
+                   'url': '', 'date': datetime.now(KST).strftime('%Y-%m-%d'), 'grade': 'CLEAR', 'layer': c['L'],
+                   'sourceLabel': '어사이드 수집 · app.earth2.io (로그인 화면)', 'sourceKey': key}
+            new_draft(dc, cfg, drafts, src)
+            pending.add(key)
+    now = datetime.now(timezone.utc)
+    keep = []
+    for c in mp.get('countdowns', []):
+        try:
+            gone = c.get('key') and c.get('endsAt') and now - datetime.fromisoformat(c['endsAt'].replace('Z', '+00:00')) > timedelta(days=1)
+        except ValueError:
+            gone = False
+        if gone:
+            updated = True
+        else:
+            keep.append(c)
+    if updated:
+        mp['countdowns'] = keep
+        mp['updatedAt'] = now_iso()
+        save(MAP, mp)
 
 
 def main():
@@ -332,6 +446,7 @@ def main():
     try:
         review(dc, cfg, drafts, bot_id)
         collect(dc, cfg, state, drafts)
+        aside(dc, cfg, state, drafts)
     finally:
         state['checkedAt'] = now_iso()
         save(STATE, state)
