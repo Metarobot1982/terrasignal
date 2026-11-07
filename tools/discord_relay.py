@@ -191,7 +191,7 @@ def collect(dc, cfg, state, drafts):
         if first_run or ch['id'] not in state['lastSeen']:
             latest = dc.messages(ch['id'], limit=1)
             init[ch['id']] = latest[-1]['id'] if latest else '0'
-            if first_run and latest and ch is cfg['sourceChannels'][0]:
+            if first_run and latest and ch is cfg['sourceChannels'][0] and latest[-1].get('type', 0) in (0, 19):
                 new_draft(dc, cfg, drafts, source_from_message(latest[-1], ch, test=True))
     state['lastSeen'].update(init)  # only after the test draft was posted successfully
     for ch in cfg['sourceChannels']:
@@ -200,8 +200,8 @@ def collect(dc, cfg, state, drafts):
             continue
         for m in dc.messages(cid, after=state['lastSeen'][cid]):
             state['lastSeen'][cid] = m['id']
-            if not message_text(m):
-                continue
+            if m.get('type', 0) not in (0, 19) or not message_text(m):
+                continue  # skip system notices such as "channel followed"
             new_draft(dc, cfg, drafts, source_from_message(m, ch))
     news = load(NEWS, {'items': []})
     for it in news['items']:
