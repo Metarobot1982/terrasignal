@@ -186,14 +186,17 @@ def collect(dc, cfg, state, drafts):
     """Post drafts for new announcements and new earth2.io articles."""
     first_run = not state.get('lastSeen')
     state.setdefault('lastSeen', {})
+    init = {}
+    for ch in cfg['sourceChannels']:
+        if first_run or ch['id'] not in state['lastSeen']:
+            latest = dc.messages(ch['id'], limit=1)
+            init[ch['id']] = latest[-1]['id'] if latest else '0'
+            if first_run and latest and ch is cfg['sourceChannels'][0]:
+                new_draft(dc, cfg, drafts, source_from_message(latest[-1], ch, test=True))
+    state['lastSeen'].update(init)  # only after the test draft was posted successfully
     for ch in cfg['sourceChannels']:
         cid = ch['id']
-        if first_run or cid not in state['lastSeen']:
-            latest = dc.messages(cid, limit=1)
-            state['lastSeen'][cid] = latest[-1]['id'] if latest else '0'
-            if first_run and latest and ch is cfg['sourceChannels'][0]:
-                m = latest[-1]
-                new_draft(dc, cfg, drafts, source_from_message(m, ch, test=True))
+        if cid in init:
             continue
         for m in dc.messages(cid, after=state['lastSeen'][cid]):
             state['lastSeen'][cid] = m['id']
