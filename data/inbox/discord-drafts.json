@@ -1,3 +1,18 @@
 {
-  "items": []
+  "items": [
+    {
+      "kind": "discord",
+      "title": "Earth 2 Official #announcements",
+      "excerpt": "",
+      "url": "",
+      "date": "2026-11-03",
+      "grade": "CLEAR",
+      "layer": "border",
+      "sourceLabel": "어스2 공식 디스코드 · #공지-announcements (연결 시험)",
+      "sourceKey": "discord:1566867496253005845:1566868450012434443",
+      "draftId": "1568774217485258804",
+      "status": "pending",
+      "createdAt": "2026-11-07T23:48:42Z"
+    }
+  ]
 }
