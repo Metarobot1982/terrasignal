@@ -125,6 +125,8 @@ def main():
         print('new articles: %d' % len(new))
         for p in reversed(new):
             inbox['items'].append(dict(p, source='earth2.io', status='pending', receivedAt=now))
+            if os.environ.get('DISCORD_BOT_TOKEN'):
+                continue  # Discord relay posts the draft for approval instead
             gh_issue('📡 새 공식 신호: %s' % p['title'],
                      '**날짜** %s\n**원문** %s\n\n> %s\n\n상태: 승인 대기 — 사이트에는 아직 반영되지 않았어요.' % (p['date'], p['url'], p['summary']))
         save(INBOX, inbox)

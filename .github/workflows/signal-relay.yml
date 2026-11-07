@@ -1,0 +1,48 @@
+name: 시그널 수신
+
+on:
+  schedule:
+    - cron: '7,37 * * * *'   # 30분마다
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - tools/**
+      - data/inbox/discord-config.json
+      - .github/workflows/signal-relay.yml
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: signal-relay
+  cancel-in-progress: false
+
+jobs:
+  relay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: earth2.io 공식 뉴스 확인
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+        run: python tools/check_earth2_news.py
+      - name: 디스코드 초안 올리기 · 승인 반영
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+        run: python tools/discord_relay.py
+      - name: 기록 저장
+        if: always()
+        run: |
+          git config user.name "terrasignal-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "시그널 수신 기록"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q && exit 0; sleep 5; done
+          exit 1

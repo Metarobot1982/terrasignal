@@ -1,0 +1,9 @@
+{
+  "note": "TERRASIGNAL Relay Station 채널 번호. 봇은 sourceChannels의 새 공지를 읽어 approvalChannel에 초안으로 올려요.",
+  "sourceChannels": [
+    { "id": "1566867496253005845", "name": "공지-announcements" },
+    { "id": "1566867632093790279", "name": "업데이트-e2-updates" },
+    { "id": "1566867831918821447", "name": "소공지-minor" }
+  ],
+  "approvalChannel": "1568766442067730593"
+}
