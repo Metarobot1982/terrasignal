@@ -1,9 +1,19 @@
 {
-  "note": "TERRASIGNAL Relay Station 채널 번호. 봇은 sourceChannels의 새 공지를 읽어 approvalChannel에 초안으로 올려요.",
+  "note": "TERRASIGNAL Relay Station 채널 번호. 봇은 sourceChannels의 새 공지를 읽어 approvalChannel에 초안으로 올려요. asideChannel은 어사이드 루틴이 [TS-AUTO] 보고를 올리는 채널이에요.",
   "sourceChannels": [
-    { "id": "1566867496253005845", "name": "공지-announcements" },
-    { "id": "1566867632093790279", "name": "업데이트-e2-updates" },
-    { "id": "1566867831918821447", "name": "소공지-minor" }
+    {
+      "id": "1566867496253005845",
+      "name": "공지-announcements"
+    },
+    {
+      "id": "1566867632093790279",
+      "name": "업데이트-e2-updates"
+    },
+    {
+      "id": "1566867831918821447",
+      "name": "소공지-minor"
+    }
   ],
-  "approvalChannel": "1568766442067730593"
+  "approvalChannel": "1568766442067730593",
+  "asideChannel": "1568777097877655753"
 }
