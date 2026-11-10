@@ -272,7 +272,10 @@ def publish(d, to_chronicle):
     if d['kind'] == 'countdown':
         cds = [c for c in m.get('countdowns', []) if c.get('key')]  # real entries replace the placeholders
         cds = [c for c in cds if c['key'] != d['sourceKey']]
-        cds.append(dict(d['countdown'], key=d['sourceKey']))
+        cd = dict(d['countdown'], key=d['sourceKey'])
+        if d.get('descKo'):
+            cd['note'] = d['descKo']  # operator's reply becomes the Korean line on the card
+        cds.append(cd)
         m['countdowns'] = cds
         m['updatedAt'] = now_iso()
         save(MAP, m)
