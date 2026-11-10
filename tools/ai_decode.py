@@ -30,6 +30,8 @@ Earth 2(어스2) 소식을 한국어로 전하는 비공식 메타버스 방송�
 - "행성"이라는 말은 쓰지 않는다. 세계는 "디지털 지구".
 - 층(layer): real = 현실 지구(땅, 영토, 타일, 국가, 프로퍼티), border = 경계(에센스, 스테이킹, 스킨, 사이드로이드, 레이딩, 쥬얼, 바자르, 출금), digital = 디지털 지구(E2V1, 리얼리티 스레드, 제작, 전투, 퀘스트, 호드, 아바타).
 - chronicle: 세계 구조가 바뀐 일(새 리얼리티 스레드, 새 시스템 도입, 접근권 확대, 공식 기념일)만 true. 패치·버그 수정·이벤트·할인·카운트다운·시즌 스킨은 false.
+- lines는 가장 중요한 것만 골라 최대 3줄. 4줄 이상 쓰지 않는다.
+- titleKo는 30자 안팎으로 짧게.
 - 원문이 너무 짧거나 내용이 불분명하면 lines를 1줄로 하고 "자세한 내용은 공식 원문에서 확인해 주세요."를 넣는다.
 
 출력 형식 (JSON 하나만, 다른 글 없이)
@@ -64,7 +66,7 @@ def decode(title, body, source_label):
         return None
     src = '출처: %s\n제목: %s\n\n본문:\n%s' % (source_label, title, (body or '(본문 없음)')[:24000])
     try:
-        res = _post({'model': MODEL, 'max_tokens': 800, 'system': SYSTEM,
+        res = _post({'model': MODEL, 'max_tokens': 1500, 'thinking': {'type': 'disabled'}, 'system': SYSTEM,
                      'messages': [{'role': 'user', 'content': src}]}, key)
     except urllib.error.HTTPError as e:
         print('AI decode failed', e.code, e.read()[:300])
@@ -101,7 +103,7 @@ def banner_ko(title):
     if not key:
         return None
     try:
-        res = _post({'model': MODEL, 'max_tokens': 60, 'system': BANNER_SYSTEM,
+        res = _post({'model': MODEL, 'max_tokens': 200, 'thinking': {'type': 'disabled'}, 'system': BANNER_SYSTEM,
                      'messages': [{'role': 'user', 'content': title}]}, key)
     except (urllib.error.HTTPError, urllib.error.URLError) as e:
         print('banner_ko failed', e)
