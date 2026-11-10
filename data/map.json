@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T07:35:20Z",
+  "updatedAt": "2026-11-10T09:11:55Z",
   "note": "pins: 지도 핀 / globals: 전역 송출 / countdowns: 곧 열리는 시그널 (endsAt = ISO 시각, 비우면 시각 확인 중)",
   "pins": [
     {
@@ -124,7 +124,8 @@
       "title": "T3 Territory Opening",
       "endsAt": "2026-11-10T15:02:32Z",
       "note": "플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요.",
-      "key": "countdown:T3 Territory Opening:Hambantota, Sri Lanka"
+      "key": "countdown:T3 Territory Opening:Hambantota, Sri Lanka",
+      "titleKo": "T3 영토 오픈"
     },
     {
       "L": "border",
