@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T09:11:55Z",
+  "updatedAt": "2026-11-10T09:13:53Z",
   "note": "pins: 지도 핀 / globals: 전역 송출 / countdowns: 곧 열리는 시그널 (endsAt = ISO 시각, 비우면 시각 확인 중)",
   "pins": [
     {
@@ -103,8 +103,9 @@
       "stage": 0,
       "title": "MENTAR STAKER DISCOUNT PERK",
       "endsAt": "2026-11-11T03:02:35Z",
-      "note": "",
-      "key": "countdown:MENTAR STAKER DISCOUNT PERK:Genoa, Italy"
+      "note": "공식 배너 · MENTAR STAKER DISCOUNT PERK",
+      "key": "countdown:MENTAR STAKER DISCOUNT PERK:Genoa, Italy",
+      "titleKo": "멘타 스테이커 할인 혜택"
     },
     {
       "L": "real",
@@ -113,8 +114,9 @@
       "stage": 0,
       "title": "Buy Tiles with Essence",
       "endsAt": "2026-11-11T03:02:34Z",
-      "note": "",
-      "key": "countdown:Buy Tiles with Essence:Genoa, Italy"
+      "note": "공식 배너 · Buy Tiles with Essence",
+      "key": "countdown:Buy Tiles with Essence:Genoa, Italy",
+      "titleKo": "에센스로 타일 구매"
     },
     {
       "L": "real",
@@ -134,8 +136,9 @@
       "stage": 0,
       "title": "New Skin coming",
       "endsAt": "2026-11-10T11:00:57Z",
-      "note": "",
-      "key": "countdown:New Skin coming:전역"
+      "note": "공식 배너 · New Skin coming",
+      "key": "countdown:New Skin coming:전역",
+      "titleKo": "새 스킨 출시 예정"
     }
   ]
 }
