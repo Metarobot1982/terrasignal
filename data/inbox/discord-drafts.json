@@ -14,6 +14,98 @@
       "status": "rejected",
       "createdAt": "2026-11-07T23:48:42Z",
       "decidedAt": "2026-11-07T23:54:12Z"
+    },
+    {
+      "kind": "countdown",
+      "title": "MENTAR STAKER DISCOUNT PERK",
+      "countdown": {
+        "L": "border",
+        "place": "Genoa, Italy",
+        "cycle": "",
+        "stage": 0,
+        "title": "MENTAR STAKER DISCOUNT PERK",
+        "endsAt": "2026-11-11T03:02:35Z",
+        "note": ""
+      },
+      "excerpt": "장소: Genoa, Italy\n끝나는 시각(UTC): 2026-11-11T03:02:35Z",
+      "url": "",
+      "date": "2026-11-10",
+      "grade": "CLEAR",
+      "layer": "border",
+      "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
+      "sourceKey": "countdown:MENTAR STAKER DISCOUNT PERK:Genoa, Italy",
+      "draftId": "1569610327992303690",
+      "status": "pending",
+      "createdAt": "2026-11-10T07:11:06Z"
+    },
+    {
+      "kind": "countdown",
+      "title": "Buy Tiles with Essence",
+      "countdown": {
+        "L": "real",
+        "place": "Genoa, Italy",
+        "cycle": "",
+        "stage": 0,
+        "title": "Buy Tiles with Essence",
+        "endsAt": "2026-11-11T03:02:34Z",
+        "note": ""
+      },
+      "excerpt": "장소: Genoa, Italy\n끝나는 시각(UTC): 2026-11-11T03:02:34Z",
+      "url": "",
+      "date": "2026-11-10",
+      "grade": "CLEAR",
+      "layer": "real",
+      "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
+      "sourceKey": "countdown:Buy Tiles with Essence:Genoa, Italy",
+      "draftId": "1569610339857731645",
+      "status": "pending",
+      "createdAt": "2026-11-10T07:11:09Z"
+    },
+    {
+      "kind": "countdown",
+      "title": "T3 Territory Opening",
+      "countdown": {
+        "L": "real",
+        "place": "Hambantota, Sri Lanka",
+        "cycle": "vote",
+        "stage": 3,
+        "title": "T3 Territory Opening",
+        "endsAt": "2026-11-10T15:02:32Z",
+        "note": "플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요."
+      },
+      "excerpt": "장소: Hambantota, Sri Lanka\n끝나는 시각(UTC): 2026-11-10T15:02:32Z\n단계: 3",
+      "url": "",
+      "date": "2026-11-10",
+      "grade": "CLEAR",
+      "layer": "real",
+      "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
+      "sourceKey": "countdown:T3 Territory Opening:Hambantota, Sri Lanka",
+      "draftId": "1569610352172470334",
+      "status": "pending",
+      "createdAt": "2026-11-10T07:11:12Z"
+    },
+    {
+      "kind": "countdown",
+      "title": "New Skin coming",
+      "countdown": {
+        "L": "border",
+        "place": "전역",
+        "cycle": "ops",
+        "stage": 0,
+        "title": "New Skin coming",
+        "endsAt": "2026-11-10T11:00:57Z",
+        "note": ""
+      },
+      "excerpt": "장소: 전역\n끝나는 시각(UTC): 2026-11-10T11:00:57Z",
+      "url": "",
+      "date": "2026-11-10",
+      "grade": "CLEAR",
+      "layer": "border",
+      "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
+      "sourceKey": "countdown:New Skin coming:전역",
+      "draftId": "1569610364281159702",
+      "status": "pending",
+      "createdAt": "2026-11-10T07:11:15Z"
     }
   ]
 }
