@@ -66,7 +66,7 @@ def decode(title, body, source_label):
         return None
     src = '출처: %s\n제목: %s\n\n본문:\n%s' % (source_label, title, (body or '(본문 없음)')[:24000])
     try:
-        res = _post({'model': MODEL, 'max_tokens': 1500, 'thinking': {'type': 'disabled'}, 'system': SYSTEM,
+        res = _post({'model': MODEL, 'max_tokens': 1500, 'thinking': {'type': 'between_tools'}, 'system': SYSTEM,
                      'messages': [{'role': 'user', 'content': src}]}, key)
     except urllib.error.HTTPError as e:
         print('AI decode failed', e.code, e.read()[:300])
@@ -103,7 +103,7 @@ def banner_ko(title):
     if not key:
         return None
     try:
-        res = _post({'model': MODEL, 'max_tokens': 200, 'thinking': {'type': 'disabled'}, 'system': BANNER_SYSTEM,
+        res = _post({'model': MODEL, 'max_tokens': 200, 'thinking': {'type': 'between_tools'}, 'system': BANNER_SYSTEM,
                      'messages': [{'role': 'user', 'content': title}]}, key)
     except (urllib.error.HTTPError, urllib.error.URLError) as e:
         print('banner_ko failed', e)
