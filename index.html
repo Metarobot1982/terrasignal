@@ -127,6 +127,7 @@ html{scroll-behavior:smooth}
   .ts .hdrnav::-webkit-scrollbar{display:none}
 }
 </style>
+<script>window.TS_DATA = {"signals": "data/signals.json"};</script>
 <script src="js/dc-lite.js"></script>
 </head>
 <body>
@@ -216,14 +217,9 @@ html{scroll-behavior:smooth}
 <div style="flex: none; display: flex; align-items: center; gap: 8px; padding: 12px 18px; background: #ffd166; color: #0b0c12; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 13px; letter-spacing: 2px">RX LIVE</div>
 <div style="flex: 1; overflow: hidden; display: flex; align-items: center">
 <div class="crawl" style="display: flex; gap: 48px; white-space: nowrap; width: max-content; padding-left: 24px">
-<span><b style="color: #ffd166; font-family: 'Space Mono', monospace">NOISE</b> RT10 인게임 변화 감지 · 공식 발표 전</span>
-<span><b style="color: #35b6ff; font-family: 'Space Mono', monospace">CLEAR</b> Earth 2 Official 공지 채널 3곳 수신 연결</span>
-<span><b style="color: #3ddc84; font-family: 'Space Mono', monospace">ON</b> E2V1 Pre-Alpha · Raiding 수신 중</span>
-<span><b style="color: #8b90aa; font-family: 'Space Mono', monospace">SCAN</b> E2 Hordes · EcoSim · Conquer · Avatar · Weaver 탐색 중</span>
-<span><b style="color: #ffd166; font-family: 'Space Mono', monospace">NOISE</b> RT10 인게임 변화 감지 · 공식 발표 전</span>
-<span><b style="color: #35b6ff; font-family: 'Space Mono', monospace">CLEAR</b> Earth 2 Official 공지 채널 3곳 수신 연결</span>
-<span><b style="color: #3ddc84; font-family: 'Space Mono', monospace">ON</b> E2V1 Pre-Alpha · Raiding 수신 중</span>
-<span><b style="color: #8b90aa; font-family: 'Space Mono', monospace">SCAN</b> E2 Hordes · EcoSim · Conquer · Avatar · Weaver 탐색 중</span>
+<sc-for list="{{ticker}}" as="tk" hint-placeholder-count="10">
+<span><b style="color: {{tk.c}}; font-family: 'Space Mono', monospace">{{tk.tag}}</b> {{tk.text}}</span>
+</sc-for>
 </div>
 </div>
 </div>
@@ -240,43 +236,21 @@ html{scroll-behavior:smooth}
 <svg class="sigpulse" width="54" height="60" viewBox="0 0 54 60" aria-hidden="true"><rect x="21" y="46" width="12" height="9" fill="none" stroke="#2fe6c8" stroke-width="3"></rect><rect x="14" y="30" width="26" height="11" fill="none" stroke="#ff2fb0" stroke-width="3"></rect><rect x="5" y="9" width="44" height="15" fill="none" stroke="#ffe14d" stroke-width="3"></rect></svg>
 <div><div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #2fe6c8; margin-bottom: 8px">RX · RECEIVED SIGNALS</div><h2 class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 52px; line-height: 1.1; color: #ffffff">경계 너머에서 도착한 신호</h2></div><div class="pop" style="flex: none; align-self: flex-start; transform: rotate(-10deg); margin-left: 6px"><svg width="130" height="130" viewBox="0 0 120 120" aria-hidden="true"><polygon points="118.0,60.0 102.9,69.8 112.3,85.2 94.4,87.4 96.2,105.3 79.1,99.6 72.9,116.5 60.0,104.0 47.1,116.5 40.9,99.6 23.8,105.3 25.6,87.4 7.7,85.2 17.1,69.8 2.0,60.0 17.1,50.2 7.7,34.8 25.6,32.6 23.8,14.7 40.9,20.4 47.1,3.5 60.0,16.0 72.9,3.5 79.1,20.4 96.2,14.7 94.4,32.6 112.3,34.8 102.9,50.2" fill="#0a0716" transform="translate(4 4)"></polygon><polygon points="118.0,60.0 102.9,69.8 112.3,85.2 94.4,87.4 96.2,105.3 79.1,99.6 72.9,116.5 60.0,104.0 47.1,116.5 40.9,99.6 23.8,105.3 25.6,87.4 7.7,85.2 17.1,69.8 2.0,60.0 17.1,50.2 7.7,34.8 25.6,32.6 23.8,14.7 40.9,20.4 47.1,3.5 60.0,16.0 72.9,3.5 79.1,20.4 96.2,14.7 94.4,32.6 112.3,34.8 102.9,50.2" fill="#ffd23f" stroke="#0a0716" stroke-width="3"></polygon><text x="60" y="57.0" text-anchor="middle" font-family="Bungee, sans-serif" font-size="15" fill="#0a0716">NEW</text><text x="60" y="73.5" text-anchor="middle" font-family="Bungee, sans-serif" font-size="15" fill="#0a0716">SIGNAL!</text></svg></div>
 </div>
-<span style="font-family: 'Gaegu', sans-serif; font-weight: 700; font-size: 20px; color: #ffe14d; transform: rotate(2deg)">아래 소식은 예시예요</span>
+<span style="font-family: 'Gaegu', sans-serif; font-weight: 700; font-size: 20px; color: #ffe14d; transform: rotate(2deg)">운영자가 확인한 신호만 올라와요</span>
 </div>
 <div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px">
-
-<article class="win" style="position: relative; background: rgba(28,12,52,.88); border: 2px solid #ff2fb0; box-shadow: 0 0 0 4px #0a0716, 0 0 34px rgba(255,47,176,.45); overflow: hidden; display: flex; flex-direction: column">
-<div class="static" style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(255,47,176,.06) 0 2px, transparent 2px 7px); pointer-events: none"></div>
-<div style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: #ff2fb0; color: #0a0716; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px"><span>RX · DAY 478 · 오늘</span><span>NOISE</span></div>
-<div style="position: relative; padding: 22px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #a99bff">⬢ 디지털 지구</span>
-<h3 class="glitchtxt" style="margin: 0; font-size: 22px; font-weight: 900; line-height: 1.4; color: #ffffff">리얼리티 스레드 10 인게임 변화 감지</h3>
-<p style="margin: 0; font-size: 14px; color: #c9b8ea">Reality Thread 10 changes detected in-game</p>
-<p style="margin: 6px 0 0; padding-top: 12px; border-top: 1px dashed rgba(255,47,176,.5); font-family: 'Space Mono', monospace; font-size: 12px; color: #c9b8ea">SOURCE · 현장 감지, 공식 발표 전</p>
-</div>
-</article>
-
-<article class="win" style="position: relative; background: rgba(12,30,52,.88); border: 2px solid #2fe6c8; box-shadow: 0 0 0 4px #0a0716, 0 0 34px rgba(47,230,200,.45); overflow: hidden; display: flex; flex-direction: column">
+<sc-for list="{{rx}}" as="r" hint-placeholder-count="3">
+<a href="{{r.href}}" class="win rxcard" style="position: relative; background: {{r.bg}}; border: 2px {{r.bstyle}} {{r.color}}; box-shadow: 0 0 0 4px #0a0716, 0 0 34px {{r.glow}}; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit">
 <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.04) 0 1px, transparent 1px 4px); pointer-events: none"></div>
-<div style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: #2fe6c8; color: #0a0716; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px"><span>RX · DAY 477 · 어제</span><span>CLEAR</span></div>
-<div style="position: relative; padding: 22px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #2fe6c8">■ 현실 지구</span>
-<h3 style="margin: 0; font-size: 22px; font-weight: 900; line-height: 1.4; color: #ffffff">Earth 2 Official 공지 제목</h3>
-<p style="margin: 0; font-size: 14px; color: #b8dfe6">Official announcement title</p>
-<p style="margin: 6px 0 0; padding-top: 12px; border-top: 1px solid rgba(47,230,200,.45); font-family: 'Space Mono', monospace; font-size: 12px; color: #b8dfe6">SOURCE · Discord #announcements</p>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: {{r.color}}; color: #0a0716; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px"><span>{{r.rx}}</span><span>{{r.grade}}</span></div>
+<div style="position: relative; padding: 22px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: {{r.layerColor}}">{{r.layerName}}</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 900; line-height: 1.4; color: #ffffff">{{r.titleKo}}</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #c9c3e6">{{r.line}}</p>
+<p style="margin: auto 0 0; padding-top: 12px; border-top: 1px {{r.bstyle}} {{r.lineColor}}; display: flex; justify-content: space-between; gap: 10px; font-family: 'Space Mono', monospace; font-size: 12px; color: #c9c3e6"><span>SOURCE · {{r.source}}</span><span style="color: #ffd23f; white-space: nowrap">수신 기록 →</span></p>
 </div>
-</article>
-
-<article class="win" style="position: relative; background: rgba(40,34,14,.88); border: 2px dashed #ffe14d; box-shadow: 0 0 0 4px #0a0716, 0 0 30px rgba(255,225,77,.35); overflow: hidden; display: flex; flex-direction: column">
-<div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(255,225,77,.16) 1.2px, transparent 1.6px); background-size: 10px 10px; pointer-events: none"></div>
-<div class="flick" style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: #ffe14d; color: #0a0716; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px"><span>RX · DAY 476 · 2일 전</span><span>WEAK</span></div>
-<div style="position: relative; padding: 22px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #a99bff">⬢ 디지털 지구</span>
-<h3 style="margin: 0; font-size: 22px; font-weight: 900; line-height: 1.4; color: #ffffff">현장 통신원 확인 소식 제목</h3>
-<p style="margin: 0; font-size: 14px; color: #e6dcb0">Field report title</p>
-<p style="margin: 6px 0 0; padding-top: 12px; border-top: 1px dashed rgba(255,225,77,.5); font-family: 'Space Mono', monospace; font-size: 12px; color: #e6dcb0">SOURCE · 나두지 현장 확인</p>
-</div>
-</article>
-
+</a>
+</sc-for>
 </div>
 <div style="position: relative; display: flex; flex-wrap: wrap; gap: 18px; margin-top: 30px; font-family: 'Space Mono', monospace; font-size: 12px; color: #c9b8ea">
 <span style="display: flex; align-items: center; gap: 8px"><span style="width: 18px; height: 12px; border: 2px solid #2fe6c8; box-shadow: 0 0 8px #2fe6c8"></span>CLEAR · 공식 발표</span>
@@ -556,6 +530,33 @@ class Component extends DCLogic {
     var start = Date.UTC(2025, 6, 14);
     var today = Date.UTC(kst.getFullYear(), kst.getMonth(), kst.getDate());
     var day = Math.floor((today - start) / 86400000) + 1;
+    var GC = { CLEAR: '#2fe6c8', WEAK: '#ffe14d', NOISE: '#ff2fb0' };
+    var GBG = { CLEAR: 'rgba(12,30,52,.88)', WEAK: 'rgba(40,34,14,.88)', NOISE: 'rgba(28,12,52,.88)' };
+    var GGL = { CLEAR: 'rgba(47,230,200,.45)', WEAK: 'rgba(255,225,77,.35)', NOISE: 'rgba(255,47,176,.45)' };
+    var GLN = { CLEAR: 'rgba(47,230,200,.45)', WEAK: 'rgba(255,225,77,.5)', NOISE: 'rgba(255,47,176,.5)' };
+    var LN = { real: '■ 현실 지구', border: '◆ 경계', digital: '⬢ 디지털 지구' };
+    var LCOL = { real: '#2fe6c8', border: '#ff8fd6', digital: '#a99bff' };
+    var SEEDRX = [
+      { id: 'rt9-p1', layer: 'digital', grade: 'NOISE', date: '2026-08-31', titleKo: '리얼리티 스레드 9 · Part 1', source: 'Shane Isaac X (공식 기사 전)', lines: [{ ko: '창업자 Shane Isaac의 X 게시물로만 확인된 소식이에요.' }] },
+      { id: 'rt8-0582', layer: 'digital', grade: 'CLEAR', date: '2026-05-31', titleKo: '리얼리티 스레드 8 업데이트 0.5.8.2', source: 'earth2.io 공식 기사', lines: [{ ko: '리얼리티 스레드 8 공개 하루 만에, 초기 출시 때 플레이어들이 찾은 문제를 고친 업데이트가 나왔어요.' }] },
+      { id: 'rt8', layer: 'digital', grade: 'CLEAR', date: '2026-05-26', titleKo: '리얼리티 스레드 8 · Seeds of Change', source: 'earth2.io 공식 기사', lines: [{ ko: '챕터 5가 시작되며 E2V1에 첫 농업이 들어왔어요.' }] }
+    ];
+    var sigs = (this.data && this.data.signals && this.data.signals.signals) || SEEDRX;
+    sigs = sigs.slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; }).slice(0, 3);
+    function ago(d) {
+      var p = d.split('-'); var n = Math.floor((today - Date.UTC(+p[0], +p[1] - 1, +(p[2] || 15))) / 86400000);
+      return n <= 0 ? '오늘' : n === 1 ? '어제' : n < 30 ? n + '일 전' : p[0] + '.' + p[1] + '.' + (p[2] || '');
+    }
+    var rx = sigs.map(function (x) {
+      var p = x.date.split('-'); var dn = Math.floor((Date.UTC(+p[0], +p[1] - 1, +(p[2] || 15)) - start) / 86400000) + 1;
+      return { href: 'signal.html?id=' + encodeURIComponent(x.id), rx: 'RX · ' + (dn >= 1 ? 'DAY ' + dn : 'E2V1 이전') + ' · ' + ago(x.date), grade: x.grade,
+        color: GC[x.grade], bg: GBG[x.grade], glow: GGL[x.grade], lineColor: GLN[x.grade], bstyle: x.grade === 'WEAK' ? 'dashed' : 'solid',
+        layerName: LN[x.layer], layerColor: LCOL[x.layer], titleKo: x.titleKo, line: x.lines && x.lines[0] ? x.lines[0].ko : '', source: x.source };
+    });
+    var TKC = { CLEAR: '#35b6ff', WEAK: '#ffd166', NOISE: '#ff5fc4' };
+    var tk1 = rx.map(function (r, n) { return { tag: sigs[n].grade, c: TKC[sigs[n].grade], text: sigs[n].titleKo + (sigs[n].grade === 'NOISE' ? ' · 공식 발표 전' : '') }; })
+      .concat([{ tag: 'ON', c: '#3ddc84', text: 'E2V1 Pre-Alpha · Raiding 수신 중' }, { tag: 'SCAN', c: '#8b90aa', text: 'E2 Hordes · EcoSim · Conquer · Avatar · Weaver 탐색 중' }]);
+    var ticker = tk1.concat(tk1);
     var motion = this.props.motion ?? true;
     var world = this.state.world || this.props.startWorld || 'digital';
     var x = world === 'real' ? 112 : (world === 'digital' ? -12 : 50);
@@ -569,7 +570,7 @@ class Component extends DCLogic {
       paused: !!this.state.paused,
       playLabel: this.state.paused ? '첫 화면 영상 재생' : '첫 화면 영상 멈춤',
       togglePlay: function () { self.setState({ paused: !self.state.paused }); },
-      buildDay: String(day),
+      buildDay: String(day), rx: rx, ticker: ticker,
       clip: 'polygon(' + (x + 6) + '% 0, 100% 0, 100% 100%, ' + (x - 6) + '% 100%)',
       riftClip: 'polygon(' + (x + 6) + '% 0, ' + (x + 6.4) + '% 0, ' + (x - 5.6) + '% 100%, ' + (x - 6) + '% 100%)',
       riftX: nx + '%',

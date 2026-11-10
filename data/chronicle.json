@@ -70,7 +70,8 @@
       "title": "리얼리티 스레드 4",
       "desc": "제작, 첫 전투(창·방패), 엔진 최적화가 들어왔어요.",
       "source": "earth2.io 공식 기사 · Reality Thread 4 – Crafting, Combat & Core E2V1 Optimisations",
-      "url": "https://earth2.io/news/reality-thread-4"
+      "url": "https://earth2.io/news/reality-thread-4",
+      "signal": "rt4"
     },
     {
       "layer": "D",
@@ -79,8 +80,9 @@
       "short": "배지 접근",
       "title": "배지 보유자 E2V1 접근 시작",
       "desc": "테스터가 아닌 배지 보유자에게 처음으로 E2V1 문이 열렸어요.",
-      "source": "공식 기사",
-      "url": ""
+      "source": "earth2.io 공식 기사 · Chapter 2: Reality Thread 5 – Teleportation Comes Online",
+      "url": "https://earth2.io/news/reality-thread-5",
+      "signal": "rt5"
     },
     {
       "layer": "D",
@@ -88,9 +90,10 @@
       "grade": "CLEAR",
       "short": "RT5",
       "title": "리얼리티 스레드 5 · 챕터 2",
-      "desc": "텔레포테이션과 룬이 들어왔어요.",
+      "desc": "텔레포테이션이 들어왔어요.",
       "source": "earth2.io 공식 기사 · Chapter 2: Reality Thread 5 – Teleportation Comes Online",
-      "url": "https://earth2.io/news/reality-thread-5"
+      "url": "https://earth2.io/news/reality-thread-5",
+      "signal": "rt5"
     },
     {
       "layer": "D",
@@ -100,7 +103,8 @@
       "title": "리얼리티 스레드 6 · 챕터 3",
       "desc": "요리, 의류, 이모트가 들어왔어요.",
       "source": "earth2.io 공식 기사 · Chapter 3: Reality Thread 6 – What’s Cooking in E2V1?",
-      "url": "https://earth2.io/news/reality-thread-6"
+      "url": "https://earth2.io/news/reality-thread-6",
+      "signal": "rt6"
     },
     {
       "layer": "D",
@@ -110,7 +114,8 @@
       "title": "리얼리티 스레드 7 · 챕터 4",
       "desc": "글로벌 퀘스트 시스템이 열렸어요.",
       "source": "earth2.io 공식 기사 · Chapter 4: Reality Thread 7 -Quests: Who’s Got the Goods?",
-      "url": "https://earth2.io/news/reality-thread-7"
+      "url": "https://earth2.io/news/reality-thread-7",
+      "signal": "rt7"
     },
     {
       "layer": "D",
@@ -120,7 +125,8 @@
       "title": "리얼리티 스레드 8 · Seeds of Change",
       "desc": "E2V1에 첫 농업이 들어왔어요.",
       "source": "earth2.io 공식 기사 · Chapter 5 -Reality Thread 8 – Seeds of Change",
-      "url": "https://earth2.io/news/reality-thread-8"
+      "url": "https://earth2.io/news/reality-thread-8",
+      "signal": "rt8"
     },
     {
       "layer": "D",
@@ -130,7 +136,8 @@
       "title": "리얼리티 스레드 9 · Part 1",
       "desc": "창업자 X 게시물로만 확인됐어요. 공식 기사 수신 전이에요.",
       "source": "Shane Isaac X",
-      "url": ""
+      "url": "",
+      "signal": "rt9-p1"
     },
     {
       "layer": "B",
@@ -170,7 +177,8 @@
       "title": "$ESS 업데이트 리포트 Q4-25",
       "desc": "2025년 4분기 에센스 통계와 반감기 내용을 담았어요.",
       "source": "earth2.io 공식 기사 · $ESS Update Report Q4-25",
-      "url": "https://earth2.io/news/ess-2025-q4"
+      "url": "https://earth2.io/news/ess-2025-q4",
+      "signal": "ess-q4-25"
     },
     {
       "layer": "R",

@@ -130,13 +130,14 @@ html{scroll-behavior:smooth}
   .ts .hdrnav::-webkit-scrollbar{display:none}
 }
 </style>
+<script>window.TS_DATA = {"signals": "data/signals.json"};</script>
 <script src="js/dc-lite.js"></script>
 </head>
 <body>
 <div id="dc-root"></div>
 <template id="dc-tpl">
 
-<div class="ts {{motionClass}} {{coatClass}}" style="width: 100%; min-height: 3950px; background: linear-gradient(180deg, #0b0c14 0%, #150d30 30%, #1a0f3a 60%, #120b28 100%); color: #eef0f7; font-family: 'Noto Sans KR', sans-serif; overflow: hidden; position: relative">
+<div class="ts {{motionClass}} {{coatClass}}" style="width: 100%; min-height: 100vh; background: linear-gradient(180deg, #0b0c14 0%, #150d30 30%, #1a0f3a 60%, #120b28 100%); color: #eef0f7; font-family: 'Noto Sans KR', sans-serif; overflow: hidden; position: relative">
 <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden">
 <svg class="sqpulse" viewBox="0 0 400 400" style="position: absolute; right: -120px; top: 900px; width: 520px; height: 520px; opacity: .35"><rect x="40" y="40" width="320" height="320" fill="none" stroke="#2fe6c8" stroke-width="2"></rect><rect x="90" y="90" width="220" height="220" fill="none" stroke="#ff2fb0" stroke-width="2"></rect><rect x="140" y="140" width="120" height="120" fill="none" stroke="#ffe14d" stroke-width="2"></rect></svg>
 <svg class="sqpulse" viewBox="0 0 400 400" style="position: absolute; left: -160px; top: 2500px; width: 480px; height: 480px; opacity: .28"><rect x="40" y="40" width="320" height="320" fill="none" stroke="#ff2fb0" stroke-width="2"></rect><rect x="100" y="100" width="200" height="200" fill="none" stroke="#2fe6c8" stroke-width="2"></rect></svg>
@@ -163,41 +164,44 @@ html{scroll-behavior:smooth}
 </header>
 
 <nav aria-label="현재 위치" style="max-width: 1360px; margin: 0 auto; padding: 26px 40px 0; font-family: 'Space Mono', monospace; font-size: 13px; color: #a99bd0; display: flex; gap: 10px; flex-wrap: wrap">
-<a href="index.html" style="color: #a99bd0; text-decoration: none">홈</a><span>›</span><a href="index.html#rx" style="color: #a99bd0; text-decoration: none">수신 기록</a><span>›</span><span style="color: #ffd23f">RX · DAY 110</span>
+<a href="index.html" style="color: #a99bd0; text-decoration: none">홈</a><span>›</span><a href="index.html#rx" style="color: #a99bd0; text-decoration: none">수신 기록</a><span>›</span><span style="color: #ffd23f">{{s.rx}}</span>
 </nav>
 
 <section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 28px 40px 0">
 <div class="halftone-tr"></div>
-<article class="win" style="position: relative; background: rgba(12,30,52,.9); border: 3px solid #2fe6c8; box-shadow: 0 0 0 5px #0a0716, 0 0 50px rgba(47,230,200,.4); overflow: hidden">
+<article class="win" style="position: relative; background: {{s.bg}}; border: 3px {{s.bstyle}} {{s.color}}; box-shadow: 0 0 0 5px #0a0716, 0 0 50px {{s.glow}}; overflow: hidden">
 <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.04) 0 1px, transparent 1px 4px); pointer-events: none"></div>
-<div style="position: relative; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 12px 22px; background: #2fe6c8; color: #0a0716; font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; letter-spacing: 2px">
-<span>RX · DAY 110 · 2025.10.31</span><span>● CLEAR · 공식 발표</span>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 12px 22px; background: {{s.color}}; color: #0a0716; font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; letter-spacing: 2px">
+<span>{{s.rx}} · {{s.dateDot}}</span><span>● {{s.grade}} · {{s.gradeName}}</span>
 </div>
 <div style="position: relative; display: grid; grid-template-columns: 1fr 260px; gap: 40px; padding: 40px 44px 44px" class="grid2">
 <div style="display: flex; flex-direction: column; gap: 16px">
-<span style="align-self: flex-start; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #0a0716; background: #ffd23f; padding: 5px 10px; border: 2px solid #0a0716">E2V1 · REALITY THREAD 4</span>
-<h1 class="htitle" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 54px; line-height: 1.15; color: #ffffff; text-shadow: 3px 3px 0 #000">리얼리티 스레드 4<br>제작·전투·핵심 최적화</h1>
-<p style="margin: 0; font-size: 18px; color: #b8dfe6">Reality Thread 4 – Crafting, Combat &amp; Core E2V1 Optimisations</p>
-<div style="display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 10px; padding-top: 18px; border-top: 1px solid rgba(47,230,200,.45); font-family: 'Space Mono', monospace; font-size: 13px; color: #b8dfe6">
-<span>SOURCE · earth2.io 공식 기사</span>
-<span>수신 · 2025.10.31</span>
-<span>대상 · E2V1 프리 알파 테스터</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="align-self: flex-start; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #0a0716; background: #ffd23f; padding: 5px 10px; border: 2px solid #0a0716">{{s.kicker}}</span>
+<span style="align-self: flex-start; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: {{s.layerColor}}; padding: 5px 10px; border: 2px solid {{s.layerColor}}">{{s.layerName}}</span>
+</div>
+<h1 class="htitle" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 54px; line-height: 1.15; color: #ffffff; text-shadow: 3px 3px 0 #000">{{s.titleKo}}</h1>
+<p style="margin: 0; font-size: 18px; color: #b8dfe6">{{s.titleEn}}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 10px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.25); font-family: 'Space Mono', monospace; font-size: 13px; color: #b8dfe6">
+<span>SOURCE · {{s.source}}</span>
+<span>수신 · {{s.dateDot}}</span>
+<sc-if value="{{s.hasAudience}}" hint-placeholder-val="{{ true }}"><span>대상 · {{s.audience}}</span></sc-if>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px">
-<a href="#" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 18px; background: #2fe6c8; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-weight: 900">공식 원문 보기 ↗ <span style="font-family: 'Space Mono', monospace; font-size: 11px">[링크 연결 예정]</span></a>
+<sc-if value="{{s.hasUrl}}" hint-placeholder-val="{{ true }}">
+<a href="{{s.url}}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 18px; background: {{s.color}}; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-weight: 900">공식 원문 보기 ↗</a>
+</sc-if>
 <a href="#shorts" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 18px; background: transparent; color: #ffffff; text-decoration: none; border: 3px solid #ffffff; font-weight: 700">숏츠로 보기</a>
 </div>
 </div>
 <div style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px">
-<div aria-label="신호 세기 5칸 중 5칸" style="display: flex; align-items: flex-end; gap: 8px; height: 120px">
-<span class="eqb" style="width: 26px; height: 30%; background: #2fe6c8; border: 2px solid #0a0716"></span>
-<span class="eqb" style="width: 26px; height: 46%; background: #2fe6c8; border: 2px solid #0a0716; animation-delay: .15s"></span>
-<span class="eqb" style="width: 26px; height: 62%; background: #2fe6c8; border: 2px solid #0a0716; animation-delay: .3s"></span>
-<span class="eqb" style="width: 26px; height: 80%; background: #2fe6c8; border: 2px solid #0a0716; animation-delay: .45s"></span>
-<span class="eqb" style="width: 26px; height: 100%; background: #2fe6c8; border: 2px solid #0a0716; animation-delay: .6s"></span>
+<div aria-label="{{s.meterAria}}" style="display: flex; align-items: flex-end; gap: 8px; height: 120px">
+<sc-for list="{{s.bars}}" as="bar" hint-placeholder-count="5">
+<span class="eqb" style="width: 26px; height: {{bar.h}}; background: {{bar.c}}; border: 2px solid #0a0716; animation-delay: {{bar.d}}"></span>
+</sc-for>
 </div>
-<span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 3px; color: #2fe6c8">SIGNAL 5/5</span>
-<div class="stamp" style="transform: rotate(-14deg); border: 4px solid #ff2fb0; color: #ff2fb0; padding: 8px 14px; font-family: 'Bungee', sans-serif; font-size: 18px; line-height: 1.1; text-align: center; background: rgba(10,7,22,.6)">APPROVED<br><span style="font-family: 'Noto Sans KR', sans-serif; font-weight: 900; font-size: 13px">운영자 확인 완료</span></div>
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 3px; color: {{s.color}}">SIGNAL {{s.strength}}/5</span>
+<div class="stamp" style="transform: rotate(-14deg); border: 4px solid {{s.stampColor}}; color: {{s.stampColor}}; padding: 8px 14px; font-family: 'Bungee', sans-serif; font-size: 18px; line-height: 1.1; text-align: center; background: rgba(10,7,22,.6)">{{s.stamp}}<br><span style="font-family: 'Noto Sans KR', sans-serif; font-weight: 900; font-size: 13px">{{s.stampSub}}</span></div>
 </div>
 </div>
 </article>
@@ -205,81 +209,84 @@ html{scroll-behavior:smooth}
 
 <section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 90px 40px 0">
 <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 28px">
-<div><div class="kicker">DECODED · 3 LINES</div><h2 class="h2c h2s">3줄 해독</h2></div>
+<div><div class="kicker">DECODED · {{s.lineCount}} LINES</div><h2 class="h2c h2s">{{s.lineTitle}}</h2></div>
 <span style="font-family: 'Gaegu', sans-serif; font-weight: 700; font-size: 20px; color: #ffe14d; transform: rotate(2deg)">바쁘면 이것만!</span>
 </div>
 <ol style="list-style: none; margin: 0; padding: 0; display: grid; gap: 18px">
-<li class="dpanel panel" style="display: grid; grid-template-columns: 64px 1fr; gap: 20px; align-items: center; padding: 22px 26px">
-<span style="font-family: 'Bungee', sans-serif; font-size: 40px; color: #ffd23f; text-shadow: 3px 3px 0 #000">01</span>
-<div><p style="margin: 0; font-size: 21px; font-weight: 900; color: #ffffff">E2V1에 제작(크래프팅)이 열렸어요. 아이템을 만들고, 만든 장비를 몸에 장착할 수 있어요.</p><p style="margin: 6px 0 0; font-size: 15px; color: #b8dfe6">Crafting is live in E2V1 — make items, then equip the gear you made.</p></div>
+<sc-for list="{{s.lines}}" as="ln" hint-placeholder-count="3">
+<li class="dpanel panel" style="display: grid; grid-template-columns: 64px 1fr; gap: 20px; align-items: center; padding: 22px 26px; border-color: {{ln.bc}}">
+<span style="font-family: 'Bungee', sans-serif; font-size: 40px; color: #ffd23f; text-shadow: 3px 3px 0 #000">{{ln.no}}</span>
+<div><p style="margin: 0; font-size: 21px; font-weight: 900; color: #ffffff">{{ln.ko}}</p><sc-if value="{{ln.hasEn}}" hint-placeholder-val="{{ true }}"><p style="margin: 6px 0 0; font-size: 15px; color: #b8dfe6">{{ln.en}}</p></sc-if></div>
 </li>
-<li class="dpanel panel" style="display: grid; grid-template-columns: 64px 1fr; gap: 20px; align-items: center; padding: 22px 26px; border-color: #ff2fb0">
-<span style="font-family: 'Bungee', sans-serif; font-size: 40px; color: #ffd23f; text-shadow: 3px 3px 0 #000">02</span>
-<div><p style="margin: 0; font-size: 21px; font-weight: 900; color: #ffffff">첫 무기 창과 방패가 나오면서 디지털 지구의 전투가 시작됐어요.</p><p style="margin: 6px 0 0; font-size: 15px; color: #b8dfe6">The spear and shield bring the first combat to Earth 2.</p></div>
-</li>
-<li class="dpanel panel" style="display: grid; grid-template-columns: 64px 1fr; gap: 20px; align-items: center; padding: 22px 26px; border-color: #ffe14d">
-<span style="font-family: 'Bungee', sans-serif; font-size: 40px; color: #ffd23f; text-shadow: 3px 3px 0 #000">03</span>
-<div><p style="margin: 0; font-size: 21px; font-weight: 900; color: #ffffff">엔진 최적화로 메모리 사용량과 런처 용량이 크게 줄었어요.</p><p style="margin: 6px 0 0; font-size: 15px; color: #b8dfe6">Core optimisation cuts memory use and launcher size.</p></div>
-</li>
+</sc-for>
 </ol>
 </section>
 
+<sc-if value="{{s.hasChanges}}" hint-placeholder-val="{{ true }}">
 <section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 100px 40px 0">
 <div class="halftone-bl"></div>
 <div style="position: relative; margin-bottom: 28px"><div class="kicker">CHANGE LOG</div><h2 class="h2c h2s">무엇이 바뀌었나</h2></div>
 <div class="grid2" style="position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px">
-<div class="dpanel panel chg" style="padding: 22px 24px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #2fe6c8">EQUIP · 백팩</span><b style="font-size: 20px; color: #fff">인벤토리 100칸 → 500칸</b><span style="font-size: 14px; line-height: 1.6; color: #c9c3e6">E2V1의 첫 장착 아이템. 만들어서 장착하면 들고 다닐 수 있는 칸이 늘어나요.</span></div>
-<div class="dpanel panel chg" style="padding: 22px 24px; display: flex; flex-direction: column; gap: 8px; border-color: #ff2fb0"><span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #ff2fb0">SAVE · 캠프파이어</span><b style="font-size: 20px; color: #fff">캐릭터 저장 지점</b><span style="font-size: 14px; line-height: 1.6; color: #c9c3e6">주인 없는 땅 24시간, 내 땅(티어 1·2) 72시간. 다른 사람 땅에선 텔레포트 수수료만큼 내고 저장해요.</span></div>
-<div class="dpanel panel chg" style="padding: 22px 24px; display: flex; flex-direction: column; gap: 8px; border-color: #ffe14d"><span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #ffe14d">COMBAT · 창 · 방패</span><b style="font-size: 20px; color: #fff">첫 전투 장비</b><span style="font-size: 14px; line-height: 1.6; color: #c9c3e6">창은 LMB 일반 공격, Shift+RMB 달리기 공격. 방패는 막는 방향에 맞은 공격만 막아요.</span></div>
-<div class="dpanel panel chg" style="padding: 22px 24px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #2fe6c8">MOVE · 글라이더</span><b style="font-size: 20px; color: #fff">기본 능력 → 제작 아이템</b><span style="font-size: 14px; line-height: 1.6; color: #c9c3e6">예전엔 F키로 바로 썼지만, 이제 만들어서 액션 바에 올려 써요.</span></div>
-<div class="dpanel panel chg" style="padding: 22px 24px; display: flex; flex-direction: column; gap: 8px; border-color: #ff2fb0"><span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #ff2fb0">LIGHT · 횃불</span><b style="font-size: 20px; color: #fff">밤 탐험용 광원</b><span style="font-size: 14px; line-height: 1.6; color: #c9c3e6">가지와 수지 성분 같은 자연 재료로 만들어요. 지금은 사용 시간 제한이 없어요.</span></div>
-<div class="dpanel panel chg" style="padding: 22px 24px; display: flex; flex-direction: column; gap: 8px; border-color: #ffe14d"><span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #ffe14d">LAND · 타일</span><b style="font-size: 20px; color: #fff">타일 검색 · 걸으면서 땅 구매</b><span style="font-size: 14px; line-height: 1.6; color: #c9c3e6">타일을 뒤져 돌·부싯돌 같은 재료를 찾고, 캐릭터 모드에서 서 있는 타일을 바로 고를 수 있어요.</span></div>
+<sc-for list="{{s.changes}}" as="cg" hint-placeholder-count="6">
+<div class="dpanel panel chg" style="padding: 22px 24px; display: flex; flex-direction: column; gap: 8px; border-color: {{cg.c}}"><span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: {{cg.c}}">{{cg.tag}}</span><b style="font-size: 20px; color: #fff">{{cg.title}}</b><span style="font-size: 14px; line-height: 1.6; color: #c9c3e6">{{cg.desc}}</span></div>
+</sc-for>
 </div>
 </section>
+</sc-if>
 
+<sc-if value="{{s.hasMeter}}" hint-placeholder-val="{{ true }}">
 <section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 100px 40px 0">
-<div style="margin-bottom: 28px"><div class="kicker">SIGNAL METER</div><h2 class="h2c h2s">숫자로 보는 최적화</h2></div>
+<div style="margin-bottom: 28px"><div class="kicker">SIGNAL METER</div><h2 class="h2c h2s">{{s.meterTitle}}</h2></div>
 <div class="dpanel panel" style="padding: 34px 38px; display: grid; gap: 28px">
 <div style="display: grid; grid-template-columns: 150px 1fr; gap: 10px 22px; align-items: center">
-<b style="color: #fff">GPU 메모리</b>
-<div style="display: grid; gap: 8px"><div style="display: flex; align-items: center; gap: 12px"><div class="bar" style="width: 70%; background: #6d6290"></div><span style="font-family: 'Space Mono', monospace; font-size: 14px; color: #a99bd0">전 9.5GB</span></div><div style="display: flex; align-items: center; gap: 12px"><div class="bar" style="width: 40.5%; background: #2fe6c8; animation-delay: .3s"></div><span style="font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; color: #2fe6c8">후 5.5GB</span></div></div>
-<b style="color: #fff">RAM</b>
-<div style="display: grid; gap: 8px"><div style="display: flex; align-items: center; gap: 12px"><div class="bar" style="width: 66%; background: #6d6290"></div><span style="font-family: 'Space Mono', monospace; font-size: 14px; color: #a99bd0">전 9GB 넘음</span></div><div style="display: flex; align-items: center; gap: 12px"><div class="bar" style="width: 29%; background: #ff2fb0; animation-delay: .3s"></div><span style="font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; color: #ff2fb0">후 4GB 미만</span></div></div>
-<b style="color: #fff">런처 용량</b>
-<div style="display: grid; gap: 8px"><div style="display: flex; align-items: center; gap: 12px"><div class="bar" style="width: 99%; max-width: calc(100% - 110px); background: #6d6290"></div><span style="font-family: 'Space Mono', monospace; font-size: 14px; color: #a99bd0">전 13.5GB</span></div><div style="display: flex; align-items: center; gap: 12px"><div class="bar" style="width: 29.6%; background: #ffe14d; animation-delay: .3s"></div><span style="font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; color: #ffe14d">후 4.04GB</span></div></div>
+<sc-for list="{{s.meterRows}}" as="mr" hint-placeholder-count="3">
+<b style="color: #fff">{{mr.label}}</b>
+<div style="display: grid; gap: 8px"><div style="display: flex; align-items: center; gap: 12px"><div class="bar" style="width: {{mr.bw}}; max-width: calc(100% - 110px); background: #6d6290"></div><span style="font-family: 'Space Mono', monospace; font-size: 14px; color: #a99bd0">{{mr.before}}</span></div><div style="display: flex; align-items: center; gap: 12px"><div class="bar" style="width: {{mr.aw}}; background: {{mr.c}}; animation-delay: .3s"></div><span style="font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; color: {{mr.c}}">{{mr.after}}</span></div></div>
+</sc-for>
 </div>
-<p style="margin: 0; padding-top: 16px; border-top: 1px dashed rgba(47,230,200,.45); font-size: 13px; line-height: 1.7; color: #a99bd0">공식 기사의 테스트 환경 기준: Windows 11, RTX 5070 Ti, RAM 32GB, 2560×1600. 런처 용량에는 지형 데이터 파일이 빠져 있어요. 내 PC에서는 다를 수 있어요.</p>
+<p style="margin: 0; padding-top: 16px; border-top: 1px dashed rgba(47,230,200,.45); font-size: 13px; line-height: 1.7; color: #a99bd0">{{s.meterNote}}</p>
 </div>
 </section>
+</sc-if>
 
+<sc-if value="{{s.hasField}}" hint-placeholder-val="{{ true }}">
 <section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 100px 40px 0">
 <div class="grid2" style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 34px; align-items: start">
 <div>
+<sc-if value="{{s.hasChecklist}}" hint-placeholder-val="{{ true }}">
 <div style="margin-bottom: 24px"><div class="kicker">FIELD CHECKLIST</div><h2 class="h2c h2s">접속하면 해볼 것</h2></div>
 <ul class="dpanel panel" style="list-style: none; margin: 0; padding: 26px 28px; display: grid; gap: 18px; border-color: #ffe14d">
-<li style="display: flex; gap: 14px; align-items: flex-start"><span class="tick" style="background: #ffe14d; color: #0a0716">1</span><span style="font-size: 16px; line-height: 1.6">G키로 <b>레시피 목록</b>을 열어 필요한 재료부터 확인하기</span></li>
-<li style="display: flex; gap: 14px; align-items: flex-start"><span class="tick" style="background: #ffe14d; color: #0a0716">2</span><span style="font-size: 16px; line-height: 1.6"><b>백팩</b>을 먼저 만들어 장착하기 (제작과 장착은 따로 해요)</span></li>
-<li style="display: flex; gap: 14px; align-items: flex-start"><span class="tick" style="background: #ffe14d; color: #0a0716">3</span><span style="font-size: 16px; line-height: 1.6">캠프파이어는 가능하면 <b>내 땅(티어 1·2)</b>에 두기</span></li>
-<li style="display: flex; gap: 14px; align-items: flex-start"><span class="tick" style="background: #ff2fb0; color: #0a0716">!</span><span style="font-size: 16px; line-height: 1.6; color: #ffd0ea">재료가 레시피와 맞지 않으면 <b>재료를 모두 잃어요</b>. 레시피는 예고 없이 바뀔 수 있어요.</span></li>
-<li style="display: flex; gap: 14px; align-items: flex-start"><span class="tick" style="background: #ff2fb0; color: #0a0716">!</span><span style="font-size: 16px; line-height: 1.6; color: #ffd0ea">주인 없는 땅 캠프파이어 저장은 24시간. 그 안에 돌아오지 않으면 <b>캐릭터가 영구적으로 죽어요</b>.</span></li>
+<sc-for list="{{s.checklist}}" as="ck" hint-placeholder-count="5">
+<li style="display: flex; gap: 14px; align-items: flex-start"><span class="tick" style="background: {{ck.c}}; color: #0a0716">{{ck.mark}}</span><span style="font-size: 16px; line-height: 1.6; color: {{ck.fg}}">{{ck.text}}</span></li>
+</sc-for>
 </ul>
+</sc-if>
 </div>
 <div>
+<sc-if value="{{s.hasCrew}}" hint-placeholder-val="{{ true }}">
 <div style="margin-bottom: 24px"><div class="kicker">CREW COMMENT</div><h2 class="h2c h2s">크루 한마디</h2></div>
 <div style="display: grid; gap: 22px">
+<sc-for list="{{s.crew}}" as="cr" hint-placeholder-count="2">
+<sc-if value="{{cr.isMetamin}}" hint-placeholder-val="{{ true }}">
 <div style="display: grid; grid-template-columns: 110px 1fr; gap: 16px; align-items: end">
 <div class="panel" style="position: relative; width: 110px; height: 110px; overflow: hidden; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; background: #1a0f3a"><img src="assets/81bc16718fe06a9909a32dd75a0ac407.webp" alt="메타민 박사" style="width: 100%; height: 100%; object-fit: cover"></div>
-<div style="position: relative; background: #ffffff; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; padding: 16px 18px; font-size: 15px; line-height: 1.65"><b style="display: block; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #6a3cff; margin-bottom: 4px">METAMIN · 스튜디오 해설</b>이번 스레드의 핵심은 "만들고, 지니고, 지킨다"예요. 땅을 가진 사람과 탐험하는 사람이 캠프파이어 하나로 연결되기 시작했어요.</div>
+<div style="position: relative; background: #ffffff; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; padding: 16px 18px; font-size: 15px; line-height: 1.65"><b style="display: block; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #6a3cff; margin-bottom: 4px">{{cr.label}}</b>{{cr.text}}</div>
 </div>
+</sc-if>
+<sc-if value="{{cr.isNaduji}}" hint-placeholder-val="{{ false }}">
 <div style="display: grid; grid-template-columns: 1fr 110px; gap: 16px; align-items: end">
-<div style="position: relative; background: #ffe14d; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; padding: 16px 18px; font-size: 15px; line-height: 1.65"><b style="display: block; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #b8125f; margin-bottom: 4px">NADUJI · 현장 통신원</b>방송하면서 캠프파이어 피울 땐 좌표 가리기! 공식 기사에 따르면 주인 없는 땅의 캠프파이어는 약탈될 수 있대요. (약탈 기능은 아직 꺼져 있어요)</div>
+<div style="position: relative; background: #ffe14d; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; padding: 16px 18px; font-size: 15px; line-height: 1.65"><b style="display: block; font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #b8125f; margin-bottom: 4px">{{cr.label}}</b>{{cr.text}}</div>
 <div style="position: relative; width: 110px; height: 130px"><img class="bob" src="assets/f9dabe0b371fffeb0818b70b009d8797.webp" alt="나두지" style="position: absolute; bottom: 0; left: 0; width: 110px; height: auto; filter: drop-shadow(4px 4px 0 #000)"></div>
 </div>
+</sc-if>
+</sc-for>
 <p style="margin: 0; font-size: 12px; color: #8b84ad">크루 한마디는 TERRASIGNAL의 해설이며 공식 입장이 아니에요.</p>
 </div>
+</sc-if>
 </div>
 </div>
 </section>
+</sc-if>
 
 <section id="shorts" style="position: relative; max-width: 1360px; margin: 0 auto; padding: 100px 40px 0">
 <div class="grid2" style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 34px; align-items: stretch">
@@ -311,11 +318,15 @@ html{scroll-behavior:smooth}
 
 <section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 100px 40px 110px">
 <div class="grid2" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px">
-<a href="#" class="win" style="position: relative; display: flex; flex-direction: column; gap: 8px; padding: 22px 24px; text-decoration: none; color: #fff; background: rgba(12,30,52,.88); border: 2px solid #2fe6c8; box-shadow: 0 0 0 4px #0a0716; overflow: hidden"><span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #2fe6c8">◀ 이전 시그널 · DAY 42 · CLEAR</span><b style="font-size: 18px; line-height: 1.4">리얼리티 스레드 3: 디지털 지구 전체 글로벌 멀티플레이어</b><span style="font-size: 13px; color: #b8dfe6">2025.08.24</span></a>
-<a href="#" class="win" style="position: relative; display: flex; flex-direction: column; gap: 8px; padding: 22px 24px; text-decoration: none; color: #fff; background: rgba(40,34,14,.88); border: 2px dashed #ffe14d; box-shadow: 0 0 0 4px #0a0716; overflow: hidden"><span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #ffe14d">다음 시그널 ▶ · 날짜 확인 중</span><b style="font-size: 18px; line-height: 1.4">리얼리티 스레드 5</b><span style="font-size: 13px; color: #e6dcb0">공식 기사 날짜는 자동 수집 후 채워져요</span></a>
-<a href="guide.html" class="chan" style="position: relative; display: flex; flex-direction: column; gap: 8px; padding: 22px 24px; text-decoration: none; color: #0a0716; background: #ffd23f; border: 3px solid #0a0716; box-shadow: 6px 6px 0 #000; overflow: hidden"><span style="font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px">수신 가이드 · CH 01</span><b style="font-size: 18px; line-height: 1.4">E2V1 Pre-Alpha · 제작과 아이템 가이드로 이동 →</b><span style="font-size: 13px">이번 소식에 나온 아이템 정리</span></a>
+<sc-if value="{{s.hasPrev}}" hint-placeholder-val="{{ true }}">
+<a href="{{s.prevHref}}" class="win" style="position: relative; display: flex; flex-direction: column; gap: 8px; padding: 22px 24px; text-decoration: none; color: #fff; background: rgba(12,30,52,.88); border: 2px solid {{s.prevColor}}; box-shadow: 0 0 0 4px #0a0716; overflow: hidden"><span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: {{s.prevColor}}">◀ 이전 시그널 · {{s.prevMeta}}</span><b style="font-size: 18px; line-height: 1.4">{{s.prevTitle}}</b><span style="font-size: 13px; color: #b8dfe6">{{s.prevDate}}</span></a>
+</sc-if>
+<sc-if value="{{s.hasNext}}" hint-placeholder-val="{{ true }}">
+<a href="{{s.nextHref}}" class="win" style="position: relative; display: flex; flex-direction: column; gap: 8px; padding: 22px 24px; text-decoration: none; color: #fff; background: rgba(12,30,52,.88); border: 2px solid {{s.nextColor}}; box-shadow: 0 0 0 4px #0a0716; overflow: hidden"><span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: {{s.nextColor}}">다음 시그널 ▶ · {{s.nextMeta}}</span><b style="font-size: 18px; line-height: 1.4">{{s.nextTitle}}</b><span style="font-size: 13px; color: #b8dfe6">{{s.nextDate}}</span></a>
+</sc-if>
+<a href="guide.html" class="chan" style="position: relative; display: flex; flex-direction: column; gap: 8px; padding: 22px 24px; text-decoration: none; color: #0a0716; background: #ffd23f; border: 3px solid #0a0716; box-shadow: 6px 6px 0 #000; overflow: hidden"><span style="font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px">수신 가이드</span><b style="font-size: 18px; line-height: 1.4">디지털 지구에서 살아가는 법 · 가이드로 이동 →</b><span style="font-size: 13px">아이템과 시스템을 모은 살아있는 도감</span></a>
 </div>
-<p style="margin: 34px 0 0; font-size: 13px; line-height: 1.7; color: #8b84ad">이 페이지의 요약은 TERRASIGNAL이 Earth2 공식 기사를 읽고 정리한 것이에요. 정확한 내용과 최신 변경은 공식 원문을 확인해 주세요.</p>
+<p style="margin: 34px 0 0; font-size: 13px; line-height: 1.7; color: #8b84ad">이 페이지의 요약은 TERRASIGNAL이 Earth2 공식 발표를 읽고 정리한 것이에요. 정확한 내용과 최신 변경은 공식 원문을 확인해 주세요.</p>
 </section>
 <footer style="position: relative; border-top: 2px solid transparent; border-image: linear-gradient(90deg, #2fe6c8, #ff2fb0, #ffe14d) 1; background: rgba(8,5,20,.6)">
 <div style="max-width: 1360px; margin: 0 auto; padding: 48px 40px 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 36px">
@@ -345,9 +356,53 @@ html{scroll-behavior:smooth}
 <script>
 class Component extends DCLogic {
   renderVals() {
+    var SEED = [{"id": "rt4", "layer": "digital", "grade": "CLEAR", "date": "2025-10-31", "kicker": "E2V1 · REALITY THREAD 4", "titleKo": "리얼리티 스레드 4 · 제작·전투·핵심 최적화", "titleEn": "Reality Thread 4 – Crafting, Combat & Core E2V1 Optimisations", "source": "earth2.io 공식 기사", "url": "https://earth2.io/news/reality-thread-4", "audience": "E2V1 프리 알파 테스터", "lines": [{"ko": "E2V1에 제작(크래프팅)이 열렸어요. 아이템을 만들고, 만든 장비를 몸에 장착할 수 있어요.", "en": "Crafting is live in E2V1 — make items, then equip the gear you made."}, {"ko": "첫 무기 창과 방패가 나오면서 디지털 지구의 전투가 시작됐어요.", "en": "The spear and shield bring the first combat to Earth 2."}, {"ko": "엔진 최적화로 메모리 사용량과 런처 용량이 크게 줄었어요.", "en": "Core optimisation cuts memory use and launcher size."}], "changes": [{"tag": "EQUIP · 백팩", "title": "인벤토리 100칸 → 500칸", "desc": "E2V1의 첫 장착 아이템. 만들어서 장착하면 들고 다닐 수 있는 칸이 늘어나요."}, {"tag": "SAVE · 캠프파이어", "title": "캐릭터 저장 지점", "desc": "주인 없는 땅 24시간, 내 땅(티어 1·2) 72시간. 다른 사람 땅에선 텔레포트 수수료만큼 내고 저장해요."}, {"tag": "COMBAT · 창 · 방패", "title": "첫 전투 장비", "desc": "창은 LMB 일반 공격, Shift+RMB 달리기 공격. 방패는 막는 방향에 맞은 공격만 막아요."}, {"tag": "MOVE · 글라이더", "title": "기본 능력 → 제작 아이템", "desc": "예전엔 F키로 바로 썼지만, 이제 만들어서 액션 바에 올려 써요."}, {"tag": "LIGHT · 횃불", "title": "밤 탐험용 광원", "desc": "가지와 수지 성분 같은 자연 재료로 만들어요. 지금은 사용 시간 제한이 없어요."}, {"tag": "LAND · 타일", "title": "타일 검색 · 걸으면서 땅 구매", "desc": "타일을 뒤져 돌·부싯돌 같은 재료를 찾고, 캐릭터 모드에서 서 있는 타일을 바로 고를 수 있어요."}], "meter": {"title": "숫자로 보는 최적화", "rows": [{"label": "GPU 메모리", "before": "전 9.5GB", "beforePct": 70, "after": "후 5.5GB", "afterPct": 40.5}, {"label": "RAM", "before": "전 9GB 넘음", "beforePct": 66, "after": "후 4GB 미만", "afterPct": 29}, {"label": "런처 용량", "before": "전 13.5GB", "beforePct": 99, "after": "후 4.04GB", "afterPct": 29.6}], "note": "공식 기사의 테스트 환경 기준: Windows 11, RTX 5070 Ti, RAM 32GB, 2560×1600. 런처 용량에는 지형 데이터 파일이 빠져 있어요. 내 PC에서는 다를 수 있어요."}, "checklist": [{"text": "G키로 레시피 목록을 열어 필요한 재료부터 확인하기", "warn": false}, {"text": "백팩을 먼저 만들어 장착하기 (제작과 장착은 따로 해요)", "warn": false}, {"text": "캠프파이어는 가능하면 내 땅(티어 1·2)에 두기", "warn": false}, {"text": "재료가 레시피와 맞지 않으면 재료를 모두 잃어요. 레시피는 예고 없이 바뀔 수 있어요.", "warn": true}, {"text": "주인 없는 땅 캠프파이어 저장은 24시간. 그 안에 돌아오지 않으면 캐릭터가 영구적으로 죽어요.", "warn": true}], "crew": [{"who": "metamin", "label": "METAMIN · 스튜디오 해설", "text": "이번 스레드의 핵심은 \"만들고, 지니고, 지킨다\"예요. 땅을 가진 사람과 탐험하는 사람이 캠프파이어 하나로 연결되기 시작했어요."}, {"who": "naduji", "label": "NADUJI · 현장 통신원", "text": "방송하면서 캠프파이어 피울 땐 좌표 가리기! 공식 기사에 따르면 주인 없는 땅의 캠프파이어는 약탈될 수 있대요. (약탈 기능은 아직 꺼져 있어요)"}], "guide": true}];
+    var list = (this.data && this.data.signals && this.data.signals.signals) || SEED;
+    list = list.slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
+    var want = '';
+    try { want = new URLSearchParams(location.search).get('id') || ''; } catch (e) { want = ''; }
+    var idx = 0;
+    for (var i = 0; i < list.length; i++) { if (list[i].id === want) { idx = i; break; } }
+    if (!want && !(this.data && this.data.signals)) { for (var j = 0; j < list.length; j++) if (list[j].id === 'rt4') idx = j; }
+    var x = list[idx];
+    var GC = { CLEAR: '#2fe6c8', WEAK: '#ffe14d', NOISE: '#ff2fb0' };
+    var GN = { CLEAR: '공식 발표', WEAK: '현장·커뮤니티 확인', NOISE: '공식 발표 전' };
+    var BG = { CLEAR: 'rgba(12,30,52,.9)', WEAK: 'rgba(40,34,14,.9)', NOISE: 'rgba(40,12,44,.9)' };
+    var LN = { real: '■ 현실 지구', border: '◆ 경계', digital: '⬢ 디지털 지구' };
+    var LC = { real: '#2fe6c8', border: '#ff8fd6', digital: '#c9c0ff' };
+    var CYC = ['#2fe6c8', '#ff2fb0', '#ffe14d'];
+    var DAY1 = Date.UTC(2025, 6, 14);
+    function dayOf(d) { var p = d.split('-'); var n = Math.floor((Date.UTC(+p[0], +p[1] - 1, +(p[2] || 15)) - DAY1) / 86400000) + 1; return n >= 1 ? 'RX · DAY ' + n : 'RX · E2V1 이전'; }
+    function dot(d) { return d.split('-').join('.'); }
+    var g = x.grade, c = GC[g];
+    var strength = g === 'CLEAR' ? 5 : g === 'WEAK' ? 3 : 1;
+    var bars = [30, 46, 62, 80, 100].map(function (hh, n) { return { h: hh + '%', c: n < strength ? c : 'rgba(255,255,255,.12)', d: (n * 0.15) + 's' }; });
+    var lines = (x.lines || []).map(function (l, n) { return { no: (n < 9 ? '0' : '') + (n + 1), ko: l.ko, en: l.en || '', hasEn: !!l.en, bc: CYC[n % 3] }; });
+    var prev = list[idx + 1], next = list[idx - 1];
+    function nav(o) { return o ? { href: 'signal.html?id=' + encodeURIComponent(o.id), meta: dayOf(o.date).replace('RX · ', '') + ' · ' + o.grade, title: o.titleKo, date: dot(o.date), color: GC[o.grade] } : {}; }
+    var pv = nav(prev), nx = nav(next);
+    var m = x.meter || null;
+    var s = {
+      rx: dayOf(x.date), dateDot: dot(x.date), grade: g, gradeName: GN[g], color: c, bg: BG[g], glow: c === '#2fe6c8' ? 'rgba(47,230,200,.4)' : c === '#ffe14d' ? 'rgba(255,225,77,.35)' : 'rgba(255,47,176,.4)',
+      bstyle: g === 'WEAK' ? 'dashed' : 'solid', kicker: x.kicker || 'SIGNAL', layerName: LN[x.layer], layerColor: LC[x.layer],
+      titleKo: x.titleKo, titleEn: x.titleEn || '', source: x.source, hasUrl: !!x.url, url: x.url || '', hasAudience: !!x.audience, audience: x.audience || '',
+      bars: bars, strength: String(strength), meterAria: '신호 세기 5칸 중 ' + strength + '칸',
+      stamp: g === 'NOISE' ? 'NOISE' : 'APPROVED', stampSub: g === 'NOISE' ? '공식 확인 전' : '운영자 확인 완료', stampColor: g === 'NOISE' ? '#ffe14d' : '#ff2fb0',
+      lines: lines, lineCount: String(lines.length), lineTitle: lines.length + '줄 해독',
+      hasChanges: !!(x.changes && x.changes.length), changes: (x.changes || []).map(function (cg, n) { return { tag: cg.tag, title: cg.title, desc: cg.desc, c: CYC[n % 3] }; }),
+      hasMeter: !!m, meterTitle: m ? m.title : '', meterNote: m ? m.note : '',
+      meterRows: m ? m.rows.map(function (r, n) { return { label: r.label, before: r.before, after: r.after, bw: r.beforePct + '%', aw: r.afterPct + '%', c: CYC[n % 3] }; }) : [],
+      hasChecklist: !!(x.checklist && x.checklist.length), checklist: (x.checklist || []).map(function (k, n) { return { text: k.text, mark: k.warn ? '!' : String(n + 1), c: k.warn ? '#ff2fb0' : '#ffe14d', fg: k.warn ? '#ffd0ea' : '#ffffff' }; }),
+      hasCrew: !!(x.crew && x.crew.length), crew: (x.crew || []).map(function (r) { return { label: r.label, text: r.text, isMetamin: r.who === 'metamin', isNaduji: r.who === 'naduji' }; }),
+      hasPrev: !!prev, prevHref: pv.href, prevMeta: pv.meta, prevTitle: pv.title, prevDate: pv.date, prevColor: pv.color,
+      hasNext: !!next, nextHref: nx.href, nextMeta: nx.meta, nextTitle: nx.title, nextDate: nx.date, nextColor: nx.color
+    };
+    s.hasField = s.hasChecklist || s.hasCrew;
+    if (typeof document !== 'undefined' && x.titleKo) { try { document.title = x.titleKo + ' · 수신 기록 · TERRASIGNAL'; } catch (e) {} }
     return {
       motionClass: (this.props.motion ?? true) ? 'anim' : '',
-      coatClass: (this.props.coating ?? true) ? 'coat' : ''
+      coatClass: (this.props.coating ?? true) ? 'coat' : '',
+      s: s
     };
   }
 }

@@ -1,0 +1,277 @@
+{
+  "updatedAt": "2026-11-10T07:30:00Z",
+  "note": "수신 기록. 운영자가 승인한 신호만 들어가요. 최신이 위.",
+  "signals": [
+    {
+      "id": "rt9-p1",
+      "layer": "digital",
+      "grade": "NOISE",
+      "date": "2026-08-31",
+      "kicker": "E2V1 · REALITY THREAD 9",
+      "titleKo": "리얼리티 스레드 9 · Part 1",
+      "titleEn": "Reality Thread 9 – Part 1",
+      "source": "Shane Isaac X (공식 기사 전)",
+      "url": "",
+      "lines": [
+        {
+          "ko": "창업자 Shane Isaac의 X 게시물로만 확인된 소식이에요.",
+          "en": ""
+        },
+        {
+          "ko": "공식 기사가 나오면 CLEAR로 바뀌어요.",
+          "en": ""
+        }
+      ]
+    },
+    {
+      "id": "rt8-0582",
+      "layer": "digital",
+      "grade": "CLEAR",
+      "date": "2026-05-31",
+      "kicker": "E2V1 · UPDATE 0.5.8.2",
+      "titleKo": "리얼리티 스레드 8 업데이트 0.5.8.2",
+      "titleEn": "Reality Thread 8 Update – 0.5.8.2 Released",
+      "source": "earth2.io 공식 기사",
+      "url": "https://earth2.io/news/e2v1-update-0-5-8-2",
+      "lines": [
+        {
+          "ko": "리얼리티 스레드 8 공개 하루 만에, 초기 출시 때 플레이어들이 찾은 문제를 고친 업데이트가 나왔어요.",
+          "en": ""
+        },
+        {
+          "ko": "자세한 변경 사항은 공식 원문에서 확인해 주세요.",
+          "en": ""
+        }
+      ]
+    },
+    {
+      "id": "rt8",
+      "layer": "digital",
+      "grade": "CLEAR",
+      "date": "2026-05-26",
+      "kicker": "E2V1 · REALITY THREAD 8",
+      "titleKo": "리얼리티 스레드 8 · Seeds of Change",
+      "titleEn": "Chapter 5 – Reality Thread 8 – Seeds of Change",
+      "source": "earth2.io 공식 기사",
+      "url": "https://earth2.io/news/reality-thread-8",
+      "lines": [
+        {
+          "ko": "챕터 5가 시작되며 E2V1에 첫 농업이 들어왔어요.",
+          "en": ""
+        },
+        {
+          "ko": "땅에 목적과 쓰임을 더하는 시스템이 계속 넓어지고 있어요.",
+          "en": ""
+        }
+      ]
+    },
+    {
+      "id": "ess-q4-25",
+      "layer": "border",
+      "grade": "CLEAR",
+      "date": "2026-03-23",
+      "kicker": "$ESS · REPORT",
+      "titleKo": "$ESS 업데이트 리포트 Q4-25",
+      "titleEn": "$ESS Update Report Q4-25",
+      "source": "earth2.io 공식 기사",
+      "url": "https://earth2.io/news/ess-2025-q4",
+      "lines": [
+        {
+          "ko": "2025년 4분기 에센스($ESS) 통계 리포트가 공개됐어요.",
+          "en": ""
+        },
+        {
+          "ko": "반감기 관련 내용이 담겼어요.",
+          "en": ""
+        }
+      ]
+    },
+    {
+      "id": "rt7",
+      "layer": "digital",
+      "grade": "CLEAR",
+      "date": "2026-03-19",
+      "kicker": "E2V1 · REALITY THREAD 7",
+      "titleKo": "리얼리티 스레드 7 · 퀘스트",
+      "titleEn": "Chapter 4: Reality Thread 7 – Quests: Who’s Got the Goods?",
+      "source": "earth2.io 공식 기사",
+      "url": "https://earth2.io/news/reality-thread-7",
+      "lines": [
+        {
+          "ko": "챕터 4가 시작되며 글로벌 퀘스트 시스템이 열렸어요.",
+          "en": ""
+        },
+        {
+          "ko": "타일 리쥬비네이터로 탐색한 타일을 에센스를 써서 다시 탐색할 수 있게 됐어요.",
+          "en": ""
+        },
+        {
+          "ko": "숫자 키(1–8)로 액션 바에 바로 아이템을 넣는 핫 스왑, 식생을 직접 치우는 랜드 클리어링 세트가 들어왔어요.",
+          "en": ""
+        }
+      ]
+    },
+    {
+      "id": "rt6",
+      "layer": "digital",
+      "grade": "CLEAR",
+      "date": "2026-01-06",
+      "kicker": "E2V1 · REALITY THREAD 6",
+      "titleKo": "리얼리티 스레드 6 · E2V1의 요리",
+      "titleEn": "Chapter 3: Reality Thread 6 – What’s Cooking in E2V1?",
+      "source": "earth2.io 공식 기사",
+      "url": "https://earth2.io/news/reality-thread-6",
+      "lines": [
+        {
+          "ko": "챕터 3이 시작되며 요리가 들어왔어요.",
+          "en": ""
+        },
+        {
+          "ko": "의류와 이모트도 함께 추가됐어요.",
+          "en": ""
+        }
+      ]
+    },
+    {
+      "id": "rt5",
+      "layer": "digital",
+      "grade": "CLEAR",
+      "date": "2025-12-18",
+      "kicker": "E2V1 · REALITY THREAD 5",
+      "titleKo": "리얼리티 스레드 5 · 텔레포테이션",
+      "titleEn": "Chapter 2: Reality Thread 5 – Teleportation Comes Online",
+      "source": "earth2.io 공식 기사",
+      "url": "https://earth2.io/news/reality-thread-5",
+      "lines": [
+        {
+          "ko": "챕터 2가 시작되며 E2V1에 텔레포테이션이 들어왔어요.",
+          "en": ""
+        },
+        {
+          "ko": "공식 기사에 따르면 2025년 12월 8일, 배지 보유자에게 처음으로 E2V1 문이 열렸어요.",
+          "en": ""
+        }
+      ]
+    },
+    {
+      "id": "rt4",
+      "layer": "digital",
+      "grade": "CLEAR",
+      "date": "2025-10-31",
+      "kicker": "E2V1 · REALITY THREAD 4",
+      "titleKo": "리얼리티 스레드 4 · 제작·전투·핵심 최적화",
+      "titleEn": "Reality Thread 4 – Crafting, Combat & Core E2V1 Optimisations",
+      "source": "earth2.io 공식 기사",
+      "url": "https://earth2.io/news/reality-thread-4",
+      "audience": "E2V1 프리 알파 테스터",
+      "lines": [
+        {
+          "ko": "E2V1에 제작(크래프팅)이 열렸어요. 아이템을 만들고, 만든 장비를 몸에 장착할 수 있어요.",
+          "en": "Crafting is live in E2V1 — make items, then equip the gear you made."
+        },
+        {
+          "ko": "첫 무기 창과 방패가 나오면서 디지털 지구의 전투가 시작됐어요.",
+          "en": "The spear and shield bring the first combat to Earth 2."
+        },
+        {
+          "ko": "엔진 최적화로 메모리 사용량과 런처 용량이 크게 줄었어요.",
+          "en": "Core optimisation cuts memory use and launcher size."
+        }
+      ],
+      "changes": [
+        {
+          "tag": "EQUIP · 백팩",
+          "title": "인벤토리 100칸 → 500칸",
+          "desc": "E2V1의 첫 장착 아이템. 만들어서 장착하면 들고 다닐 수 있는 칸이 늘어나요."
+        },
+        {
+          "tag": "SAVE · 캠프파이어",
+          "title": "캐릭터 저장 지점",
+          "desc": "주인 없는 땅 24시간, 내 땅(티어 1·2) 72시간. 다른 사람 땅에선 텔레포트 수수료만큼 내고 저장해요."
+        },
+        {
+          "tag": "COMBAT · 창 · 방패",
+          "title": "첫 전투 장비",
+          "desc": "창은 LMB 일반 공격, Shift+RMB 달리기 공격. 방패는 막는 방향에 맞은 공격만 막아요."
+        },
+        {
+          "tag": "MOVE · 글라이더",
+          "title": "기본 능력 → 제작 아이템",
+          "desc": "예전엔 F키로 바로 썼지만, 이제 만들어서 액션 바에 올려 써요."
+        },
+        {
+          "tag": "LIGHT · 횃불",
+          "title": "밤 탐험용 광원",
+          "desc": "가지와 수지 성분 같은 자연 재료로 만들어요. 지금은 사용 시간 제한이 없어요."
+        },
+        {
+          "tag": "LAND · 타일",
+          "title": "타일 검색 · 걸으면서 땅 구매",
+          "desc": "타일을 뒤져 돌·부싯돌 같은 재료를 찾고, 캐릭터 모드에서 서 있는 타일을 바로 고를 수 있어요."
+        }
+      ],
+      "meter": {
+        "title": "숫자로 보는 최적화",
+        "rows": [
+          {
+            "label": "GPU 메모리",
+            "before": "전 9.5GB",
+            "beforePct": 70,
+            "after": "후 5.5GB",
+            "afterPct": 40.5
+          },
+          {
+            "label": "RAM",
+            "before": "전 9GB 넘음",
+            "beforePct": 66,
+            "after": "후 4GB 미만",
+            "afterPct": 29
+          },
+          {
+            "label": "런처 용량",
+            "before": "전 13.5GB",
+            "beforePct": 99,
+            "after": "후 4.04GB",
+            "afterPct": 29.6
+          }
+        ],
+        "note": "공식 기사의 테스트 환경 기준: Windows 11, RTX 5070 Ti, RAM 32GB, 2560×1600. 런처 용량에는 지형 데이터 파일이 빠져 있어요. 내 PC에서는 다를 수 있어요."
+      },
+      "checklist": [
+        {
+          "text": "G키로 레시피 목록을 열어 필요한 재료부터 확인하기",
+          "warn": false
+        },
+        {
+          "text": "백팩을 먼저 만들어 장착하기 (제작과 장착은 따로 해요)",
+          "warn": false
+        },
+        {
+          "text": "캠프파이어는 가능하면 내 땅(티어 1·2)에 두기",
+          "warn": false
+        },
+        {
+          "text": "재료가 레시피와 맞지 않으면 재료를 모두 잃어요. 레시피는 예고 없이 바뀔 수 있어요.",
+          "warn": true
+        },
+        {
+          "text": "주인 없는 땅 캠프파이어 저장은 24시간. 그 안에 돌아오지 않으면 캐릭터가 영구적으로 죽어요.",
+          "warn": true
+        }
+      ],
+      "crew": [
+        {
+          "who": "metamin",
+          "label": "METAMIN · 스튜디오 해설",
+          "text": "이번 스레드의 핵심은 \"만들고, 지니고, 지킨다\"예요. 땅을 가진 사람과 탐험하는 사람이 캠프파이어 하나로 연결되기 시작했어요."
+        },
+        {
+          "who": "naduji",
+          "label": "NADUJI · 현장 통신원",
+          "text": "방송하면서 캠프파이어 피울 땐 좌표 가리기! 공식 기사에 따르면 주인 없는 땅의 캠프파이어는 약탈될 수 있대요. (약탈 기능은 아직 꺼져 있어요)"
+        }
+      ],
+      "guide": true
+    }
+  ]
+}

@@ -224,6 +224,7 @@ html{scroll-behavior:smooth}
 <b style="font-size: 18px; line-height: 1.4; color: #ffffff">{{g.title}}</b>
 <span style="font-size: 13px; line-height: 1.6; color: #b8b0d8">{{g.desc}}</span>
 <span style="font-family: 'Space Mono', monospace; font-size: 11px; color: #8b84ad">{{g.date}}</span>
+<sc-if value="{{g.hasSignal}}" hint-placeholder-val="{{ false }}"><a href="{{g.signalHref}}" style="align-self: flex-start; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; color: #ffd23f; text-decoration: none">수신 기록 보기 →</a></sc-if>
 </article>
 </sc-for>
 </div>
@@ -377,7 +378,7 @@ class Component extends DCLogic {
     for (var k = 0; k < globalsAll.length; k++) {
       var gg = globalsAll[k];
       if (layer !== 'all' && gg.L !== layer) continue;
-      globals.push({ layerName: LN[gg.L], grade: gg.g, color: GC[gg.g], border: gg.g === 'WEAK' ? 'dashed' : 'solid', title: gg.title, desc: gg.desc, date: gg.date });
+      globals.push({ layerName: LN[gg.L], grade: gg.g, color: GC[gg.g], border: gg.g === 'WEAK' ? 'dashed' : 'solid', title: gg.title, desc: gg.desc, date: gg.date, hasSignal: !!gg.signal, signalHref: gg.signal ? 'signal.html?id=' + encodeURIComponent(gg.signal) : '' });
     }
     var X = layer === 'real' ? 112 : (layer === 'digital' ? -12 : 50);
     var clip = 'polygon(' + (X + 7) + '% 0, 100% 0, 100% 100%, ' + (X - 7) + '% 100%)';

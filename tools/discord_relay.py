@@ -35,6 +35,7 @@ DRAFTS = os.path.join(ROOT, 'data', 'inbox', 'discord-drafts.json')
 NEWS = os.path.join(ROOT, 'data', 'inbox', 'earth2-news.json')
 MAP = os.path.join(ROOT, 'data', 'map.json')
 CHRON = os.path.join(ROOT, 'data', 'chronicle.json')
+SIGNALS = os.path.join(ROOT, 'data', 'signals.json')
 
 OK, NO, BOOK = '✅', '❌', '📜'
 LAYER_NAME = {'real': '■ 현실 지구', 'border': '◆ 경계', 'digital': '⬢ 디지털 지구'}
@@ -169,7 +170,7 @@ def draft_embed(d):
             {'name': '날짜 (한국 시간)', 'value': d['date'], 'inline': True},
             {'name': '출처', 'value': d['sourceLabel'][:200], 'inline': False},
         ],
-        'footer': {'text': '✅ 사이트 반영 · ❌ 버리기 · 📜 연대기에도 기록 · 답장하면 그 글이 사이트 설명이 돼요 (#현실 #경계 #디지털 로 층 변경)'},
+        'footer': {'text': '✅ 사이트 반영 · ❌ 버리기 · 📜 연대기에도 기록 · 답장: 한 줄에 하나씩 해독(최대 3~5줄), "제목: …" 으로 한국어 제목, #현실 #경계 #디지털 로 층 변경'},
     }
 
 
@@ -260,9 +261,19 @@ def apply_reply(d, reply):
         if tag in reply:
             d['layer'] = layer
             reply = reply.replace(tag, '')
-    reply = clean(reply)
-    if reply:
-        d['descKo'] = reply
+    lines = []
+    for raw in reply.splitlines():
+        line = clean(raw)
+        if not line:
+            continue
+        m = re.match(r'^제목\s*[:：]\s*(.+)$', line)
+        if m:
+            d['titleKo'] = m.group(1).strip()
+        else:
+            lines.append(re.sub(r'^\s*(?:[0-9]+[.)]|[-•·])\s*', '', line))
+    if lines:
+        d['linesKo'] = lines[:5]
+        d['descKo'] = lines[0]
 
 
 def publish(d, to_chronicle):
@@ -281,9 +292,23 @@ def publish(d, to_chronicle):
         save(MAP, m)
         return
     y, mo, da = d['date'].split('-')
-    entry = {'L': d['layer'], 'g': d['grade'], 'title': d['title'], 'desc': d.get('descKo') or d['excerpt'][:160] or d['title'],
+    entry = {'L': d['layer'], 'g': d['grade'], 'title': d.get('titleKo') or d['title'], 'desc': d.get('descKo') or d['excerpt'][:160] or d['title'],
              'date': '%s.%s.%s · %s' % (y, mo, da, '공식 기사' if d['kind'] == 'earth2.io' else '공식 디스코드'),
              'url': d['url'], 'key': d['sourceKey']}
+    parts = d['sourceKey'].split(':')
+    sid = ('e2-' + parts[-1]) if parts[0] == 'earth2' else ('dc-' + parts[-1])
+    entry['signal'] = sid
+    sig = load(SIGNALS, {'signals': []})
+    sig['signals'] = [x for x in sig['signals'] if x.get('id') != sid]
+    lines = d.get('linesKo') or ([d['excerpt'].split('\n')[0][:200]] if d['excerpt'] else [])
+    sig['signals'].insert(0, {
+        'id': sid, 'layer': d['layer'], 'grade': d['grade'], 'date': d['date'],
+        'kicker': {'real': 'REAL EARTH', 'border': 'BORDER', 'digital': 'DIGITAL EARTH'}[d['layer']] + ' · SIGNAL',
+        'titleKo': d.get('titleKo') or d['title'], 'titleEn': d['title'] if d.get('titleKo') else '',
+        'source': 'earth2.io 공식 기사' if d['kind'] == 'earth2.io' else d['sourceLabel'], 'url': d['url'],
+        'lines': [{'ko': x, 'en': ''} for x in lines], 'key': d['sourceKey'], 'approvedAt': now_iso()})
+    sig['updatedAt'] = now_iso()
+    save(SIGNALS, sig)
     m['globals'] = [g for g in m.get('globals', []) if g.get('key') != d['sourceKey']]
     m['globals'].insert(0, entry)
     m['globals'] = m['globals'][:MAX_GLOBALS]
@@ -293,9 +318,9 @@ def publish(d, to_chronicle):
         c = load(CHRON, {'events': []})
         if not any(e.get('key') == d['sourceKey'] for e in c['events']):
             c['events'].append({'layer': CHRON_LAYER[d['layer']], 'date': d['date'], 'grade': d['grade'],
-                                'short': d['title'][:14], 'title': d['title'], 'desc': entry['desc'],
+                                'short': entry['title'][:14], 'title': entry['title'], 'desc': entry['desc'],
                                 'source': ('earth2.io 공식 기사' if d['kind'] == 'earth2.io' else '어스2 공식 디스코드'),
-                                'url': d['url'], 'key': d['sourceKey']})
+                                'url': d['url'], 'key': d['sourceKey'], 'signal': entry['signal']})
             c['updatedAt'] = now_iso()
             save(CHRON, c)
 
