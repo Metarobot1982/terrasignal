@@ -105,7 +105,13 @@
       "endsAt": "2026-11-11T03:02:35Z",
       "note": "공식 배너 · MENTAR STAKER DISCOUNT PERK",
       "key": "countdown:MENTAR STAKER DISCOUNT PERK:Genoa, Italy",
-      "titleKo": "멘타 스테이커 할인 혜택"
+      "titleKo": "멘타 스테이커 할인 혜택",
+      "kind": "스테이커",
+      "phase": 1,
+      "country": {
+        "code": "IT",
+        "en": "Italy"
+      }
     },
     {
       "L": "real",
@@ -116,7 +122,13 @@
       "endsAt": "2026-11-11T03:02:34Z",
       "note": "공식 배너 · Buy Tiles with Essence",
       "key": "countdown:Buy Tiles with Essence:Genoa, Italy",
-      "titleKo": "에센스로 타일 구매"
+      "titleKo": "에센스로 타일 구매",
+      "kind": "에센스타일",
+      "phase": 2,
+      "country": {
+        "code": "IT",
+        "en": "Italy"
+      }
     },
     {
       "L": "real",
@@ -127,7 +139,13 @@
       "endsAt": "2026-11-10T15:02:32Z",
       "note": "플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요.",
       "key": "countdown:T3 Territory Opening:Hambantota, Sri Lanka",
-      "titleKo": "T3 영토 오픈"
+      "titleKo": "T3 영토 오픈",
+      "kind": "영토",
+      "phase": 3,
+      "country": {
+        "code": "LK",
+        "en": "Sri Lanka"
+      }
     },
     {
       "L": "border",
@@ -138,7 +156,10 @@
       "endsAt": "2026-11-10T11:00:57Z",
       "note": "공식 배너 · New Skin coming",
       "key": "countdown:New Skin coming:전역",
-      "titleKo": "새 스킨 출시 예정"
+      "titleKo": "새 스킨 출시 예정",
+      "kind": "스킨",
+      "phase": 0,
+      "country": null
     }
   ]
 }

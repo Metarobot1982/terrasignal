@@ -207,23 +207,24 @@ a{color:#ffd166}a:hover{color:#ffffff}
 
 <section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 70px 40px 0">
 <div style="margin-bottom: 22px"><div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #ffe14d; margin-bottom: 8px">COUNTDOWN SIGNALS</div><h2 class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 38px">곧 열리는 시그널</h2></div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px">
-<sc-for list="{{countdowns}}" as="c" hint-placeholder-count="4">
-<div class="panel" style="position: relative; overflow: hidden; padding: 18px 20px; background: {{c.bg}}; border: 2px solid {{c.color}}; box-shadow: 4px 4px 0 #000; display: grid; gap: 10px; align-content: start">
-<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; color: #d6d0f0">{{c.tag}}</span>
-<b style="font-size: 17px">{{c.title}}</b>
-<sc-if value="{{c.isVote}}" hint-placeholder-val="{{ false }}">
-<span style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700">
-<sc-for list="{{c.stages}}" as="st" hint-placeholder-count="4">
-<span style="padding: 3px 7px; border: 1px solid {{st.bd}}; background: {{st.bg}}; color: {{st.fg}}">{{st.label}}</span>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; align-items: start">
+<sc-for list="{{countdowns}}" as="c" hint-placeholder-count="3">
+<div class="win" style="position: relative; overflow: hidden; padding: 16px 18px; background: {{c.bg}}; border: 2px solid {{c.color}}; box-shadow: 0 0 0 3px #0a0716; display: grid; gap: 10px; align-content: start">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; color: #d6d0f0">{{c.tag}}</span>
+<div style="display: flex; align-items: center; gap: 10px"><sc-if value="{{c.hasFlag}}" hint-placeholder-val="{{ true }}"><img src="{{c.flag}}" alt="" width="28" height="21" style="flex: none; width: 28px; height: 21px; border: 1px solid rgba(255,255,255,.4)"></sc-if><b style="font-size: 18px; color: #ffffff">{{c.title}}</b></div>
+<sc-if value="{{c.isTerr}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-wrap: wrap; gap: 4px; font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700">
+<sc-for list="{{c.phases}}" as="ph" hint-placeholder-count="3"><span style="padding: 3px 7px; border: 1px solid {{ph.bd}}; background: {{ph.bg}}; color: {{ph.fg}}">{{ph.label}}</span></sc-for>
+</div>
+</sc-if>
+<sc-for list="{{c.rows}}" as="r" hint-placeholder-count="2">
+<div style="display: grid; gap: 2px; padding-top: 8px; border-top: 1px dashed rgba(255,255,255,.18)">
+<span style="font-size: 13px; font-weight: 700; color: #ffe9a8">{{r.label}}</span>
+<span class="cd" data-ends="{{r.endsAt}}" style="font-family: 'Bungee', sans-serif; font-size: 26px; color: #ffd23f; letter-spacing: 1px">{{r.left}}</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; color: #ffe9a8">{{r.when}}</span>
+</div>
 </sc-for>
-</span>
-</sc-if>
-<span class="cd" data-ends="{{c.endsAt}}" style="font-family: 'Bungee', sans-serif; font-size: 30px; color: #ffd23f; letter-spacing: 2px">{{c.left}}</span>
-<span style="font-family: 'Space Mono', monospace; font-size: 11px; color: #ffe9a8">{{c.when}}</span>
-<sc-if value="{{c.hasNote}}" hint-placeholder-val="{{ false }}">
-<span style="font-size: 12px; line-height: 1.5; color: #b8b0d8">{{c.note}}</span>
-</sc-if>
+<sc-if value="{{c.hasNote}}" hint-placeholder-val="{{ false }}"><span style="font-size: 12px; line-height: 1.5; color: #b8b0d8">{{c.note}}</span></sc-if>
 </div>
 </sc-for>
 </div>
@@ -311,22 +312,47 @@ class Component extends DCLogic {
       { L: 'border', g: 'CLEAR', title: 'Halloween 2026 드로이드 스킨', desc: 'Skin Store에 할로윈 2026 Cydroid 스킨이 올라왔어요. 스킨은 외형 전용이에요.', date: '2026.11 · Skin Store' },
       { L: 'border', g: 'CLEAR', title: '$ESS 업데이트 리포트 Q4-25', desc: '2025년 4분기 에센스 통계 리포트. 반감기 내용이 담겼어요.', date: '2026.03.23 · 공식 기사' }
     ];
-    var cdAll = DATA && DATA.countdowns ? DATA.countdowns : [{"L": "border", "place": "Genoa, Italy", "cycle": "", "stage": 0, "title": "MENTAR STAKER DISCOUNT PERK", "titleKo": "멘타 스테이커 할인 혜택", "endsAt": "2026-11-11T03:02:35Z", "note": "공식 배너 · MENTAR STAKER DISCOUNT PERK"}, {"L": "real", "place": "Genoa, Italy", "cycle": "", "stage": 0, "title": "Buy Tiles with Essence", "titleKo": "에센스로 타일 구매", "endsAt": "2026-11-11T03:02:34Z", "note": "공식 배너 · Buy Tiles with Essence"}, {"L": "real", "place": "Hambantota, Sri Lanka", "cycle": "vote", "stage": 3, "title": "T3 Territory Opening", "titleKo": "T3 영토 오픈", "endsAt": "2026-11-10T15:02:32Z", "note": "플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요."}, {"L": "border", "place": "전역", "cycle": "ops", "stage": 0, "title": "New Skin coming", "titleKo": "새 스킨 출시 예정", "endsAt": "2026-11-10T11:00:57Z", "note": "공식 배너 · New Skin coming"}];
-    var CYC = { vote: ' · 유저 투표 주기', ops: ' · 운영 일정' };
-    var LCOL = { real: '#2fe6c8', border: '#ff2fb0', digital: '#7d6bff' };
-    var LBG = { real: 'rgba(47,230,200,.18)', border: 'rgba(255,47,176,.18)', digital: 'rgba(125,107,255,.22)' };
-    var STG = ['① 투표', '② 결과', '③ 카운트다운', '④ 오픈'];
-    var countdowns = [];
-    for (var q = 0; q < cdAll.length; q++) {
-      var cd = cdAll[q];
-      if (layer !== 'all' && cd.L !== layer) continue;
-      var ends = cd.endsAt ? Date.parse(cd.endsAt) : NaN;
-      countdowns.push({ tag: LN[cd.L] + ' · ' + cd.place + (CYC[cd.cycle] || ''), title: cd.titleKo || cd.title, color: LCOL[cd.L],
-        bg: 'linear-gradient(120deg, ' + LBG[cd.L] + ', rgba(106,60,255,.3))',
-        isVote: cd.cycle === 'vote', stages: STG.map(function (t, n) { var on = n + 1 === cd.stage; return { label: t, bd: on ? '#ffd23f' : 'rgba(255,255,255,.3)', bg: on ? '#ffd23f' : 'transparent', fg: on ? '#0a0716' : '#b8b0d8' }; }),
-        endsAt: isNaN(ends) ? '' : String(ends), left: Component.left(ends), when: isNaN(ends) ? '시각 확인 중' : Component.kst(ends),
-        hasNote: !!cd.note, note: cd.note || '' });
+    var cdAll = DATA && DATA.countdowns ? DATA.countdowns : [{"L": "border", "place": "Genoa, Italy", "cycle": "", "stage": 0, "kind": "스테이커", "phase": 1, "country": {"code": "IT", "en": "Italy"}, "title": "MENTAR STAKER DISCOUNT PERK", "titleKo": "멘타 스테이커 할인 혜택", "endsAt": "2026-11-11T03:02:35Z", "note": "공식 배너 · MENTAR STAKER DISCOUNT PERK"}, {"L": "real", "place": "Genoa, Italy", "cycle": "", "stage": 0, "kind": "에센스타일", "phase": 2, "country": {"code": "IT", "en": "Italy"}, "title": "Buy Tiles with Essence", "titleKo": "에센스로 타일 구매", "endsAt": "2026-11-11T03:02:34Z", "note": "공식 배너 · Buy Tiles with Essence"}, {"L": "real", "place": "Hambantota, Sri Lanka", "cycle": "vote", "stage": 3, "kind": "영토", "phase": 3, "country": {"code": "LK", "en": "Sri Lanka"}, "title": "T3 Territory Opening", "titleKo": "T3 영토 오픈", "endsAt": "2026-11-10T15:02:32Z", "note": "플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요."}, {"L": "border", "place": "전역", "cycle": "ops", "stage": 0, "kind": "스킨", "phase": 0, "country": null, "title": "New Skin coming", "titleKo": "새 스킨 출시 예정", "endsAt": "2026-11-10T11:00:57Z", "note": "공식 배너 · New Skin coming"}];
+
+    function groupCd(list, nowMs, withFlags) {
+      var LN = { real: '■ 현실 지구', border: '◆ 경계', digital: '⬢ 디지털 지구' };
+      var LC = { real: '#2fe6c8', border: '#ff2fb0', digital: '#7d6bff' };
+      var LB = { real: 'linear-gradient(120deg, rgba(47,230,200,.16), rgba(106,60,255,.28))', border: 'linear-gradient(120deg, rgba(255,47,176,.16), rgba(106,60,255,.28))', digital: 'linear-gradient(120deg, rgba(125,107,255,.2), rgba(106,60,255,.28))' };
+      var PH = ['멘타 스테이커 할인', '에센스로 타일 구매', 'T3 영토 오픈'];
+      var W = ['일', '월', '화', '수', '목', '금', '토'];
+      function p2(n) { return (n < 10 ? '0' : '') + n; }
+      function left(e) { if (isNaN(e)) return '--:--:--'; var s = Math.floor((e - nowMs) / 1000); if (s <= 0) return '열림'; var dd = Math.floor(s / 86400); return (dd ? dd + 'D ' : '') + p2(Math.floor(s % 86400 / 3600)) + ':' + p2(Math.floor(s % 3600 / 60)) + ':' + p2(s % 60); }
+      function when(e) { if (isNaN(e)) return '시각 확인 중'; var k = new Date(e + 9 * 3600000), hr = k.getUTCHours(); return (k.getUTCMonth() + 1) + '월 ' + k.getUTCDate() + '일 (' + W[k.getUTCDay()] + ') ' + (hr < 12 ? '오전 ' : '오후 ') + ((hr % 12) || 12) + ':' + p2(k.getUTCMinutes()) + ' · 한국 시간'; }
+      function countryKo(c) { if (!c) return ''; try { if (c.code && typeof Intl !== 'undefined' && Intl.DisplayNames) return new Intl.DisplayNames(['ko'], { type: 'region' }).of(c.code); } catch (e) {} return c.en || ''; }
+      function flag(c) { return withFlags && c && c.code ? 'assets/flags/' + c.code.toLowerCase() + '.svg' : ''; }
+      function city(place) { var i = place.lastIndexOf(','); return i > 0 ? place.slice(0, i).trim() : ''; }
+      var groups = {}, order = [], cards = [];
+      list.forEach(function (c) {
+        var e = c.endsAt ? Date.parse(c.endsAt) : NaN;
+        if (!isNaN(e) && nowMs - e > 86400000) return;
+        var row = { label: '', left: left(e), endsAt: isNaN(e) ? '' : String(e), when: when(e), e: isNaN(e) ? 9e15 : e };
+        if (c.phase) {
+          if (!groups[c.place]) { groups[c.place] = { c: c, rows: [], on: {} }; order.push(c.place); }
+          row.label = PH[c.phase - 1]; row.ph = c.phase;
+          groups[c.place].rows.push(row); groups[c.place].on[c.phase] = true;
+        } else {
+          var ck = countryKo(c.country);
+          cards.push({ isTerr: false, tag: LN[c.L] + ' · ' + (ck || c.place), title: c.titleKo || c.title, hasFlag: false, flag: '', color: LC[c.L], bg: LB[c.L],
+            phases: [], rows: [row], hasNote: !!c.note, note: c.note || '', e: row.e });
+        }
+      });
+      order.forEach(function (pl) {
+        var g = groups[pl], c = g.c, ck = countryKo(c.country), ct = city(pl);
+        g.rows.sort(function (a, b) { return a.ph - b.ph; });
+        cards.push({ isTerr: true, tag: '■ 현실 지구 · 영토 오픈', title: (ck || pl) + (ck && ct ? ' · ' + ct : ''), hasFlag: !!flag(c.country), flag: flag(c.country),
+          color: LC.real, bg: LB.real,
+          phases: PH.map(function (t, n) { var on = !!g.on[n + 1]; return { label: (n + 1) + ' ' + t, bd: on ? '#ffd23f' : 'rgba(255,255,255,.25)', bg: on ? '#ffd23f' : 'transparent', fg: on ? '#0a0716' : '#8b84ad' }; }),
+          rows: g.rows, hasNote: true, note: '공식 배너 순서: ① 멘타 스테이커 할인 → ② 에센스로 타일 구매 → ③ T3 영토 오픈. 노란 칸이 지금 열려 있는 단계예요.',
+          e: Math.min.apply(null, g.rows.map(function (r) { return r.e; })) });
+      });
+      return cards.sort(function (a, b) { return a.e - b.e; });
     }
+    var countdowns = groupCd(cdAll, Date.now(), !!DATA).filter(function (c) { return layer === 'all' || (c.isTerr ? layer === 'real' : c.color === { real: '#2fe6c8', border: '#ff2fb0', digital: '#7d6bff' }[layer]); });
     var sel = this.state.sel;
     if (sel >= all.length) sel = 0;
     var pins = [], labels = [];

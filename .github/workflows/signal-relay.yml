@@ -27,6 +27,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - run: pip install -q pycountry
       - name: earth2.io 공식 뉴스 확인
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

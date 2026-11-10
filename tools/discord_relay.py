@@ -382,6 +382,41 @@ KIND = {
     '에센스타일': ('real', ''), '기타': ('border', ''),
 }
 STAGE = {'투표': 1, '결과': 2, '카운트다운': 3, '오픈': 4}
+# Official banner carousel order for a territory release (operator confirmed 2026-11-10):
+# 1 MENTAR STAKER DISCOUNT PERK → 2 Buy Tiles with Essence → 3 T3 Territory Opening
+PHASE = {'스테이커': 1, '에센스타일': 2, '영토': 3}
+COUNTRY_ALIAS = {'korea': 'KR', 'south korea': 'KR', 'turkey': 'TR', 'türkiye': 'TR', 'ivory coast': 'CI',
+                 'uk': 'GB', 'england': 'GB', 'scotland': 'GB', 'wales': 'GB', 'russia': 'RU', 'usa': 'US', 'america': 'US',
+                 'vietnam': 'VN', 'laos': 'LA', 'syria': 'SY', 'bolivia': 'BO', 'venezuela': 'VE', 'iran': 'IR',
+                 'tanzania': 'TZ', 'moldova': 'MD', 'czechia': 'CZ', 'macedonia': 'MK', 'palestine': 'PS', 'taiwan': 'TW'}
+
+
+def country_of(place):
+    """'Genoa, Italy' → {'code': 'IT', 'en': 'Italy'}; exact names only, never a guess."""
+    if not place or place == '전역':
+        return None
+    name = place.split(',')[-1].strip()
+    code = COUNTRY_ALIAS.get(name.lower())
+    if not code:
+        try:
+            import pycountry
+            code = pycountry.countries.lookup(name).alpha_2
+        except (ImportError, LookupError):
+            code = ''
+    return {'code': code, 'en': name}
+
+
+def kind_of(title):
+    t = title.lower()
+    if 'staker' in t or 'mentar' in t:
+        return '스테이커'
+    if 'essence' in t:
+        return '에센스타일'
+    if 'territor' in t or re.search(r'\bt3\b', t):
+        return '영토'
+    if 'skin' in t:
+        return '스킨'
+    return '기타'
 
 
 def parse_left(t):
@@ -418,6 +453,7 @@ def parse_report(m):
         layer, cycle = KIND[kind]
         ends = (sent + timedelta(seconds=secs)).strftime('%Y-%m-%dT%H:%M:%SZ') if secs is not None else ''
         out.append({'L': layer, 'place': place or '전역', 'cycle': cycle, 'stage': stage if kind == '영토' else 0,
+                    'kind': kind, 'phase': PHASE.get(kind, 0), 'country': country_of(place),
                     'title': title, 'endsAt': ends,
                     'note': '플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요.' if kind == '영토' else ''})
     return out
@@ -447,6 +483,7 @@ def aside(dc, cfg, state, drafts):
         key = 'countdown:%s:%s' % (c['title'], c['place'])
         if key in live:  # approved before → keep the time fresh without asking again
             live[key].update({k: c[k] for k in ('endsAt', 'stage') if c[k] or k == 'stage'})
+            live[key].update({'kind': c['kind'], 'phase': c['phase'], 'country': c['country']})
             updated = True
         elif key not in pending and key not in rejected:
             when = c['endsAt'] or '시각 확인 중'
