@@ -473,6 +473,24 @@ def aside(dc, cfg, state, drafts):
         save(MAP, mp)
 
 
+def name_countdowns():
+    """Give approved countdown cards a Korean name (official banner name kept in the note)."""
+    mp = load(MAP, {})
+    changed = False
+    for c in mp.get('countdowns', []):
+        if c.get('key') and not c.get('titleKo'):
+            ko = ai_decode.banner_ko(c['title'])
+            if ko:
+                c['titleKo'] = ko
+                if not c.get('note'):
+                    c['note'] = '공식 배너 · ' + c['title']
+                changed = True
+                print('countdown name', c['title'], '→', ko)
+    if changed:
+        mp['updatedAt'] = now_iso()
+        save(MAP, mp)
+
+
 def main():
     token = os.environ.get('DISCORD_BOT_TOKEN', '').strip()
     if not token:
@@ -489,6 +507,7 @@ def main():
         review(dc, cfg, drafts, bot_id)
         collect(dc, cfg, state, drafts)
         aside(dc, cfg, state, drafts)
+        name_countdowns()
     finally:
         state['checkedAt'] = now_iso()
         save(STATE, state)

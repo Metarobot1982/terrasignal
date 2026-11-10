@@ -87,3 +87,25 @@ def decode(title, body, source_label):
         return None
     layer = out.get('layer') if out.get('layer') in ('real', 'border', 'digital') else None
     return {'titleKo': str(out['titleKo']).strip()[:120], 'lines': lines, 'layer': layer, 'chronicle': bool(out.get('chronicle'))}
+
+
+BANNER_SYSTEM = """어스2 공식 앱 상단 카운트다운 배너의 영어 제목을 한국어로 옮겨.
+- 제목에 있는 말만 옮긴다. 설명, 추측, 권유를 덧붙이지 않는다.
+- 게임 용어: Mentar → 멘타, Staker → 스테이커, Essence → 에센스, Tiles → 타일, Territory → 영토, Skin → 스킨, Perk → 혜택, Discount → 할인, Opening → 오픈, T3 → T3
+- 결과 한 줄만, 따옴표 없이."""
+
+
+def banner_ko(title):
+    """Korean name for a countdown banner title, or None."""
+    key = os.environ.get('ANTHROPIC_API_KEY', '').strip()
+    if not key:
+        return None
+    try:
+        res = _post({'model': MODEL, 'max_tokens': 60, 'system': BANNER_SYSTEM,
+                     'messages': [{'role': 'user', 'content': title}]}, key)
+    except (urllib.error.HTTPError, urllib.error.URLError) as e:
+        print('banner_ko failed', e)
+        return None
+    text = ''.join(b.get('text', '') for b in res.get('content', []) if b.get('type') == 'text').strip()
+    text = text.splitlines()[0].strip().strip('"“”') if text else ''
+    return text[:60] or None
