@@ -355,7 +355,7 @@ class Component extends DCLogic {
       var cd = cdAll[q];
       if (layer !== 'all' && cd.L !== layer) continue;
       var ends = cd.endsAt ? Date.parse(cd.endsAt) : NaN;
-      countdowns.push({ tag: LN[cd.L] + ' · ' + cd.place + (CYC[cd.cycle] || ''), title: cd.title, color: LCOL[cd.L],
+      countdowns.push({ tag: LN[cd.L] + ' · ' + cd.place + (CYC[cd.cycle] || ''), title: cd.titleKo || cd.title, color: LCOL[cd.L],
         bg: 'linear-gradient(120deg, ' + LBG[cd.L] + ', rgba(106,60,255,.3))',
         isVote: cd.cycle === 'vote', stages: STG.map(function (t, n) { var on = n + 1 === cd.stage; return { label: t, bd: on ? '#ffd23f' : 'rgba(255,255,255,.3)', bg: on ? '#ffd23f' : 'transparent', fg: on ? '#0a0716' : '#b8b0d8' }; }),
         endsAt: isNaN(ends) ? '' : String(ends), left: Component.left(ends), when: isNaN(ends) ? '시각 확인 중' : Component.kst(ends),
