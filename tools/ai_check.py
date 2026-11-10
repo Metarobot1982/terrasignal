@@ -1,4 +1,4 @@
-"""One-off check that the Claude API key works and the decoding reads well (prints only)."""
+"""One-off (v2) check that the Claude API key works and the decoding reads well (prints only)."""
 import json
 import urllib.request
 

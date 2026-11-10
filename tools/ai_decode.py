@@ -75,7 +75,7 @@ def decode(title, body, source_label):
     text = ''.join(b.get('text', '') for b in res.get('content', []) if b.get('type') == 'text')
     m = re.search(r'\{[\s\S]*\}', text)
     if not m:
-        print('AI decode: no JSON')
+        print('AI decode: no JSON · stop=%s · blocks=%s · text=%r' % (res.get('stop_reason'), [b.get('type') for b in res.get('content', [])], text[:300]))
         return None
     try:
         out = json.loads(m.group(0))
@@ -107,5 +107,7 @@ def banner_ko(title):
         print('banner_ko failed', e)
         return None
     text = ''.join(b.get('text', '') for b in res.get('content', []) if b.get('type') == 'text').strip()
+    if not text:
+        print('banner_ko empty · stop=%s · blocks=%s' % (res.get('stop_reason'), [b.get('type') for b in res.get('content', [])]))
     text = text.splitlines()[0].strip().strip('"“”') if text else ''
     return text[:60] or None
