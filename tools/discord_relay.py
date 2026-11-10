@@ -25,6 +25,8 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
+import ai_decode
+
 API = 'https://discord.com/api/v10'
 UA = 'DiscordBot (https://metarobot1982.github.io/terrasignal/, 1.0)'
 KST = timezone(timedelta(hours=9))
@@ -162,7 +164,7 @@ def draft_embed(d):
     return {
         'title': ('📡 ' + d['title'])[:250],
         'url': d['url'] or None,
-        'description': d['excerpt'][:1500] or '(본문 없음)',
+        'description': (('🤖 **AI 해독 초안** — 원문과 맞는지 확인해 주세요\n**' + d['titleKo'] + '**\n' + '\n'.join('%d. %s' % (n + 1, x) for n, x in enumerate(d.get('linesKo') or [])) + ('\n📜 연대기 추천' if d.get('aiChronicle') else '') + '\n\n— 원문 —\n') if d.get('aiDecoded') else '') + (d['excerpt'][:1200] or '(본문 없음)'),
         'color': {'real': 0x2FE6C8, 'border': 0xFF2FB0, 'digital': 0x7D6BFF}[d['layer']],
         'fields': [
             {'name': '층 추정', 'value': LAYER_NAME[d['layer']], 'inline': True},
@@ -174,7 +176,19 @@ def draft_embed(d):
     }
 
 
-def new_draft(dc, cfg, drafts, src):
+def apply_ai(src, body):
+    if src.get('kind') == 'countdown':
+        return
+    r = ai_decode.decode(src['title'], body or src.get('excerpt', ''), src.get('sourceLabel', ''))
+    if not r:
+        return
+    src.update({'titleKo': r['titleKo'], 'linesKo': r['lines'], 'descKo': r['lines'][0], 'aiDecoded': True, 'aiChronicle': r['chronicle']})
+    if r['layer']:
+        src['layer'] = r['layer']
+
+
+def new_draft(dc, cfg, drafts, src, body=None):
+    apply_ai(src, body)
     msg = dc.post(cfg['approvalChannel'], '🟡 **승인 대기** — 새 신호가 들어왔어요.', draft_embed(src))
     for e in (OK, NO, BOOK):
         dc.react(cfg['approvalChannel'], msg['id'], e)
@@ -203,7 +217,7 @@ def collect(dc, cfg, state, drafts):
             state['lastSeen'][cid] = m['id']
             if m.get('type', 0) not in (0, 19) or not message_text(m):
                 continue  # skip system notices such as "channel followed"
-            new_draft(dc, cfg, drafts, source_from_message(m, ch))
+            new_draft(dc, cfg, drafts, source_from_message(m, ch), message_text(m))
     news = load(NEWS, {'items': []})
     for it in news['items']:
         if it.get('status') == 'pending' and not it.get('draftId'):
@@ -213,7 +227,7 @@ def collect(dc, cfg, state, drafts):
                 'layer': guess_layer(it['title'] + ' ' + it.get('summary', '')),
                 'sourceLabel': 'earth2.io 공식 기사', 'sourceKey': 'earth2:%s' % it.get('id'),
             }
-            new_draft(dc, cfg, drafts, src)
+            new_draft(dc, cfg, drafts, src, ai_decode.article_text(it.get('id')) if ai_decode.os.environ.get('ANTHROPIC_API_KEY') else None)
             it['draftId'] = src['draftId']
             it['status'] = 'drafted'
     save(NEWS, news)

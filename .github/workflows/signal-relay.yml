@@ -35,6 +35,7 @@ jobs:
       - name: 디스코드 초안 올리기 · 승인 반영
         env:
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python tools/discord_relay.py
       - name: 기록 저장
         if: always()
