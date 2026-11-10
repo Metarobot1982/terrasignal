@@ -16,42 +16,6 @@
       "cta": "송출탑 EPL [설정 예정]"
     },
     {
-      "L": "real",
-      "g": "CLEAR",
-      "lat": -0.53,
-      "lon": 166.92,
-      "title": "T3 영토 오픈",
-      "coord": "0.53 S · 166.92 E · 나우루",
-      "desc": "플레이어 투표(Tier 3 Territory Voting)로 열리는 영토예요. 열리면 T3 땅이 해금되고, 공식 안내 기준 타일당 E$0.10부터 시작해요. 국가는 카운트다운 배너의 국기로 판단했어요.",
-      "source": "app.earth2.io 카운트다운 배너",
-      "date": "2026.11.04 확인",
-      "cta": "수신 기록 보기"
-    },
-    {
-      "L": "real",
-      "g": "CLEAR",
-      "lat": 35.68,
-      "lon": 139.69,
-      "title": "에센스로 타일 구매",
-      "coord": "35.68 N · 139.69 E · 일본",
-      "desc": "공식 앱 카운트다운 배너에 BUY TILES WITH ESSENCE로 표시된 이벤트예요.",
-      "source": "app.earth2.io 카운트다운 배너",
-      "date": "2026.11.04 확인",
-      "cta": "수신 기록 보기"
-    },
-    {
-      "L": "border",
-      "g": "CLEAR",
-      "lat": 43.06,
-      "lon": 141.35,
-      "title": "멘타 스테이커 할인 혜택",
-      "coord": "일본 영토",
-      "desc": "멘타 스테이커를 위한 일본 영토 할인 혜택(MENTAR STAKER DISCOUNT PERK)이 카운트다운으로 진행 중이에요.",
-      "source": "app.earth2.io 카운트다운 배너",
-      "date": "2026.11.04 확인",
-      "cta": "수신 기록 보기"
-    },
-    {
       "L": "digital",
       "g": "CLEAR",
       "lat": 6.912794,
