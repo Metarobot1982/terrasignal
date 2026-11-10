@@ -35,8 +35,10 @@
       "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
       "sourceKey": "countdown:MENTAR STAKER DISCOUNT PERK:Genoa, Italy",
       "draftId": "1569610327992303690",
-      "status": "pending",
-      "createdAt": "2026-11-10T07:11:06Z"
+      "status": "published",
+      "createdAt": "2026-11-10T07:11:06Z",
+      "decidedAt": "2026-11-10T07:35:10Z",
+      "chronicle": false
     },
     {
       "kind": "countdown",
@@ -58,8 +60,10 @@
       "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
       "sourceKey": "countdown:Buy Tiles with Essence:Genoa, Italy",
       "draftId": "1569610339857731645",
-      "status": "pending",
-      "createdAt": "2026-11-10T07:11:09Z"
+      "status": "published",
+      "createdAt": "2026-11-10T07:11:09Z",
+      "decidedAt": "2026-11-10T07:35:14Z",
+      "chronicle": false
     },
     {
       "kind": "countdown",
@@ -81,8 +85,10 @@
       "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
       "sourceKey": "countdown:T3 Territory Opening:Hambantota, Sri Lanka",
       "draftId": "1569610352172470334",
-      "status": "pending",
-      "createdAt": "2026-11-10T07:11:12Z"
+      "status": "published",
+      "createdAt": "2026-11-10T07:11:12Z",
+      "decidedAt": "2026-11-10T07:35:17Z",
+      "chronicle": false
     },
     {
       "kind": "countdown",
@@ -104,8 +110,10 @@
       "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
       "sourceKey": "countdown:New Skin coming:전역",
       "draftId": "1569610364281159702",
-      "status": "pending",
-      "createdAt": "2026-11-10T07:11:15Z"
+      "status": "published",
+      "createdAt": "2026-11-10T07:11:15Z",
+      "decidedAt": "2026-11-10T07:35:20Z",
+      "chronicle": false
     }
   ]
 }

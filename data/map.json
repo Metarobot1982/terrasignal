@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T14:25:46.311Z",
+  "updatedAt": "2026-11-10T07:35:20Z",
   "note": "pins: 지도 핀 / globals: 전역 송출 / countdowns: 곧 열리는 시그널 (endsAt = ISO 시각, 비우면 시각 확인 중)",
   "pins": [
     {
@@ -133,40 +133,44 @@
   ],
   "countdowns": [
     {
+      "L": "border",
+      "place": "Genoa, Italy",
+      "cycle": "",
+      "stage": 0,
+      "title": "MENTAR STAKER DISCOUNT PERK",
+      "endsAt": "2026-11-11T03:02:35Z",
+      "note": "",
+      "key": "countdown:MENTAR STAKER DISCOUNT PERK:Genoa, Italy"
+    },
+    {
       "L": "real",
-      "place": "나우루",
+      "place": "Genoa, Italy",
+      "cycle": "",
+      "stage": 0,
+      "title": "Buy Tiles with Essence",
+      "endsAt": "2026-11-11T03:02:34Z",
+      "note": "",
+      "key": "countdown:Buy Tiles with Essence:Genoa, Italy"
+    },
+    {
+      "L": "real",
+      "place": "Hambantota, Sri Lanka",
       "cycle": "vote",
       "stage": 3,
-      "title": "T3 영토 오픈",
-      "endsAt": "",
-      "note": "플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요."
-    },
-    {
-      "L": "real",
-      "place": "일본",
-      "cycle": "",
-      "stage": 0,
-      "title": "에센스로 타일 구매",
-      "endsAt": "",
-      "note": ""
-    },
-    {
-      "L": "border",
-      "place": "일본",
-      "cycle": "",
-      "stage": 0,
-      "title": "멘타 스테이커 할인 혜택",
-      "endsAt": "",
-      "note": ""
+      "title": "T3 Territory Opening",
+      "endsAt": "2026-11-10T15:02:32Z",
+      "note": "플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요.",
+      "key": "countdown:T3 Territory Opening:Hambantota, Sri Lanka"
     },
     {
       "L": "border",
       "place": "전역",
       "cycle": "ops",
       "stage": 0,
-      "title": "새 스킨 드롭",
-      "endsAt": "",
-      "note": ""
+      "title": "New Skin coming",
+      "endsAt": "2026-11-10T11:00:57Z",
+      "note": "",
+      "key": "countdown:New Skin coming:전역"
     }
   ]
 }
