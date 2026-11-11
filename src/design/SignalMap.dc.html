@@ -355,7 +355,12 @@ class Component extends DCLogic {
     }
     var countdowns = groupCd(cdAll, Date.now(), !!DATA).filter(function (c) { return layer === 'all' || (c.isTerr ? layer === 'real' : c.color === { real: '#2fe6c8', border: '#ff2fb0', digital: '#7d6bff' }[layer]); });
     var sel = this.state.sel;
-    if (sel >= all.length) sel = 0;
+    if (!(sel >= 0 && sel < all.length)) sel = 0;
+    if (layer !== 'all' && all[sel].L !== layer) {  // the selected pin must belong to the layer on screen
+      var first = -1;
+      for (var q = 0; q < all.length; q++) { if (all[q].L === layer && (first < 0 || (all[q].station && !all[first].station))) first = q; }
+      if (first >= 0) sel = first;
+    }
     var pins = [], labels = [];
     for (var i = 0; i < all.length; i++) {
       var s = all[i];
@@ -392,9 +397,9 @@ class Component extends DCLogic {
       borderBg: layer === 'border' ? on : off, borderFg: layer === 'border' ? onFg : offFg,
       digiBg: layer === 'digital' ? on : off, digiFg: layer === 'digital' ? onFg : offFg,
       showAll: function () { self.setState({ layer: 'all' }); },
-      showReal: function () { self.setState({ layer: 'real', sel: 0 }); },
-      showBorder: function () { self.setState({ layer: 'border', sel: 3 }); },
-      showDigital: function () { self.setState({ layer: 'digital', sel: 4 }); }
+      showReal: function () { self.setState({ layer: 'real' }); },
+      showBorder: function () { self.setState({ layer: 'border' }); },
+      showDigital: function () { self.setState({ layer: 'digital' }); }
     };
   }
 }

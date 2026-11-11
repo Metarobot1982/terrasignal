@@ -173,9 +173,9 @@ a{color:#ffd166}a:hover{color:#ffffff}
 </div>
 </div>
 <div class="stage" style="position: relative; overflow: hidden; aspect-ratio: 16 / 9; border: 3px solid #0a0716; box-shadow: 0 0 0 3px #ffd23f, 8px 8px 0 3px #000; background: #07051a">
-<img src="/_blob/ea9e760d62745312f367290e811d7de7" alt="현실 지구 · {{pt.title}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<img src="/_blob/ea9e760d62745312f367290e811d7de7" alt="현실 지구 · {{pt.title}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; visibility: {{fbVis}}">
 <div class="mapslot-real" aria-hidden="true" style="position: absolute; inset: 0"></div>
-<div class="world" aria-hidden="true" style="position: absolute; inset: 0; clip-path: {{clip}}; pointer-events: none"><img class="jit" src="/_blob/1cf215a3977029b64faf8cab9aef9688" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><div class="mapslot-digi" style="position: absolute; inset: 0"></div><div class="digigrid" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(169,155,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(169,155,255,.35) 1px, transparent 1px), repeating-linear-gradient(0deg, rgba(255,47,176,.06) 0 2px, transparent 2px 5px); background-size: 28px 28px, 28px 28px, auto; mix-blend-mode: screen"></div></div>
+<div class="world" aria-hidden="true" style="position: absolute; inset: 0; clip-path: {{clip}}; pointer-events: none"><img class="jit" src="/_blob/1cf215a3977029b64faf8cab9aef9688" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; visibility: {{fbVis}}"><div class="mapslot-digi" style="position: absolute; inset: 0"></div><div class="digigrid" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(169,155,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(169,155,255,.35) 1px, transparent 1px), repeating-linear-gradient(0deg, rgba(255,47,176,.06) 0 2px, transparent 2px 5px); background-size: 28px 28px, 28px 28px, auto; mix-blend-mode: screen"></div></div>
 <div class="world" aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; clip-path: {{riftClip}}; background: linear-gradient(90deg, #2fe6c8, #ffffff 45%, #ff2fb0); box-shadow: 0 0 40px #ff2fb0"></div>
 <div aria-hidden="true" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(255,210,63,.55); pointer-events: none"></div>
 <div aria-hidden="true" style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: rgba(255,210,63,.55); pointer-events: none"></div>
@@ -197,7 +197,7 @@ a{color:#ffd166}a:hover{color:#ffffff}
 <p style="margin: -6px 0 0; font-size: 12px; color: #8b84ad">어스2 좌표와 실제 지구 좌표는 같은 자리를 가리켜요. 복사한 좌표는 어스2 지도와 구글 지도에서 그대로 쓸 수 있어요.</p>
 <div style="display: grid; gap: 10px">
 <a href="{{pt.gmaps}}" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 54px; padding: 0 16px; background: #ffffff; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-weight: 900"><span>■ 현실 지구에서 보기 · 구글 지도</span><span style="font-family: 'Space Mono', monospace; font-size: 11px">MAP ↗</span></a>
-<a href="https://app.earth2.io/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 54px; padding: 0 16px; background: #2fe6c8; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #ff2fb0; font-weight: 900"><span>⬢ 디지털 지구로 · 어스2 지도 열기</span><span style="font-family: 'Space Mono', monospace; font-size: 11px">E2 ↗</span></a>
+<a href="{{pt.e2}}" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 54px; padding: 0 16px; background: #2fe6c8; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #ff2fb0; font-weight: 900"><span>⬢ 디지털 지구로 · 어스2 지도 열기</span><span style="font-family: 'Space Mono', monospace; font-size: 11px">E2 ↗</span></a>
 <a href="#" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 50px; padding: 0 16px; background: transparent; color: #ffffff; text-decoration: none; border: 2px solid #ffffff; font-weight: 700; font-size: 15px"><span>E2V1에서 가는 법</span><span>→</span></a>
 <a href="#" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 50px; padding: 0 16px; background: transparent; color: #ffe14d; text-decoration: none; border: 2px dashed #ffe14d; font-weight: 700; font-size: 15px"><span>내 방에 송출탑 띄우기</span><span style="font-family: 'Space Mono', monospace; font-size: 11px">AR · 준비 중</span></a>
 </div>
@@ -274,7 +274,7 @@ class Component extends DCLogic {
       real.on('move', function () { digi.jumpTo({ center: real.getCenter(), zoom: real.getZoom(), bearing: real.getBearing(), pitch: real.getPitch() }); });
       real.addControl(new window.mapboxgl.NavigationControl({ showCompass: false }), 'top-right');
       self.__maps = { real: real, digi: digi, realEl: realEl, digiEl: digiEl };
-      root.querySelectorAll('.stage > img').forEach(function (i) { i.style.visibility = 'hidden'; });
+      root.querySelectorAll('.stage img').forEach(function (i) { i.style.visibility = 'hidden'; });
     }
     if (window.mapboxgl) { boot(); return; }
     var css = document.createElement('link'); css.rel = 'stylesheet'; css.href = 'https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.css'; document.head.appendChild(css);
@@ -295,6 +295,7 @@ class Component extends DCLogic {
       clip: 'polygon(' + (X + 7) + '% 0, 100% 0, 100% 100%, ' + (X - 7) + '% 100%)',
       riftClip: 'polygon(' + (X + 7) + '% 0, ' + (X + 7.5) + '% 0, ' + (X - 6.5) + '% 100%, ' + (X - 7) + '% 100%)',
       capReal: v !== 'digi', capDigi: v !== 'real',
+      fbVis: this.pt.station ? 'visible' : 'hidden',  // the Seoul photos are only true for the tower
       isReal: v === 'real', isBoth: v === 'both', isDigi: v === 'digi',
       realBg: v === 'real' ? on : off, realFg: v === 'real' ? onFg : offFg,
       bothBg: v === 'both' ? on : off, bothFg: v === 'both' ? onFg : offFg,
@@ -305,6 +306,7 @@ class Component extends DCLogic {
       copyLabel: this.state.copied ? '복사 완료' : '복사',
       copyBg: this.state.copied ? '#2fe6c8' : 'transparent', copyFg: this.state.copied ? '#0a0716' : '#2fe6c8',
       pt: { station: this.pt.station, title: this.pt.title, desc: this.pt.desc, coord: coord, label: label, gmaps: 'https://www.google.com/maps?q=' + this.pt.lat.toFixed(6) + ',' + this.pt.lon.toFixed(6),
+        e2: 'https://app.earth2.io/?lat=' + this.pt.lat.toFixed(6) + '&lng=' + this.pt.lon.toFixed(6),  // the Earth 2 app reads ?lat=&lng= on load
         capReal: this.pt.place || this.pt.title, capDigi: this.pt.station ? '타일 TV 송출탑' : '같은 좌표' },
       copy: function () { try { navigator.clipboard.writeText(coord); } catch (e) {} self.setState({ copied: true }); }
     };
