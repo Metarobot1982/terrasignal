@@ -299,14 +299,16 @@ class Component extends DCLogic {
       var r = document.querySelector('.mapslot-real'), d = document.querySelector('.mapslot-digi');
       r.appendChild(realEl); d.appendChild(digiEl);
       window.mapboxgl.accessToken = token;
-      var opt = function (el, inter) { return { container: el, style: 'mapbox://styles/mapbox/satellite-v9', center: [pt.lon, pt.lat], zoom: 17.2, attributionControl: inter, interactive: inter, cooperativeGestures: true }; };
+      var opt = function (el, inter) { return { container: el, style: 'mapbox://styles/mapbox/satellite-v9', center: [pt.lon, pt.lat], zoom: 15, attributionControl: inter, interactive: inter, cooperativeGestures: true }; };
       var real = new window.mapboxgl.Map(opt(realEl, true));
       var digi = new window.mapboxgl.Map(opt(digiEl, false));
       real.on('move', function () { digi.jumpTo({ center: real.getCenter(), zoom: real.getZoom(), bearing: real.getBearing(), pitch: real.getPitch() }); });
       real.addControl(new window.mapboxgl.NavigationControl({ showCompass: false }), 'bottom-right');
       var stat = function (t) { self.__msg = t; document.querySelectorAll('.mapstat').forEach(function (s) { s.textContent = t; s.style.display = t ? '' : 'none'; }); };
-      real.once('load', function () { stat(''); });
-      real.on('error', function (e) { var st = e && e.error && e.error.status; stat(st === 401 || st === 403 ? '지도 키가 이 주소에서 거부됐어요 (' + st + ')' : '지도를 불러오지 못했어요' + (st ? ' (' + st + ')' : '')); });
+      var loaded = false;
+      real.once('load', function () { loaded = true; stat(''); });
+      real.on('error', function (e) { var st = e && e.error && e.error.status; if (loaded && st !== 401 && st !== 403) return;  // one missing tile after load is not a broken map
+        stat(st === 401 || st === 403 ? '지도 키가 이 주소에서 거부됐어요 (' + st + ')' : '지도를 불러오지 못했어요' + (st ? ' (' + st + ')' : '')); });
       self.__maps = { real: real, digi: digi, realEl: realEl, digiEl: digiEl };
       root.querySelectorAll('.stage img').forEach(function (i) { i.style.visibility = 'hidden'; });
     }
