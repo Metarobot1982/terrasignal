@@ -274,7 +274,7 @@ class Component extends DCLogic {
   static left(ends) {
     if (isNaN(ends)) return '--:--:--';
     var s = Math.floor((ends - Date.now()) / 1000);
-    if (s <= 0) return '열림';
+    if (s <= 0) return (function (a) { var h = Math.floor(a / 3600), m = Math.floor(a % 3600 / 60); return '열림 · ' + (h ? h + '시간 ' : '') + (h ? '' : m + '분 ') + '전'; })(-s);
     var dd = Math.floor(s / 86400), hh = Math.floor(s % 86400 / 3600), mm = Math.floor(s % 3600 / 60), ss = s % 60;
     function p(n) { return n < 10 ? '0' + n : '' + n; }
     return (dd ? dd + 'D ' : '') + p(hh) + ':' + p(mm) + ':' + p(ss);
@@ -322,7 +322,7 @@ class Component extends DCLogic {
       var PH = ['멘타 스테이커 할인', '에센스로 타일 구매', 'T3 영토 오픈'];
       var W = ['일', '월', '화', '수', '목', '금', '토'];
       function p2(n) { return (n < 10 ? '0' : '') + n; }
-      function left(e) { if (isNaN(e)) return '--:--:--'; var s = Math.floor((e - nowMs) / 1000); if (s <= 0) return '열림'; var dd = Math.floor(s / 86400); return (dd ? dd + 'D ' : '') + p2(Math.floor(s % 86400 / 3600)) + ':' + p2(Math.floor(s % 3600 / 60)) + ':' + p2(s % 60); }
+      function left(e) { if (isNaN(e)) return '--:--:--'; var s = Math.floor((e - nowMs) / 1000); if (s <= 0) return (function (a) { var h = Math.floor(a / 3600), m = Math.floor(a % 3600 / 60); return '열림 · ' + (h ? h + '시간 ' : '') + (h ? '' : m + '분 ') + '전'; })(-s); var dd = Math.floor(s / 86400); return (dd ? dd + 'D ' : '') + p2(Math.floor(s % 86400 / 3600)) + ':' + p2(Math.floor(s % 3600 / 60)) + ':' + p2(s % 60); }
       function when(e) { if (isNaN(e)) return '시각 확인 중'; var k = new Date(e + 9 * 3600000), hr = k.getUTCHours(); return (k.getUTCMonth() + 1) + '월 ' + k.getUTCDate() + '일 (' + W[k.getUTCDay()] + ') ' + (hr < 12 ? '오전 ' : '오후 ') + ((hr % 12) || 12) + ':' + p2(k.getUTCMinutes()) + ' · 한국 시간'; }
       function countryKo(c) { if (!c) return ''; try { if (c.code && typeof Intl !== 'undefined' && Intl.DisplayNames) return new Intl.DisplayNames(['ko'], { type: 'region' }).of(c.code); } catch (e) {} return c.en || ''; }
       function flag(c) { return withFlags && c && c.code ? 'assets/flags/' + c.code.toLowerCase() + '.svg' : ''; }
