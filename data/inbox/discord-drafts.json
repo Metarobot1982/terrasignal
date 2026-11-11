@@ -203,7 +203,7 @@
       "status": "published",
       "createdAt": "2026-11-11T10:44:40Z",
       "decidedAt": "2026-11-11T11:10:04Z",
-      "chronicle": false
+      "chronicle": true
     },
     {
       "kind": "earth2.io",

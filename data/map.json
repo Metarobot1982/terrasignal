@@ -75,30 +75,12 @@
       "signal": "e2-3449"
     },
     {
-      "L": "border",
-      "g": "CLEAR",
-      "title": "리얼리티 스레드 9 공개, 에센스 1.1억 스테이킹",
-      "desc": "리얼리티 스레드 9 기사가 공개됐어요. 사이드로이드 레이딩과 38종 사이드로이드를 다뤄요.",
-      "date": "2026.11.11 · 공식 디스코드",
-      "url": "https://earth2.io/news/reality-thread-9",
-      "key": "discord:1566867496253005845:1570000871255973890",
-      "signal": "dc-1570000871255973890"
-    },
-    {
       "L": "digital",
       "g": "CLEAR",
       "title": "리얼리티 스레드 8 · Seeds of Change",
       "desc": "E2V1에 첫 농업이 들어왔어요.",
       "date": "2026.05.26 · 공식 기사",
       "signal": "rt8"
-    },
-    {
-      "L": "digital",
-      "g": "NOISE",
-      "title": "리얼리티 스레드 9 · Part 1",
-      "desc": "창업자 X 게시물로만 확인됐어요. 공식 기사 수신 전이에요.",
-      "date": "2026.08 말 · Shane Isaac X",
-      "signal": "rt9-p1"
     },
     {
       "L": "digital",

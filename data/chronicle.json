@@ -130,14 +130,15 @@
     },
     {
       "layer": "D",
-      "date": "2026-08-31",
-      "grade": "NOISE",
-      "short": "RT9 P1",
-      "title": "리얼리티 스레드 9 · Part 1",
-      "desc": "창업자 X 게시물로만 확인됐어요. 공식 기사 수신 전이에요.",
-      "source": "Shane Isaac X",
-      "url": "",
-      "signal": "rt9-p1"
+      "date": "2026-09-09",
+      "grade": "CLEAR",
+      "short": "RT9",
+      "title": "리얼리티 스레드 9 · Command Deck Online",
+      "desc": "E2V1 첫 플레이 가능 게임, 사이드로이드 레이딩이 열렸어요. 테스터 선공개는 8월 30일(쉐인 아이작 X 게시물 기준).",
+      "source": "earth2.io 공식 기사 · Chapter 6 – Reality Thread 9 – Command Deck Online",
+      "url": "https://earth2.io/news/reality-thread-9",
+      "key": "earth2:3449",
+      "signal": "e2-3449"
     },
     {
       "layer": "B",

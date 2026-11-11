@@ -57,54 +57,6 @@
       "approvedAt": "2026-11-11T11:10:04Z"
     },
     {
-      "id": "dc-1570000871255973890",
-      "layer": "border",
-      "grade": "CLEAR",
-      "date": "2026-11-11",
-      "kicker": "BORDER · SIGNAL",
-      "titleKo": "리얼리티 스레드 9 공개, 에센스 1.1억 스테이킹",
-      "titleEn": "# Reality Thread 9 + 110 Million Essence Staked!",
-      "source": "어스2 공식 디스코드 · #공지-announcements",
-      "url": "https://earth2.io/news/reality-thread-9",
-      "lines": [
-        {
-          "ko": "리얼리티 스레드 9 기사가 공개됐어요. 사이드로이드 레이딩과 38종 사이드로이드를 다뤄요.",
-          "en": ""
-        },
-        {
-          "ko": "플레이어 스톨, 아바타 전투 개선, 런처 2.0.0 등 플랫폼 업데이트도 함께 소개돼요.",
-          "en": ""
-        },
-        {
-          "ko": "프로퍼티에 스테이킹된 에센스가 1.1억 $ESS를 넘었고, 최초 최대 공급량의 11%예요.",
-          "en": ""
-        }
-      ],
-      "key": "discord:1566867496253005845:1570000871255973890",
-      "approvedAt": "2026-11-11T11:10:02Z"
-    },
-    {
-      "id": "rt9-p1",
-      "layer": "digital",
-      "grade": "NOISE",
-      "date": "2026-08-31",
-      "kicker": "E2V1 · REALITY THREAD 9",
-      "titleKo": "리얼리티 스레드 9 · Part 1",
-      "titleEn": "Reality Thread 9 – Part 1",
-      "source": "Shane Isaac X (공식 기사 전)",
-      "url": "",
-      "lines": [
-        {
-          "ko": "창업자 Shane Isaac의 X 게시물로만 확인된 소식이에요.",
-          "en": ""
-        },
-        {
-          "ko": "공식 기사가 나오면 CLEAR로 바뀌어요.",
-          "en": ""
-        }
-      ]
-    },
-    {
       "id": "rt8-0582",
       "layer": "digital",
       "grade": "CLEAR",
