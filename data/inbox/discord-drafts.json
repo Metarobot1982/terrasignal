@@ -114,6 +114,44 @@
       "createdAt": "2026-11-10T07:11:15Z",
       "decidedAt": "2026-11-10T07:35:20Z",
       "chronicle": false
+    },
+    {
+      "kind": "viewer",
+      "title": "기타 · 메타로봇",
+      "excerpt": "테스트",
+      "url": "",
+      "date": "2026-11-11",
+      "grade": "WEAK",
+      "layer": "border",
+      "sourceLabel": "시청자 시그널 · 메타로봇 · 한국",
+      "sourceKey": "viewer:1569960325745221748",
+      "titleKo": "기타 · 메타로봇",
+      "linesKo": [
+        "테스트"
+      ],
+      "descKo": "테스트",
+      "draftId": "1569961166833197097",
+      "status": "pending",
+      "createdAt": "2026-11-11T06:25:13Z"
+    },
+    {
+      "kind": "viewer",
+      "title": "현장 제보 · 메타로봇",
+      "excerpt": "테스트\n링크: 없어요",
+      "url": "",
+      "date": "2026-11-11",
+      "grade": "WEAK",
+      "layer": "border",
+      "sourceLabel": "시청자 시그널 · 메타로봇 · 한국",
+      "sourceKey": "viewer:1569960738301280297",
+      "titleKo": "현장 제보 · 메타로봇",
+      "linesKo": [
+        "테스트"
+      ],
+      "descKo": "테스트",
+      "draftId": "1569961178015211634",
+      "status": "pending",
+      "createdAt": "2026-11-11T06:25:15Z"
     }
   ]
 }
