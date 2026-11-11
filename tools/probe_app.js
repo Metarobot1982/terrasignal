@@ -1,4 +1,4 @@
-// One-off: open app.earth2.io logged out in a real browser, list JSON responses and visible banner/countdown text.
+// One-off (retry): open app.earth2.io logged out in a real browser, list JSON responses and visible banner/countdown text.
 const { chromium } = require('playwright');
 (async () => {
   const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1400, height: 900 }, userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36' });
