@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T09:13:53Z",
+  "updatedAt": "2026-11-11T11:10:06Z",
   "note": "pins: 지도 핀 / globals: 전역 송출 / countdowns: 곧 열리는 시그널 (endsAt = ISO 시각, 비우면 시각 확인 중)",
   "pins": [
     {
@@ -54,6 +54,36 @@
     }
   ],
   "globals": [
+    {
+      "L": "border",
+      "g": "CLEAR",
+      "title": "에센스 1.1억 스테이킹, 2026 리포트, 브릴리언트 쥬얼 확장",
+      "desc": "110M $ESS가 프로퍼티에 스테이킹됐고, 이는 최대 공급량 10억의 11%예요.",
+      "date": "2026.11.11 · 공식 기사",
+      "url": "https://earth2.io/news/110-million-ess-staked",
+      "key": "earth2:3207",
+      "signal": "e2-3207"
+    },
+    {
+      "L": "digital",
+      "g": "CLEAR",
+      "title": "리얼리티 스레드 9: 사이드로이드 레이딩 개방",
+      "desc": "E2V1 안에서 처음 플레이 가능한 게임, 사이드로이드 레이딩이 테스터에게 먼저 열렸어요.",
+      "date": "2026.09.09 · 공식 기사",
+      "url": "https://earth2.io/news/reality-thread-9",
+      "key": "earth2:3449",
+      "signal": "e2-3449"
+    },
+    {
+      "L": "border",
+      "g": "CLEAR",
+      "title": "리얼리티 스레드 9 공개, 에센스 1.1억 스테이킹",
+      "desc": "리얼리티 스레드 9 기사가 공개됐어요. 사이드로이드 레이딩과 38종 사이드로이드를 다뤄요.",
+      "date": "2026.11.11 · 공식 디스코드",
+      "url": "https://earth2.io/news/reality-thread-9",
+      "key": "discord:1566867496253005845:1570000871255973890",
+      "signal": "dc-1570000871255973890"
+    },
     {
       "L": "digital",
       "g": "CLEAR",

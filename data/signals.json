@@ -1,7 +1,88 @@
 {
-  "updatedAt": "2026-11-10T07:30:00Z",
+  "updatedAt": "2026-11-11T11:10:06Z",
   "note": "수신 기록. 운영자가 승인한 신호만 들어가요. 최신이 위.",
   "signals": [
+    {
+      "id": "e2-3207",
+      "layer": "border",
+      "grade": "CLEAR",
+      "date": "2026-11-11",
+      "kicker": "BORDER · SIGNAL",
+      "titleKo": "에센스 1.1억 스테이킹, 2026 리포트, 브릴리언트 쥬얼 확장",
+      "titleEn": "110 Million Essence Staked, 2026 Reports, New Brilliant Jewel Utility & Returning Gifted Skins",
+      "source": "earth2.io 공식 기사",
+      "url": "https://earth2.io/news/110-million-ess-staked",
+      "lines": [
+        {
+          "ko": "110M $ESS가 프로퍼티에 스테이킹됐고, 이는 최대 공급량 10억의 11%예요.",
+          "en": ""
+        },
+        {
+          "ko": "브릴리언트 쥬얼을 장착하면 모든 자원이 100% 몫을 받고, 일일 O.U.가 티어에 따라 ×1.1~×3.0이 돼요.",
+          "en": ""
+        },
+        {
+          "ko": "과거에 선물한 스킨 중 일부는 My Skins에서 수령자를 확인해 돌려받을 수 있어요.",
+          "en": ""
+        }
+      ],
+      "key": "earth2:3207",
+      "approvedAt": "2026-11-11T11:10:06Z"
+    },
+    {
+      "id": "e2-3449",
+      "layer": "digital",
+      "grade": "CLEAR",
+      "date": "2026-09-09",
+      "kicker": "DIGITAL EARTH · SIGNAL",
+      "titleKo": "리얼리티 스레드 9: 사이드로이드 레이딩 개방",
+      "titleEn": "Chapter 6 – Reality Thread 9 -Command Deck Online",
+      "source": "earth2.io 공식 기사",
+      "url": "https://earth2.io/news/reality-thread-9",
+      "lines": [
+        {
+          "ko": "E2V1 안에서 처음 플레이 가능한 게임, 사이드로이드 레이딩이 테스터에게 먼저 열렸어요.",
+          "en": ""
+        },
+        {
+          "ko": "파일럿이 사이드로이드를 원격 조종해 불안정해진 이더(E-ther)를 모으고, 모은 몫을 가져가요.",
+          "en": ""
+        },
+        {
+          "ko": "땅이나 사이드로이드가 없어도 시작할 수 있어요. 커맨드 덱 접근에는 런처 2.0.0 업데이트가 필요해요.",
+          "en": ""
+        }
+      ],
+      "key": "earth2:3449",
+      "approvedAt": "2026-11-11T11:10:04Z"
+    },
+    {
+      "id": "dc-1570000871255973890",
+      "layer": "border",
+      "grade": "CLEAR",
+      "date": "2026-11-11",
+      "kicker": "BORDER · SIGNAL",
+      "titleKo": "리얼리티 스레드 9 공개, 에센스 1.1억 스테이킹",
+      "titleEn": "# Reality Thread 9 + 110 Million Essence Staked!",
+      "source": "어스2 공식 디스코드 · #공지-announcements",
+      "url": "https://earth2.io/news/reality-thread-9",
+      "lines": [
+        {
+          "ko": "리얼리티 스레드 9 기사가 공개됐어요. 사이드로이드 레이딩과 38종 사이드로이드를 다뤄요.",
+          "en": ""
+        },
+        {
+          "ko": "플레이어 스톨, 아바타 전투 개선, 런처 2.0.0 등 플랫폼 업데이트도 함께 소개돼요.",
+          "en": ""
+        },
+        {
+          "ko": "프로퍼티에 스테이킹된 에센스가 1.1억 $ESS를 넘었고, 최초 최대 공급량의 11%예요.",
+          "en": ""
+        }
+      ],
+      "key": "discord:1566867496253005845:1570000871255973890",
+      "approvedAt": "2026-11-11T11:10:02Z"
+    },
     {
       "id": "rt9-p1",
       "layer": "digital",

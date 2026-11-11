@@ -175,8 +175,10 @@
       "aiDecoded": true,
       "aiChronicle": true,
       "draftId": "1570026430228733986",
-      "status": "pending",
-      "createdAt": "2026-11-11T10:44:33Z"
+      "status": "published",
+      "createdAt": "2026-11-11T10:44:33Z",
+      "decidedAt": "2026-11-11T11:10:02Z",
+      "chronicle": false
     },
     {
       "kind": "earth2.io",
@@ -198,8 +200,10 @@
       "aiDecoded": true,
       "aiChronicle": true,
       "draftId": "1570026460889092101",
-      "status": "pending",
-      "createdAt": "2026-11-11T10:44:40Z"
+      "status": "published",
+      "createdAt": "2026-11-11T10:44:40Z",
+      "decidedAt": "2026-11-11T11:10:04Z",
+      "chronicle": false
     },
     {
       "kind": "earth2.io",
@@ -221,8 +225,10 @@
       "aiDecoded": true,
       "aiChronicle": false,
       "draftId": "1570026483345399841",
-      "status": "pending",
-      "createdAt": "2026-11-11T10:44:45Z"
+      "status": "published",
+      "createdAt": "2026-11-11T10:44:45Z",
+      "decidedAt": "2026-11-11T11:10:06Z",
+      "chronicle": false
     }
   ]
 }
