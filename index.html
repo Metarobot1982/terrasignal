@@ -465,26 +465,17 @@ html{scroll-behavior:smooth}
 </div>
 <div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 34px; align-items: start">
 
-<form style="position: relative; background: #120c2a; border: 5px solid #0a0716; outline: 2px solid #ffd23f; box-shadow: 10px 10px 0 #000000; padding: 26px; display: flex; flex-direction: column; gap: 16px">
-<div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #ffd23f"><span>SIGNAL FORM</span><span><span class="blink" style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ff2fb0; margin-right: 6px"></span>REC</span></div>
-<label for="sig-name" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700; color: #ffffff">닉네임
-<input id="sig-name" type="text" placeholder="어스2 닉네임이나 부르고 싶은 이름" style="min-height: 44px; padding: 0 12px; background: #1d1440; border: 2px solid #3a2a6e; color: #ffffff; font-size: 15px; font-family: 'Noto Sans KR', sans-serif">
-</label>
-<fieldset style="border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px">
-<legend style="font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 8px">어떤 시그널인가요?</legend>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<label for="sig-q" style="display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 12px; border: 2px solid #2fe6c8; color: #2fe6c8; font-size: 14px; font-weight: 700"><input id="sig-q" type="radio" name="sig-type" checked>궁금해요</label>
-<label for="sig-tip" style="display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 12px; border: 2px solid #ff2fb0; color: #ff2fb0; font-size: 14px; font-weight: 700"><input id="sig-tip" type="radio" name="sig-type">제보해요</label>
-<label for="sig-say" style="display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 12px; border: 2px solid #ffd23f; color: #ffd23f; font-size: 14px; font-weight: 700"><input id="sig-say" type="radio" name="sig-type">하고 싶은 말</label>
+<div style="position: relative; background: #120c2a; border: 5px solid #0a0716; outline: 2px solid #ffd23f; box-shadow: 10px 10px 0 #000000; padding: 26px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; color: #ffd23f"><span>SIGNAL FORM</span><span><span class="blink" style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ff2fb0; margin-right: 6px"></span>수신 대기 중</span></div>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; font-weight: 700; color: #ffffff">디지털 지구에서 궁금한 것, 직접 본 것을 보내주세요.</p>
+<ul style="margin: 0; padding: 0; list-style: none; display: grid; gap: 10px">
+<li style="display: flex; gap: 10px; align-items: center"><span style="flex: none; padding: 3px 9px; border: 2px solid #2fe6c8; color: #2fe6c8; font-size: 13px; font-weight: 700">질문</span><span style="font-size: 14px; color: #d6d0f0">E2V1에서 궁금한 점</span></li>
+<li style="display: flex; gap: 10px; align-items: center"><span style="flex: none; padding: 3px 9px; border: 2px solid #ff2fb0; color: #ff2fb0; font-size: 13px; font-weight: 700">현장 제보</span><span style="font-size: 14px; color: #d6d0f0">내 좌표에서 직접 본 소식</span></li>
+<li style="display: flex; gap: 10px; align-items: center"><span style="flex: none; padding: 3px 9px; border: 2px solid #ffd23f; color: #ffd23f; font-size: 13px; font-weight: 700">변화 발견</span><span style="font-size: 14px; color: #d6d0f0">버그나 바뀐 점</span></li>
+</ul>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSeBBR9Ut9PIPQI7O8tc276bLm4iu0wa8QYLTtVVxM222Oj-uw/viewform" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; min-height: 56px; background: #ffd23f; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 5px 5px 0 #000000; font-family: 'Bungee', sans-serif; font-size: 18px; letter-spacing: 1px">SEND SIGNAL · 시그널 보내기 ↗</a>
+<p style="margin: 0; font-size: 12px; line-height: 1.6; color: #a99bd0">구글 폼으로 열려요. 운영자가 확인한 시그널만 골라서 공개하고, 공개할 때는 닉네임과 도시까지만 보여줘요. 연락처나 개인정보는 적지 말아주세요. 레퍼럴 코드 홍보는 소개하지 않아요.</p>
 </div>
-</fieldset>
-<label for="sig-msg" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700; color: #ffffff">내용
-<textarea id="sig-msg" rows="5" placeholder="E2V1에서 궁금한 점, 발견한 변화, 방송에 바라는 점을 적어주세요" style="padding: 12px; background: #1d1440; border: 2px solid #3a2a6e; color: #ffffff; font-size: 15px; font-family: 'Noto Sans KR', sans-serif; resize: vertical"></textarea>
-</label>
-<p style="margin: 0; font-size: 12px; line-height: 1.6; color: #a99bd0">보내주신 시그널은 운영자가 확인한 뒤 골라서 공개해요. 연락처나 개인정보는 적지 말아주세요.</p>
-<button type="button" style="min-height: 52px; background: #ffd23f; color: #0a0716; border: 3px solid #0a0716; box-shadow: 5px 5px 0 #000000; font-family: 'Bungee', sans-serif; font-size: 18px; letter-spacing: 1px; cursor: pointer">SEND SIGNAL · 시그널 보내기</button>
-<p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 11px; color: #ffd23f">[디자인 시안 · 실제 전송 기능은 연결 예정]</p>
-</form>
 
 <div style="display: flex; flex-direction: column; gap: 20px">
 <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><span style="font-family: 'Bungee', sans-serif; font-size: 20px; color: #ffd23f; text-shadow: 2px 2px 0 #000000">VIEWER SIGNALS</span><span style="font-family: 'Gaegu', sans-serif; font-weight: 700; font-size: 18px; color: #ffd23f">아래는 예시예요</span></div>

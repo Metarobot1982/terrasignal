@@ -177,7 +177,7 @@ def draft_embed(d):
 
 
 def apply_ai(src, body):
-    if src.get('kind') == 'countdown':
+    if src.get('kind') in ('countdown', 'viewer'):
         return
     r = ai_decode.decode(src['title'], body or src.get('excerpt', ''), src.get('sourceLabel', ''))
     if not r:
@@ -307,10 +307,10 @@ def publish(d, to_chronicle):
         return
     y, mo, da = d['date'].split('-')
     entry = {'L': d['layer'], 'g': d['grade'], 'title': d.get('titleKo') or d['title'], 'desc': d.get('descKo') or d['excerpt'][:160] or d['title'],
-             'date': '%s.%s.%s · %s' % (y, mo, da, '공식 기사' if d['kind'] == 'earth2.io' else '공식 디스코드'),
+             'date': '%s.%s.%s · %s' % (y, mo, da, {'earth2.io': '공식 기사', 'viewer': '시청자 시그널'}.get(d['kind'], '공식 디스코드')),
              'url': d['url'], 'key': d['sourceKey']}
     parts = d['sourceKey'].split(':')
-    sid = ('e2-' + parts[-1]) if parts[0] == 'earth2' else ('dc-' + parts[-1])
+    sid = {'earth2': 'e2-', 'viewer': 'tx-'}.get(parts[0], 'dc-') + parts[-1]
     entry['signal'] = sid
     sig = load(SIGNALS, {'signals': []})
     sig['signals'] = [x for x in sig['signals'] if x.get('id') != sid]
@@ -510,6 +510,51 @@ def aside(dc, cfg, state, drafts):
         save(MAP, mp)
 
 
+# ---------------------------------------------------------------- Viewer signals
+# The Google Form "시그널 보내기" posts each entry to the viewer channel through a
+# Discord webhook (tools/google-form.gs). Each entry becomes a WEAK draft.
+REFERRAL = re.compile(r'referral|레퍼럴|추천\s*인?\s*코드|추천코드|promo\s*code', re.I)
+
+
+def parse_viewer(m):
+    text = m.get('content') or ''
+    if '[TS-VIEWER]' not in text:
+        return None
+    head, _, body = text.partition('내용:')
+    f = {}
+    for line in head.splitlines():
+        if ':' in line:
+            k, v = line.split(':', 1)
+            f[k.strip()] = v.strip()
+    return {'nick': f.get('닉네임', '') or '익명', 'type': f.get('종류', '') or '기타', 'place': f.get('장소', ''),
+            'link': f.get('링크', ''), 'body': body.strip()}
+
+
+def viewer(dc, cfg, state, drafts):
+    ch = cfg.get('viewerChannel')
+    if not ch:
+        return
+    after = state.get('viewerLastSeen')
+    if not after:
+        latest = dc.messages(ch, limit=1)
+        state['viewerLastSeen'] = latest[-1]['id'] if latest else '0'
+        after = state['viewerLastSeen']
+    for m in dc.messages(ch, after=after, limit=100):
+        state['viewerLastSeen'] = m['id']
+        v = parse_viewer(m)
+        if not v or not v['body']:
+            continue
+        warn = '\n⚠️ 레퍼럴 코드로 보이는 내용이 있어요 — 원칙상 홍보 목적이면 소개하지 않아요.' if REFERRAL.search(v['body']) else ''
+        place = ' · ' + v['place'] if v['place'] else ''
+        src = {'kind': 'viewer', 'title': '%s · %s' % (v['type'], v['nick']),
+               'excerpt': v['body'][:1200] + ('\n링크: ' + v['link'] if v['link'] else '') + warn,
+               'url': v['link'] if v['link'].startswith('http') else '', 'date': kst_date(m.get('timestamp')), 'grade': 'WEAK',
+               'layer': guess_layer(v['body']), 'sourceLabel': '시청자 시그널 · %s%s' % (v['nick'], place),
+               'sourceKey': 'viewer:%s' % m['id'], 'titleKo': '%s · %s' % (v['type'], v['nick']),
+               'linesKo': [v['body'].split('\n')[0][:200]], 'descKo': v['body'].split('\n')[0][:160]}
+        new_draft(dc, cfg, drafts, src)
+
+
 def name_countdowns():
     """Give approved countdown cards a Korean name (official banner name kept in the note)."""
     mp = load(MAP, {})
@@ -544,6 +589,7 @@ def main():
         review(dc, cfg, drafts, bot_id)
         collect(dc, cfg, state, drafts)
         aside(dc, cfg, state, drafts)
+        viewer(dc, cfg, state, drafts)
         name_countdowns()
     finally:
         state['checkedAt'] = now_iso()
