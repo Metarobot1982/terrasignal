@@ -181,7 +181,7 @@ a{color:#ffd166}a:hover{color:#ffffff}
 <h2 style="margin: 0; font-size: 22px; font-weight: 900; line-height: 1.4; color: #ffffff">{{sel.title}}</h2>
 <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #c9c3e6">{{sel.desc}}</p>
 <p style="margin: 0; padding-top: 12px; border-top: 1px dashed rgba(47,230,200,.45); font-family: 'Space Mono', monospace; font-size: 12px; line-height: 1.6; color: #b8b0d8">SOURCE · {{sel.source}}<br>수신 · {{sel.date}}</p>
-<a href="#" style="display: inline-flex; align-items: center; justify-content: center; min-height: 46px; background: #ffd23f; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-weight: 900">{{sel.cta}}</a>
+<a href="{{sel.dive}}" style="display: inline-flex; align-items: center; justify-content: center; min-height: 46px; background: #ffd23f; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-weight: 900">◎ 이 좌표로 다이브 →</a>
 </div>
 </aside>
 </div>
@@ -384,7 +384,7 @@ class Component extends DCLogic {
       motionClass: (this.props.motion ?? true) ? 'anim' : '',
       coatClass: (this.props.coating ?? true) ? 'coat' : '',
       pins: pins, labels: labels, globals: globals, countdowns: countdowns,
-      sel: { layerName: LN[cur.L], grade: cur.g, color: GC[cur.g], coord: cur.coord, title: cur.title, desc: cur.desc, source: cur.source, date: cur.date, cta: cur.cta },
+      sel: { layerName: LN[cur.L], grade: cur.g, color: GC[cur.g], coord: cur.coord, title: cur.title, desc: cur.desc, source: cur.source, date: cur.date, cta: cur.cta, dive: cur.station && cur.L === 'real' ? 'dive.html' : 'dive.html?lat=' + cur.lat + '&lon=' + cur.lon + '&t=' + encodeURIComponent(cur.title) + '&d=' + encodeURIComponent(cur.desc || '') + '&p=' + encodeURIComponent((cur.coord || '').split(' · ').pop()) },
       mapGlow: glow, landFill: land, clip: clip, riftClip: riftClip, riftGlow: riftGlow, showRealCap: layer !== 'digital', showDigiCap: layer !== 'real',
       isAll: layer === 'all', isReal: layer === 'real', isBorder: layer === 'border', isDigital: layer === 'digital',
       allBg: layer === 'all' ? on : off, allFg: layer === 'all' ? onFg : offFg,

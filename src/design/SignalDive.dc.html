@@ -138,6 +138,7 @@ a{color:#ffd166}a:hover{color:#ffffff}
 <div style="font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 3px; color: #2fe6c8; margin-bottom: 10px">SIGNAL DIVE · 좌표로 뛰어들기</div>
 <h1 class="h2c dtitle" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 56px; line-height: 1.1">신호를 따라 좌표로</h1>
 </div>
+<sc-if value="{{pt.station}}" hint-placeholder-val="{{ true }}">
 <ol class="dive4" style="position: relative; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px">
 <li class="panel zf" style="position: relative; overflow: hidden; border: 3px solid #0a0716; box-shadow: 0 0 0 2px #2fe6c8, 5px 5px 0 2px #000; background: #07051a">
 <div style="position: relative; aspect-ratio: 2520 / 1080; overflow: hidden"><img src="/_blob/ac50af9688746efd633f474b3231c7fc" alt="디지털 지구 우주 지도" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><span class="zbox" aria-hidden="true" style="position: absolute; left: 76.4%; top: 22%; width: 15.3%; height: 15.3%; border: 2px solid #ffd23f; box-shadow: 0 0 12px #ffd23f"></span></div>
@@ -156,7 +157,8 @@ a{color:#ffd166}a:hover{color:#ffffff}
 <div style="padding: 10px 12px; display: flex; justify-content: space-between; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700"><span style="color: #ffd23f">ZOOM 04 · LOCK</span><span>서울 한강</span></div>
 </li>
 </ol>
-<p style="position: relative; margin: 14px 0 0; font-size: 13px; color: #8b84ad">시안에서는 줌 단계를 그림으로 보여줘요. 실제 사이트에서는 핀을 누르면 Mapbox 위성 지도로 부드럽게 줌인해요 [④단계 연결 예정].</p>
+</sc-if>
+<p style="position: relative; margin: 14px 0 0; font-size: 13px; color: #8b84ad">시그널 지도에서 핀을 누르면 그 좌표가 여기서 열려요. 아래 지도는 손가락이나 마우스로 움직이고 확대할 수 있어요.</p>
 </section>
 
 <section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 60px 40px 0">
@@ -171,34 +173,35 @@ a{color:#ffd166}a:hover{color:#ffffff}
 </div>
 </div>
 <div class="stage" style="position: relative; overflow: hidden; aspect-ratio: 16 / 9; border: 3px solid #0a0716; box-shadow: 0 0 0 3px #ffd23f, 8px 8px 0 3px #000; background: #07051a">
-<img src="/_blob/ea9e760d62745312f367290e811d7de7" alt="현실 지구 · 서울 한강 영동대교 앞" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
-<div class="world" aria-hidden="true" style="position: absolute; inset: 0; clip-path: {{clip}}"><img class="jit" src="/_blob/1cf215a3977029b64faf8cab9aef9688" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></div>
-<div class="world" aria-hidden="true" style="position: absolute; inset: 0; clip-path: {{riftClip}}; background: linear-gradient(90deg, #2fe6c8, #ffffff 45%, #ff2fb0); box-shadow: 0 0 40px #ff2fb0"></div>
-<div aria-hidden="true" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(255,210,63,.55)"></div>
-<div aria-hidden="true" style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: rgba(255,210,63,.55)"></div>
-<span class="sqping" aria-hidden="true" style="position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border: 3px solid #ffd23f"></span>
-<span aria-hidden="true" style="position: absolute; left: calc(50% + 34px); top: calc(50% - 40px); padding: 5px 10px; background: #0a0716; border: 2px solid #ffd23f; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700">37.5310 N · 127.0531 E</span>
-<sc-if value="{{capReal}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="position: absolute; left: 14px; bottom: 14px; padding: 6px 12px; background: #ffffff; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px">EARTH-REAL · 영동대교 앞 한강</span></sc-if>
-<sc-if value="{{capDigi}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="position: absolute; right: 14px; bottom: 14px; padding: 6px 12px; background: #2fe6c8; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #ff2fb0; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px">EARTH-2 · 타일 TV 송출탑</span></sc-if>
+<img src="/_blob/ea9e760d62745312f367290e811d7de7" alt="현실 지구 · {{pt.title}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<div class="mapslot-real" aria-hidden="true" style="position: absolute; inset: 0"></div>
+<div class="world" aria-hidden="true" style="position: absolute; inset: 0; clip-path: {{clip}}; pointer-events: none"><img class="jit" src="/_blob/1cf215a3977029b64faf8cab9aef9688" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><div class="mapslot-digi" style="position: absolute; inset: 0"></div><div class="digigrid" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(169,155,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(169,155,255,.35) 1px, transparent 1px), repeating-linear-gradient(0deg, rgba(255,47,176,.06) 0 2px, transparent 2px 5px); background-size: 28px 28px, 28px 28px, auto; mix-blend-mode: screen"></div></div>
+<div class="world" aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; clip-path: {{riftClip}}; background: linear-gradient(90deg, #2fe6c8, #ffffff 45%, #ff2fb0); box-shadow: 0 0 40px #ff2fb0"></div>
+<div aria-hidden="true" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(255,210,63,.55); pointer-events: none"></div>
+<div aria-hidden="true" style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: rgba(255,210,63,.55); pointer-events: none"></div>
+<span class="sqping" aria-hidden="true" style="position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border: 3px solid #ffd23f; pointer-events: none"></span>
+<span aria-hidden="true" style="position: absolute; left: calc(50% + 34px); top: calc(50% - 40px); padding: 5px 10px; background: #0a0716; border: 2px solid #ffd23f; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; pointer-events: none">{{pt.label}}</span>
+<sc-if value="{{capReal}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="position: absolute; left: 14px; bottom: 14px; padding: 6px 12px; background: #ffffff; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px; pointer-events: none">EARTH-REAL · {{pt.capReal}}</span></sc-if>
+<sc-if value="{{capDigi}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="position: absolute; right: 14px; bottom: 14px; padding: 6px 12px; background: #2fe6c8; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #ff2fb0; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px; pointer-events: none">DIGITAL EARTH · {{pt.capDigi}}</span></sc-if>
 </div>
 </div>
 
 <aside class="panel" style="position: relative; overflow: hidden; background: rgba(18,12,44,.94); border: 2px solid #ffd23f; box-shadow: 0 0 0 4px #0a0716, 8px 8px 0 4px #000">
 <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; background: #ffd23f; color: #0a0716; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px"><span>COORDINATE CARD</span><span>■ 현실 · ⬢ 디지털</span></div>
 <div style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 16px">
-<div><h2 style="margin: 0; font-size: 24px; font-weight: 900; line-height: 1.35">TERRASIGNAL 송출탑</h2><p style="margin: 6px 0 0; font-size: 14px; color: #c9c3e6">서울 한강 · 영동대교 앞 · 모든 시그널이 출발하는 좌표</p></div>
+<div><h2 style="margin: 0; font-size: 24px; font-weight: 900; line-height: 1.35">{{pt.title}}</h2><p style="margin: 6px 0 0; font-size: 14px; line-height: 1.6; color: #c9c3e6">{{pt.desc}}</p></div>
 <div style="display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: #0a0716; border: 2px solid #2fe6c8">
-<span style="flex: 1; font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700; color: #2fe6c8">37.530965, 127.053108</span>
+<span style="flex: 1; font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700; color: #2fe6c8">{{pt.coord}}</span>
 <button type="button" onClick="{{copy}}" aria-label="좌표 복사" style="min-height: 40px; padding: 0 12px; border: 2px solid #2fe6c8; background: {{copyBg}}; color: {{copyFg}}; font-weight: 700; font-size: 13px">{{copyLabel}}</button>
 </div>
-<p style="margin: -6px 0 0; font-size: 12px; color: #8b84ad">복사한 좌표는 E2V1 지도와 실제 지도 앱에서 그대로 쓸 수 있어요.</p>
+<p style="margin: -6px 0 0; font-size: 12px; color: #8b84ad">어스2 좌표와 실제 지구 좌표는 같은 자리를 가리켜요. 복사한 좌표는 어스2 지도와 구글 지도에서 그대로 쓸 수 있어요.</p>
 <div style="display: grid; gap: 10px">
-<a href="#" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 54px; padding: 0 16px; background: #ffffff; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-weight: 900"><span>■ 현실로 가기 · 지도 앱 열기</span><span style="font-family: 'Space Mono', monospace; font-size: 11px">AR ↗</span></a>
-<a href="#" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 54px; padding: 0 16px; background: #2fe6c8; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #ff2fb0; font-weight: 900"><span>⬢ 디지털로 가기 · 송출탑 EPL</span><span style="font-family: 'Space Mono', monospace; font-size: 11px">XR ↗</span></a>
+<a href="{{pt.gmaps}}" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 54px; padding: 0 16px; background: #ffffff; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-weight: 900"><span>■ 현실 지구에서 보기 · 구글 지도</span><span style="font-family: 'Space Mono', monospace; font-size: 11px">MAP ↗</span></a>
+<a href="https://app.earth2.io/" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 54px; padding: 0 16px; background: #2fe6c8; color: #0a0716; text-decoration: none; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #ff2fb0; font-weight: 900"><span>⬢ 디지털 지구로 · 어스2 지도 열기</span><span style="font-family: 'Space Mono', monospace; font-size: 11px">E2 ↗</span></a>
 <a href="#" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 50px; padding: 0 16px; background: transparent; color: #ffffff; text-decoration: none; border: 2px solid #ffffff; font-weight: 700; font-size: 15px"><span>E2V1에서 가는 법</span><span>→</span></a>
 <a href="#" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 50px; padding: 0 16px; background: transparent; color: #ffe14d; text-decoration: none; border: 2px dashed #ffe14d; font-weight: 700; font-size: 15px"><span>내 방에 송출탑 띄우기</span><span style="font-family: 'Space Mono', monospace; font-size: 11px">AR · 준비 중</span></a>
 </div>
-<p style="margin: 0; padding-top: 12px; border-top: 1px dashed rgba(255,210,63,.5); font-size: 12px; line-height: 1.7; color: #b8b0d8">송출탑 EPL은 설정 후 이름이 들어가요 [설정 예정]. E2V1 이동 방법은 [입력 예정]이에요. 지도 앱은 현실 좌표만 열고 위치 정보를 수집하지 않아요.</p>
+<p style="margin: 0; padding-top: 12px; border-top: 1px dashed rgba(255,210,63,.5); font-size: 12px; line-height: 1.7; color: #b8b0d8">어스2 지도에서는 복사한 좌표로 그 칸을 찾아가요. E2V1 이동 방법은 [입력 예정]이에요. 디지털 지구 화면은 TERRASIGNAL이 위성 지도에 입힌 연출이며 어스2 공식 화면이 아니에요. 위치 정보는 수집하지 않아요.</p>
 </div>
 </aside>
 </div>
@@ -240,9 +243,50 @@ a{color:#ffd166}a:hover{color:#ffffff}
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"motion":{"editor":"boolean","default":true},"coating":{"editor":"boolean","default":true},"":{"width":1440,"height":2500}}'>
 class Component extends DCLogic {
-  constructor(props) { super(props); this.state = { view: 'both', copied: false }; }
+  constructor(props) {
+    super(props);
+    this.state = { view: 'both', copied: false };
+    var q = {};
+    try { new URLSearchParams(location.search).forEach(function (v, k) { q[k] = v; }); } catch (e) {}
+    var lat = parseFloat(q.lat), lon = parseFloat(q.lon);
+    var ok = !isNaN(lat) && !isNaN(lon) && Math.abs(lat) <= 90 && Math.abs(lon) <= 180;
+    this.pt = ok ? { lat: lat, lon: lon, title: (q.t || '선택한 좌표').slice(0, 60), desc: (q.d || '시그널 지도에서 고른 좌표예요.').slice(0, 200), place: (q.p || '').slice(0, 40), station: false }
+      : { lat: 37.530965, lon: 127.053108, title: 'TERRASIGNAL 송출탑', desc: '서울 한강 · 영동대교 앞 · 모든 시그널이 출발하는 좌표', place: '영동대교 앞 한강', station: true };
+  }
+  afterRender(root) {
+    var token = window.TS_MAPBOX, pt = this.pt, self = this;
+    var sr = root.querySelector('.mapslot-real'), sd = root.querySelector('.mapslot-digi');
+    if (!token || !sr || !sd) return;
+    if (this.__maps) { sr.appendChild(this.__maps.realEl); sd.appendChild(this.__maps.digiEl); this.__maps.real.resize(); this.__maps.digi.resize(); return; }
+    if (this.__loading) return;
+    this.__loading = true;
+    function boot() {
+      var mk = function (cls) { var el = document.createElement('div'); el.className = cls; el.style.cssText = 'position:absolute;inset:0'; return el; };
+      var realEl = mk('tsmap-real'), digiEl = mk('tsmap-digi');
+      digiEl.style.filter = 'hue-rotate(205deg) saturate(1.9) contrast(1.25) brightness(.72)';
+      var s1 = root.isConnected ? root : document; 
+      var r = document.querySelector('.mapslot-real'), d = document.querySelector('.mapslot-digi');
+      r.appendChild(realEl); d.appendChild(digiEl);
+      window.mapboxgl.accessToken = token;
+      var opt = function (el, inter) { return { container: el, style: 'mapbox://styles/mapbox/satellite-v9', center: [pt.lon, pt.lat], zoom: 17.2, attributionControl: inter, interactive: inter, cooperativeGestures: true }; };
+      var real = new window.mapboxgl.Map(opt(realEl, true));
+      var digi = new window.mapboxgl.Map(opt(digiEl, false));
+      real.on('move', function () { digi.jumpTo({ center: real.getCenter(), zoom: real.getZoom(), bearing: real.getBearing(), pitch: real.getPitch() }); });
+      real.addControl(new window.mapboxgl.NavigationControl({ showCompass: false }), 'top-right');
+      self.__maps = { real: real, digi: digi, realEl: realEl, digiEl: digiEl };
+      root.querySelectorAll('.stage > img').forEach(function (i) { i.style.visibility = 'hidden'; });
+    }
+    if (window.mapboxgl) { boot(); return; }
+    var css = document.createElement('link'); css.rel = 'stylesheet'; css.href = 'https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.css'; document.head.appendChild(css);
+    var s = document.createElement('script'); s.src = 'https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.js';
+    s.onload = boot; s.onerror = function () { self.__loading = false; };
+    document.head.appendChild(s);
+  }
   renderVals() {
     var self = this, v = this.state.view;
+    function fx(n) { return String(+n.toFixed(6)); }
+    var coord = fx(this.pt.lat) + ', ' + fx(this.pt.lon);
+    var label = Math.abs(this.pt.lat).toFixed(4) + (this.pt.lat >= 0 ? ' N' : ' S') + ' · ' + Math.abs(this.pt.lon).toFixed(4) + (this.pt.lon >= 0 ? ' E' : ' W');
     var X = v === 'real' ? 112 : (v === 'digi' ? -12 : 50);
     var on = '#ffd23f', onFg = '#0a0716', off = 'transparent', offFg = '#d6d0f0';
     return {
@@ -260,7 +304,9 @@ class Component extends DCLogic {
       viewDigi: function () { self.setState({ view: 'digi' }); },
       copyLabel: this.state.copied ? '복사 완료' : '복사',
       copyBg: this.state.copied ? '#2fe6c8' : 'transparent', copyFg: this.state.copied ? '#0a0716' : '#2fe6c8',
-      copy: function () { try { navigator.clipboard.writeText('37.530965, 127.053108'); } catch (e) {} self.setState({ copied: true }); }
+      pt: { station: this.pt.station, title: this.pt.title, desc: this.pt.desc, coord: coord, label: label, gmaps: 'https://www.google.com/maps?q=' + this.pt.lat.toFixed(6) + ',' + this.pt.lon.toFixed(6),
+        capReal: this.pt.place || this.pt.title, capDigi: this.pt.station ? '타일 TV 송출탑' : '같은 좌표' },
+      copy: function () { try { navigator.clipboard.writeText(coord); } catch (e) {} self.setState({ copied: true }); }
     };
   }
 }

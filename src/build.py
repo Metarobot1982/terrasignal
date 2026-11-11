@@ -131,6 +131,7 @@ def convert(src_name, out_name, title, desc):
         for a in ('#rx', '#tx-you', '#ch', '#portal', '#prologue', '#map'):
             body_tpl = body_tpl.replace('href="%s"' % a, 'href="index.html%s"' % a)
 
+    mapbox_tag = "<script>window.TS_MAPBOX = 'pk.eyJ1IjoibWV0YXJvYm90MTk4MiIsImEiOiJjbXdidXJmamcwMnkxMnpva2ZlbWthY29pIn0.b837yBqRofBDs20_pEgngg';</script>\n" if src_name == 'SignalDive.dc.html' else ''
     data_tag = ('<script>window.TS_DATA = %s;</script>\n' % json.dumps(DATA[src_name])) if src_name in DATA else ''
     head = f'''<!doctype html>
 <html lang="ko">
@@ -155,7 +156,7 @@ def convert(src_name, out_name, title, desc):
 {helmet.strip()}
 <style>{EXTRA_CSS}</style>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "461cfeaefff848cda186328d4f27ed23"}}'></script>
-{data_tag}<script src="js/dc-lite.js"></script>
+{mapbox_tag}{data_tag}<script src="js/dc-lite.js"></script>
 </head>
 <body>
 <div id="dc-root"></div>
