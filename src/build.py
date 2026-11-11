@@ -154,6 +154,7 @@ def convert(src_name, out_name, title, desc):
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 {helmet.strip()}
 <style>{EXTRA_CSS}</style>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token": "461cfeaefff848cda186328d4f27ed23"}}'></script>
 {data_tag}<script src="js/dc-lite.js"></script>
 </head>
 <body>
