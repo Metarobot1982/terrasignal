@@ -107,6 +107,7 @@ a{color:#ffd166}a:hover{color:#ffffff}
 @keyframes jit{0%,92%,100%{transform:none;filter:none}93%{transform:translate(-4px,1px);filter:hue-rotate(25deg)}95%{transform:translate(5px,-2px)}97%{transform:translate(-2px,2px);filter:hue-rotate(-20deg)}}
 .anim .jit{animation:jit 4s steps(1) infinite}
 .ts .zf{transition:transform .2s}.ts .zf:hover{transform:translateY(-4px)}
+@media (hover:none),(max-width:900px){.coat{filter:none!important}.ts .stage{aspect-ratio:4 / 5!important}.ts .clabel{font-size:10px!important;left:auto!important;right:8px!important;top:8px!important}.ts .ccap{font-size:10px!important;letter-spacing:1px!important;padding:4px 8px!important}}
 @media (max-width:900px){.ts .dive4{grid-template-columns:1fr 1fr!important}.ts .divegrid{grid-template-columns:1fr!important}.ts .dtitle{font-size:38px!important}}
 </style>
 </helmet>
@@ -129,7 +130,7 @@ a{color:#ffd166}a:hover{color:#ffffff}
 </div>
 </header>
 <nav aria-label="현재 위치" style="max-width: 1360px; margin: 0 auto; padding: 26px 40px 0; font-family: 'Space Mono', monospace; font-size: 13px; color: #a99bd0; display: flex; gap: 10px; flex-wrap: wrap">
-<a href="#" style="color: #a99bd0; text-decoration: none">시그널 지도</a><span>›</span><span>다이브</span><span>›</span><span style="color: #ffd23f">서울 한강 · TX 송출탑</span>
+<a href="#" style="color: #a99bd0; text-decoration: none">시그널 지도</a><span>›</span><span>다이브</span><span>›</span><span style="color: #ffd23f">{{pt.crumb}}</span>
 </nav>
 
 <section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 30px 40px 0">
@@ -175,14 +176,15 @@ a{color:#ffd166}a:hover{color:#ffffff}
 <div class="stage" style="position: relative; overflow: hidden; aspect-ratio: 16 / 9; border: 3px solid #0a0716; box-shadow: 0 0 0 3px #ffd23f, 8px 8px 0 3px #000; background: #07051a">
 <img src="/_blob/ea9e760d62745312f367290e811d7de7" alt="현실 지구 · {{pt.title}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; visibility: {{fbVis}}">
 <div class="mapslot-real" aria-hidden="true" style="position: absolute; inset: 0"></div>
+<div class="mapstat" role="status" style="position: absolute; left: 8px; bottom: 56px; z-index: 30; max-width: 70%; padding: 4px 8px; background: rgba(10,7,22,.85); border: 1px solid #ffd23f; color: #ffe9a8; font-size: 11px; pointer-events: none">지도 불러오는 중…</div>
 <div class="world" aria-hidden="true" style="position: absolute; inset: 0; clip-path: {{clip}}; pointer-events: none"><img class="jit" src="/_blob/1cf215a3977029b64faf8cab9aef9688" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; visibility: {{fbVis}}"><div class="mapslot-digi" style="position: absolute; inset: 0"></div><div class="digigrid" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(169,155,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(169,155,255,.35) 1px, transparent 1px), repeating-linear-gradient(0deg, rgba(255,47,176,.06) 0 2px, transparent 2px 5px); background-size: 28px 28px, 28px 28px, auto; mix-blend-mode: screen"></div></div>
 <div class="world" aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; clip-path: {{riftClip}}; background: linear-gradient(90deg, #2fe6c8, #ffffff 45%, #ff2fb0); box-shadow: 0 0 40px #ff2fb0"></div>
 <div aria-hidden="true" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(255,210,63,.55); pointer-events: none"></div>
 <div aria-hidden="true" style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: rgba(255,210,63,.55); pointer-events: none"></div>
 <span class="sqping" aria-hidden="true" style="position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border: 3px solid #ffd23f; pointer-events: none"></span>
-<span aria-hidden="true" style="position: absolute; left: calc(50% + 34px); top: calc(50% - 40px); padding: 5px 10px; background: #0a0716; border: 2px solid #ffd23f; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; pointer-events: none">{{pt.label}}</span>
-<sc-if value="{{capReal}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="position: absolute; left: 14px; bottom: 14px; padding: 6px 12px; background: #ffffff; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px; pointer-events: none">EARTH-REAL · {{pt.capReal}}</span></sc-if>
-<sc-if value="{{capDigi}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="position: absolute; right: 14px; bottom: 14px; padding: 6px 12px; background: #2fe6c8; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #ff2fb0; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px; pointer-events: none">DIGITAL EARTH · {{pt.capDigi}}</span></sc-if>
+<span aria-hidden="true" class="clabel" style="position: absolute; left: calc(50% + 34px); top: calc(50% - 40px); padding: 5px 10px; background: #0a0716; border: 2px solid #ffd23f; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; pointer-events: none">{{pt.label}}</span>
+<sc-if value="{{capReal}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" class="ccap" style="position: absolute; left: 14px; bottom: 14px; padding: 6px 12px; background: #ffffff; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #000; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px; pointer-events: none">EARTH-REAL · {{pt.capReal}}</span></sc-if>
+<sc-if value="{{capDigi}}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" class="ccap" style="position: absolute; right: 14px; bottom: 14px; padding: 6px 12px; background: #2fe6c8; color: #0a0716; border: 3px solid #0a0716; box-shadow: 4px 4px 0 #ff2fb0; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 2px; pointer-events: none">DIGITAL EARTH · {{pt.capDigi}}</span></sc-if>
 </div>
 </div>
 
@@ -257,6 +259,7 @@ class Component extends DCLogic {
     var token = window.TS_MAPBOX, pt = this.pt, self = this;
     var sr = root.querySelector('.mapslot-real'), sd = root.querySelector('.mapslot-digi');
     if (!token || !sr || !sd) return;
+    if (this.__msg !== undefined) root.querySelectorAll('.mapstat').forEach(function (s) { s.textContent = self.__msg; s.style.display = self.__msg ? '' : 'none'; });
     if (this.__maps) { sr.appendChild(this.__maps.realEl); sd.appendChild(this.__maps.digiEl); this.__maps.real.resize(); this.__maps.digi.resize(); return; }
     if (this.__loading) return;
     this.__loading = true;
@@ -272,14 +275,18 @@ class Component extends DCLogic {
       var real = new window.mapboxgl.Map(opt(realEl, true));
       var digi = new window.mapboxgl.Map(opt(digiEl, false));
       real.on('move', function () { digi.jumpTo({ center: real.getCenter(), zoom: real.getZoom(), bearing: real.getBearing(), pitch: real.getPitch() }); });
-      real.addControl(new window.mapboxgl.NavigationControl({ showCompass: false }), 'top-right');
+      real.addControl(new window.mapboxgl.NavigationControl({ showCompass: false }), 'bottom-right');
+      var stat = function (t) { self.__msg = t; document.querySelectorAll('.mapstat').forEach(function (s) { s.textContent = t; s.style.display = t ? '' : 'none'; }); };
+      real.once('load', function () { stat(''); });
+      real.on('error', function (e) { var st = e && e.error && e.error.status; stat(st === 401 || st === 403 ? '지도 키가 이 주소에서 거부됐어요 (' + st + ')' : '지도를 불러오지 못했어요' + (st ? ' (' + st + ')' : '')); });
       self.__maps = { real: real, digi: digi, realEl: realEl, digiEl: digiEl };
       root.querySelectorAll('.stage img').forEach(function (i) { i.style.visibility = 'hidden'; });
     }
     if (window.mapboxgl) { boot(); return; }
     var css = document.createElement('link'); css.rel = 'stylesheet'; css.href = 'https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.css'; document.head.appendChild(css);
     var s = document.createElement('script'); s.src = 'https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.js';
-    s.onload = boot; s.onerror = function () { self.__loading = false; };
+    s.onload = function () { if (window.mapboxgl && window.mapboxgl.supported && !window.mapboxgl.supported()) { document.querySelectorAll('.mapstat').forEach(function (x) { x.textContent = '이 브라우저에서는 3D 지도(WebGL)를 쓸 수 없어요'; }); return; } boot(); };
+    s.onerror = function () { self.__loading = false; document.querySelectorAll('.mapstat').forEach(function (x) { x.textContent = '지도 프로그램을 불러오지 못했어요'; }); };
     document.head.appendChild(s);
   }
   renderVals() {
@@ -306,6 +313,7 @@ class Component extends DCLogic {
       copyLabel: this.state.copied ? '복사 완료' : '복사',
       copyBg: this.state.copied ? '#2fe6c8' : 'transparent', copyFg: this.state.copied ? '#0a0716' : '#2fe6c8',
       pt: { station: this.pt.station, title: this.pt.title, desc: this.pt.desc, coord: coord, label: label, gmaps: 'https://www.google.com/maps?q=' + this.pt.lat.toFixed(6) + ',' + this.pt.lon.toFixed(6),
+        crumb: this.pt.station ? '서울 한강 · TX 송출탑' : (this.pt.title + (this.pt.place ? ' · ' + this.pt.place : '')),
         e2: 'https://app.earth2.io/?lat=' + this.pt.lat.toFixed(6) + '&lng=' + this.pt.lon.toFixed(6),  // the Earth 2 app reads ?lat=&lng= on load
         capReal: this.pt.place || this.pt.title, capDigi: this.pt.station ? '타일 TV 송출탑' : '같은 좌표' },
       copy: function () { try { navigator.clipboard.writeText(coord); } catch (e) {} self.setState({ copied: true }); }
