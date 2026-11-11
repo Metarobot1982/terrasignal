@@ -131,8 +131,9 @@
       ],
       "descKo": "테스트",
       "draftId": "1569961166833197097",
-      "status": "pending",
-      "createdAt": "2026-11-11T06:25:13Z"
+      "status": "rejected",
+      "createdAt": "2026-11-11T06:25:13Z",
+      "decidedAt": "2026-11-11T10:44:22Z"
     },
     {
       "kind": "viewer",
@@ -150,8 +151,78 @@
       ],
       "descKo": "테스트",
       "draftId": "1569961178015211634",
+      "status": "rejected",
+      "createdAt": "2026-11-11T06:25:15Z",
+      "decidedAt": "2026-11-11T10:44:26Z"
+    },
+    {
+      "kind": "discord",
+      "title": "# Reality Thread 9 + 110 Million Essence Staked!",
+      "excerpt": "Two new articles covering gameplay, platform updates and a major milestone! 🎉\n🚀 Reality Thread 9: Command Deck Online\nOur long-awaited RT9 article is here! Explore Cydroid raiding, all 38 Cydroids, flight and combat, squad play, Pilot progression, perks, leaderboards and rewards.\nThere's plenty beyond raiding, too:\n🌏 Player Stalls and local trade, plus Global Locations and geographic labels.\n🌏 Avatar spear and shield combat improvements, meals designed for future Horde combat and updates to the multiplayer Beach Ball physics.\n🌏 F-Wheel shortcuts, persistent Character Action Bars, refreshed inventory icons and the ACE Cydroid Uplink.\n🌏 Launcher 2.0.0, VELA voice guidance and language support, graphics and performance improvements, and in-game bug reporting.\n👉 https://earth2.io/news/reality-thread-9\n💎 110 Million Essence Staked\nPlayers have now actively staked 110 million $ESS on properties, equivalent to 11% of the original maximum supply!\nRead the Q1–Q3 2026 Essence report, learn more about the future role of staking in Hordes and selected minigames, and discover expanded Brilliant Jewel benefits, including up to 300% of normal daily O.U. output.\nAlso included is the skin gift return system in My Skins, designed to help resolve remaining affected gifts. Eligible Players who help complete verified recoveries during the initial 30-day period can qualify for a special Cydroid skin planned for 2027.\n👉 https://earth2.io/news/110-million-ess-staked\nThank you for continuing to help ",
+      "url": "https://earth2.io/news/reality-thread-9",
+      "date": "2026-11-11",
+      "grade": "CLEAR",
+      "layer": "border",
+      "sourceLabel": "어스2 공식 디스코드 · #공지-announcements",
+      "sourceKey": "discord:1566867496253005845:1570000871255973890",
+      "titleKo": "리얼리티 스레드 9 공개, 에센스 1.1억 스테이킹",
+      "linesKo": [
+        "리얼리티 스레드 9 기사가 공개됐어요. 사이드로이드 레이딩과 38종 사이드로이드를 다뤄요.",
+        "플레이어 스톨, 아바타 전투 개선, 런처 2.0.0 등 플랫폼 업데이트도 함께 소개돼요.",
+        "프로퍼티에 스테이킹된 에센스가 1.1억 $ESS를 넘었고, 최초 최대 공급량의 11%예요."
+      ],
+      "descKo": "리얼리티 스레드 9 기사가 공개됐어요. 사이드로이드 레이딩과 38종 사이드로이드를 다뤄요.",
+      "aiDecoded": true,
+      "aiChronicle": true,
+      "draftId": "1570026430228733986",
       "status": "pending",
-      "createdAt": "2026-11-11T06:25:15Z"
+      "createdAt": "2026-11-11T10:44:33Z"
+    },
+    {
+      "kind": "earth2.io",
+      "title": "Chapter 6 – Reality Thread 9 -Command Deck Online",
+      "excerpt": "Earth 2 · Chapter 6 · REALITY THREAD 9 Chapter 6 – Reality Thread 9Command Deck Online Cydroid raiding, Pilot progression and the systems behind RT9 Reality Thread 9 introduces Cydroid raiding, the first of Earth 2’s planned games to become playable inside E2V1. Pilots control Cydroids over real Earth 2 terrain, collect unstable E-ther […]",
+      "url": "https://earth2.io/news/reality-thread-9",
+      "date": "2026-09-09",
+      "grade": "CLEAR",
+      "layer": "digital",
+      "sourceLabel": "earth2.io 공식 기사",
+      "sourceKey": "earth2:3449",
+      "titleKo": "리얼리티 스레드 9: 사이드로이드 레이딩 개방",
+      "linesKo": [
+        "E2V1 안에서 처음 플레이 가능한 게임, 사이드로이드 레이딩이 테스터에게 먼저 열렸어요.",
+        "파일럿이 사이드로이드를 원격 조종해 불안정해진 이더(E-ther)를 모으고, 모은 몫을 가져가요.",
+        "땅이나 사이드로이드가 없어도 시작할 수 있어요. 커맨드 덱 접근에는 런처 2.0.0 업데이트가 필요해요."
+      ],
+      "descKo": "E2V1 안에서 처음 플레이 가능한 게임, 사이드로이드 레이딩이 테스터에게 먼저 열렸어요.",
+      "aiDecoded": true,
+      "aiChronicle": true,
+      "draftId": "1570026460889092101",
+      "status": "pending",
+      "createdAt": "2026-11-11T10:44:40Z"
+    },
+    {
+      "kind": "earth2.io",
+      "title": "110 Million Essence Staked, 2026 Reports, New Brilliant Jewel Utility & Returning Gifted Skins",
+      "excerpt": "Earth 2 / Essence Update 110 Million! Essence Staked · Q1–Q3 2026 $ESS Update Earth 2 has reached a remarkable milestone: 110 million Essence ($ESS) is now actively staked on properties by Earth 2 Players. That represents 11% of the original maximum possible supply of one billion $ESS committed by Players to their properties and […]",
+      "url": "https://earth2.io/news/110-million-ess-staked",
+      "date": "2026-11-11",
+      "grade": "CLEAR",
+      "layer": "border",
+      "sourceLabel": "earth2.io 공식 기사",
+      "sourceKey": "earth2:3207",
+      "titleKo": "에센스 1.1억 스테이킹, 2026 리포트, 브릴리언트 쥬얼 확장",
+      "linesKo": [
+        "110M $ESS가 프로퍼티에 스테이킹됐고, 이는 최대 공급량 10억의 11%예요.",
+        "브릴리언트 쥬얼을 장착하면 모든 자원이 100% 몫을 받고, 일일 O.U.가 티어에 따라 ×1.1~×3.0이 돼요.",
+        "과거에 선물한 스킨 중 일부는 My Skins에서 수령자를 확인해 돌려받을 수 있어요."
+      ],
+      "descKo": "110M $ESS가 프로퍼티에 스테이킹됐고, 이는 최대 공급량 10억의 11%예요.",
+      "aiDecoded": true,
+      "aiChronicle": false,
+      "draftId": "1570026483345399841",
+      "status": "pending",
+      "createdAt": "2026-11-11T10:44:45Z"
     }
   ]
 }

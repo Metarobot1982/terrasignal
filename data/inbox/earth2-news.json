@@ -1,3 +1,38 @@
 {
-  "items": []
+  "items": [
+    {
+      "id": 3449,
+      "date": "2026-09-09",
+      "publishedAt": "2026-09-09T13:54:00+10:00",
+      "title": "Chapter 6 – Reality Thread 9 -Command Deck Online",
+      "url": "https://earth2.io/news/reality-thread-9",
+      "summary": "Earth 2 · Chapter 6 · REALITY THREAD 9 Chapter 6 – Reality Thread 9Command Deck Online Cydroid raiding, Pilot progression and the systems behind RT9 Reality Thread 9 introduces Cydroid raiding, the first of Earth 2’s planned games to become playable inside E2V1. Pilots control Cydroids over real Earth 2 terrain, collect unstable E-ther […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "pinned"
+      ],
+      "source": "earth2.io",
+      "status": "drafted",
+      "receivedAt": "2026-11-11T10:44:19Z",
+      "draftId": "1570026460889092101"
+    },
+    {
+      "id": 3207,
+      "date": "2026-11-11",
+      "publishedAt": "2026-11-11T18:34:38+10:00",
+      "title": "110 Million Essence Staked, 2026 Reports, New Brilliant Jewel Utility & Returning Gifted Skins",
+      "url": "https://earth2.io/news/110-million-ess-staked",
+      "summary": "Earth 2 / Essence Update 110 Million! Essence Staked · Q1–Q3 2026 $ESS Update Earth 2 has reached a remarkable milestone: 110 million Essence ($ESS) is now actively staked on properties by Earth 2 Players. That represents 11% of the original maximum possible supply of one billion $ESS committed by Players to their properties and […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [],
+      "source": "earth2.io",
+      "status": "drafted",
+      "receivedAt": "2026-11-11T10:44:19Z",
+      "draftId": "1570026483345399841"
+    }
+  ]
 }
