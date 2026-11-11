@@ -304,13 +304,15 @@ class Component extends DCLogic {
             for (var y = y0; y <= y1; y++) { var la = Math.atan(Math.sinh(Math.PI * (1 - 2 * y / N))) * 180 / Math.PI, p2 = real.project([W, la]), q2 = real.project([E, la]); ctx.moveTo(p2.x, p2.y); ctx.lineTo(q2.x, q2.y); }
             ctx.stroke();
           }
-          txt = '어스2 타일 1칸 ≈ ' + side.toFixed(1) + 'm · 약 ' + Math.round(area / 3.3058) + '평';
+          txt = ['1타일 19.08m 정사각 (약 110평)', '이 위도 실제 지면 ≈ ' + side.toFixed(1) + 'm'];
         } else {
-          txt = '확대하면 어스2 타일 격자가 보여요';
+          txt = ['확대하면 어스2 타일 격자가 보여요'];
         }
-        ctx.font = '700 11px "Space Mono", monospace'; var tw = ctx.measureText(txt).width;
-        ctx.fillStyle = 'rgba(10,7,22,.85)'; ctx.fillRect(w - tw - 22, h - 82, tw + 14, 22);
-        ctx.fillStyle = '#c9c0ff'; ctx.textBaseline = 'middle'; ctx.fillText(txt, w - tw - 15, h - 71);
+        ctx.font = '700 ' + (w < 360 ? 10 : 11) + 'px "Space Mono", monospace';
+        var tw = Math.max.apply(null, txt.map(function (s) { return ctx.measureText(s).width; })), top = h - 62 - txt.length * 18;
+        ctx.fillStyle = 'rgba(10,7,22,.85)'; ctx.fillRect(w - tw - 22, top, tw + 14, txt.length * 18 + 6);
+        ctx.fillStyle = '#c9c0ff'; ctx.textBaseline = 'middle';
+        txt.forEach(function (s, i) { ctx.fillText(s, w - tw - 15, top + 12 + i * 18); });
       }
       real.on('move', draw); real.on('resize', draw); real.on('load', draw); draw();
       self.__maps = { real: real, realEl: realEl, draw: draw };
