@@ -204,7 +204,7 @@ html{scroll-behavior:smooth}
 <img src="assets/ea9e760d62745312f367290e811d7de7.webp" alt="현실 지구 · {{pt.title}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; visibility: {{fbVis}}">
 <div class="mapslot-real" aria-hidden="true" style="position: absolute; inset: 0"></div>
 <div class="mapstat" role="status" style="position: absolute; left: 8px; bottom: 56px; z-index: 30; max-width: 70%; padding: 4px 8px; background: rgba(10,7,22,.85); border: 1px solid #ffd23f; color: #ffe9a8; font-size: 11px; pointer-events: none">지도 불러오는 중…</div>
-<div class="world" aria-hidden="true" style="position: absolute; inset: 0; clip-path: {{clip}}; pointer-events: none"><img class="jit" src="assets/1cf215a3977029b64faf8cab9aef9688.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; visibility: {{fbVis}}"><div class="mapslot-digi" style="position: absolute; inset: 0"></div><div class="digigrid" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(169,155,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(169,155,255,.35) 1px, transparent 1px), repeating-linear-gradient(0deg, rgba(255,47,176,.06) 0 2px, transparent 2px 5px); background-size: 28px 28px, 28px 28px, auto; mix-blend-mode: screen"></div></div>
+<div class="world" aria-hidden="true" style="position: absolute; inset: 0; clip-path: {{clip}}; pointer-events: none; -webkit-backdrop-filter: hue-rotate(205deg) saturate(1.9) contrast(1.25) brightness(.72); backdrop-filter: hue-rotate(205deg) saturate(1.9) contrast(1.25) brightness(.72)"><img class="jit" src="assets/1cf215a3977029b64faf8cab9aef9688.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; visibility: {{fbVis}}"><div class="mapslot-digi" style="position: absolute; inset: 0"></div><div class="digigrid" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(169,155,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(169,155,255,.35) 1px, transparent 1px), repeating-linear-gradient(0deg, rgba(255,47,176,.06) 0 2px, transparent 2px 5px); background-size: 28px 28px, 28px 28px, auto; mix-blend-mode: screen"></div></div>
 <div class="world" aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; clip-path: {{riftClip}}; background: linear-gradient(90deg, #2fe6c8, #ffffff 45%, #ff2fb0); box-shadow: 0 0 40px #ff2fb0"></div>
 <div aria-hidden="true" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(255,210,63,.55); pointer-events: none"></div>
 <div aria-hidden="true" style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: rgba(255,210,63,.55); pointer-events: none"></div>
@@ -288,28 +288,25 @@ class Component extends DCLogic {
     var sr = root.querySelector('.mapslot-real'), sd = root.querySelector('.mapslot-digi');
     if (!token || !sr || !sd) return;
     if (this.__msg !== undefined) root.querySelectorAll('.mapstat').forEach(function (s) { s.textContent = self.__msg; s.style.display = self.__msg ? '' : 'none'; });
-    if (this.__maps) { sr.appendChild(this.__maps.realEl); sd.appendChild(this.__maps.digiEl); this.__maps.real.resize(); this.__maps.digi.resize(); return; }
+    if (this.__maps) { sr.appendChild(this.__maps.realEl); this.__maps.real.resize(); return; }
     if (this.__loading) return;
     this.__loading = true;
     function boot() {
       var mk = function (cls) { var el = document.createElement('div'); el.className = cls; el.style.cssText = 'position:absolute;inset:0'; return el; };
-      var realEl = mk('tsmap-real'), digiEl = mk('tsmap-digi');
-      digiEl.style.filter = 'hue-rotate(205deg) saturate(1.9) contrast(1.25) brightness(.72)';
-      var s1 = root.isConnected ? root : document; 
-      var r = document.querySelector('.mapslot-real'), d = document.querySelector('.mapslot-digi');
-      r.appendChild(realEl); d.appendChild(digiEl);
+      // One map only: the digital half is the same map seen through a colour filter (.world backdrop-filter),
+      // so tiles are fetched once (two maps doubled the requests and hit Mapbox's 429 limit).
+      var realEl = mk('tsmap-real');
+      document.querySelector('.mapslot-real').appendChild(realEl);
       window.mapboxgl.accessToken = token;
-      var opt = function (el, inter) { return { container: el, style: 'mapbox://styles/mapbox/satellite-v9', center: [pt.lon, pt.lat], zoom: 15, attributionControl: inter, interactive: inter, cooperativeGestures: true }; };
-      var real = new window.mapboxgl.Map(opt(realEl, true));
-      var digi = new window.mapboxgl.Map(opt(digiEl, false));
-      real.on('move', function () { digi.jumpTo({ center: real.getCenter(), zoom: real.getZoom(), bearing: real.getBearing(), pitch: real.getPitch() }); });
+      var real = new window.mapboxgl.Map({ container: realEl, style: 'mapbox://styles/mapbox/satellite-v9', projection: 'globe', center: [pt.lon, pt.lat], zoom: 15, cooperativeGestures: true });
+      real.on('style.load', function () { try { real.setFog({ color: 'rgb(18,12,48)', 'high-color': 'rgb(60,40,140)', 'space-color': 'rgb(7,5,26)', 'horizon-blend': 0.06, 'star-intensity': 0.35 }); } catch (e) {} });
       real.addControl(new window.mapboxgl.NavigationControl({ showCompass: false }), 'bottom-right');
       var stat = function (t) { self.__msg = t; document.querySelectorAll('.mapstat').forEach(function (s) { s.textContent = t; s.style.display = t ? '' : 'none'; }); };
       var loaded = false;
       real.once('load', function () { loaded = true; stat(''); });
       real.on('error', function (e) { var st = e && e.error && e.error.status; if (loaded && st !== 401 && st !== 403) return;  // one missing tile after load is not a broken map
         stat(st === 401 || st === 403 ? '지도 키가 이 주소에서 거부됐어요 (' + st + ')' : '지도를 불러오지 못했어요' + (st ? ' (' + st + ')' : '')); });
-      self.__maps = { real: real, digi: digi, realEl: realEl, digiEl: digiEl };
+      self.__maps = { real: real, realEl: realEl };
       root.querySelectorAll('.stage img').forEach(function (i) { i.style.visibility = 'hidden'; });
     }
     if (window.mapboxgl) { boot(); return; }
