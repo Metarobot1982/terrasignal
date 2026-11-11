@@ -1,0 +1,1428 @@
+{
+  "updatedAt": "2026-11-11T12:23:04Z",
+  "note": "어스2 공식 기사(earth2.io/news) 전체. 한국어 제목과 요약은 원문 첫 부분 기준 AI 요약이며, 정확한 내용은 원문이 기준이에요.",
+  "items": [
+    {
+      "id": 3207,
+      "date": "2026-11-11",
+      "layer": "B",
+      "titleKo": "에센스 1.1억 스테이킹 · 2026 리포트",
+      "line": "프로퍼티에 스테이킹된 에센스가 1.1억 $ESS에 이르렀고, 최초 최대 공급량 10억 개의 11%예요.",
+      "titleEn": "110 Million Essence Staked, 2026 Reports, New Brilliant Jewel Utility & Returning Gifted Skins",
+      "url": "https://earth2.io/news/110-million-ess-staked"
+    },
+    {
+      "id": 3449,
+      "date": "2026-09-09",
+      "layer": "D",
+      "titleKo": "챕터 6 · 리얼리티 스레드 9 · 커맨드 덱",
+      "line": "E2V1 안에서 처음 플레이 가능한 게임, 사이드로이드 레이딩이 열렸어요.",
+      "titleEn": "Chapter 6 – Reality Thread 9 -Command Deck Online",
+      "url": "https://earth2.io/news/reality-thread-9"
+    },
+    {
+      "id": 3182,
+      "date": "2026-05-31",
+      "layer": "D",
+      "titleKo": "리얼리티 스레드 8 업데이트 0.5.8.2",
+      "line": "리얼리티 스레드 8 공개 하루 만에, 초기 출시 때 플레이어들이 찾은 문제를 고친 업데이트가 나왔어요.",
+      "titleEn": "Reality Thread 8 Update – 0.5.8.2 Released",
+      "url": "https://earth2.io/news/e2v1-update-0-5-8-2"
+    },
+    {
+      "id": 3035,
+      "date": "2026-05-26",
+      "layer": "D",
+      "titleKo": "챕터 5 · 리얼리티 스레드 8 · 농업",
+      "line": "지난 대형 출시 두 달 만에, E2V1에 첫 농업이 들어왔어요.",
+      "titleEn": "Chapter 5 -Reality Thread 8 – Seeds of Change",
+      "url": "https://earth2.io/news/reality-thread-8"
+    },
+    {
+      "id": 3027,
+      "date": "2026-03-24",
+      "layer": "D",
+      "titleKo": "리얼리티 스레드 7 업데이트 0.4.7.1",
+      "line": "리얼리티 스레드 7 출시 24시간 만에 초기 문제를 고친 업데이트가 나왔어요.",
+      "titleEn": "Reality Thread 7 Update 0.4.7.1",
+      "url": "https://earth2.io/news/e2v1-update-0-4-7-1"
+    },
+    {
+      "id": 2894,
+      "date": "2026-03-23",
+      "layer": "B",
+      "titleKo": "$ESS 리포트 2025년 4분기",
+      "line": "2025년 4분기 $ESS 통계와 항목별 설명을 공개했어요.",
+      "titleEn": "$ESS Update Report Q4-25",
+      "url": "https://earth2.io/news/ess-2025-q4"
+    },
+    {
+      "id": 2936,
+      "date": "2026-03-19",
+      "layer": "D",
+      "titleKo": "챕터 4 · 리얼리티 스레드 7 · 퀘스트",
+      "line": "리얼리티 스레드 7(0.4.7.0)이 E2V1의 기반 위에 퀘스트 중심 기능을 더해요.",
+      "titleEn": "Chapter 4: Reality Thread 7 -Quests: Who’s Got the Goods?",
+      "url": "https://earth2.io/news/reality-thread-7"
+    },
+    {
+      "id": 2910,
+      "date": "2026-01-25",
+      "layer": "D",
+      "titleKo": "리얼리티 스레드 6 업데이트 0.3.6.2",
+      "line": "안정성과 인벤토리 신뢰성에 집중한 수정과 백엔드 변경이 들어갔어요.",
+      "titleEn": "Reality Thread 6 Update -Version 0.3.6.2",
+      "url": "https://earth2.io/news/e2v1-update-0-3-6-2"
+    },
+    {
+      "id": 2830,
+      "date": "2026-01-06",
+      "layer": "D",
+      "titleKo": "챕터 3 · 리얼리티 스레드 6 · 요리",
+      "line": "새해를 맞아 챕터 3 리얼리티 스레드 6이 나왔어요.",
+      "titleEn": "Chapter 3: Reality Thread 6 – What’s Cooking in E2V1?",
+      "url": "https://earth2.io/news/reality-thread-6"
+    },
+    {
+      "id": 2821,
+      "date": "2025-12-21",
+      "layer": "D",
+      "titleKo": "리얼리티 스레드 5 업데이트 0.2.5.1",
+      "line": "리얼리티 스레드 5 출시 이틀 뒤, 플레이 데이터와 의견을 반영한 업데이트예요.",
+      "titleEn": "Reality Thread 5 Update -Version 0.2.5.1",
+      "url": "https://earth2.io/news/e2v1-update-0-2-5-1"
+    },
+    {
+      "id": 2776,
+      "date": "2025-12-18",
+      "layer": "D",
+      "titleKo": "챕터 2 · 리얼리티 스레드 5 · 텔레포트",
+      "line": "2025년 12월 8일 배지 보유자에게 E2V1이 처음 열렸고, 텔레포트가 들어왔어요.",
+      "titleEn": "Chapter 2: Reality Thread 5 – Teleportation Comes Online",
+      "url": "https://earth2.io/news/reality-thread-5"
+    },
+    {
+      "id": 2764,
+      "date": "2025-11-22",
+      "layer": "D",
+      "titleKo": "프리 알파 업데이트 0.1.4.1",
+      "line": "리얼리티 스레드 4 이후 테스터 의견을 반영해 캐릭터 위치와 멀티플레이를 다듬었어요.",
+      "titleEn": "Earth 2 Pre-Alpha Update 0.1.4.1",
+      "url": "https://earth2.io/news/e2v1-update-0-1-4-1"
+    },
+    {
+      "id": 2715,
+      "date": "2025-10-31",
+      "layer": "D",
+      "titleKo": "리얼리티 스레드 4 · 제작·전투·최적화",
+      "line": "리얼리티 스레드 3 두 달 만에 제작, 전투, E2V1 핵심 최적화가 들어왔어요.",
+      "titleEn": "Reality Thread 4 – Crafting, Combat & Core E2V1 Optimisations",
+      "url": "https://earth2.io/news/reality-thread-4"
+    },
+    {
+      "id": 2087,
+      "date": "2025-10-31",
+      "layer": "B",
+      "titleKo": "$ESS 리포트 (2025년 4~9월)",
+      "line": "2025년 4월부터 9월까지의 $ESS 통계와 항목별 설명을 공개했어요.",
+      "titleEn": "Earth 2 $ESS Update Report: (April-June 2025, July-September 2025)",
+      "url": "https://earth2.io/news/ess-30-sep-2025"
+    },
+    {
+      "id": 2655,
+      "date": "2025-08-24",
+      "layer": "D",
+      "titleKo": "리얼리티 스레드 3 · 디지털 지구 전역 멀티플레이",
+      "line": "디지털 지구 전체에서 다른 플레이어와 함께하는 글로벌 멀티플레이가 들어왔어요.",
+      "titleEn": "Earth 2 Reality Thread 3 introduces Global Multiplayer across entire Digital Earth",
+      "url": "https://earth2.io/news/reality-thread-3"
+    },
+    {
+      "id": 2644,
+      "date": "2025-07-27",
+      "layer": "D",
+      "titleKo": "E2V1 리얼리티 스레드 2 업데이트 노트",
+      "line": "지난 5일 동안 E2V1 프리 알파의 여러 시스템을 고치고 개선했어요.",
+      "titleEn": "E2V1 – Reality Thread 2 Update Notes",
+      "url": "https://earth2.io/news/reality-thread-2"
+    },
+    {
+      "id": 2630,
+      "date": "2025-07-20",
+      "layer": "B",
+      "titleKo": "스테이킹 7,400만 에센스 · 이정표",
+      "line": "챕터 1 출시를 앞두고, 땅에 스테이킹된 에센스가 7,400만 개를 넘었어요.",
+      "titleEn": "Earth 2 Reaches Staking Milestone Ahead of Chapter 1: Reality Thread 1",
+      "url": "https://earth2.io/news/reality-thread-1-reminders"
+    },
+    {
+      "id": 2597,
+      "date": "2025-07-14",
+      "layer": "D",
+      "titleKo": "E2V1 프리 알파 챕터 1 · 리얼리티 스레드 1",
+      "line": "E2V1 프리 알파 챕터 1이 처음으로 플레이 가능한 테스트 버전으로 나왔어요.",
+      "titleEn": "Welcome to E2V1 Pre-Alpha Chapter 1: Reality Thread 1",
+      "url": "https://earth2.io/news/e2v1-chapter-1"
+    },
+    {
+      "id": 2426,
+      "date": "2025-05-26",
+      "layer": "D",
+      "titleKo": "E2V1 2025 미리 보기 후속 · 핵심 설계 변경",
+      "line": "E2V1 미리 보기 영상에 나온 장면이 무엇을 뜻하는지 자세히 설명했어요.",
+      "titleEn": "E2V1 2025 Sneak Peek Follow Up Article – Core E2V1 Design Updates",
+      "url": "https://earth2.io/news/e2v1-core-design-updates"
+    },
+    {
+      "id": 2273,
+      "date": "2025-05-14",
+      "layer": "B",
+      "titleKo": "에센스 리포트 (2024년 6월~2025년 3월)",
+      "line": "ERC-20 토큰 출시부터 2025년 3월 31일까지의 $ESS 통계를 공개했어요.",
+      "titleEn": "Earth 2 Essence Update Report (June 2024 – March 2025)",
+      "url": "https://earth2.io/news/ess-31-mar-25"
+    },
+    {
+      "id": 2399,
+      "date": "2025-05-10",
+      "layer": "B",
+      "titleKo": "ESS 할인 스피너 · 스테이커 혜택",
+      "line": "에센스에 새 쓰임새와 소각을 더하고, 스테이커에게 혜택을 주는 할인 스피너를 소개했어요.",
+      "titleEn": "The ESS Discount Spinner: A Unique Perk for Earth 2 Stakers",
+      "url": "https://earth2.io/news/ess-spinner"
+    },
+    {
+      "id": 2377,
+      "date": "2025-05-08",
+      "layer": "D",
+      "titleKo": "챕터 2: 텔레포트 안내",
+      "line": "챕터 1 다음 목표인 챕터 2 텔레포트가 어떻게 작동할지 자세히 설명했어요.",
+      "titleEn": "Chapter 2: Teleportation",
+      "url": "https://earth2.io/news/teleportation"
+    },
+    {
+      "id": 2353,
+      "date": "2025-04-23",
+      "layer": "B",
+      "titleKo": "어스2 데이 2025",
+      "line": "E2V1 챕터 1 출시를 앞두고, 올해도 지구의 날에 맞춰 이더 보상을 늘렸어요.",
+      "titleEn": "Supercharged E-ther For Earth 2 Day – 2025!",
+      "url": "https://earth2.io/news/earth2day2025"
+    },
+    {
+      "id": 2342,
+      "date": "2025-04-18",
+      "layer": "B",
+      "titleKo": "멘타 스테이킹 6,700만 에센스 돌파",
+      "line": "멘타 스테이킹에 묶인 에센스가 6,700만 개를 넘어 역대 최고를 기록했어요.",
+      "titleEn": "Over 67 Million Essence Staked – a New Milestone for Earth 2’s Mentar Staking System",
+      "url": "https://earth2.io/news/mentar-staking-all-time-high"
+    },
+    {
+      "id": 2335,
+      "date": "2025-04-13",
+      "layer": "D",
+      "titleKo": "E2 호드 전투 메커니즘 3편",
+      "line": "실제 지형 위에 해골 전사, 좀비, 바위 골렘 등이 나타나 전리품과 이더를 떨어뜨려요.",
+      "titleEn": "Earth 2 Hordes Combat Mechanics Vol. 3",
+      "url": "https://earth2.io/news/combat-mechanics-volume-3"
+    },
+    {
+      "id": 2309,
+      "date": "2025-04-06",
+      "layer": "D",
+      "titleKo": "E2V1 캐릭터 합성 · 생명의 시작",
+      "line": "챕터 1 '탐험·제작·생존'을 앞두고, E2V1에 첫 주민을 만드는 캐릭터 합성 시스템을 소개했어요.",
+      "titleEn": "The Dawn of Life in Earth 2: Character Synthesis in E2V1",
+      "url": "https://earth2.io/news/dawn-of-life"
+    },
+    {
+      "id": 2261,
+      "date": "2024-12-01",
+      "layer": "R",
+      "titleKo": "메가시티·타일 아트 시리즈 5편 · 마지막 회",
+      "line": "플레이어 땅의 창작물을 소개해 온 시리즈의 E2V1 전 마지막 편이에요.",
+      "titleEn": "Earth 2 Megacities & Tile Art Series: Vol.5 – Final Episode before E2V1",
+      "url": "https://earth2.io/news/megacity-tileart-series"
+    },
+    {
+      "id": 2256,
+      "date": "2024-11-26",
+      "layer": "D",
+      "titleKo": "E2 호드 전투 메커니즘 2편",
+      "line": "E2 호드 미니게임을 위해 시험 중인 업데이트를 소개했어요.",
+      "titleEn": "Earth 2 Hordes Combat Mechanics Volume 2",
+      "url": "https://earth2.io/news/combat-mechanics-volume-2"
+    },
+    {
+      "id": 2239,
+      "date": "2024-11-20",
+      "layer": "D",
+      "titleKo": "제작 과정 시리즈 1편 · 해골 전사",
+      "line": "어스2의 3D 에셋을 만드는 과정을 보여주는 시리즈 첫 편이에요.",
+      "titleEn": "Earth 2 Creation Process Series – Volume 1 – The Skeleton Warrior",
+      "url": "https://earth2.io/news/creation-process-vol-1"
+    },
+    {
+      "id": 2197,
+      "date": "2024-11-15",
+      "layer": "R",
+      "titleKo": "에코심 채굴 · 새 시대의 시작",
+      "line": "플레이어가 가진 땅에서 살아 있는 생태계를 만들어 가는 새 단계, 채굴이 시작됐어요.",
+      "titleEn": "The Earth 2 EcoSim – Mining: The Beginning of a New Era!",
+      "url": "https://earth2.io/news/earth2-ecosim-mining"
+    },
+    {
+      "id": 2141,
+      "date": "2024-11-06",
+      "layer": "R",
+      "titleKo": "어스2 4주년",
+      "line": "4주년을 맞아, 어려움 속에서도 지난 1년 동안 이룬 개발 소식을 정리했어요.",
+      "titleEn": "Earth 2 Turns 4!",
+      "url": "https://earth2.io/news/earth-2-turns-4"
+    },
+    {
+      "id": 2125,
+      "date": "2024-10-12",
+      "layer": "D",
+      "titleKo": "어스2 런처 미리 보기",
+      "line": "E2V1 프리 알파와 함께 쓰일 어스2 런처를 미리 보여주는 영상을 공개했어요.",
+      "titleEn": "The Earth 2 Launcher: A Sneak Peek",
+      "url": "https://earth2.io/news/earth-2-launcher"
+    },
+    {
+      "id": 2106,
+      "date": "2024-09-18",
+      "layer": "D",
+      "titleKo": "E2 호드 초기 전투 메커니즘 1편",
+      "line": "어스2의 첫 전투 메커니즘을 영상과 글로 아주 이른 단계에서 보여줬어요.",
+      "titleEn": "Earth 2 Hordes: Early Combat Mechanics – Volume 1",
+      "url": "https://earth2.io/news/combat-mechanics-volume-1"
+    },
+    {
+      "id": 2092,
+      "date": "2024-08-28",
+      "layer": "D",
+      "titleKo": "어스2 야생동물 1편",
+      "line": "E2V1에 들어올 야생동물의 첫 모습을 공개했어요.",
+      "titleEn": "Wildlife in Earth 2 – Vol. 1",
+      "url": "https://earth2.io/news/wildlife-vol-1"
+    },
+    {
+      "id": 2076,
+      "date": "2024-08-11",
+      "layer": "D",
+      "titleKo": "GDC 2024 트레일러 공개",
+      "line": "GDC 2024에서 선보인 E2V1 공식 영상을 공개했어요. E2V1은 아직 개발 중이에요.",
+      "titleEn": "Earth 2, 2024 | GDC Trailer",
+      "url": "https://earth2.io/news/earth-2-gdc-trailer"
+    },
+    {
+      "id": 2065,
+      "date": "2024-08-04",
+      "layer": "B",
+      "titleKo": "멘타 스테이킹·E2 호드·출금 업데이트",
+      "line": "새 멘타 스테이킹 시스템과 첫 미니게임 E2 호드 배경, 출금 변경을 함께 발표했어요.",
+      "titleEn": "Earth 2 Unveils Mentar Staking, Earth 2 Hordes, and Withdrawal Update",
+      "url": "https://earth2.io/news/mentar-staking-live"
+    },
+    {
+      "id": 2054,
+      "date": "2024-07-26",
+      "layer": "B",
+      "titleKo": "$ESS 30일 통계",
+      "line": "지난 30일 동안 땅 업그레이드, 사이드로이드 제작, 스킨 구매에 쓰인 $ESS 통계를 공개했어요.",
+      "titleEn": "Earth 2 $ESS Statistics Update: 30 Days On-Platform Data",
+      "url": "https://earth2.io/news/ess-26-jul-24"
+    },
+    {
+      "id": 2045,
+      "date": "2024-07-16",
+      "layer": "B",
+      "titleKo": "땅 업그레이드 첫날 소각 상위 10명",
+      "line": "출시 첫날 에센스를 가장 많이 소각한 플레이어 10명을 소개했어요.",
+      "titleEn": "TOP 10 Land Upgrade Burners on Launch Day!",
+      "url": "https://earth2.io/news/top-10-land-upgrades"
+    },
+    {
+      "id": 2036,
+      "date": "2024-06-30",
+      "layer": "B",
+      "titleKo": "땅 업그레이드 첫날 에센스 1,200만 사용",
+      "line": "땅 업그레이드 출시 첫날 플레이어들이 에센스 1,200만 개 이상을 썼어요.",
+      "titleEn": "Earth 2 Players Spend Over 12 Million Essence on Land Upgrade Launch",
+      "url": "https://earth2.io/news/land-upgrade-burn"
+    },
+    {
+      "id": 2026,
+      "date": "2024-06-29",
+      "layer": "B",
+      "titleKo": "스킨 스토어에서 에센스 사용",
+      "line": "스킨 스토어의 일부 스킨을 에센스($ESS)로 살 수 있게 했어요.",
+      "titleEn": "ESSENCE Utility Boost via the Earth 2 Skin Store",
+      "url": "https://earth2.io/news/ess-utility-e2-skins"
+    },
+    {
+      "id": 2001,
+      "date": "2024-06-23",
+      "layer": "R",
+      "titleKo": "땅 $ESS 업그레이드 시스템",
+      "line": "에센스($ESS)로 땅을 업그레이드하는 시스템을 배포 전에 미리 설명했어요.",
+      "titleEn": "Introducing the Earth 2 Land $ESS Upgrade System",
+      "url": "https://earth2.io/news/ess-land-upgrade"
+    },
+    {
+      "id": 1987,
+      "date": "2024-04-23",
+      "layer": "B",
+      "titleKo": "어스2 데이 2024",
+      "line": "올해도 지구의 날에 맞춰 활동 플레이어에게 이더 보상을 늘렸어요.",
+      "titleEn": "Supercharged E-ther For Earth 2 Day!",
+      "url": "https://earth2.io/news/earth2day2024"
+    },
+    {
+      "id": 1981,
+      "date": "2024-03-28",
+      "layer": "D",
+      "titleKo": "E2V1 프리 알파 초대 땅 경품 당첨자",
+      "line": "X와 유튜브에서 연 E2V1 땅 경품 행사 당첨자를 발표했어요.",
+      "titleEn": "E2V1 Pre-Alpha Invite Land Giveaway Competition Winners (X & YouTube)",
+      "url": "https://earth2.io/news/pre-alpha-invite-winners"
+    },
+    {
+      "id": 1966,
+      "date": "2024-03-21",
+      "layer": "D",
+      "titleKo": "GDC 2024 참가 · E2V1 공개 시연 예고",
+      "line": "GDC 2024에 참가해 MetaGravity와 함께 부스를 열고, 누구나 E2V1 빌드를 해볼 수 있게 한다고 알렸어요.",
+      "titleEn": "Earth 2 at GDC 2024!",
+      "url": "https://earth2.io/news/gdc-2024"
+    },
+    {
+      "id": 1954,
+      "date": "2024-03-17",
+      "layer": "D",
+      "titleKo": "MetaGravity와 초대형 3D 지구 협력",
+      "line": "MetaGravity와 손잡고, 1:1 크기 3D 디지털 지구를 대규모로 함께 만든다고 발표했어요.",
+      "titleEn": "MetaGravity and Earth 2 Partner to Build a HyperScale Interactive 3D Replica of the Earth",
+      "url": "https://earth2.io/news/metagravity-earth2"
+    },
+    {
+      "id": 1942,
+      "date": "2024-03-06",
+      "layer": "D",
+      "titleKo": "E2V1 프리 알파 테스터 신청 시작",
+      "line": "E2V1(어스2 버전 1) 프리 알파 테스트 신청을 미리 받기 시작했어요.",
+      "titleEn": "E2V1 pre-alpha invites open!",
+      "url": "https://earth2.io/news/e2v1-pre-alpha-invite"
+    },
+    {
+      "id": 1916,
+      "date": "2024-03-01",
+      "layer": "B",
+      "titleKo": "옐로 에너지 · 창작자 보상",
+      "line": "어스2 커뮤니티에 콘텐츠로 기여하는 창작자에게 보상하는 옐로 에너지를 소개했어요.",
+      "titleEn": "Yellow Energy – Rewarding Creativity & Contributions to Earth 2!",
+      "url": "https://earth2.io/news/yellow-energy"
+    },
+    {
+      "id": 1907,
+      "date": "2024-02-22",
+      "layer": "B",
+      "titleKo": "잠긴 나라 티어 1 땅 에센스 소급 지급",
+      "line": "티어 1 판매가 잠겼던 나라의 현재 땅 주인에게 에센스를 소급 지급한다고 확정했어요.",
+      "titleEn": "Retroactive EDC Air Drop for Tier 1 Properties Affected by Locked Countries",
+      "url": "https://earth2.io/news/locked-countries-edc"
+    },
+    {
+      "id": 1890,
+      "date": "2024-01-28",
+      "layer": "B",
+      "titleKo": "아키옥과 스킨에 대해 기억할 점",
+      "line": "메타버스에서 입는 꾸밈 아이템의 중요성과 어스2 스킨의 핵심을 정리했어요.",
+      "titleEn": "Archiok & Things To Remember About Earth 2 Skins",
+      "url": "https://earth2.io/news/archiok"
+    },
+    {
+      "id": 1878,
+      "date": "2024-01-18",
+      "layer": "B",
+      "titleKo": "에센스의 힘",
+      "line": "에센스의 힘은 그것을 가진 사람들이 정하게 된다는 생각을 풀어낸 글이에요.",
+      "titleEn": "The Power of Essence",
+      "url": "https://earth2.io/news/the-power-of-essence"
+    },
+    {
+      "id": 1865,
+      "date": "2023-12-31",
+      "layer": "R",
+      "titleKo": "자원 공개: 이리듐 · 마지막 자원",
+      "line": "이리듐으로 공식 발표된 자원 목록이 모두 공개됐어요.",
+      "titleEn": "Resource Release: Iridium",
+      "url": "https://earth2.io/news/resources-iridium"
+    },
+    {
+      "id": 1856,
+      "date": "2023-12-18",
+      "layer": "R",
+      "titleKo": "자원 공개: 토륨",
+      "line": "토륨은 공식 자원 목록의 끝에서 두 번째 자원이에요.",
+      "titleEn": "Resource Release: Thorium",
+      "url": "https://earth2.io/news/resources-thorium"
+    },
+    {
+      "id": 1771,
+      "date": "2023-12-14",
+      "layer": "R",
+      "titleKo": "탐사 사이드로이드·자원·프라임 쥬얼 – 모래",
+      "line": "같은 시리즈의 모래 편이에요.",
+      "titleEn": "Prospecting Cydroids, Resources & Prime Jewels – Sand",
+      "url": "https://earth2.io/news/resources-sand"
+    },
+    {
+      "id": 1846,
+      "date": "2023-12-11",
+      "layer": "R",
+      "titleKo": "자원 공개: 바나듐",
+      "line": "바나듐이 공개됐고, 발견 티어 9에서 남은 자원은 2종이에요.",
+      "titleEn": "Resource Release: Vanadium",
+      "url": "https://earth2.io/news/resources-vanadium"
+    },
+    {
+      "id": 1808,
+      "date": "2023-12-04",
+      "layer": "R",
+      "titleKo": "자원 공개: 레늄",
+      "line": "레늄이 공개됐고, 남은 자원은 3종이에요.",
+      "titleEn": "Resource Release: Rhenium",
+      "url": "https://earth2.io/news/resources-rhenium"
+    },
+    {
+      "id": 1828,
+      "date": "2023-12-03",
+      "layer": "B",
+      "titleKo": "어스2 스킨 스토어 안내",
+      "line": "E2V1에서 쓸 수집형 스킨을 얻고, 나중에는 거래할 수 있는 스킨 스토어를 소개했어요.",
+      "titleEn": "Earth 2 Skins – Important Details",
+      "url": "https://earth2.io/news/earth2skins"
+    },
+    {
+      "id": 1781,
+      "date": "2023-11-27",
+      "layer": "R",
+      "titleKo": "테리토리 · 부스트 이더 · 거버넌스 · T3 땅",
+      "line": "2023년 여섯 번째 대형 출시로, 부스트 이더·거버넌스·T3 땅 세 시스템이 함께 들어왔어요.",
+      "titleEn": "Territories – Boosted E-ther, Governance System & T3 Land",
+      "url": "https://earth2.io/news/territories"
+    },
+    {
+      "id": 1760,
+      "date": "2023-11-27",
+      "layer": "R",
+      "titleKo": "자원 공개: 우라늄",
+      "line": "우라늄은 발견 티어 8의 첫 자원이고, 남은 자원은 4종이에요.",
+      "titleEn": "Resource Release: Uranium",
+      "url": "https://earth2.io/news/resources-uranium"
+    },
+    {
+      "id": 1765,
+      "date": "2023-11-23",
+      "layer": "R",
+      "titleKo": "탐사 사이드로이드·자원·프라임 쥬얼 – 나무",
+      "line": "같은 시리즈의 나무 편이에요.",
+      "titleEn": "Prospecting Cydroids, Resources & Prime Jewels – Wood",
+      "url": "https://earth2.io/news/resources-wood"
+    },
+    {
+      "id": 1750,
+      "date": "2023-11-21",
+      "layer": "R",
+      "titleKo": "자원 공개: 텔루륨",
+      "line": "텔루륨이 공개됐고, 남은 자원은 5종이에요.",
+      "titleEn": "Resource Release: Tellurium",
+      "url": "https://earth2.io/news/resources-tellurium"
+    },
+    {
+      "id": 1744,
+      "date": "2023-11-17",
+      "layer": "R",
+      "titleKo": "탐사 사이드로이드·자원·프라임 쥬얼 – 구리",
+      "line": "같은 시리즈의 구리 편이에요.",
+      "titleEn": "Prospecting Cydroids, Resources & Prime Jewels – Copper",
+      "url": "https://earth2.io/news/resources-copper"
+    },
+    {
+      "id": 1731,
+      "date": "2023-11-15",
+      "layer": "R",
+      "titleKo": "탐사 사이드로이드·자원·프라임 쥬얼 – 석탄",
+      "line": "같은 시리즈의 석탄 편이에요.",
+      "titleEn": "Prospecting Cydroids, Resources & Prime Jewels – Coal",
+      "url": "https://earth2.io/news/resources-coal"
+    },
+    {
+      "id": 1721,
+      "date": "2023-11-14",
+      "layer": "R",
+      "titleKo": "시민 새 능력 '레이드 중단'",
+      "line": "새 시민 능력 '레이드 중단(Raid Abort)'이 나왔고, 이 능력은 레이드 지휘관이 쓰게 돼요.",
+      "titleEn": "‘Abort Raid’ A New Civilian Ability",
+      "url": "https://earth2.io/news/abort-raid"
+    },
+    {
+      "id": 1709,
+      "date": "2023-11-13",
+      "layer": "R",
+      "titleKo": "자원 공개: 탄탈럼",
+      "line": "탄탈럼을 E2PRV로 신청할 수 있게 됐어요.",
+      "titleEn": "Resource Release: Tantalum",
+      "url": "https://earth2.io/news/resources-tantalum"
+    },
+    {
+      "id": 1700,
+      "date": "2023-11-09",
+      "layer": "R",
+      "titleKo": "탐사 사이드로이드·자원·프라임 쥬얼 – 금",
+      "line": "같은 시리즈의 금 편이에요.",
+      "titleEn": "Prospecting Cydroids, Resources & Prime Jewels – Gold",
+      "url": "https://earth2.io/news/resources-gold"
+    },
+    {
+      "id": 1660,
+      "date": "2023-11-07",
+      "layer": "R",
+      "titleKo": "탐사 사이드로이드·자원·프라임 쥬얼 – 석유",
+      "line": "같은 시리즈의 석유 편이에요.",
+      "titleEn": "Prospecting Cydroids, Resources & Prime Jewels – Oil",
+      "url": "https://earth2.io/news/resources-oil"
+    },
+    {
+      "id": 1685,
+      "date": "2023-11-06",
+      "layer": "R",
+      "titleKo": "자원 공개: 붕소",
+      "line": "발견 티어 7부터는 티어 1 땅에서만 채굴할 수 있다고 다시 알렸어요.",
+      "titleEn": "Resource Release: Boron",
+      "url": "https://earth2.io/news/resources-boron"
+    },
+    {
+      "id": 1664,
+      "date": "2023-11-05",
+      "layer": "R",
+      "titleKo": "어스2 3주년",
+      "line": "3주년을 맞아, 지난 1년 동안 더 복잡한 기능들을 공개해 왔다고 돌아봤어요.",
+      "titleEn": "Happy 3rd Anniversary Earth 2",
+      "url": "https://earth2.io/news/e2-turns-3"
+    },
+    {
+      "id": 1653,
+      "date": "2023-10-31",
+      "layer": "R",
+      "titleKo": "탐사 사이드로이드·자원·프라임 쥬얼 – 은",
+      "line": "같은 시리즈의 은 편이에요.",
+      "titleEn": "Prospecting Cydroids, Resources & Prime Jewels – Silver",
+      "url": "https://earth2.io/news/resources-silver"
+    },
+    {
+      "id": 1642,
+      "date": "2023-10-30",
+      "layer": "R",
+      "titleKo": "자원 공개: 몰리브덴",
+      "line": "몰리브덴은 발견 티어 7의 첫 자원이에요.",
+      "titleEn": "Resource Release: Molybdenum",
+      "url": "https://earth2.io/news/resources-molybdenum"
+    },
+    {
+      "id": 1634,
+      "date": "2023-10-27",
+      "layer": "R",
+      "titleKo": "탐사 사이드로이드·자원·프라임 쥬얼 – 석회석",
+      "line": "같은 시리즈의 석회석 편이에요.",
+      "titleEn": "Prospecting Cydroids, Resources & Prime Jewels – Limestone",
+      "url": "https://earth2.io/news/resources-limestone"
+    },
+    {
+      "id": 1559,
+      "date": "2023-10-25",
+      "layer": "R",
+      "titleKo": "탐사 사이드로이드·자원·프라임 쥬얼 – 물",
+      "line": "같은 시리즈의 물 편이에요.",
+      "titleEn": "Prospecting Cydroids, Resources & Prime Jewels – Water",
+      "url": "https://earth2.io/news/resources-water"
+    },
+    {
+      "id": 1570,
+      "date": "2023-10-23",
+      "layer": "R",
+      "titleKo": "자원 공개: 티타늄",
+      "line": "티타늄은 발견 티어 6의 마지막 자원이에요.",
+      "titleEn": "Resource Release: Titanium",
+      "url": "https://earth2.io/news/resources-titanium"
+    },
+    {
+      "id": 1499,
+      "date": "2023-10-19",
+      "layer": "R",
+      "titleKo": "탐사 사이드로이드·자원·프라임 쥬얼 – 철",
+      "line": "탐사 사이드로이드, 자원, 프라임 쥬얼이 무엇인지 철을 예로 설명했어요.",
+      "titleEn": "Prospecting Cydroids, Resources & Prime Jewels – Iron",
+      "url": "https://earth2.io/news/resources-iron"
+    },
+    {
+      "id": 1462,
+      "date": "2023-10-16",
+      "layer": "R",
+      "titleKo": "자원 공개: 지르코늄",
+      "line": "지르코늄 신청이 1,240건을 넘었고, 남은 기본 자원은 10종이에요.",
+      "titleEn": "Resource Release: Zirconium",
+      "url": "https://earth2.io/news/resources-zirconium"
+    },
+    {
+      "id": 1442,
+      "date": "2023-10-10",
+      "layer": "R",
+      "titleKo": "자원 공개: 네오디뮴",
+      "line": "네오디뮴 신청이 740건 넘게 승인됐어요.",
+      "titleEn": "Resource Release: Neodymium",
+      "url": "https://earth2.io/news/resources-neodymium"
+    },
+    {
+      "id": 1430,
+      "date": "2023-10-03",
+      "layer": "R",
+      "titleKo": "자원 공개: 다이아몬드",
+      "line": "다이아몬드를 E2PRV로 신청할 수 있게 됐어요.",
+      "titleEn": "Resource Release: Diamond",
+      "url": "https://earth2.io/news/resources-diamond"
+    },
+    {
+      "id": 1411,
+      "date": "2023-09-25",
+      "layer": "R",
+      "titleKo": "자원 공개: 니오븀",
+      "line": "니오븀을 E2PRV로 신청할 수 있게 됐어요.",
+      "titleEn": "Resource Release: Niobium",
+      "url": "https://earth2.io/news/resources-niobium"
+    },
+    {
+      "id": 1375,
+      "date": "2023-09-21",
+      "layer": "R",
+      "titleKo": "자원 공개: 백금",
+      "line": "백금을 E2PRV로 신청할 수 있게 됐어요.",
+      "titleEn": "Resource Release: Platinum",
+      "url": "https://earth2.io/news/resources-platinum"
+    },
+    {
+      "id": 1384,
+      "date": "2023-09-19",
+      "layer": "B",
+      "titleKo": "시민 플레이어 간 거래 시작",
+      "line": "바자에서 시민을 플레이어끼리 거래할 수 있게 됐어요. 세 번째 주요 거래 아이템이에요.",
+      "titleEn": "P2P Civilian Trading LIVE",
+      "url": "https://earth2.io/news/civilian-bazaar-live"
+    },
+    {
+      "id": 1353,
+      "date": "2023-09-08",
+      "layer": "R",
+      "titleKo": "자원 공개: 코발트",
+      "line": "코발트를 E2PRV로 신청할 수 있게 됐어요.",
+      "titleEn": "Resource Release: Cobalt",
+      "url": "https://earth2.io/news/resources-cobalt"
+    },
+    {
+      "id": 1355,
+      "date": "2023-09-05",
+      "layer": "B",
+      "titleKo": "쥬얼 바자 개편과 대량 구매",
+      "line": "쥬얼 바자 화면이 새 디자인으로 바뀌고 대량 구매와 새 필터가 들어갔어요.",
+      "titleEn": "Jewel Bazaar Update, Jewels Bulk Buy & New Marketplace Filter",
+      "url": "https://earth2.io/news/jewel-bazaar-update"
+    },
+    {
+      "id": 1296,
+      "date": "2023-08-30",
+      "layer": "R",
+      "titleKo": "자원 공개: 크롬",
+      "line": "크롬 신청이 열린 지 며칠 만에 400건 넘게 승인됐어요.",
+      "titleEn": "Resource Release: Chromium",
+      "url": "https://earth2.io/news/resources-chromium"
+    },
+    {
+      "id": 1328,
+      "date": "2023-08-28",
+      "layer": "B",
+      "titleKo": "사이드로이드 플레이어 간 거래 시작",
+      "line": "바자에서 사이드로이드를 플레이어끼리 사고팔 수 있게 됐어요.",
+      "titleEn": "P2P Cydroid Trading NOW LIVE",
+      "url": "https://earth2.io/news/cydroid-bazaar"
+    },
+    {
+      "id": 1313,
+      "date": "2023-08-17",
+      "layer": "R",
+      "titleKo": "사이드로이드 관리 화면과 장착",
+      "line": "지난주 조용히 나온 사이드로이드 관리 화면이 정식으로 열렸어요.",
+      "titleEn": "Cydroid Management Update & Cydroid Slotting",
+      "url": "https://earth2.io/news/cydroid-jewel-slotting"
+    },
+    {
+      "id": 1291,
+      "date": "2023-08-11",
+      "layer": "R",
+      "titleKo": "자원 공개: 텅스텐",
+      "line": "텅스텐을 E2PRV로 신청할 수 있게 됐어요.",
+      "titleEn": "Resource Release: Tungsten",
+      "url": "https://earth2.io/news/resources-tungsten"
+    },
+    {
+      "id": 1278,
+      "date": "2023-08-11",
+      "layer": "B",
+      "titleKo": "자원용 쥬얼 부스트 한눈에 보기",
+      "line": "땅의 쥬얼 장착 화면에 자원 부스트를 보여주는 작은 개선이 들어갔어요.",
+      "titleEn": "NEW JEWEL BOOST OVERVIEW FOR RESOURCES",
+      "url": "https://earth2.io/news/resource-jewel-boost-overview"
+    },
+    {
+      "id": 1271,
+      "date": "2023-08-10",
+      "layer": "B",
+      "titleKo": "브릴리언트 쥬얼 능력 '복사 효과'",
+      "line": "루미너스 쥬얼을 만들 때 아주 드물게 나오는 브릴리언트 쥬얼의 능력이 공개됐어요.",
+      "titleEn": "Brilliant Ability Revealed – the ‘COPY EFFECT’",
+      "url": "https://earth2.io/news/brilliant-copy"
+    },
+    {
+      "id": 1257,
+      "date": "2023-08-08",
+      "layer": "R",
+      "titleKo": "자원 검증 거절 손실 감소",
+      "line": "신청이 거절될 때 잃는 에센스를 줄이는 E2PRV 변경과 기준 안내예요.",
+      "titleEn": "REDUCED E2PRV REJECTION LOSS + GUIDELINE REMINDERS",
+      "url": "https://earth2.io/news/e2prv-reduced-loss-and-guidelines"
+    },
+    {
+      "id": 1243,
+      "date": "2023-08-08",
+      "layer": "R",
+      "titleKo": "자원 공개: 니켈",
+      "line": "니켈을 E2PRV로 신청할 수 있게 됐어요.",
+      "titleEn": "Resource Release: Nickel",
+      "url": "https://earth2.io/news/resources-nickel"
+    },
+    {
+      "id": 1234,
+      "date": "2023-08-01",
+      "layer": "R",
+      "titleKo": "자원 공개: 주석",
+      "line": "주석을 E2PRV로 신청할 수 있게 됐어요.",
+      "titleEn": "Resource Release: Tin",
+      "url": "https://earth2.io/news/resources-tin"
+    },
+    {
+      "id": 1229,
+      "date": "2023-07-28",
+      "layer": "R",
+      "titleKo": "레드 에너지로 새 티어 1 땅 얻기 종료",
+      "line": "레드 에너지를 합쳐 새 티어 1 땅을 얻는 방식이 7월 31일 끝난다고 알렸어요.",
+      "titleEn": "Red Energy for New T1 to Stop",
+      "url": "https://earth2.io/news/red-energy-t1-over"
+    },
+    {
+      "id": 1222,
+      "date": "2023-07-28",
+      "layer": "R",
+      "titleKo": "프로필 한눈에 보기 V1",
+      "line": "가진 디지털 아이템을 한눈에 볼 수 있는 프로필 화면 V1이 나왔어요.",
+      "titleEn": "Profile Overview V1",
+      "url": "https://earth2.io/news/profile-overview-v1"
+    },
+    {
+      "id": 1196,
+      "date": "2023-07-27",
+      "layer": "R",
+      "titleKo": "자원 공개: 아연·보크사이트",
+      "line": "보크사이트와 아연을 E2PRV로 신청할 수 있게 됐어요.",
+      "titleEn": "Resource Release: Zinc + Bauxite",
+      "url": "https://earth2.io/news/resources-zinc-bauxite"
+    },
+    {
+      "id": 1164,
+      "date": "2023-07-23",
+      "layer": "R",
+      "titleKo": "자원 한눈에 보기",
+      "line": "가진 땅 전체에 자원이 얼마나 있는지 요약해 보여주는 화면이 나왔어요.",
+      "titleEn": "Resources Overview",
+      "url": "https://earth2.io/news/resources-overview"
+    },
+    {
+      "id": 1157,
+      "date": "2023-07-22",
+      "layer": "B",
+      "titleKo": "쥬얼과 쥬얼 인벤토리 새 디자인",
+      "line": "쥬얼 출시 이후 처음으로 쥬얼과 인벤토리 화면 전체가 새로 바뀌었어요.",
+      "titleEn": "New Look Revealed for Jewels and the Jewel Inventory!",
+      "url": "https://earth2.io/news/jewels-and-inventory-update"
+    },
+    {
+      "id": 1139,
+      "date": "2023-07-05",
+      "layer": "R",
+      "titleKo": "나무·물·모래 선택 캠페인",
+      "line": "아직 나오지 않은 나무, 물, 모래 자원에 대해 E2V1 전까지 쓸 수 있는 해결책을 내놨어요.",
+      "titleEn": "Optional Campaign: Pre-E2V1 Resource Solution for Wood, Water & Sand",
+      "url": "https://earth2.io/news/wood-water-sand-campaign"
+    },
+    {
+      "id": 1131,
+      "date": "2023-06-23",
+      "layer": "R",
+      "titleKo": "거절 예정 신청에 이의 제기 기회",
+      "line": "첫 자원 검증 라운드를 마무리하며, 거절 예정인 신청에 이의를 제기할 기회를 줬어요.",
+      "titleEn": "E2PRV: Chance To Appeal Claims Marked For Rejection",
+      "url": "https://earth2.io/news/claim-rejection-appeals"
+    },
+    {
+      "id": 1123,
+      "date": "2023-06-23",
+      "layer": "R",
+      "titleKo": "구리·은 자원 승인 기준",
+      "line": "자원 신청에서 받아들여지는 것과 아닌 것을 예시로 정리했어요.",
+      "titleEn": "E2PRV: Claim Approval Guidelines for Copper and Silver Resources",
+      "url": "https://earth2.io/news/copper-silver-guidelines"
+    },
+    {
+      "id": 1111,
+      "date": "2023-06-18",
+      "layer": "R",
+      "titleKo": "위버, 탐사 사이드로이드와 자원",
+      "line": "에코심 기본 버전에 가까워지는 다음 단계로, 탐사 사이드로이드와 자원 과정을 소개했어요.",
+      "titleEn": "The Weaver, Prospecting Cydroids & Resources",
+      "url": "https://earth2.io/news/major-ecosim-update"
+    },
+    {
+      "id": 791,
+      "date": "2023-06-08",
+      "layer": "R",
+      "titleKo": "1세대 시민 정식 출시",
+      "line": "땅에서 시민을 만들어 사이드로이드와 레이드를 관리하고, 레벨을 올릴 수 있게 됐어요.",
+      "titleEn": "First Edition Civilians Officially Live on Earth 2!",
+      "url": "https://earth2.io/news/civilians-live"
+    },
+    {
+      "id": 1053,
+      "date": "2023-05-17",
+      "layer": "R",
+      "titleKo": "시민 경험치와 레이드 지휘관 자동 조준",
+      "line": "시민 경험치와 레이드 지휘관 자동 조준 시스템이 어떻게 작동하는지 미리 알렸어요.",
+      "titleEn": "Civilians XP + Raid Commander Targeting System",
+      "url": "https://earth2.io/news/civilians-xp-target-system"
+    },
+    {
+      "id": 1040,
+      "date": "2023-05-03",
+      "layer": "R",
+      "titleKo": "1세대 시민의 생존 자원",
+      "line": "1세대 시민을 유지하는 첫 시스템과, 여기에 레드 에너지가 어떻게 쓰이는지 설명했어요.",
+      "titleEn": "Sustenance for First Edition Civilians on Earth 2",
+      "url": "https://earth2.io/news/civilian-sustenance"
+    },
+    {
+      "id": 1033,
+      "date": "2023-04-22",
+      "layer": "B",
+      "titleKo": "어스2 데이 2023",
+      "line": "작년 4월 23일 시작한 어스2 데이를 맞아, 지구1을 돕겠다는 장기 목표는 그대로라고 밝혔어요.",
+      "titleEn": "Get Supercharged on Earth 2 Day 2023!",
+      "url": "https://earth2.io/news/earth2day-2023"
+    },
+    {
+      "id": 1025,
+      "date": "2023-04-20",
+      "layer": "B",
+      "titleKo": "이더 거래 내역 공개",
+      "line": "에코심에서 얻은 이더의 거래 내역을 항목별로 볼 수 있게 됐어요. 이더 뱅킹을 향한 준비예요.",
+      "titleEn": "E-ther transactions brings E-ther Banking one step closer & more",
+      "url": "https://earth2.io/news/ether-update"
+    },
+    {
+      "id": 1013,
+      "date": "2023-04-13",
+      "layer": "R",
+      "titleKo": "은·구리 자원 검증 재개",
+      "line": "E2PRV가 다시 열려 은과 구리 자원을 신청할 수 있게 됐어요.",
+      "titleEn": "E2PRV System Reopens for Silver and Copper Resource Claims",
+      "url": "https://earth2.io/news/e2prv-silver-copper"
+    },
+    {
+      "id": 982,
+      "date": "2023-03-31",
+      "layer": "R",
+      "titleKo": "레드 에너지와 첫 RBA 보상",
+      "line": "첫 번째 에너지 종류인 레드 에너지가 나왔고, 기간 한정 첫 RBA 보상에 쓰여요.",
+      "titleEn": "Introducing ‘Red Energy’ & the First RBA Reward",
+      "url": "https://earth2.io/news/red-energy"
+    },
+    {
+      "id": 955,
+      "date": "2023-03-29",
+      "layer": "R",
+      "titleKo": "레이딩 소소한 개선",
+      "line": "레이딩 경험을 높이는 몇 가지 편의 개선을 내놨어요.",
+      "titleEn": "Minor Updates: Improvements to Raiding",
+      "url": "https://earth2.io/news/raiding-update-1"
+    },
+    {
+      "id": 937,
+      "date": "2023-03-16",
+      "layer": "R",
+      "titleKo": "레이딩 정식 출시",
+      "line": "레이딩 버전 1이 실제 사이트에 조용히 배포됐어요. 레이딩 게임 엔진의 첫 버전이에요.",
+      "titleEn": "Raiding is Officially Live on Earth 2!",
+      "url": "https://earth2.io/news/raiding-v1"
+    },
+    {
+      "id": 928,
+      "date": "2023-03-05",
+      "layer": "R",
+      "titleKo": "사이드로이드 등급과 땅 거래 주의사항",
+      "line": "레이딩 출시를 앞두고, 레이딩 출발지로 쓰이는 땅을 팔 때 주의할 점을 짚었어요.",
+      "titleEn": "Cydroid Rarities & Property Trading Protocols",
+      "url": "https://earth2.io/news/cydroid-property-trading-rarities"
+    },
+    {
+      "id": 919,
+      "date": "2023-02-24",
+      "layer": "R",
+      "titleKo": "레이딩·사이드로이드 업데이트, 스테이지2 시험 시작",
+      "line": "테스트 서버 스테이지2에서 레이딩을 시험할 수 있게 됐어요.",
+      "titleEn": "Raiding & Cydroid Update + Green Light on Stage2",
+      "url": "https://earth2.io/news/raiding-update"
+    },
+    {
+      "id": 885,
+      "date": "2022-12-24",
+      "layer": "R",
+      "titleKo": "레이딩·사이드로이드·시민 개요",
+      "line": "새로 들어올 게임 메커니즘 중 레이딩, 사이드로이드, 시민을 한눈에 정리했어요.",
+      "titleEn": "Raiding, Cydroids & Civilians High Level Summary",
+      "url": "https://earth2.io/news/raiding-details"
+    },
+    {
+      "id": 879,
+      "date": "2022-12-22",
+      "layer": "R",
+      "titleKo": "크리스마스 선물 아이디어",
+      "line": "연말을 맞아 땅 선물 기능을 손봤다고 알렸어요.",
+      "titleEn": "A Unique Gift Idea, just in time for Christmas!",
+      "url": "https://earth2.io/news/gift-the-metaverse"
+    },
+    {
+      "id": 871,
+      "date": "2022-12-20",
+      "layer": "D",
+      "titleKo": "Ready Player Me와 전략적 파트너십",
+      "line": "E2V1을 직접 꾸민 아바타로 더 일찍 둘러볼 수 있도록 Ready Player Me와 손잡았어요.",
+      "titleEn": "Earth 2 and Ready Player Me Announce Strategic Partnership",
+      "url": "https://earth2.io/news/ready-player-me-partnership"
+    },
+    {
+      "id": 859,
+      "date": "2022-12-16",
+      "layer": "R",
+      "titleKo": "고객 데이터 보호",
+      "line": "정기 코드 리뷰와 품질 검사 외에 2020년 12월부터 보안 전문가를 두고 있다고 설명했어요.",
+      "titleEn": "Protection of Earth 2 Customer Data",
+      "url": "https://earth2.io/news/customer-data-protection"
+    },
+    {
+      "id": 854,
+      "date": "2022-12-02",
+      "layer": "B",
+      "titleKo": "레이딩·드로이드로 쥬얼 쓰임새 확대",
+      "line": "레이딩과 드로이드가 티어 2·3 쥬얼 일부에 새 쓰임새를 더한다고 밝혔어요.",
+      "titleEn": "Earth 2 Jewels to receive more Utility with introduction of Raiding and Droids",
+      "url": "https://earth2.io/news/jewelsboost"
+    },
+    {
+      "id": 842,
+      "date": "2022-12-01",
+      "layer": "R",
+      "titleKo": "2주년 생일 달 마무리",
+      "line": "생일 달 동안 나온 업데이트를 정리하고, 게임 메커니즘 첫 버전과 세계관이 공개됐다고 알렸어요.",
+      "titleEn": "Earth 2 Birthday Wrap-Up but Celebrations to Continue",
+      "url": "https://earth2.io/news/e2bdaywrap"
+    },
+    {
+      "id": 837,
+      "date": "2022-11-30",
+      "layer": "B",
+      "titleKo": "누적 출금 처리 1,900만 달러 돌파",
+      "line": "2022년 11월 26일 기준 E$ 출금 처리 누적액이 1,900만 달러를 넘었다고 밝혔어요.",
+      "titleEn": "Over $19M USD in Withdrawals processed by Earth 2",
+      "url": "https://earth2.io/news/e2withdrawals"
+    },
+    {
+      "id": 828,
+      "date": "2022-11-24",
+      "layer": "R",
+      "titleKo": "1억 번째 타일 구매자 보상과 쥬얼 거래 증가",
+      "line": "2020년 11월 출시 이후의 성장을 돌아보며 1억 번째 타일 구매자 보상을 알렸어요.",
+      "titleEn": "E$10,000(USD) Reward for the 100m’th Tile Purchased + 700% increase in P2P Jewel Sales",
+      "url": "https://earth2.io/news/100m-tile-reward"
+    },
+    {
+      "id": 822,
+      "date": "2022-11-22",
+      "layer": "B",
+      "titleKo": "소수점 단위 업데이트",
+      "line": "다가올 레이딩 기능과 앞으로의 사용을 위해 이더와 에센스 단위를 조정했어요.",
+      "titleEn": "Decimalisation Update",
+      "url": "https://earth2.io/news/decimal-update2"
+    },
+    {
+      "id": 807,
+      "date": "2022-11-11",
+      "layer": "B",
+      "titleKo": "U2U 홀로빌딩 거래 v1.1 정식 업데이트",
+      "line": "창작자를 위한 U2U 홀로블루프린트 거래 v1.1이 나왔어요.",
+      "titleEn": "Earth 2 Continues Support for Creators with U2U HB Trading v1.1 Update",
+      "url": "https://earth2.io/news/u2uhbv11"
+    },
+    {
+      "id": 795,
+      "date": "2022-11-01",
+      "layer": "R",
+      "titleKo": "어스2 2주년",
+      "line": "2주년을 맞아 CEO 쉐인 아이작이 지난 1년을 돌아보는 메시지를 전했어요.",
+      "titleEn": "Earth 2 Turns 2!",
+      "url": "https://earth2.io/news/e2turns2"
+    },
+    {
+      "id": 782,
+      "date": "2022-10-13",
+      "layer": "R",
+      "titleKo": "자원 검증 신청 잠시 중단",
+      "line": "3개월 동안 이어진 자원 검증 신청을 잠시 멈추고 쉬어 간다고 알렸어요.",
+      "titleEn": "A Well-Earned Break For Stakers: Earth 2 to Put A Pause On Validation Claims",
+      "url": "https://earth2.io/news/e2prv-claims-paused"
+    },
+    {
+      "id": 759,
+      "date": "2022-09-18",
+      "layer": "R",
+      "titleKo": "자원 신청 50% 처리 돌파",
+      "line": "검토팀(CAT)이 열린 자원 신청의 절반 이상을 처리했다고 알렸어요.",
+      "titleEn": "Over 50% of open Resource Claims Processed by the CAT & 20M Essence Rewarded!",
+      "url": "https://earth2.io/news/e2prv-update"
+    },
+    {
+      "id": 736,
+      "date": "2022-09-17",
+      "layer": "B",
+      "titleKo": "U2U 홀로빌딩 거래 v1.1 등",
+      "line": "U2U 거래 출시 2주 뒤 내부 검토와 커뮤니티 의견을 반영한 업데이트예요.",
+      "titleEn": "U2U HB Trading v1.1 plus other Updates!",
+      "url": "https://earth2.io/news/hb-trading-update"
+    },
+    {
+      "id": 724,
+      "date": "2022-09-01",
+      "layer": "B",
+      "titleKo": "홀로빌딩 플레이어 간 거래(U2U) 안내",
+      "line": "바자에서 홀로블루프린트를 플레이어끼리 사고파는 U2U 거래를 자세히 설명했어요.",
+      "titleEn": "U2U HoloBuilding Trading: Everything you need to know about buying and selling creations on the Bazaar.",
+      "url": "https://earth2.io/news/u2u-hb-trading"
+    },
+    {
+      "id": 670,
+      "date": "2022-08-30",
+      "layer": "R",
+      "titleKo": "2021 에그 헌트 당첨자 정리",
+      "line": "2021 에그 헌트 상품 문제를 바로잡기 위해 당첨자 명단과 이의 제기 기간을 열었어요.",
+      "titleEn": "Community Update on 2021 Egg Hunt Winners",
+      "url": "https://earth2.io/news/2021-egg-hunt"
+    },
+    {
+      "id": 651,
+      "date": "2022-08-13",
+      "layer": "R",
+      "titleKo": "자원 검증 승인 시작",
+      "line": "E2PRV 출시 3주 만에 신청이 9,000건을 넘었고, 이제 승인이 시작된다고 알렸어요.",
+      "titleEn": "Player Resource Validation approvals are about to begin!",
+      "url": "https://earth2.io/news/e2prv-approvals"
+    },
+    {
+      "id": 630,
+      "date": "2022-07-15",
+      "layer": "R",
+      "titleKo": "플레이어 자원 검증(E2PRV) 출시",
+      "line": "조용히 공개된 지 12시간도 안 돼 2만 5천 건 넘는 스테이킹, 60만 에센스 이상이 몰렸다고 알렸어요.",
+      "titleEn": "Earth 2 Player Resource Validation",
+      "url": "https://earth2.io/news/e2prv"
+    },
+    {
+      "id": 623,
+      "date": "2022-07-11",
+      "layer": "R",
+      "titleKo": "주간 카운트다운: 멘타 지급과 새 나라 공개",
+      "line": "몇 달 동안 매주 두 개의 카운트다운을 시험 운영한다고 알렸어요.",
+      "titleEn": "Ongoing Weekly Countdowns for Mentar Giveaways And New Country Releases!",
+      "url": "https://earth2.io/news/countdowns-mentars"
+    },
+    {
+      "id": 595,
+      "date": "2022-06-09",
+      "layer": "R",
+      "titleKo": "타일 판매 1억 개 돌파, 철광석 히트맵",
+      "line": "2022년 6월 2일 1억 번째 타일이 팔렸고, 철광석 히트맵도 공개됐어요.",
+      "titleEn": "Earth 2 passes100 Million tile sales, Iron Ore Heatmap Release & more",
+      "url": "https://earth2.io/news/e2-passes-100m-tiles"
+    },
+    {
+      "id": 570,
+      "date": "2022-05-30",
+      "layer": "B",
+      "titleKo": "에센스 소수 단위·브이로그 6편 등",
+      "line": "브이로그 6편과 에센스 소수 단위 등 세 가지 소식을 한 글에 묶었어요.",
+      "titleEn": "Essence Fractions, Vlog #6 & more",
+      "url": "https://earth2.io/news/vlog6"
+    },
+    {
+      "id": 534,
+      "date": "2022-05-20",
+      "layer": "R",
+      "titleKo": "자원 히트맵과 에센스 소수 단위",
+      "line": "금과 석유 자원 히트맵이 24시간 안에 공개된다고 알렸어요. 공식 자원 위치의 첫 공개예요.",
+      "titleEn": "Resource Heatmap & Fractions of Essence",
+      "url": "https://earth2.io/news/gold-oil-heatmap"
+    },
+    {
+      "id": 506,
+      "date": "2022-05-07",
+      "layer": "R",
+      "titleKo": "R/GA와 전략적 파트너십",
+      "line": "디자인·혁신 에이전시 R/GA와 전략적 파트너십을 맺었다고 발표했어요.",
+      "titleEn": "Earth 2 Announces Strategic Partnership with R/GA",
+      "url": "https://earth2.io/news/earth2-rga-partnership"
+    },
+    {
+      "id": 467,
+      "date": "2022-04-23",
+      "layer": "B",
+      "titleKo": "어스2 데이와 활동 플레이어 에센스 보상",
+      "line": "지구의 날을 맞아 '어스2 데이'를 만들고, 활동 중인 플레이어에게 에센스를 보상했어요.",
+      "titleEn": "Earth2Day & Active Player Essence Rewards",
+      "url": "https://earth2.io/news/earth2day"
+    },
+    {
+      "id": 412,
+      "date": "2022-03-25",
+      "layer": "R",
+      "titleKo": "개발 브이로그 2편 · 건물 기술",
+      "line": "에코심 첫 건물인 '물 처리기(Water Processor)'의 2단계 모습을 영상으로 보여줬어요.",
+      "titleEn": "Dev Vlog #2 looks at Earth 2 Building Tech",
+      "url": "https://earth2.io/news/dev-vlog-2-looks-at-earth-2-building-tech"
+    },
+    {
+      "id": 394,
+      "date": "2022-03-17",
+      "layer": "R",
+      "titleKo": "개발 브이로그 1편과 리더보드 업데이트",
+      "line": "개발 과정을 보여주는 새 브이로그 시리즈 첫 영상과 리더보드 업데이트를 소개했어요.",
+      "titleEn": "Watch the first video in our new Dev Vlog series plus Leaderboard Update & more",
+      "url": "https://earth2.io/news/devlog1update"
+    },
+    {
+      "id": 377,
+      "date": "2022-02-24",
+      "layer": "B",
+      "titleKo": "Web3 문서 초안과 토큰 소개",
+      "line": "2022년 2월 22일 공개된 Web3 문서 초안을 정리하고, 커뮤니티 의견을 받는다고 알렸어요.",
+      "titleEn": "Earth 2’s Web3 Document, Token & more",
+      "url": "https://earth2.io/news/earth-2s-web3-document-token-more"
+    },
+    {
+      "id": 333,
+      "date": "2022-02-17",
+      "layer": "R",
+      "titleKo": "에그 헌트 2022 당첨자 발표",
+      "line": "#Earth2EggHunt2022 당첨자와 차점자 전체 명단을 정리한 글이에요.",
+      "titleEn": "Winners & Runners-Up of the #Earth2EggHunt2022",
+      "url": "https://earth2.io/news/winners-runners-up-of-the-earth2egghunt2022"
+    },
+    {
+      "id": 326,
+      "date": "2022-02-10",
+      "layer": "R",
+      "titleKo": "티어 1 맞춤 추천 코드·잠긴 나라 등",
+      "line": "티어 1 땅 주인을 위한 맞춤 추천 코드 혜택이 적용됐고, 잠긴 나라 관련 소식도 전했어요.",
+      "titleEn": "CUSTOM REFERRAL CODE, LOCKED COUNTRIES & MORE",
+      "url": "https://earth2.io/news/custom-referral-code-locked-countries-more"
+    },
+    {
+      "id": 320,
+      "date": "2022-02-09",
+      "layer": "R",
+      "titleKo": "자원 개발 진행 상황",
+      "line": "땅에서 자원을 찾을 수 있게 되는 기능의 진행 상황과 자원 위치를 정하는 방식을 설명했어요.",
+      "titleEn": "Progress Update on Resources",
+      "url": "https://earth2.io/news/progress-update-on-resources"
+    },
+    {
+      "id": 302,
+      "date": "2022-01-29",
+      "layer": "R",
+      "titleKo": "두 번째 에그 헌트 시작",
+      "line": "무료 계정만 있으면 누구나 참여할 수 있는 두 번째 에그 헌트가 시작됐어요.",
+      "titleEn": "Second Egg Hunt Live and Update",
+      "url": "https://earth2.io/news/second-egg-hunt-live-and-update"
+    },
+    {
+      "id": 297,
+      "date": "2022-01-20",
+      "layer": "B",
+      "titleKo": "티어 3 쥬얼 추가",
+      "line": "에코심에 플레이어가 만드는 다음 단계, 티어 3 쥬얼이 들어왔어요. 지금까지 판매된 쥬얼은 130만 개예요.",
+      "titleEn": "Tier 3 Jewels add to 1.3m Player sold Jewels to date",
+      "url": "https://earth2.io/news/tier-3-jewels-add-to-1-3m-player-sold-jewels-to-date"
+    },
+    {
+      "id": 292,
+      "date": "2022-01-13",
+      "layer": "R",
+      "titleKo": "새해 웹 업데이트",
+      "line": "연말 동안 진행한 여러 수정과 업데이트를 새해 인사와 함께 정리했어요.",
+      "titleEn": "Web Updates and Happy New Year!",
+      "url": "https://earth2.io/news/web-updates-and-happy-new-year"
+    },
+    {
+      "id": 281,
+      "date": "2021-12-23",
+      "layer": "R",
+      "titleKo": "땅 선물하기 기능 출시",
+      "line": "크리스마스를 앞두고, 원하는 위치의 땅 타일을 다른 사람에게 선물하는 기능이 나왔어요.",
+      "titleEn": "Gifting of Virtual Land on Earth 2",
+      "url": "https://earth2.io/news/gifting-of-virtual-land-on-earth-2"
+    },
+    {
+      "id": 276,
+      "date": "2021-12-22",
+      "layer": "R",
+      "titleKo": "전 바이낸스 임원 오마르 라힘, 전략 고문 합류",
+      "line": "바이낸스 시니어 디렉터 출신 오마르 라힘이 전략 고문으로 합류했어요.",
+      "titleEn": "Former Senior Binance Director, Omar Rahim, joins Earth 2 as Strategic Advisor",
+      "url": "https://earth2.io/news/former-senior-binance-director-omar-rahim-joins-earth-2-as-strategic-advisor"
+    },
+    {
+      "id": 252,
+      "date": "2021-12-16",
+      "layer": "R",
+      "titleKo": "3D 차량 전투 게임 DRONE 인수",
+      "line": "직접 만든 SF 차량으로 싸우는 3D 액션 게임 DRONE을 인수했다고 발표했어요.",
+      "titleEn": "Earth 2 announces acquisition of 3D fast-paced sci-fi vehicular combat game DRONE",
+      "url": "https://earth2.io/news/earth-2-announces-acquisition-of-3d-fast-paced-sci-fi-vehicular-combat-game-drone"
+    },
+    {
+      "id": 240,
+      "date": "2021-12-07",
+      "layer": "R",
+      "titleKo": "탈중앙화 계획과 Polygon Studios 협력",
+      "line": "Polygon Studios와 협력해 자산을 블록체인에서 직접 소유·거래하는 방향을 발표했어요.",
+      "titleEn": "Earth 2 announces decentralization plans and partnership with Polygon Studios",
+      "url": "https://earth2.io/news/earth-2-announces-decentralization-plans-and-partnership-with-polygon-studios"
+    },
+    {
+      "id": 233,
+      "date": "2021-12-04",
+      "layer": "B",
+      "titleKo": "땅 주인 대상 에센스 소급 보상",
+      "line": "첫해를 마무리하며 땅을 가진 플레이어에게 에센스를 소급 지급한다고 알렸어요.",
+      "titleEn": "Announcement & Retrospective Essence Reward for Earth 2 Land Owners",
+      "url": "https://earth2.io/news/retrospective-reward-for-earth-2-land-owners"
+    },
+    {
+      "id": 225,
+      "date": "2021-11-11",
+      "layer": "B",
+      "titleKo": "쥬얼 크래프팅 출시 예고",
+      "line": "쥬얼은 에코심의 핵심 요소로, 땅의 자원 생산을 높이거나 조절하는 데 쓰인다고 밝혔어요.",
+      "titleEn": "Earth 2 to release Jewel Crafting",
+      "url": "https://earth2.io/news/earth-2-to-release-jewel-crafting"
+    },
+    {
+      "id": 175,
+      "date": "2021-09-24",
+      "layer": "R",
+      "titleKo": "Mapbox와 홀로빌딩 보도자료",
+      "line": "Mapbox 지도 도구로 플레이어가 홀로빌딩 배치를 직접 만들고 고칠 수 있게 됐다는 보도자료예요.",
+      "titleEn": "Earth 2® & Mapbox HoloBuilding Press Release",
+      "url": "https://earth2.io/news/earth-2-mapbox-holobuilding-press-release"
+    },
+    {
+      "id": 165,
+      "date": "2021-09-24",
+      "layer": "R",
+      "titleKo": "홀로빌딩 배치 기능과 수정 사항",
+      "line": "홀로빌딩 정식 출시 2부로, 플레이어가 만든 홀로빌딩을 자기 땅에 놓을 수 있게 됐어요.",
+      "titleEn": "HoloBuildings, Updates and Fixes",
+      "url": "https://earth2.io/news/holobuildings-updates-and-fixes"
+    },
+    {
+      "id": 155,
+      "date": "2021-09-17",
+      "layer": "R",
+      "titleKo": "어스2 '네트워크' 첫걸음",
+      "line": "정보·소식·알림을 한곳에서 전하는 중앙 시스템 '네트워크'의 첫 버전을 소개했어요.",
+      "titleEn": "Earth 2® “Network” Humble Beginnings",
+      "url": "https://earth2.io/news/earth-2-network-humble-beginnings"
+    },
+    {
+      "id": 146,
+      "date": "2021-09-07",
+      "layer": "R",
+      "titleKo": "프로퍼티 고유 식별자 EPL 출시",
+      "line": "땅마다 고유 주소를 붙이는 EPL(Earth 2 Property Locator)이 2021년 9월 8일 공개된다고 알렸어요.",
+      "titleEn": "Earth 2® Set to Launch Unique Property Identifier System",
+      "url": "https://earth2.io/news/earth-2-set-to-launch-unique-property-identifier-system"
+    },
+    {
+      "id": 127,
+      "date": "2021-08-28",
+      "layer": "R",
+      "titleKo": "자동 본인 인증(Jumio) 도입",
+      "line": "Jumio와 손잡고 AI 기반 본인 인증을 도입해, 거래하는 플레이어가 실제 사람인지 확인하기로 했어요.",
+      "titleEn": "Earth 2® announces automated customer verification solution",
+      "url": "https://earth2.io/news/earth-2-announces-automated-customer-verification-solution"
+    },
+    {
+      "id": 104,
+      "date": "2021-08-13",
+      "layer": "R",
+      "titleKo": "멘타·이더·에센스·홀로빌딩 소개",
+      "line": "8주 동안 7번의 출시가 있었다고 정리하며 멘타, 이더(E-ther), 에센스, 홀로빌딩을 소개했어요.",
+      "titleEn": "Mentars, E-ther, Essence & Holo Buildings",
+      "url": "https://earth2.io/news/mentars-e-ther-essence"
+    },
+    {
+      "id": 93,
+      "date": "2021-07-23",
+      "layer": "B",
+      "titleKo": "바자 업데이트",
+      "line": "이번 주 두 가지 출시가 예정돼 있다고 알렸고, 그중 하나가 바자(거래소) 관련 업데이트예요.",
+      "titleEn": "Bazaar",
+      "url": "https://earth2.io/news/bazaar"
+    },
+    {
+      "id": 55,
+      "date": "2021-07-23",
+      "layer": "B",
+      "titleKo": "쥬얼 출시와 새 앱 화면",
+      "line": "어스2 앱 전체가 새 React 화면으로 바뀌었고, 쥬얼 시스템이 소개됐어요.",
+      "titleEn": "Jewels",
+      "url": "https://earth2.io/news/jewels"
+    }
+  ]
+}

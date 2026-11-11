@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T14:35:18Z",
+  "updatedAt": "2026-11-11T12:23:04Z",
   "note": "연대기 = 세계 구조가 바뀐 날만. 반복 카운트다운·시즌 스킨은 넣지 않음. layer R/B/D, date YYYY-MM-DD 또는 YYYY-MM",
   "events": [
     {
@@ -133,8 +133,8 @@
       "date": "2026-09-09",
       "grade": "CLEAR",
       "short": "RT9",
-      "title": "리얼리티 스레드 9 · Command Deck Online",
-      "desc": "E2V1 첫 플레이 가능 게임, 사이드로이드 레이딩이 열렸어요. 테스터 선공개는 8월 30일(쉐인 아이작 X 게시물 기준).",
+      "title": "챕터 6 · 리얼리티 스레드 9 · 커맨드 덱",
+      "desc": "E2V1 안에서 처음 플레이 가능한 게임, 사이드로이드 레이딩이 열렸어요.",
       "source": "earth2.io 공식 기사 · Chapter 6 – Reality Thread 9 – Command Deck Online",
       "url": "https://earth2.io/news/reality-thread-9",
       "key": "earth2:3449",
@@ -220,6 +220,237 @@
       "desc": "어스2가 4주년을 맞았어요.",
       "source": "earth2.io 공식 기사 · Earth 2 Turns 4!",
       "url": "https://earth2.io/news/earth-2-turns-4"
+    },
+    {
+      "layer": "B",
+      "date": "2021-07-23",
+      "grade": "CLEAR",
+      "short": "쥬얼",
+      "title": "쥬얼 출시와 새 앱 화면",
+      "desc": "어스2 앱 전체가 새 React 화면으로 바뀌었고, 쥬얼 시스템이 소개됐어요.",
+      "source": "earth2.io 공식 기사 · Jewels",
+      "url": "https://earth2.io/news/jewels",
+      "key": "earth2:55"
+    },
+    {
+      "layer": "R",
+      "date": "2021-08-13",
+      "grade": "CLEAR",
+      "short": "멘타·에센스",
+      "title": "멘타·이더·에센스·홀로빌딩 소개",
+      "desc": "8주 동안 7번의 출시가 있었다고 정리하며 멘타, 이더(E-ther), 에센스, 홀로빌딩을 소개했어요.",
+      "source": "earth2.io 공식 기사 · Mentars, E-ther, Essence & Holo Buildings",
+      "url": "https://earth2.io/news/mentars-e-ther-essence",
+      "key": "earth2:104"
+    },
+    {
+      "layer": "R",
+      "date": "2021-09-07",
+      "grade": "CLEAR",
+      "short": "EPL",
+      "title": "프로퍼티 고유 식별자 EPL 출시",
+      "desc": "땅마다 고유 주소를 붙이는 EPL(Earth 2 Property Locator)이 2021년 9월 8일 공개된다고 알렸어요.",
+      "source": "earth2.io 공식 기사 · Earth 2® Set to Launch Unique Property Identifier System",
+      "url": "https://earth2.io/news/earth-2-set-to-launch-unique-property-identifier-system",
+      "key": "earth2:146"
+    },
+    {
+      "layer": "B",
+      "date": "2022-02-24",
+      "grade": "CLEAR",
+      "short": "Web3 초안",
+      "title": "Web3 문서 초안과 토큰 소개",
+      "desc": "2022년 2월 22일 공개된 Web3 문서 초안을 정리하고, 커뮤니티 의견을 받는다고 알렸어요.",
+      "source": "earth2.io 공식 기사 · Earth 2’s Web3 Document, Token & more",
+      "url": "https://earth2.io/news/earth-2s-web3-document-token-more",
+      "key": "earth2:377"
+    },
+    {
+      "layer": "R",
+      "date": "2022-05-20",
+      "grade": "CLEAR",
+      "short": "자원 히트맵",
+      "title": "자원 히트맵과 에센스 소수 단위",
+      "desc": "금과 석유 자원 히트맵이 24시간 안에 공개된다고 알렸어요. 공식 자원 위치의 첫 공개예요.",
+      "source": "earth2.io 공식 기사 · Resource Heatmap & Fractions of Essence",
+      "url": "https://earth2.io/news/gold-oil-heatmap",
+      "key": "earth2:534"
+    },
+    {
+      "layer": "R",
+      "date": "2022-06-09",
+      "grade": "CLEAR",
+      "short": "타일 1억",
+      "title": "타일 판매 1억 개 돌파, 철광석 히트맵",
+      "desc": "2022년 6월 2일 1억 번째 타일이 팔렸고, 철광석 히트맵도 공개됐어요.",
+      "source": "earth2.io 공식 기사 · Earth 2 passes100 Million tile sales, Iron Ore Heatmap Release & more",
+      "url": "https://earth2.io/news/e2-passes-100m-tiles",
+      "key": "earth2:595"
+    },
+    {
+      "layer": "R",
+      "date": "2022-07-15",
+      "grade": "CLEAR",
+      "short": "E2PRV",
+      "title": "플레이어 자원 검증(E2PRV) 출시",
+      "desc": "조용히 공개된 지 12시간도 안 돼 2만 5천 건 넘는 스테이킹, 60만 에센스 이상이 몰렸다고 알렸어요.",
+      "source": "earth2.io 공식 기사 · Earth 2 Player Resource Validation",
+      "url": "https://earth2.io/news/e2prv",
+      "key": "earth2:630"
+    },
+    {
+      "layer": "R",
+      "date": "2022-11-01",
+      "grade": "CLEAR",
+      "short": "2주년",
+      "title": "어스2 2주년",
+      "desc": "2주년을 맞아 CEO 쉐인 아이작이 지난 1년을 돌아보는 메시지를 전했어요.",
+      "source": "earth2.io 공식 기사 · Earth 2 Turns 2!",
+      "url": "https://earth2.io/news/e2turns2",
+      "key": "earth2:795"
+    },
+    {
+      "layer": "R",
+      "date": "2023-03-16",
+      "grade": "CLEAR",
+      "short": "레이딩",
+      "title": "레이딩 정식 출시",
+      "desc": "레이딩 버전 1이 실제 사이트에 조용히 배포됐어요. 레이딩 게임 엔진의 첫 버전이에요.",
+      "source": "earth2.io 공식 기사 · Raiding is Officially Live on Earth 2!",
+      "url": "https://earth2.io/news/raiding-v1",
+      "key": "earth2:937"
+    },
+    {
+      "layer": "R",
+      "date": "2023-03-31",
+      "grade": "CLEAR",
+      "short": "레드 에너지",
+      "title": "레드 에너지와 첫 RBA 보상",
+      "desc": "첫 번째 에너지 종류인 레드 에너지가 나왔고, 기간 한정 첫 RBA 보상에 쓰여요.",
+      "source": "earth2.io 공식 기사 · Introducing ‘Red Energy’ & the First RBA Reward",
+      "url": "https://earth2.io/news/red-energy",
+      "key": "earth2:982"
+    },
+    {
+      "layer": "R",
+      "date": "2023-06-08",
+      "grade": "CLEAR",
+      "short": "시민",
+      "title": "1세대 시민 정식 출시",
+      "desc": "땅에서 시민을 만들어 사이드로이드와 레이드를 관리하고, 레벨을 올릴 수 있게 됐어요.",
+      "source": "earth2.io 공식 기사 · First Edition Civilians Officially Live on Earth 2!",
+      "url": "https://earth2.io/news/civilians-live",
+      "key": "earth2:791"
+    },
+    {
+      "layer": "B",
+      "date": "2023-08-28",
+      "grade": "CLEAR",
+      "short": "사이드로이드 거래",
+      "title": "사이드로이드 플레이어 간 거래 시작",
+      "desc": "바자에서 사이드로이드를 플레이어끼리 사고팔 수 있게 됐어요.",
+      "source": "earth2.io 공식 기사 · P2P Cydroid Trading NOW LIVE",
+      "url": "https://earth2.io/news/cydroid-bazaar",
+      "key": "earth2:1328"
+    },
+    {
+      "layer": "R",
+      "date": "2023-11-05",
+      "grade": "CLEAR",
+      "short": "3주년",
+      "title": "어스2 3주년",
+      "desc": "3주년을 맞아, 지난 1년 동안 더 복잡한 기능들을 공개해 왔다고 돌아봤어요.",
+      "source": "earth2.io 공식 기사 · Happy 3rd Anniversary Earth 2",
+      "url": "https://earth2.io/news/e2-turns-3",
+      "key": "earth2:1664"
+    },
+    {
+      "layer": "R",
+      "date": "2023-12-31",
+      "grade": "CLEAR",
+      "short": "자원 완성",
+      "title": "자원 공개: 이리듐 · 마지막 자원",
+      "desc": "이리듐으로 공식 발표된 자원 목록이 모두 공개됐어요.",
+      "source": "earth2.io 공식 기사 · Resource Release: Iridium",
+      "url": "https://earth2.io/news/resources-iridium",
+      "key": "earth2:1865"
+    },
+    {
+      "layer": "D",
+      "date": "2024-03-21",
+      "grade": "CLEAR",
+      "short": "GDC 2024",
+      "title": "GDC 2024 참가 · E2V1 공개 시연 예고",
+      "desc": "GDC 2024에 참가해 MetaGravity와 함께 부스를 열고, 누구나 E2V1 빌드를 해볼 수 있게 한다고 알렸어요.",
+      "source": "earth2.io 공식 기사 · Earth 2 at GDC 2024!",
+      "url": "https://earth2.io/news/gdc-2024",
+      "key": "earth2:1966"
+    },
+    {
+      "layer": "D",
+      "date": "2024-10-12",
+      "grade": "CLEAR",
+      "short": "런처",
+      "title": "어스2 런처 미리 보기",
+      "desc": "E2V1 프리 알파와 함께 쓰일 어스2 런처를 미리 보여주는 영상을 공개했어요.",
+      "source": "earth2.io 공식 기사 · The Earth 2 Launcher: A Sneak Peek",
+      "url": "https://earth2.io/news/earth-2-launcher",
+      "key": "earth2:2125"
+    },
+    {
+      "layer": "R",
+      "date": "2024-11-15",
+      "grade": "CLEAR",
+      "short": "채굴",
+      "title": "에코심 채굴 · 새 시대의 시작",
+      "desc": "플레이어가 가진 땅에서 살아 있는 생태계를 만들어 가는 새 단계, 채굴이 시작됐어요.",
+      "source": "earth2.io 공식 기사 · The Earth 2 EcoSim – Mining: The Beginning of a New Era!",
+      "url": "https://earth2.io/news/earth2-ecosim-mining",
+      "key": "earth2:2197"
+    },
+    {
+      "layer": "D",
+      "date": "2025-04-06",
+      "grade": "CLEAR",
+      "short": "캐릭터 합성",
+      "title": "E2V1 캐릭터 합성 · 생명의 시작",
+      "desc": "챕터 1 '탐험·제작·생존'을 앞두고, E2V1에 첫 주민을 만드는 캐릭터 합성 시스템을 소개했어요.",
+      "source": "earth2.io 공식 기사 · The Dawn of Life in Earth 2: Character Synthesis in E2V1",
+      "url": "https://earth2.io/news/dawn-of-life",
+      "key": "earth2:2309"
+    },
+    {
+      "layer": "B",
+      "date": "2025-04-18",
+      "grade": "CLEAR",
+      "short": "스테이킹 기록",
+      "title": "멘타 스테이킹 6,700만 에센스 돌파",
+      "desc": "멘타 스테이킹에 묶인 에센스가 6,700만 개를 넘어 역대 최고를 기록했어요.",
+      "source": "earth2.io 공식 기사 · Over 67 Million Essence Staked – a New Milestone for Earth 2’s Mentar Staking System",
+      "url": "https://earth2.io/news/mentar-staking-all-time-high",
+      "key": "earth2:2342"
+    },
+    {
+      "layer": "B",
+      "date": "2025-05-10",
+      "grade": "CLEAR",
+      "short": "할인 스피너",
+      "title": "ESS 할인 스피너 · 스테이커 혜택",
+      "desc": "에센스에 새 쓰임새와 소각을 더하고, 스테이커에게 혜택을 주는 할인 스피너를 소개했어요.",
+      "source": "earth2.io 공식 기사 · The ESS Discount Spinner: A Unique Perk for Earth 2 Stakers",
+      "url": "https://earth2.io/news/ess-spinner",
+      "key": "earth2:2399"
+    },
+    {
+      "layer": "B",
+      "date": "2026-11-11",
+      "grade": "CLEAR",
+      "short": "1.1억 스테이킹",
+      "title": "에센스 1.1억 스테이킹 · 2026 리포트",
+      "desc": "프로퍼티에 스테이킹된 에센스가 1.1억 $ESS에 이르렀고, 최초 최대 공급량 10억 개의 11%예요.",
+      "source": "earth2.io 공식 기사 · 110 Million Essence Staked, 2026 Reports, New Brilliant Jewel Utility & Returning Gifted Skins",
+      "url": "https://earth2.io/news/110-million-ess-staked",
+      "key": "earth2:3207"
     }
   ]
 }

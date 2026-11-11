@@ -41,7 +41,7 @@ DATA = {
     'Main.dc.html': {'signals': 'data/signals.json', 'map': 'data/map.json'},
     'RxDetail.dc.html': {'signals': 'data/signals.json'},
     'SignalMap.dc.html': {'map': 'data/map.json'},
-    'Chronicle.dc.html': {'chronicle': 'data/chronicle.json'},
+    'Chronicle.dc.html': {'chronicle': 'data/chronicle.json', 'archive': 'data/archive.json'},
 }
 
 NAV = {

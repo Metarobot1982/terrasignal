@@ -88,6 +88,7 @@ a{color:#ffd166}a:hover{color:#ffffff}
 .anim .spin{animation:spin 14s linear infinite}
 .ts .win:hover{transform:translateY(-6px) scale(1.02) rotate(-.4deg)!important}
 .ts .chan:hover{transform:translateY(-5px) scale(1.02)}
+@media (max-width:640px){.ts .arow{grid-template-columns:1fr!important;gap:8px!important}}
 @media (max-width:900px){.ts .pop svg,.ts .spin svg{width:84px;height:84px}}
 @keyframes qbob{0%,100%{translate:0 0;scale:1}50%{translate:0 -10px;scale:1.05}}
 .anim .qmark{animation:qbob 2.8s ease-in-out infinite,gt 3s steps(1) infinite}
@@ -122,7 +123,7 @@ html{scroll-behavior:smooth}
 }
 </style>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "461cfeaefff848cda186328d4f27ed23"}'></script>
-<script>window.TS_DATA = {"chronicle": "data/chronicle.json"};</script>
+<script>window.TS_DATA = {"chronicle": "data/chronicle.json", "archive": "data/archive.json"};</script>
 <script src="js/dc-lite.js"></script>
 </head>
 <body>
@@ -209,6 +210,34 @@ html{scroll-behavior:smooth}
 </div>
 </section>
 
+<section id="archive" aria-labelledby="arch-h" style="position: relative; max-width: 1360px; margin: 0 auto; padding: 70px 40px 0">
+<div style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px">
+<div style="display: grid; gap: 6px">
+<span style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 3px; color: #2fe6c8">SIGNAL ARCHIVE · {{archCount}}</span>
+<h2 id="arch-h" class="h2c" style="margin: 0; font-family: 'Black Han Sans', sans-serif; font-weight: 400; font-size: 40px; line-height: 1.15">지난 시그널 보관소</h2>
+<p style="margin: 0; max-width: 680px; font-size: 14px; line-height: 1.7; color: #c9c3e6">어스2 공식 기사 전체를 날짜순으로 모았어요. 위 연대기는 이 중 큰 이정표만 골라 둔 거예요.</p>
+</div>
+<div role="group" aria-label="연도 선택" style="display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{years}}" as="y" hint-placeholder-count="6">
+<button type="button" onClick="{{y.pick}}" aria-pressed="{{y.on}}" style="min-height: 40px; padding: 0 14px; border: 2px solid {{y.bd}}; background: {{y.bg}}; color: {{y.fg}}; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700">{{y.label}}</button>
+</sc-for>
+</div>
+</div>
+<ol style="list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 10px">
+<sc-for list="{{arch}}" as="a" hint-placeholder-count="8">
+<li class="arow" style="display: grid; grid-template-columns: 110px 1fr auto; gap: 16px; align-items: start; padding: 14px 16px; background: rgba(18,12,44,.85); border-left: 4px solid {{a.lc}}">
+<div style="display: grid; gap: 4px"><span style="font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; color: #ffffff">{{a.date}}</span><span style="font-family: 'Space Mono', monospace; font-size: 10px; color: {{a.lc}}">{{a.layer}}</span></div>
+<div style="display: grid; gap: 4px; min-width: 0">
+<b style="font-size: 16px; line-height: 1.4; color: #ffffff">{{a.title}}</b>
+<span style="font-size: 13px; line-height: 1.6; color: #c9c3e6">{{a.line}}</span>
+<span style="font-family: 'Space Mono', monospace; font-size: 10px; color: #8b84ad; overflow-wrap: anywhere">원문 · {{a.en}}</span>
+</div>
+<a href="{{a.url}}" target="_blank" rel="noopener" style="align-self: center; display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border: 1px solid #2fe6c8; color: #2fe6c8; text-decoration: none; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; white-space: nowrap">원문 ↗</a>
+</li>
+</sc-for>
+</ol>
+<p style="margin: 14px 0 0; font-size: 12px; line-height: 1.7; color: #8b84ad">한국어 제목과 한 줄 요약은 원문 첫 부분을 기준으로 한 AI 요약이에요. 정확한 내용은 원문이 기준이에요. 새 공식 기사는 승인 후 자동으로 추가돼요.</p>
+</section>
 <section style="position: relative; max-width: 1360px; margin: 0 auto; padding: 70px 40px 110px">
 <div class="halftone-bl"></div>
 <div class="c3" style="position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px">
@@ -298,7 +327,19 @@ class Component extends DCLogic {
         date: e[3] ? e[1] + '.' + pad(e[2]) + '.' + pad(e[3]) : e[1] + '.' + pad(e[2]), day: dayOf(e[1], e[2], e[3]),
         title: (e[6].indexOf('리얼리티 스레드 1 ') === 0 ? '★ 깨어난 날 · ' : '') + e[6], desc: e[7], source: e[8], url: e[9] || '', hasUrl: !!e[9], hasSignal: !!e[10], signalHref: e[10] ? 'signal.html?id=' + encodeURIComponent(e[10]) : '' });
     });
+    var AR = this.data && this.data.archive ? this.data.archive.items : [
+      { date: '2026-11-11', layer: 'B', titleKo: '에센스 1.1억 스테이킹 · 2026 리포트', line: '프로퍼티에 스테이킹된 에센스가 1.1억 $ESS를 넘었고, 최초 최대 공급량의 11%예요.', titleEn: '110 Million Essence Staked, 2026 Reports, New Brilliant Jewel Utility & Returning Gifted Skins', url: 'https://earth2.io/news/110-million-ess-staked' },
+      { date: '2026-09-09', layer: 'D', titleKo: '챕터 6 · 리얼리티 스레드 9 · 커맨드 덱', line: 'E2V1 안에서 처음 플레이 가능한 게임, 사이드로이드 레이딩이 열렸어요.', titleEn: 'Chapter 6 – Reality Thread 9 -Command Deck Online', url: 'https://earth2.io/news/reality-thread-9' },
+      { date: '2026-05-31', layer: 'D', titleKo: '리얼리티 스레드 8 업데이트 0.5.8.2', line: '리얼리티 스레드 8 공개 하루 만에, 초기 출시 때 플레이어들이 찾은 문제를 고친 업데이트가 나왔어요.', titleEn: 'Reality Thread 8 Update – 0.5.8.2 Released', url: 'https://earth2.io/news/e2v1-update-0-5-8-2' }
+    ];
+    var ys = []; AR.forEach(function (a) { var y = a.date.slice(0, 4); if (ys.indexOf(y) < 0) ys.push(y); });
+    var curY = this.state.year || ys[0] || 'all';
+    var years = ys.concat(['all']).map(function (y) { var on = y === curY; return { label: y === 'all' ? '전체 ' + AR.length : y + ' · ' + AR.filter(function (a) { return a.date.slice(0, 4) === y; }).length, on: on, bg: on ? '#2fe6c8' : 'rgba(18,12,44,.9)', fg: on ? '#0a0716' : '#c9c3e6', bd: on ? '#2fe6c8' : '#3a3266', pick: function () { self.setState({ year: y }); } }; });
+    var arch = AR.filter(function (a) { return curY === 'all' || a.date.slice(0, 4) === curY; }).map(function (a) { return { date: a.date.replace(/-/g, '.'), layer: LN[a.layer], lc: LC[a.layer], title: a.titleKo, line: a.line, en: a.titleEn, url: a.url }; });
     return {
+      archCount: AR.length + ' ARTICLES',
+      years: years,
+      arch: arch,
       motionClass: (this.props.motion ?? true) ? 'anim' : '',
       coatClass: (this.props.coating ?? true) ? 'coat' : '',
       buildDay: String(buildDay),

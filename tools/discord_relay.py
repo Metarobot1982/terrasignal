@@ -38,6 +38,7 @@ NEWS = os.path.join(ROOT, 'data', 'inbox', 'earth2-news.json')
 MAP = os.path.join(ROOT, 'data', 'map.json')
 CHRON = os.path.join(ROOT, 'data', 'chronicle.json')
 SIGNALS = os.path.join(ROOT, 'data', 'signals.json')
+ARCHIVE = os.path.join(ROOT, 'data', 'archive.json')
 
 OK, NO, BOOK = '✅', '❌', '📜'
 LAYER_NAME = {'real': '■ 현실 지구', 'border': '◆ 경계', 'digital': '⬢ 디지털 지구'}
@@ -340,6 +341,15 @@ def publish(d, to_chronicle):
         'lines': [{'ko': x, 'en': ''} for x in lines], 'key': d['sourceKey'], 'approvedAt': now_iso()})
     sig['updatedAt'] = now_iso()
     save(SIGNALS, sig)
+    if d['kind'] == 'earth2.io':  # every approved official article also lands in the archive list
+        ar = load(ARCHIVE, {'items': []})
+        pid = int(parts[-1])
+        ar['items'] = [x for x in ar['items'] if x.get('id') != pid]
+        ar['items'].append({'id': pid, 'date': d['date'], 'layer': CHRON_LAYER[d['layer']], 'titleKo': entry['title'],
+                            'line': (lines[0] if lines else entry['desc']), 'titleEn': d['title'], 'url': d['url']})
+        ar['items'].sort(key=lambda x: (x['date'], x['id']), reverse=True)
+        ar['updatedAt'] = now_iso()
+        save(ARCHIVE, ar)
     m['globals'] = [g for g in m.get('globals', []) if g.get('key') != d['sourceKey']]
     m['globals'].insert(0, entry)
     m['globals'] = m['globals'][:MAX_GLOBALS]
