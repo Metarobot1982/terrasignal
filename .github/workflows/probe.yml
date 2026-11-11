@@ -2,12 +2,15 @@ name: 앱 좌표 링크 조사
 on:
   workflow_dispatch:
   push:
-    paths: ['tools/probe_app.py']
+    paths: ['tools/probe_app.js']
 jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: '3.12' }
-      - run: python tools/probe_app.py || true
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm i playwright@1.48.2 && npx playwright install --with-deps chromium
+      - run: node tools/probe_app.js || true
+      - uses: actions/upload-artifact@v4
+        with: { name: probe, path: probe.png }
