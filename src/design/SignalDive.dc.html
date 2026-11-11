@@ -260,7 +260,7 @@ class Component extends DCLogic {
     var sr = root.querySelector('.mapslot-real'), sd = root.querySelector('.mapslot-digi');
     if (!token || !sr || !sd) return;
     if (this.__msg !== undefined) root.querySelectorAll('.mapstat').forEach(function (s) { s.textContent = self.__msg; s.style.display = self.__msg ? '' : 'none'; });
-    if (this.__maps) { sr.appendChild(this.__maps.realEl); this.__maps.real.resize(); return; }
+    if (this.__maps) { sr.appendChild(this.__maps.realEl); this.__maps.real.resize(); this.__maps.draw(); return; }
     if (this.__loading) return;
     this.__loading = true;
     function boot() {
@@ -270,7 +270,7 @@ class Component extends DCLogic {
       var realEl = mk('tsmap-real');
       document.querySelector('.mapslot-real').appendChild(realEl);
       window.mapboxgl.accessToken = token;
-      var real = new window.mapboxgl.Map({ container: realEl, style: 'mapbox://styles/mapbox/satellite-v9', projection: 'globe', center: [pt.lon, pt.lat], zoom: 15, cooperativeGestures: true });
+      var real = new window.mapboxgl.Map({ container: realEl, style: 'mapbox://styles/mapbox/satellite-v9', projection: 'globe', center: [pt.lon, pt.lat], zoom: 16.5, cooperativeGestures: true });
       real.on('style.load', function () { try { real.setFog({ color: 'rgb(18,12,48)', 'high-color': 'rgb(60,40,140)', 'space-color': 'rgb(7,5,26)', 'horizon-blend': 0.06, 'star-intensity': 0.35 }); } catch (e) {} });
       real.addControl(new window.mapboxgl.NavigationControl({ showCompass: false }), 'bottom-right');
       var stat = function (t) { self.__msg = t; document.querySelectorAll('.mapstat').forEach(function (s) { s.textContent = t; s.style.display = t ? '' : 'none'; }); };
@@ -278,7 +278,42 @@ class Component extends DCLogic {
       real.once('load', function () { loaded = true; stat(''); });
       real.on('error', function (e) { var st = e && e.error && e.error.status; if (loaded && st !== 401 && st !== 403) return;  // one missing tile after load is not a broken map
         stat(st === 401 || st === 403 ? '지도 키가 이 주소에서 거부됐어요 (' + st + ')' : '지도를 불러오지 못했어요' + (st ? ' (' + st + ')' : '')); });
-      self.__maps = { real: real, realEl: realEl };
+      // Earth 2 land tiles = Web Mercator zoom-21 tiles (app.earth2.io constant L=21, max 750 per property).
+      // Draw that exact grid on the digital half only, so each square is one real Earth 2 tile.
+      var cv = document.createElement('canvas'); cv.className = 'tsgrid';
+      cv.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none';
+      var Z = 21, N = Math.pow(2, Z);
+      function draw() {
+        var slot = document.querySelector('.mapslot-digi'); if (!slot) return;
+        if (cv.parentNode !== slot) slot.appendChild(cv);
+        document.querySelectorAll('.digigrid').forEach(function (g) { g.style.display = 'none'; });
+        var w = slot.clientWidth, h = slot.clientHeight, dpr = window.devicePixelRatio || 1;
+        cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+        var ctx = cv.getContext('2d'); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
+        var c = real.getCenter(), lat = c.lat;
+        var side = 40075016.686 * Math.cos(lat * Math.PI / 180) / N, area = side * side;
+        var txt;
+        if (real.getZoom() >= 16) {
+          var b = real.getBounds(), W = b.getWest(), E = b.getEast(), S = Math.max(b.getSouth(), -85), Nn = Math.min(b.getNorth(), 85);
+          var tx = function (lon) { return (lon + 180) / 360 * N; };
+          var ty = function (la) { var r = la * Math.PI / 180; return (1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * N; };
+          var x0 = Math.floor(tx(W)), x1 = Math.ceil(tx(E)), y0 = Math.floor(ty(Nn)), y1 = Math.ceil(ty(S));
+          if ((x1 - x0) + (y1 - y0) < 1200) {
+            ctx.strokeStyle = 'rgba(190,175,255,.7)'; ctx.lineWidth = 1; ctx.beginPath();
+            for (var x = x0; x <= x1; x++) { var lo = x / N * 360 - 180, p = real.project([lo, Nn]), q = real.project([lo, S]); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); }
+            for (var y = y0; y <= y1; y++) { var la = Math.atan(Math.sinh(Math.PI * (1 - 2 * y / N))) * 180 / Math.PI, p2 = real.project([W, la]), q2 = real.project([E, la]); ctx.moveTo(p2.x, p2.y); ctx.lineTo(q2.x, q2.y); }
+            ctx.stroke();
+          }
+          txt = '어스2 타일 1칸 ≈ ' + side.toFixed(1) + 'm · 약 ' + Math.round(area / 3.3058) + '평';
+        } else {
+          txt = '확대하면 어스2 타일 격자가 보여요';
+        }
+        ctx.font = '700 11px "Space Mono", monospace'; var tw = ctx.measureText(txt).width;
+        ctx.fillStyle = 'rgba(10,7,22,.85)'; ctx.fillRect(w - tw - 22, h - 82, tw + 14, 22);
+        ctx.fillStyle = '#c9c0ff'; ctx.textBaseline = 'middle'; ctx.fillText(txt, w - tw - 15, h - 71);
+      }
+      real.on('move', draw); real.on('resize', draw); real.on('load', draw); draw();
+      self.__maps = { real: real, realEl: realEl, draw: draw };
       root.querySelectorAll('.stage img').forEach(function (i) { i.style.visibility = 'hidden'; });
     }
     if (window.mapboxgl) { boot(); return; }
