@@ -145,6 +145,16 @@ def first_link(m):
     return links[0] if links else ''
 
 
+def all_links(m):
+    text = (m.get('content') or '') + ' ' + ' '.join((e.get('url') or '') + ' ' + (e.get('description') or '') for e in m.get('embeds') or [])
+    return re.findall(r'https?://[^\s)>\]]+', text)
+
+
+def slug(url):
+    mm = re.search(r'earth2\.io/news/([a-z0-9\-_]+)', url or '', re.I)
+    return mm.group(1).lower() if mm else ''
+
+
 def guess_layer(text):
     t = text.lower()
     for layer, pat in RULES:
@@ -209,15 +219,6 @@ def collect(dc, cfg, state, drafts):
             if first_run and latest and ch is cfg['sourceChannels'][0] and latest[-1].get('type', 0) in (0, 19):
                 new_draft(dc, cfg, drafts, source_from_message(latest[-1], ch, test=True))
     state['lastSeen'].update(init)  # only after the test draft was posted successfully
-    for ch in cfg['sourceChannels']:
-        cid = ch['id']
-        if cid in init:
-            continue
-        for m in dc.messages(cid, after=state['lastSeen'][cid]):
-            state['lastSeen'][cid] = m['id']
-            if m.get('type', 0) not in (0, 19) or not message_text(m):
-                continue  # skip system notices such as "channel followed"
-            new_draft(dc, cfg, drafts, source_from_message(m, ch), message_text(m))
     news = load(NEWS, {'items': []})
     for it in news['items']:
         if it.get('status') == 'pending' and not it.get('draftId'):
@@ -231,6 +232,22 @@ def collect(dc, cfg, state, drafts):
             it['draftId'] = src['draftId']
             it['status'] = 'drafted'
     save(NEWS, news)
+    # A Discord announcement that only points to official articles we already draft is a duplicate.
+    known = {slug(it.get('url', '')) for it in news['items']} | {slug(d.get('url', '')) for d in drafts['items']}
+    known.discard('')
+    for ch in cfg['sourceChannels']:
+        cid = ch['id']
+        if cid in init:
+            continue
+        for m in dc.messages(cid, after=state['lastSeen'][cid]):
+            state['lastSeen'][cid] = m['id']
+            if m.get('type', 0) not in (0, 19) or not message_text(m):
+                continue  # skip system notices such as "channel followed"
+            links = {slug(u) for u in all_links(m)} - {''}
+            if links and links <= known:
+                print('skip duplicate announcement', m['id'], sorted(links))
+                continue
+            new_draft(dc, cfg, drafts, source_from_message(m, ch), message_text(m))
     if first_run:
         dc.post(cfg['approvalChannel'], '📡 **TERRASIGNAL 봇 연결 완료.** 공지 채널 %d개를 지켜보고 있어요. '
                 '위 초안은 연결 시험용으로 가장 최근 공지를 가져온 거예요. ✅를 누르면 사이트에 실제로 올라가고, ❌를 누르면 버려져요.'
