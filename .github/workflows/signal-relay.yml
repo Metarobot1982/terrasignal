@@ -2,7 +2,7 @@ name: 시그널 수신
 
 on:
   schedule:
-    - cron: '7,37 * * * *'   # 30분마다
+    - cron: '*/10 * * * *'   # 10분마다
   workflow_dispatch:
   push:
     branches: [main]
