@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T12:23:04Z",
+  "updatedAt": "2026-11-15T23:36:12Z",
   "note": "연대기 = 세계 구조가 바뀐 날만. 반복 카운트다운·시즌 스킨은 넣지 않음. layer R/B/D, date YYYY-MM-DD 또는 YYYY-MM",
   "events": [
     {
@@ -451,6 +451,18 @@
       "source": "earth2.io 공식 기사 · 110 Million Essence Staked, 2026 Reports, New Brilliant Jewel Utility & Returning Gifted Skins",
       "url": "https://earth2.io/news/110-million-ess-staked",
       "key": "earth2:3207"
+    },
+    {
+      "layer": "D",
+      "date": "2026-11-15",
+      "grade": "CLEAR",
+      "short": "챕터 6 리얼리티 스레드 ",
+      "title": "챕터 6 리얼리티 스레드 10: 그라운드 컨트롤",
+      "desc": "리얼리티 스레드 10(0.6.10.0)으로 사이드로이드를 디지털 지구 전역에서 멀티플레이로 조종할 수 있어요.",
+      "source": "earth2.io 공식 기사",
+      "url": "https://earth2.io/news/reality-thread-10",
+      "key": "earth2:3582",
+      "signal": "e2-3582"
     }
   ]
 }

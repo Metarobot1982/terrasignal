@@ -250,8 +250,10 @@
       "aiDecoded": true,
       "aiChronicle": true,
       "draftId": "1571409536168886394",
-      "status": "pending",
-      "createdAt": "2026-11-15T06:20:31Z"
+      "status": "published",
+      "createdAt": "2026-11-15T06:20:31Z",
+      "decidedAt": "2026-11-15T23:36:12Z",
+      "chronicle": true
     }
   ]
 }

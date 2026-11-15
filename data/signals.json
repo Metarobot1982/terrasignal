@@ -1,7 +1,34 @@
 {
-  "updatedAt": "2026-11-11T11:10:06Z",
+  "updatedAt": "2026-11-15T23:36:12Z",
   "note": "수신 기록. 운영자가 승인한 신호만 들어가요. 최신이 위.",
   "signals": [
+    {
+      "id": "e2-3582",
+      "layer": "digital",
+      "grade": "CLEAR",
+      "date": "2026-11-15",
+      "kicker": "DIGITAL EARTH · SIGNAL",
+      "titleKo": "챕터 6 리얼리티 스레드 10: 그라운드 컨트롤",
+      "titleEn": "Chapter 6 – Reality Thread 10 – Ground Control",
+      "source": "earth2.io 공식 기사",
+      "url": "https://earth2.io/news/reality-thread-10",
+      "lines": [
+        {
+          "ko": "리얼리티 스레드 10(0.6.10.0)으로 사이드로이드를 디지털 지구 전역에서 멀티플레이로 조종할 수 있어요.",
+          "en": ""
+        },
+        {
+          "ko": "멘타 콘솔로 프로퍼티·리소스·쥬얼·사이드로이드·캐릭터 관리가 E2V1 안으로 들어왔어요.",
+          "en": ""
+        },
+        {
+          "ko": "홀로빌딩 저장소, 쥬얼 바자르, 38종 할로윈 스킨과 스핀도 함께 열렸어요.",
+          "en": ""
+        }
+      ],
+      "key": "earth2:3582",
+      "approvedAt": "2026-11-15T23:36:12Z"
+    },
     {
       "id": "e2-3207",
       "layer": "border",

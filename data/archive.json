@@ -1,7 +1,16 @@
 {
-  "updatedAt": "2026-11-11T12:23:04Z",
+  "updatedAt": "2026-11-15T23:36:12Z",
   "note": "어스2 공식 기사(earth2.io/news) 전체. 한국어 제목과 요약은 원문 첫 부분 기준 AI 요약이며, 정확한 내용은 원문이 기준이에요.",
   "items": [
+    {
+      "id": 3582,
+      "date": "2026-11-15",
+      "layer": "D",
+      "titleKo": "챕터 6 리얼리티 스레드 10: 그라운드 컨트롤",
+      "line": "리얼리티 스레드 10(0.6.10.0)으로 사이드로이드를 디지털 지구 전역에서 멀티플레이로 조종할 수 있어요.",
+      "titleEn": "Chapter 6 – Reality Thread 10 – Ground Control",
+      "url": "https://earth2.io/news/reality-thread-10"
+    },
     {
       "id": 3207,
       "date": "2026-11-11",
