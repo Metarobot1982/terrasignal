@@ -33,6 +33,24 @@
       "status": "drafted",
       "receivedAt": "2026-11-11T10:44:19Z",
       "draftId": "1570026483345399841"
+    },
+    {
+      "id": 3582,
+      "date": "2026-11-15",
+      "publishedAt": "2026-11-15T15:16:38+10:00",
+      "title": "Chapter 6 – Reality Thread 10 – Ground Control",
+      "url": "https://earth2.io/news/reality-thread-10",
+      "summary": "Earth 2 · Chapter 6 · REALITY THREAD 10 Chapter 6 – Reality Thread 10 – Ground Control Land, resources and flight come together inside E2V1, with a seasonal transformation for the Cydroid fleet. Reality Thread 9 brought the Command Deck online. Reality Thread 10 allows Cydroids to be piloted around the entire planet in […]",
+      "categories": [
+        "News"
+      ],
+      "tags": [
+        "pinned"
+      ],
+      "source": "earth2.io",
+      "status": "drafted",
+      "receivedAt": "2026-11-15T06:20:24Z",
+      "draftId": "1571409536168886394"
     }
   ]
 }

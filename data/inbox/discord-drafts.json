@@ -229,6 +229,29 @@
       "createdAt": "2026-11-11T10:44:45Z",
       "decidedAt": "2026-11-11T11:10:06Z",
       "chronicle": false
+    },
+    {
+      "kind": "earth2.io",
+      "title": "Chapter 6 – Reality Thread 10 – Ground Control",
+      "excerpt": "Earth 2 · Chapter 6 · REALITY THREAD 10 Chapter 6 – Reality Thread 10 – Ground Control Land, resources and flight come together inside E2V1, with a seasonal transformation for the Cydroid fleet. Reality Thread 9 brought the Command Deck online. Reality Thread 10 allows Cydroids to be piloted around the entire planet in […]",
+      "url": "https://earth2.io/news/reality-thread-10",
+      "date": "2026-11-15",
+      "grade": "CLEAR",
+      "layer": "digital",
+      "sourceLabel": "earth2.io 공식 기사",
+      "sourceKey": "earth2:3582",
+      "titleKo": "챕터 6 리얼리티 스레드 10: 그라운드 컨트롤",
+      "linesKo": [
+        "리얼리티 스레드 10(0.6.10.0)으로 사이드로이드를 디지털 지구 전역에서 멀티플레이로 조종할 수 있어요.",
+        "멘타 콘솔로 프로퍼티·리소스·쥬얼·사이드로이드·캐릭터 관리가 E2V1 안으로 들어왔어요.",
+        "홀로빌딩 저장소, 쥬얼 바자르, 38종 할로윈 스킨과 스핀도 함께 열렸어요."
+      ],
+      "descKo": "리얼리티 스레드 10(0.6.10.0)으로 사이드로이드를 디지털 지구 전역에서 멀티플레이로 조종할 수 있어요.",
+      "aiDecoded": true,
+      "aiChronicle": true,
+      "draftId": "1571409536168886394",
+      "status": "pending",
+      "createdAt": "2026-11-15T06:20:31Z"
     }
   ]
 }
