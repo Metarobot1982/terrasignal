@@ -281,8 +281,10 @@
       "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
       "sourceKey": "countdown:MENTAR STAKER DISCOUNT PERK:Gaga'ifomauga",
       "draftId": "1574399942175232153",
-      "status": "pending",
-      "createdAt": "2026-11-23T12:23:19Z"
+      "status": "published",
+      "createdAt": "2026-11-23T12:23:19Z",
+      "decidedAt": "2026-11-23T12:32:10Z",
+      "chronicle": false
     },
     {
       "kind": "countdown",
@@ -310,8 +312,10 @@
       "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
       "sourceKey": "countdown:Buy Tiles with Essence:Gaga'ifomauga",
       "draftId": "1574399951772065825",
-      "status": "pending",
-      "createdAt": "2026-11-23T12:23:21Z"
+      "status": "published",
+      "createdAt": "2026-11-23T12:23:21Z",
+      "decidedAt": "2026-11-23T12:32:14Z",
+      "chronicle": false
     },
     {
       "kind": "countdown",
@@ -339,8 +343,10 @@
       "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
       "sourceKey": "countdown:T3 Territory Opening:Wakayama, Japan",
       "draftId": "1574399961917816894",
-      "status": "pending",
-      "createdAt": "2026-11-23T12:23:23Z"
+      "status": "published",
+      "createdAt": "2026-11-23T12:23:23Z",
+      "decidedAt": "2026-11-23T12:32:17Z",
+      "chronicle": false
     },
     {
       "kind": "countdown",
@@ -368,8 +374,10 @@
       "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
       "sourceKey": "countdown:T3 Territory Opening:Galápagos, Ecuador",
       "draftId": "1574399970969264181",
-      "status": "pending",
-      "createdAt": "2026-11-23T12:23:26Z"
+      "status": "published",
+      "createdAt": "2026-11-23T12:23:26Z",
+      "decidedAt": "2026-11-23T12:32:21Z",
+      "chronicle": false
     },
     {
       "kind": "countdown",
@@ -394,8 +402,10 @@
       "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
       "sourceKey": "countdown:Territory Voting Totals:전역",
       "draftId": "1574399980179820607",
-      "status": "pending",
-      "createdAt": "2026-11-23T12:23:28Z"
+      "status": "published",
+      "createdAt": "2026-11-23T12:23:28Z",
+      "decidedAt": "2026-11-23T12:32:24Z",
+      "chronicle": false
     }
   ]
 }
