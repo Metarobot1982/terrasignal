@@ -175,10 +175,10 @@ a{color:#ffd166}a:hover{color:#ffffff}
 </div>
 </div>
 <div class="stage" style="position: relative; overflow: hidden; aspect-ratio: 16 / 9; border: 3px solid #0a0716; box-shadow: 0 0 0 3px #ffd23f, 8px 8px 0 3px #000; background: #07051a">
-<img src="/_blob/ea9e760d62745312f367290e811d7de7" alt="현실 지구 · {{pt.title}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; visibility: {{fbVis}}">
 <div class="mapslot-real" aria-hidden="true" style="position: absolute; inset: 0"></div>
+<img class="fbimg" src="/_blob/ea9e760d62745312f367290e811d7de7" alt="현실 지구 · {{pt.title}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; transition: opacity .45s; opacity: {{fbOp}}; visibility: {{fbVis}}">
 <div class="mapstat" role="status" style="position: absolute; left: 8px; bottom: 56px; z-index: 30; max-width: 70%; padding: 4px 8px; background: rgba(10,7,22,.85); border: 1px solid #ffd23f; color: #ffe9a8; font-size: 11px; pointer-events: none">지도 불러오는 중…</div>
-<div class="world" aria-hidden="true" style="position: absolute; inset: 0; clip-path: {{clip}}; pointer-events: none; -webkit-backdrop-filter: hue-rotate(205deg) saturate(1.9) contrast(1.25) brightness(.72); backdrop-filter: hue-rotate(205deg) saturate(1.9) contrast(1.25) brightness(.72)"><img class="jit" src="/_blob/1cf215a3977029b64faf8cab9aef9688" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; visibility: {{fbVis}}"><div class="mapslot-digi" style="position: absolute; inset: 0"></div><div class="digigrid" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(169,155,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(169,155,255,.35) 1px, transparent 1px), repeating-linear-gradient(0deg, rgba(255,47,176,.06) 0 2px, transparent 2px 5px); background-size: 28px 28px, 28px 28px, auto; mix-blend-mode: screen"></div></div>
+<div class="world" aria-hidden="true" style="position: absolute; inset: 0; clip-path: {{clip}}; pointer-events: none; -webkit-backdrop-filter: hue-rotate(205deg) saturate(1.9) contrast(1.25) brightness(.72); backdrop-filter: hue-rotate(205deg) saturate(1.9) contrast(1.25) brightness(.72)"><img class="jit fbimg" src="/_blob/1cf215a3977029b64faf8cab9aef9688" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; transition: opacity .45s; opacity: {{fbOp}}; visibility: {{fbVis}}"><div class="mapslot-digi" style="position: absolute; inset: 0"></div><div class="digigrid" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(169,155,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(169,155,255,.35) 1px, transparent 1px), repeating-linear-gradient(0deg, rgba(255,47,176,.06) 0 2px, transparent 2px 5px); background-size: 28px 28px, 28px 28px, auto; mix-blend-mode: screen"></div></div>
 <div class="world" aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; clip-path: {{riftClip}}; background: linear-gradient(90deg, #2fe6c8, #ffffff 45%, #ff2fb0); box-shadow: 0 0 40px #ff2fb0"></div>
 <div class="xhair" aria-hidden="true" style="position: absolute; left: 50%; top: 50%; width: 22px; height: 22px; margin: -11px 0 0 -11px; pointer-events: none; z-index: 5; background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)) center / 2px 100% no-repeat, linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)) center / 100% 2px no-repeat; opacity: .7"></div>
 <div class="pinslot" aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; z-index: 6; overflow: hidden"></div>
@@ -262,7 +262,7 @@ class Component extends DCLogic {
     var sr = root.querySelector('.mapslot-real'), sd = root.querySelector('.mapslot-digi');
     if (!token || !sr || !sd) return;
     if (this.__msg !== undefined) root.querySelectorAll('.mapstat').forEach(function (s) { s.textContent = self.__msg; s.style.display = self.__msg ? '' : 'none'; });
-    if (this.__maps) { root.querySelectorAll('.stage img').forEach(function (i) { i.style.visibility = 'hidden'; }); sr.appendChild(this.__maps.realEl); this.__maps.real.resize(); this.__maps.draw(); this.__maps.place(); this.__maps.readout(); return; }
+    if (this.__maps) { sr.appendChild(this.__maps.realEl); this.__maps.real.resize(); this.__maps.draw(); this.__maps.place(); this.__maps.readout(); return; }
     if (this.__loading) return;
     this.__loading = true;
     function boot() {
@@ -358,7 +358,17 @@ class Component extends DCLogic {
       real.on('move', function () { draw(); place(); if (!hover) readout(); }); real.on('resize', function () { draw(); place(); }); real.on('load', function () { draw(); place(); });
       draw(); place();
       self.__maps = { real: real, realEl: realEl, draw: draw, place: place, readout: readout };
-      root.querySelectorAll('.stage img').forEach(function (i) { i.style.visibility = 'hidden'; });
+      // The tower photos stay as the opening shot until the viewer touches the map, then fade out for good.
+      function touched() {
+        if (self.__touched) return;
+        self.__touched = true;
+        document.querySelectorAll('.stage .fbimg').forEach(function (i) { i.style.opacity = '0'; setTimeout(function () { i.style.visibility = 'hidden'; }, 450); });
+      }
+      var cc = real.getCanvasContainer();
+      ['pointerdown', 'wheel', 'touchstart'].forEach(function (ev) { cc.addEventListener(ev, touched, { passive: true }); });
+      real.on('movestart', function (e) { if (e && e.originalEvent) touched(); });
+      real.on('click', touched);
+      if (!pt.station) touched();
     }
     if (window.mapboxgl) { boot(); return; }
     var css = document.createElement('link'); css.rel = 'stylesheet'; css.href = 'https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.css'; document.head.appendChild(css);
@@ -394,7 +404,7 @@ class Component extends DCLogic {
       clip: 'polygon(' + (X + 7) + '% 0, 100% 0, 100% 100%, ' + (X - 7) + '% 100%)',
       riftClip: 'polygon(' + (X + 7) + '% 0, ' + (X + 7.5) + '% 0, ' + (X - 6.5) + '% 100%, ' + (X - 7) + '% 100%)',
       capReal: v !== 'digi', capDigi: v !== 'real',
-      fbVis: this.pt.station && !this.__maps ? 'visible' : 'hidden',  // once the live map is up, the stand-in photos must never come back  // the Seoul photos are only true for the tower
+      fbVis: this.pt.station && !this.__touched ? 'visible' : 'hidden', fbOp: this.pt.station && !this.__touched ? '1' : '0',  // tower photo = opening shot until the viewer touches the map  // the Seoul photos are only true for the tower
       isReal: v === 'real', isBoth: v === 'both', isDigi: v === 'digi',
       realBg: v === 'real' ? on : off, realFg: v === 'real' ? onFg : offFg,
       bothBg: v === 'both' ? on : off, bothFg: v === 'both' ? onFg : offFg,
