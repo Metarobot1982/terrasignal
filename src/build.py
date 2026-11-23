@@ -132,7 +132,7 @@ def convert(src_name, out_name, title, desc):
             body_tpl = body_tpl.replace('href="%s"' % a, 'href="index.html%s"' % a)
 
     mapbox_tag = '<meta name="referrer" content="no-referrer-when-downgrade">\n' if src_name == 'SignalDive.dc.html' else ''  # Mapbox URL restriction needs the full page address
-    mapbox_tag += "<script>window.TS_MAPBOX = 'pk.eyJ1IjoibWV0YXJvYm90MTk4MiIsImEiOiJjbXdidXJmamcwMnkxMnpva2ZlbWthY29pIn0.b837yBqRofBDs20_pEgngg';</script>\n" if src_name == 'SignalDive.dc.html' else ''
+    mapbox_tag += "<script>window.TS_MAPBOX = 'pk.eyJ1IjoibWV0YXJvYm90MTk4MiIsImEiOiJjbXd0djA4eWIwNWxrMnlxdnhuOG5oMDZpIn0.LyMiw_70a--5u6vnCiRP2w';</script>\n" if src_name == 'SignalDive.dc.html' else ''
     data_tag = ('<script>window.TS_DATA = %s;</script>\n' % json.dumps(DATA[src_name])) if src_name in DATA else ''
     head = f'''<!doctype html>
 <html lang="ko">
