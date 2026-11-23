@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T12:32:32Z",
+  "updatedAt": "2026-11-23T21:04:00Z",
   "note": "pins: 지도 핀 / globals: 전역 송출 / countdowns: 곧 열리는 시그널 (endsAt = ISO 시각, 비우면 시각 확인 중)",
   "pins": [
     {
@@ -178,7 +178,7 @@
         "en": "Japan"
       },
       "title": "T3 Territory Opening",
-      "endsAt": "2026-11-25T02:00:00Z",
+      "endsAt": "2026-11-25T01:59:59Z",
       "note": "플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요.",
       "key": "countdown:T3 Territory Opening:Wakayama, Japan",
       "titleKo": "T3 영토 오픈"
@@ -195,7 +195,7 @@
         "en": "Ecuador"
       },
       "title": "T3 Territory Opening",
-      "endsAt": "2026-11-28T23:00:00Z",
+      "endsAt": "2026-11-28T22:59:59Z",
       "note": "플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요.",
       "key": "countdown:T3 Territory Opening:Galápagos, Ecuador",
       "titleKo": "T3 영토 오픈"
@@ -209,7 +209,7 @@
       "phase": 0,
       "country": null,
       "title": "Territory Voting Totals",
-      "endsAt": "2026-11-25T00:00:00Z",
+      "endsAt": "2026-11-24T23:59:59Z",
       "note": "공식 배너 · Territory Voting Totals",
       "key": "countdown:Territory Voting Totals:전역",
       "titleKo": "영토 투표 집계"
