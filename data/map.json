@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T21:04:00Z",
+  "updatedAt": "2026-11-23T23:00:03Z",
   "note": "pins: 지도 핀 / globals: 전역 송출 / countdowns: 곧 열리는 시그널 (endsAt = ISO 시각, 비우면 시각 확인 중)",
   "pins": [
     {
@@ -144,7 +144,7 @@
         "en": "Gaga'ifomauga"
       },
       "title": "MENTAR STAKER DISCOUNT PERK",
-      "endsAt": "2026-11-24T02:59:59Z",
+      "endsAt": "2026-11-24T03:00:00Z",
       "note": "공식 배너 · MENTAR STAKER DISCOUNT PERK",
       "key": "countdown:MENTAR STAKER DISCOUNT PERK:Gaga'ifomauga",
       "titleKo": "멘타 스테이커 할인 혜택"
@@ -161,7 +161,7 @@
         "en": "Gaga'ifomauga"
       },
       "title": "Buy Tiles with Essence",
-      "endsAt": "2026-11-24T02:59:59Z",
+      "endsAt": "2026-11-24T03:00:00Z",
       "note": "공식 배너 · Buy Tiles with Essence",
       "key": "countdown:Buy Tiles with Essence:Gaga'ifomauga",
       "titleKo": "에센스로 타일 구매하기"
