@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T23:36:12Z",
+  "updatedAt": "2026-11-23T11:36:05Z",
   "note": "pins: 지도 핀 / globals: 전역 송출 / countdowns: 곧 열리는 시그널 (endsAt = ISO 시각, 비우면 시각 확인 중)",
   "pins": [
     {
@@ -120,62 +120,11 @@
   "countdowns": [
     {
       "L": "border",
-      "place": "Genoa, Italy",
-      "cycle": "",
-      "stage": 0,
-      "title": "MENTAR STAKER DISCOUNT PERK",
-      "endsAt": "2026-11-11T03:02:35Z",
-      "note": "공식 배너 · MENTAR STAKER DISCOUNT PERK",
-      "key": "countdown:MENTAR STAKER DISCOUNT PERK:Genoa, Italy",
-      "titleKo": "멘타 스테이커 할인 혜택",
-      "kind": "스테이커",
-      "phase": 1,
-      "country": {
-        "code": "IT",
-        "en": "Italy"
-      }
-    },
-    {
-      "L": "real",
-      "place": "Genoa, Italy",
-      "cycle": "",
-      "stage": 0,
-      "title": "Buy Tiles with Essence",
-      "endsAt": "2026-11-11T03:02:34Z",
-      "note": "공식 배너 · Buy Tiles with Essence",
-      "key": "countdown:Buy Tiles with Essence:Genoa, Italy",
-      "titleKo": "에센스로 타일 구매",
-      "kind": "에센스타일",
-      "phase": 2,
-      "country": {
-        "code": "IT",
-        "en": "Italy"
-      }
-    },
-    {
-      "L": "real",
-      "place": "Hambantota, Sri Lanka",
-      "cycle": "vote",
-      "stage": 3,
-      "title": "T3 Territory Opening",
-      "endsAt": "2026-11-10T15:02:32Z",
-      "note": "플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요.",
-      "key": "countdown:T3 Territory Opening:Hambantota, Sri Lanka",
-      "titleKo": "T3 영토 오픈",
-      "kind": "영토",
-      "phase": 3,
-      "country": {
-        "code": "LK",
-        "en": "Sri Lanka"
-      }
-    },
-    {
-      "L": "border",
       "place": "전역",
       "cycle": "ops",
       "stage": 0,
       "title": "New Skin coming",
-      "endsAt": "2026-11-10T11:00:57Z",
+      "endsAt": "2026-11-24T10:59:10Z",
       "note": "공식 배너 · New Skin coming",
       "key": "countdown:New Skin coming:전역",
       "titleKo": "새 스킨 출시 예정",
