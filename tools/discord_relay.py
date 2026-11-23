@@ -469,8 +469,18 @@ def parse_report(m):
     if '[TS-AUTO]' not in text:
         return []
     sent = datetime.fromisoformat(m['timestamp'].replace('Z', '+00:00'))
+    body = text.split('[TS-AUTO]', 1)[1].splitlines()
+    # Optional "기준 | 2026-11-23 20:34:05" line (Korean time the banners were read): the countdown is
+    # measured from that moment instead of the Discord post time, which comes a minute or so later.
+    for line in body:
+        mm = re.match(r'^\s*기준\s*\|\s*(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d{1,2}):(\d{2})(?::(\d{2}))?\s*$', line.strip('-• '))
+        if mm:
+            y, mo, d, h, mi, se = (int(x or 0) for x in mm.groups())
+            read = datetime(y, mo, d, h, mi, se, tzinfo=timezone(timedelta(hours=9)))
+            if timedelta(0) <= sent - read <= timedelta(hours=2):
+                sent = read
     out = []
-    for line in text.split('[TS-AUTO]', 1)[1].splitlines():
+    for line in body:
         cols = [c.strip() for c in line.strip().strip('-•').split('|')]
         if len(cols) < 4 or cols[0] not in KIND:
             continue
@@ -478,7 +488,7 @@ def parse_report(m):
         stage = STAGE.get(cols[4], 0) if len(cols) > 4 else 0
         secs = parse_left(left)
         layer, cycle = KIND[kind]
-        ends = (sent + timedelta(seconds=secs)).strftime('%Y-%m-%dT%H:%M:%SZ') if secs is not None else ''
+        ends = (sent + timedelta(seconds=secs)).astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ') if secs is not None else ''
         out.append({'L': layer, 'place': place or '전역', 'cycle': cycle, 'stage': stage if kind == '영토' else 0,
                     'kind': kind, 'phase': PHASE.get(kind, 0), 'country': country_of(place),
                     'title': title, 'endsAt': ends,
