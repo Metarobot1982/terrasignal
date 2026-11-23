@@ -485,6 +485,13 @@ def parse_report(m):
         if len(cols) < 4 or cols[0] not in KIND:
             continue
         kind, title, place, left = cols[:4]
+        # Territory-voting page rows come as "영토 | Galápagos | Ecuador": fold the territory name into the
+        # place so one territory = one card, same as the banner rows ("T3 Territory Opening | Wakayama, Japan").
+        if kind == '영토' and title.lower() == 'voting totals':
+            kind, title, place = '기타', 'Territory Voting Totals', '전역'
+        elif kind == '영토' and title != 'T3 Territory Opening':
+            place = '%s, %s' % (title, place) if place and place != '전역' else title
+            title = 'T3 Territory Opening'
         stage = STAGE.get(cols[4], 0) if len(cols) > 4 else 0
         secs = parse_left(left)
         layer, cycle = KIND[kind]
