@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T11:36:05Z",
+  "updatedAt": "2026-11-23T12:23:28Z",
   "note": "pins: 지도 핀 / globals: 전역 송출 / countdowns: 곧 열리는 시그널 (endsAt = ISO 시각, 비우면 시각 확인 중)",
   "pins": [
     {
@@ -124,7 +124,7 @@
       "cycle": "ops",
       "stage": 0,
       "title": "New Skin coming",
-      "endsAt": "2026-11-24T11:00:00Z",
+      "endsAt": "2026-11-24T10:59:59Z",
       "note": "공식 배너 · New Skin coming",
       "key": "countdown:New Skin coming:전역",
       "titleKo": "새 스킨 출시 예정",

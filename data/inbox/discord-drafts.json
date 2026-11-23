@@ -254,6 +254,148 @@
       "createdAt": "2026-11-15T06:20:31Z",
       "decidedAt": "2026-11-15T23:36:12Z",
       "chronicle": true
+    },
+    {
+      "kind": "countdown",
+      "title": "MENTAR STAKER DISCOUNT PERK",
+      "countdown": {
+        "L": "border",
+        "place": "Gaga'ifomauga",
+        "cycle": "",
+        "stage": 0,
+        "kind": "스테이커",
+        "phase": 1,
+        "country": {
+          "code": "",
+          "en": "Gaga'ifomauga"
+        },
+        "title": "MENTAR STAKER DISCOUNT PERK",
+        "endsAt": "2026-11-24T02:59:59Z",
+        "note": ""
+      },
+      "excerpt": "장소: Gaga'ifomauga\n끝나는 시각(UTC): 2026-11-24T02:59:59Z",
+      "url": "",
+      "date": "2026-11-23",
+      "grade": "CLEAR",
+      "layer": "border",
+      "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
+      "sourceKey": "countdown:MENTAR STAKER DISCOUNT PERK:Gaga'ifomauga",
+      "draftId": "1574399942175232153",
+      "status": "pending",
+      "createdAt": "2026-11-23T12:23:19Z"
+    },
+    {
+      "kind": "countdown",
+      "title": "Buy Tiles with Essence",
+      "countdown": {
+        "L": "real",
+        "place": "Gaga'ifomauga",
+        "cycle": "",
+        "stage": 0,
+        "kind": "에센스타일",
+        "phase": 2,
+        "country": {
+          "code": "",
+          "en": "Gaga'ifomauga"
+        },
+        "title": "Buy Tiles with Essence",
+        "endsAt": "2026-11-24T02:59:59Z",
+        "note": ""
+      },
+      "excerpt": "장소: Gaga'ifomauga\n끝나는 시각(UTC): 2026-11-24T02:59:59Z",
+      "url": "",
+      "date": "2026-11-23",
+      "grade": "CLEAR",
+      "layer": "real",
+      "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
+      "sourceKey": "countdown:Buy Tiles with Essence:Gaga'ifomauga",
+      "draftId": "1574399951772065825",
+      "status": "pending",
+      "createdAt": "2026-11-23T12:23:21Z"
+    },
+    {
+      "kind": "countdown",
+      "title": "T3 Territory Opening",
+      "countdown": {
+        "L": "real",
+        "place": "Wakayama, Japan",
+        "cycle": "vote",
+        "stage": 3,
+        "kind": "영토",
+        "phase": 3,
+        "country": {
+          "code": "JP",
+          "en": "Japan"
+        },
+        "title": "T3 Territory Opening",
+        "endsAt": "2026-11-25T02:00:00Z",
+        "note": "플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요."
+      },
+      "excerpt": "장소: Wakayama, Japan\n끝나는 시각(UTC): 2026-11-25T02:00:00Z\n단계: 3",
+      "url": "",
+      "date": "2026-11-23",
+      "grade": "CLEAR",
+      "layer": "real",
+      "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
+      "sourceKey": "countdown:T3 Territory Opening:Wakayama, Japan",
+      "draftId": "1574399961917816894",
+      "status": "pending",
+      "createdAt": "2026-11-23T12:23:23Z"
+    },
+    {
+      "kind": "countdown",
+      "title": "T3 Territory Opening",
+      "countdown": {
+        "L": "real",
+        "place": "Galápagos, Ecuador",
+        "cycle": "vote",
+        "stage": 3,
+        "kind": "영토",
+        "phase": 3,
+        "country": {
+          "code": "EC",
+          "en": "Ecuador"
+        },
+        "title": "T3 Territory Opening",
+        "endsAt": "2026-11-28T23:00:00Z",
+        "note": "플레이어 투표로 열리는 영토. 열리면 T3 땅이 해금돼요."
+      },
+      "excerpt": "장소: Galápagos, Ecuador\n끝나는 시각(UTC): 2026-11-28T23:00:00Z\n단계: 3",
+      "url": "",
+      "date": "2026-11-23",
+      "grade": "CLEAR",
+      "layer": "real",
+      "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
+      "sourceKey": "countdown:T3 Territory Opening:Galápagos, Ecuador",
+      "draftId": "1574399970969264181",
+      "status": "pending",
+      "createdAt": "2026-11-23T12:23:26Z"
+    },
+    {
+      "kind": "countdown",
+      "title": "Territory Voting Totals",
+      "countdown": {
+        "L": "border",
+        "place": "전역",
+        "cycle": "",
+        "stage": 0,
+        "kind": "기타",
+        "phase": 0,
+        "country": null,
+        "title": "Territory Voting Totals",
+        "endsAt": "2026-11-25T00:00:00Z",
+        "note": ""
+      },
+      "excerpt": "장소: 전역\n끝나는 시각(UTC): 2026-11-25T00:00:00Z",
+      "url": "",
+      "date": "2026-11-23",
+      "grade": "CLEAR",
+      "layer": "border",
+      "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
+      "sourceKey": "countdown:Territory Voting Totals:전역",
+      "draftId": "1574399980179820607",
+      "status": "pending",
+      "createdAt": "2026-11-23T12:23:28Z"
     }
   ]
 }
