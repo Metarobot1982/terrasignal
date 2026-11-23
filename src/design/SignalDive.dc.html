@@ -262,7 +262,7 @@ class Component extends DCLogic {
     var sr = root.querySelector('.mapslot-real'), sd = root.querySelector('.mapslot-digi');
     if (!token || !sr || !sd) return;
     if (this.__msg !== undefined) root.querySelectorAll('.mapstat').forEach(function (s) { s.textContent = self.__msg; s.style.display = self.__msg ? '' : 'none'; });
-    if (this.__maps) { sr.appendChild(this.__maps.realEl); this.__maps.real.resize(); this.__maps.draw(); this.__maps.place(); this.__maps.readout(); return; }
+    if (this.__maps) { root.querySelectorAll('.stage img').forEach(function (i) { i.style.visibility = 'hidden'; }); sr.appendChild(this.__maps.realEl); this.__maps.real.resize(); this.__maps.draw(); this.__maps.place(); this.__maps.readout(); return; }
     if (this.__loading) return;
     this.__loading = true;
     function boot() {
@@ -394,7 +394,7 @@ class Component extends DCLogic {
       clip: 'polygon(' + (X + 7) + '% 0, 100% 0, 100% 100%, ' + (X - 7) + '% 100%)',
       riftClip: 'polygon(' + (X + 7) + '% 0, ' + (X + 7.5) + '% 0, ' + (X - 6.5) + '% 100%, ' + (X - 7) + '% 100%)',
       capReal: v !== 'digi', capDigi: v !== 'real',
-      fbVis: this.pt.station ? 'visible' : 'hidden',  // the Seoul photos are only true for the tower
+      fbVis: this.pt.station && !this.__maps ? 'visible' : 'hidden',  // once the live map is up, the stand-in photos must never come back  // the Seoul photos are only true for the tower
       isReal: v === 'real', isBoth: v === 'both', isDigi: v === 'digi',
       realBg: v === 'real' ? on : off, realFg: v === 'real' ? onFg : offFg,
       bothBg: v === 'both' ? on : off, bothFg: v === 'both' ? onFg : offFg,
