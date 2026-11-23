@@ -251,6 +251,7 @@ html{scroll-behavior:smooth}
 </div>
 </sc-for>
 <sc-if value="{{c.hasNote}}" hint-placeholder-val="{{ false }}"><span style="font-size: 12px; line-height: 1.5; color: #b8b0d8">{{c.note}}</span></sc-if>
+<sc-if value="{{c.hasLink}}" hint-placeholder-val="{{ false }}"><a href="{{c.link}}" target="_blank" rel="noopener" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 36px; margin-top: 2px; padding: 0 12px; border: 1px solid {{c.color}}; color: {{c.color}}; text-decoration: none; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700">{{c.linkLabel}} ↗</a></sc-if>
 </div>
 </sc-for>
 </div>
@@ -307,7 +308,7 @@ class Component extends DCLogic {
     return (dd ? dd + 'D ' : '') + p(hh) + ':' + p(mm) + ':' + p(ss);
   }
   static kst(ends) {
-    var k = new Date(ends + 9 * 3600000);
+    var k = new Date(ends + 30000 + 9 * 3600000);
     var W = ['일', '월', '화', '수', '목', '금', '토'];
     var hr = k.getUTCHours(), mi = k.getUTCMinutes();
     return (k.getUTCMonth() + 1) + '월 ' + k.getUTCDate() + '일 (' + W[k.getUTCDay()] + ') ' + (hr < 12 ? '오전 ' : '오후 ') + ((hr % 12) || 12) + ':' + (mi < 10 ? '0' : '') + mi + ' · 한국 시간';
@@ -350,7 +351,7 @@ class Component extends DCLogic {
       var W = ['일', '월', '화', '수', '목', '금', '토'];
       function p2(n) { return (n < 10 ? '0' : '') + n; }
       function left(e) { if (isNaN(e)) return '--:--:--'; var s = Math.floor((e - nowMs) / 1000); if (s <= 0) return (function (a) { var h = Math.floor(a / 3600), m = Math.floor(a % 3600 / 60); return '열림 · ' + (h ? h + '시간 ' : '') + (h ? '' : m + '분 ') + '전'; })(-s); var dd = Math.floor(s / 86400); return (dd ? dd + 'D ' : '') + p2(Math.floor(s % 86400 / 3600)) + ':' + p2(Math.floor(s % 3600 / 60)) + ':' + p2(s % 60); }
-      function when(e) { if (isNaN(e)) return '시각 확인 중'; var k = new Date(e + 9 * 3600000), hr = k.getUTCHours(); return (k.getUTCMonth() + 1) + '월 ' + k.getUTCDate() + '일 (' + W[k.getUTCDay()] + ') ' + (hr < 12 ? '오전 ' : '오후 ') + ((hr % 12) || 12) + ':' + p2(k.getUTCMinutes()) + ' · 한국 시간'; }
+      function when(e) { if (isNaN(e)) return '시각 확인 중'; var k = new Date(e + 30000 + 9 * 3600000), hr = k.getUTCHours(); return (k.getUTCMonth() + 1) + '월 ' + k.getUTCDate() + '일 (' + W[k.getUTCDay()] + ') ' + (hr < 12 ? '오전 ' : '오후 ') + ((hr % 12) || 12) + ':' + p2(k.getUTCMinutes()) + ' · 한국 시간'; }
       function countryKo(c) { if (!c) return ''; try { if (c.code && typeof Intl !== 'undefined' && Intl.DisplayNames) return new Intl.DisplayNames(['ko'], { type: 'region' }).of(c.code); } catch (e) {} return c.en || ''; }
       function flag(c) { return withFlags && c && c.code ? 'assets/flags/' + c.code.toLowerCase() + '.svg' : ''; }
       function city(place) { var i = place.lastIndexOf(','); return i > 0 ? place.slice(0, i).trim() : ''; }
@@ -366,7 +367,8 @@ class Component extends DCLogic {
         } else {
           var ck = countryKo(c.country);
           cards.push({ isTerr: false, tag: LN[c.L] + ' · ' + (ck || c.place), title: c.titleKo || c.title, hasFlag: false, flag: '', color: LC[c.L], bg: LB[c.L],
-            phases: [], rows: [row], hasNote: !!c.note, note: c.note || '', e: row.e });
+            phases: [], rows: [row], hasNote: !!c.note, note: c.note || '', e: row.e,
+            hasLink: c.kind === '스킨' || /territory/i.test(c.title), link: c.kind === '스킨' ? 'https://app.earth2.io/#skins' : 'https://app.earth2.io/#territory-voting', linkLabel: c.kind === '스킨' ? '어스2 스킨 상점에서 보기' : '어스2 영토 투표에서 보기' });
         }
       });
       order.forEach(function (pl) {
@@ -375,7 +377,7 @@ class Component extends DCLogic {
         cards.push({ isTerr: true, tag: '■ 현실 지구 · 영토 오픈', title: (ck || pl) + (ck && ct ? ' · ' + ct : ''), hasFlag: !!flag(c.country), flag: flag(c.country),
           color: LC.real, bg: LB.real,
           phases: PH.map(function (t, n) { var on = !!g.on[n + 1]; return { label: (n + 1) + ' ' + t, bd: on ? '#ffd23f' : 'rgba(255,255,255,.25)', bg: on ? '#ffd23f' : 'transparent', fg: on ? '#0a0716' : '#8b84ad' }; }),
-          rows: g.rows, hasNote: true, note: '공식 배너 순서: ① 멘타 스테이커 할인 → ② 에센스로 타일 구매 → ③ T3 영토 오픈. 노란 칸이 지금 열려 있는 단계예요.',
+          rows: g.rows, hasLink: true, link: 'https://app.earth2.io/#territory-voting', linkLabel: '어스2 영토 투표에서 보기', hasNote: true, note: '공식 배너 순서: ① 멘타 스테이커 할인 → ② 에센스로 타일 구매 → ③ T3 영토 오픈. 노란 칸이 지금 열려 있는 단계예요.',
           e: Math.min.apply(null, g.rows.map(function (r) { return r.e; })) });
       });
       return cards.sort(function (a, b) { return a.e - b.e; });
