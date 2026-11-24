@@ -433,8 +433,10 @@
       "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
       "sourceKey": "countdown:MENTAR STAKER DISCOUNT PERK:Baghdad/IQ",
       "draftId": "1574655329218732213",
-      "status": "pending",
-      "createdAt": "2026-11-24T05:18:08Z"
+      "status": "published",
+      "createdAt": "2026-11-24T05:18:08Z",
+      "decidedAt": "2026-11-24T15:59:45Z",
+      "chronicle": false
     },
     {
       "kind": "countdown",
@@ -462,8 +464,10 @@
       "sourceLabel": "어사이드 수집 · app.earth2.io (로그인 화면)",
       "sourceKey": "countdown:Buy Tiles with Essence:Baghdad/IQ",
       "draftId": "1574655340803264617",
-      "status": "pending",
-      "createdAt": "2026-11-24T05:18:11Z"
+      "status": "published",
+      "createdAt": "2026-11-24T05:18:11Z",
+      "decidedAt": "2026-11-24T15:59:49Z",
+      "chronicle": false
     }
   ]
 }
